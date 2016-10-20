@@ -1,0 +1,39 @@
+#newsletter-subscribe {
+    background: $color-mozred;
+    color: #fff;
+    margin: 0;
+
+    .content {
+        width: $width-desktop;
+    }
+
+    h3,
+    h4 {
+        color: #fff;
+        text-shadow: none;
+    }
+
+    .form-title {
+        @include span(5);
+        background: url(img/mozorg-newsletter.svg) left top no-repeat;
+        @include background-size(150px, 150px);
+        min-height: 150px;
+        padding: 10px 0 20px 180px;
+    }
+
+    .form-contents {
+        @include span(6);
+
+        label {
+            display: block;
+        }
+
+        input[type='email'] {
+            width: 100%;
+        }
+    }
+
+    .form-submit {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,122 @@
+/*
+Theme Name: Rebrand (real name TBD)
+Theme URI: https://github.com/mozilla/repo-tbd
+Author: Mozilla
+Author URI: https://www.mozilla.org
+Description: Description to come.
+Version: 1.0
+License: MPL Mozilla Public License v2 or later
+License URI: https://www.mozilla.org/MPL/2.0/
+Text Domain: rebrand
+Domain Path: /languages/
+Tags: none yet
+*/
+
+@import
+    // Fonts
+    'includes/fonts/fira-sans',
+
+    // Base elements - general HTML elements
+    'base/elements',
+
+    // Components - specific purpose blocks with sub-elements and modifiers
+    'components/sections',
+    'components/posts',
+    'components/comments',
+    'components/masthead',
+    'components/nav-global',
+    'components/sidebar',
+    'components/newsletter-form',
+    'components/footer',
+    'components/buttons';
+
+
+#explore {
+    width: 100%;
+    min-height: 100px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    background: #fff;
+    box-shadow: 0 3px 1px rgba(0, 0, 0, .2);
+
+    .cat-list li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    .category {
+        display: none;
+
+        &:first-child {
+            display: block;
+        }
+    }
+
+    .category-title {
+        display: none;
+    }
+
+    .category-posts {
+        @include flexbox;
+    }
+
+    .post-mini {
+        @include border-box;
+        @include span(2.4);
+    }
+}
+
+.site-wrap {
+    position: relative;
+}
+
+#content {
+    padding-top: 20px;
+}
+
+
+#masthead .site-title-wrap {
+//    background: rgba(255, 255, 255, .8);
+}
+
+
+.pagination {
+    @include font-size(22px);
+    margin: 40px 0;
+    text-align: center;
+
+    a,
+    .current {
+        padding: 5px 15px;
+        margin: 0 2px;
+        background: #eee;
+
+        &:hover,
+        &:focus {
+            background: #e3e3e3;
+        }
+    }
+}
+
+.comment-list .entry-title {
+    @include font-size(16px);
+}
+
+.to-do {
+    border: 2px dotted gray;
+    background: rgba(255, 255, 100, .25);
+    position: relative;
+    margin-bottom: 20px;
+
+    &:before {
+        content: 'To Do';
+        display: block;
+        color: white;
+        background: gray;
+        padding: 5px;
+        position: absolute;
+        left: -2px;
+        top: -2px;
+    }
+}

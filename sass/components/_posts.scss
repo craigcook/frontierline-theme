@@ -1,0 +1,238 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+
+.posts-wrap {
+    .post {
+        margin-bottom: 40px;
+
+        .wp-post-image {
+            background: url(img/bg-stripe.png);
+            margin-bottom: 20px;
+            max-height: 330px;
+        }
+
+        .entry-title,
+        .entry-info,
+        .entry-summary,
+        .entry-meta {
+            padding: 0 20px;
+        }
+
+        .entry-title {
+            @include font-size-level3;
+        }
+
+        .entry-info {
+            margin-bottom: 20px;
+
+            .vcard {
+                border-right: 1px solid #ccc;
+                display: inline;
+                font-style: normal;
+                margin-right: 10px;
+                padding-right: 10px;
+            }
+
+            .date {
+                display: inline;
+            }
+        }
+
+        .entry-summary .go {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            @include trailing-arrow;
+        }
+    }
+}
+
+.single .post-image {
+    margin: 0 auto 40px;
+    text-align: center;
+    background: #eee;
+}
+
+.single {
+    .entry-header,
+    .entry-content,
+    .entry-meta,
+    .comments {
+        max-width: $width-desktop - 40px;
+        margin: 0 auto;
+    }
+
+    .entry-header {
+        .entry-title {
+            @include font-size-level1;
+            margin-top: .5em;
+        }
+
+        .entry-tools {
+            margin: 0 -20px 20px;
+            @include clearfix;
+        }
+
+        .categories {
+            margin-bottom: 20px;
+
+            a {
+                background: #eee;
+                outline: 1px solid #ccc;
+                padding: .25em 6px;
+                margin-right: 10px;
+                text-decoration: none;
+            }
+        }
+
+        .categories,
+        .share {
+            @include span(6);
+
+            b {
+                @include visually-hidden;
+            }
+        }
+
+        .share {
+            text-align: right;
+
+            a {
+                margin-left: 10px;
+                padding: 2px 10px 2px 25px;
+
+                &.twitter {
+                    background: url(img/twitter.svg) left center no-repeat;
+                    @include background-size(18px, 18px);
+                }
+
+                &.facebook {
+                    background: url(img/facebook.svg) left center no-repeat;
+                    @include background-size(18px, 18px);
+                }
+            }
+        }
+
+        .entry-info {
+            margin-bottom: 20px;
+
+            .vcard {
+                border-right: 1px solid #ccc;
+                display: inline;
+                font-style: normal;
+                margin-right: 10px;
+                padding-right: 10px;
+            }
+
+            .date {
+                display: inline;
+            }
+        }
+
+        .entry-comments {
+            display: inline;
+            border-left: 1px solid #ccc;
+            margin-left: 10px;
+            padding-left: 10px;
+        }
+    }
+}
+
+.entry-content {
+
+    ul {
+        list-style: disc;
+        margin-left: 30px;
+
+        ul {
+            list-style: circle;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
+
+        ol {
+            list-style: decimal;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
+    }
+
+    ol {
+        list-style: decimal;
+        margin-left: 30px;
+
+        ol {
+            list-style: lower-alpha;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+.wpp-list {
+    .wp-post-image,
+    .wpp-thumbnail {
+        display: block;
+        float: none;
+        margin: 0 0 1em;
+    }
+
+    .wpp-post-title {
+        font-weight: bold;
+        display: block;
+    }
+}
+
+
+.paging-prev,
+.paging-next {
+    @include span(6);
+    text-align: center;
+
+    b {
+        display: block;
+    }
+}
+
+#relpop {
+    .related,
+    .popular {
+        @include span(6);
+
+        li {
+            margin-bottom: 1em;
+        }
+
+        .date {
+            @include font-size(14px);
+        }
+    }
+}
+
+@media #{$mq-tablet} {
+    .posts-wrap {
+        display: flex;
+        flex-wrap: wrap;
+
+        .post {
+            @include span(6);
+        }
+    }
+}
+
+@media #{$mq-desktop} {
+    .posts-wrap .post {
+        @include span(4);
+    }
+}

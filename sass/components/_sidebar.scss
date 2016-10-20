@@ -1,0 +1,64 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib',
+        'base-button';
+
+#sidebar {
+    @include border-box;
+    @include transition(left 600ms cubic-bezier(.30, -0.5, .60, 1.1));
+    background: #fff;
+    box-shadow: 3px 0 1px rgba(0, 0, 0, .2);
+    height: 100%;
+    left: 0;
+    max-width: 600px;
+    min-width: 300px;
+    padding: 80px 40px 40px;
+    position: absolute;
+    top: 0;
+    width: 33%;
+    z-index: 9;
+
+    .widget-title {
+        color: $color-mozred;
+        margin: 0;
+        padding-bottom: .5em;
+    }
+
+    .widget_nav_menu,
+    .widget_categories,
+    .widget_recent_entries,
+    .widget_recent_comments {
+        ul {
+            border-bottom: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        li {
+            border-bottom: 1px solid rgba(0, 0, 0, .05);
+            margin: 0;
+        }
+
+        a {
+            @include transition(background-color 100ms ease);
+            display: block;
+            padding: .25em 4px;
+            text-decoration: none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: rgba(0, 0, 0, .02);
+            }
+        }
+    }
+
+}
+
+.js #sidebar {
+    left: -33.3%;
+
+    &.show {
+        left: 0;
+    }
+}

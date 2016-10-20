@@ -1,0 +1,60 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+#masthead {
+    .content {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .site-id {
+        @include background-size(cover);
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 40px 20px;
+        position: relative;
+        text-align: center;
+
+        @media #{$mq-desktop} and #{$mq-tall} {
+            padding: 80px 20px;
+        }
+    }
+
+    .site-title-wrap {
+        text-align: center;
+        color: $color-mozred;
+        padding: 20px 40px;
+        margin: 0 auto;
+        display: inline-block;
+        max-width: $width-tablet;
+        text-shadow: 0 0 2px rgba(255, 255, 255, .5), 0 1px 0 rgba(255, 255, 255, .8);
+
+        a {
+            color: $color-mozred;
+            text-decoration: none;
+        }
+    }
+}
+
+
+#nav-util {
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 40px;
+    position: relative;
+    z-index: 10;
+}
+
+
+// .single #masthead .site-id {
+//     padding: 20px;
+
+//     #site-title {
+//         @include font-size(36px);
+//     }
+
+//     #site-description {
+//         @include font-size(24px);
+//     }
+// }

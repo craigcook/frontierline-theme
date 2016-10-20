@@ -1,0 +1,13 @@
+h3#comments,
+ol.commentlist,
+.comment-respond {
+    max-width: $width-desktop - 40px;
+    margin: 0 auto;
+}
+
+
+h3#comments {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #ccc;
+}

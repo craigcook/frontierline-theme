@@ -1,0 +1,177 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+.nav-global {
+    @include clearfix;
+    background: $color-mozred;
+    color: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+    min-height: 40px;
+    position: relative;
+    z-index: 10;
+
+    .content {
+        padding: 0 20px;
+    }
+
+    .logo {
+        @include font-size(16px);
+        float: right;
+        margin: 8px 0 0;
+
+        a {
+            @include at2x('img/mozilla-wordmark-white.svg', 93px, 24px);
+            @include image-replaced;
+            display: inline-block;
+            height: 24px;
+            width: 93px;
+        }
+
+        @media #{$mq-tablet} {
+            float: left;
+        }
+    }
+}
+
+.nav-mozilla {
+    @include fira-sans-light;
+    @include font-size(14px);
+    left: 0;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    z-index: 99;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: underline;
+        }
+    }
+
+    .toggle {
+        @include image-replaced;
+        background: $color-mozred url('/media/img/pebbles/icon-menu-light.svg') center center no-repeat;
+        @include background-size(22px auto);
+        cursor: pointer;
+        display: block;
+        height: 40px;
+        overflow: hidden;
+        position: relative;
+        width: 40px;
+    }
+
+    .nav-mozilla-menu {
+        background: #fff;
+        box-shadow: 2px 2px 0 rgba(0, 0, 0, .2);
+        left: -300px;
+        margin: 0;
+        overflow: visible;
+        position: absolute;
+        top: 40px;
+        width: 200px;
+        z-index: 99;
+
+        li {
+            border-bottom: 1px solid #ccc;
+
+            &:last-child {
+                border: 0;
+            }
+        }
+
+        a {
+            background: #fff;
+            color: $color-text-primary;
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            @include transition(background-color 150ms ease, border-width 150ms ease, color 150ms ease, padding 150ms ease);
+
+            &:hover,
+            &:focus {
+                background-color: #f5f5f5;
+                border-right: 6px solid $color-mozred;
+                color: $color-mozred;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.nav-mozilla:hover .nav-mozilla-menu,
+.nav-mozilla-menu:target {
+    left: auto;
+}
+
+.js .nav-mozilla .nav-mozilla-menu {
+    left: auto;
+    display: none;
+}
+
+@media #{$mq-tablet} {
+    .nav-mozilla {
+        float: right;
+        margin: 0 20px;
+        position: relative;
+
+        .nav-mozilla-menu {
+            width: auto;
+            position: static;
+            background: transparent;
+            box-shadow: none;
+            padding: 10px 0;
+
+            li {
+                display: inline;
+                border: 0;
+                padding: 0 10px;
+            }
+
+            a {
+                background: transparent;
+                display: inline-block;
+                padding: 0;
+                color: #fff;
+
+                &:hover,
+                &:focus {
+                    background: transparent;
+                    border: 0;
+                    color: #fff;
+                }
+            }
+        }
+
+        .toggle {
+            @include hidden;
+        }
+
+    }
+
+    .js .nav-mozilla .nav-mozilla-menu {
+        display: block;
+    }
+}
+
+@media #{$mq-desktop} {
+    .nav-mozilla .nav-mozilla-menu li {
+            padding: 0 20px;
+    }
+}
+
+// flexbox layout for savvy browsers to push nav items to the right
+@supports (display: flex) {
+    @media #{$mq-tablet} {
+        .nav-mozilla-menu,
+        .js .nav-mozilla-menu {
+            @include flexbox;
+            @include justify-content(flex-end);
+        }
+    }
+}
