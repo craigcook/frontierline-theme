@@ -34,4 +34,9 @@
     &:focus {
         text-decoration: none;
     }
+
+    &.button-minor {
+        @include font-size(14px);
+        padding: .25em 10px;
+    }
 }

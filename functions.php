@@ -40,6 +40,9 @@ function onemozilla_setup() {
   // Large post image
   add_image_size( 'post-large', 600, 330, true );
 
+  // Thumbnail post image
+  add_image_size( 'post-thumbnail', 300, 165, true );
+
   $header_defaults = array(
     'width'         => 1600,
     'height'        => 600,
@@ -303,8 +306,8 @@ add_action ( 'admin_footer', 'fc_page_comments_off' );
 * Prints the page number currently being browsed, with a pipe before it.
 * Used in header.php to add the page number to the <title>.
 */
-if ( ! function_exists( 'fc_page_number' ) ) :
-function fc_page_number() {
+if ( ! function_exists( 'moz_page_number' ) ) :
+function moz_page_number() {
   global $paged; // Contains page number.
   if ( $paged >= 2 )
     echo ' | ' . sprintf( __( 'Page %s' , 'wordpress' ), $paged );
@@ -314,15 +317,16 @@ endif;
 /*********
 * Allow uploading some additional MIME types
 */
-function fc_add_mimes( $mimes=array() ) {
+function moz_add_mimes( $mimes=array() ) {
   $mimes['webm'] = 'video/webm';
-  $mimes['ogv'] = 'video/ogg';
-  $mimes['mp4'] = 'video/mp4';
-  $mimes['m4v'] = 'video/mp4';
-  $mimes['flv'] = 'video/x-flv';
+  $mimes['ogv']  = 'video/ogg';
+  $mimes['mp4']  = 'video/mp4';
+  $mimes['m4v']  = 'video/mp4';
+  $mimes['flv']  = 'video/x-flv';
+  $mimes['svg']  = 'image/svg+xml';
   return $mimes;
 }
-add_filter('upload_mimes', 'fc_add_mimes');
+add_filter('upload_mimes', 'moz_add_mimes');
 
 /*********
 * Load various JavaScripts

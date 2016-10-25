@@ -1,7 +1,13 @@
+<?php
+/**
+ * Display a post with medium image and summary.
+ */
+?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
   <header class="entry-header">
-    <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permanent link to “%s”', 'onemozilla' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
+    <a href="<?php the_permalink(); ?>" class="entry-link" title="<?php printf( esc_attr__( 'Permanent link to “%s”', 'onemozilla' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
     <?php if ( has_post_thumbnail() ) {
       the_post_thumbnail( 'post-large' );
     } else { ?>

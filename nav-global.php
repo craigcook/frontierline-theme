@@ -6,7 +6,7 @@
       <span class="toggle" role="button" aria-controls="nav-mozilla-menu" aria-expanded="false" tabindex="0"><?php _e('Menu', 'rebrand'); ?></span>
       <ul class="nav-mozilla-menu" id="nav-mozilla-menu">
         <li><a href="#" rel="external"><?php _e('Internet Health', 'rebrand'); ?></a></li>
-        <li><a href="https://www.mozilla.org/technology/" rel="external"><?php _e('Web Innovations', 'rebrand'); ?></a></li>
+        <li><a href="https://www.mozilla.org/technology/" rel="external"><?php _e('Innovation', 'rebrand'); ?></a></li>
         <li><a href="https://www.mozilla.org/firefox/products/" rel="external">Firefox</a></li>
         <li><a href="https://donate.mozilla.org/" rel="external"><?php _e('Donate', 'rebrand'); ?></a></li>
       </ul>

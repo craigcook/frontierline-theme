@@ -1,0 +1,46 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+#nav-util {
+    background: $color-mozgray;
+    color: #fff;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    z-index: 10;
+
+    .content {
+        @include flexbox;
+        padding: 10px 20px;
+    }
+
+    li {
+        display: inline-block;
+        width: 33%;
+
+        &.nav-util-sidebar {
+            text-align: left;
+        }
+
+        &.nav-util-explore {
+            text-align: center;
+        }
+
+        &.nav-util-home {
+            text-align: right;
+        }
+    }
+
+    a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}

@@ -22,9 +22,12 @@ Tags: none yet
     // Components - specific purpose blocks with sub-elements and modifiers
     'components/sections',
     'components/posts',
+    'components/related-posts',
+    'components/nav-paging',
     'components/comments',
     'components/masthead',
     'components/nav-global',
+    'components/nav-util',
     'components/sidebar',
     'components/newsletter-form',
     'components/footer',
@@ -40,9 +43,16 @@ Tags: none yet
     background: #fff;
     box-shadow: 0 3px 1px rgba(0, 0, 0, .2);
 
-    .cat-list li {
-        display: inline;
-        margin: 0 10px;
+    .cat-list {
+        text-align: center;
+
+        li {
+            display: inline;
+        }
+
+        a {
+            @include category-link;
+        }
     }
 
     .category {
@@ -59,11 +69,19 @@ Tags: none yet
 
     .category-posts {
         @include flexbox;
+        margin: 0 auto;
+        max-width: 1500px;
     }
 
-    .post-mini {
+    .category-post {
         @include border-box;
         @include span(2.4);
+        max-width: 300px;
+    }
+
+    .post-mini .date {
+        @include font-size(14px);
+        color: $color-text-secondary;
     }
 }
 
@@ -101,22 +119,4 @@ Tags: none yet
 
 .comment-list .entry-title {
     @include font-size(16px);
-}
-
-.to-do {
-    border: 2px dotted gray;
-    background: rgba(255, 255, 100, .25);
-    position: relative;
-    margin-bottom: 20px;
-
-    &:before {
-        content: 'To Do';
-        display: block;
-        color: white;
-        background: gray;
-        padding: 5px;
-        position: absolute;
-        left: -2px;
-        top: -2px;
-    }
 }

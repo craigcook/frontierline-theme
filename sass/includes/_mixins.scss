@@ -9,6 +9,26 @@
     'mixins/typography';
 
 
+// Common style for category links
+@mixin category-link {
+    @include transition(color 150ms ease, background-color 150ms ease);
+    background: #eee;
+    color: $color-text-secondary;
+    display: inline-block;
+    margin: 0 5px .25em 0;
+    padding: .15em 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: darken($color-link, 10%);
+        background: #e3e3e3;
+    }
+}
+
+
 // Clear floats
 @mixin clearfix {
     zoom: 1;

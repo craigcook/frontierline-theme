@@ -1,3 +1,9 @@
+<?php
+/**
+ * Display a full post with full size image.
+ */
+?>
+
 <?php if ( has_post_thumbnail() ) : ?>
   <div class="post-image">
     <?php the_post_thumbnail( 'post-full-size' ); ?>
@@ -7,8 +13,18 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header class="entry-header">
     <div class="entry-tools">
-      <p class="categories"><b><?php _e('Categories','onemozilla'); ?>:</b> <?php the_category(' ') ?></p>
-      <p class="share"><b>Share:</b> <a href="#" class="twitter">Twitter</a> <a href="#" class="facebook">Facebook</a></p>
+      <div class="categories">
+        <b><?php _e('Categories:','onemozilla'); ?></b>
+        <?php the_category(' ') ?>
+      </div>
+
+      <div class="share">
+        <b>Share:</b>
+        <ul>
+          <li><a href="#" class="twitter">Twitter</a></li>
+          <li><a href="#" class="facebook">Facebook</a></li>
+        </ul>
+      </div>
     </div>
 
     <h2 class="entry-title">

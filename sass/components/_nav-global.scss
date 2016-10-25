@@ -56,7 +56,7 @@
 
     .toggle {
         @include image-replaced;
-        background: $color-mozred url('/media/img/pebbles/icon-menu-light.svg') center center no-repeat;
+        background: $color-mozred url('img/icon-menu-light.svg') center center no-repeat;
         @include background-size(22px auto);
         cursor: pointer;
         display: block;

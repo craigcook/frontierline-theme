@@ -1,0 +1,114 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/lib';
+
+
+// Link to previous and next posts
+.nav-paging {
+    @include clearfix;
+    @include flexbox;
+    text-align: center;
+    margin: 30px 0;
+    background: #eee;
+
+    .label {
+        @include font-size(14px);
+        text-transform: lowercase;
+    }
+
+    .entry-title {
+        @include font-size(18px);
+        display: block;
+        font-weight: bold;
+        margin: 20px 20% 0;
+    }
+
+    .date {
+        @include font-size(14px);
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        height: 100%;
+
+        .label {
+            color: $color-mozred;
+        }
+
+        .entry-title {
+            color: $color-text-primary;
+        }
+
+        .date {
+            color: $color-text-secondary;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            .entry-title {
+                color: $color-link;
+                text-decoration: underline;
+            }
+
+            .arrow-left {
+                left: 0;
+            }
+
+            .arrow-right {
+                right: 0;
+            }
+        }
+    }
+
+    .arrow-left,
+    .arrow-right {
+        width: 30px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        @include transition(left 250ms cubic-bezier(.30, -0.5, .60, 1.5), right 250ms cubic-bezier(.30, -0.5, .60, 1.5));
+
+        .cls-1 {
+            stroke: $color-mozgray;
+        }
+    }
+
+    .arrow-left {
+        left: 10px;
+    }
+
+    .arrow-right {
+        right: 10px;
+    }
+}
+
+.nav-paging-prev,
+.nav-paging-next {
+    position: relative;
+    width: 50%;
+    margin-bottom: 0;
+    height: 100%;
+}
+
+.nav-paging-prev {
+    float: left;
+}
+
+.nav-paging-next {
+    float: right;
+}
+
+[dir='rtl'] {
+    .nav-paging-prev {
+        float: right;
+    }
+
+    .nav-paging-next {
+        float: left;
+    }
+}

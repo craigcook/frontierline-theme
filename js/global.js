@@ -10,17 +10,18 @@
 
     function toggleSidebar() {
         var sidebar = jQuery('#sidebar');
-        var button = jQuery('#toggle-sidebar');
+        var toggle = jQuery('#toggle-sidebar');
 
         sidebar.hide();
 
-        button.on('click', function() {
+        toggle.on('click', function(e) {
+            e.preventDefault();
             if (sidebar.is(':hidden')) {
                 sidebar.show(function(){ sidebar.addClass('show') });
-                button.addClass('close');
+                toggle.addClass('close');
             } else {
                 sidebar.toggleClass('show');
-                button.toggleClass('close');
+                toggle.toggleClass('close');
             }
         });
     }
@@ -28,13 +29,14 @@
 
     function toggleExplore() {
         var explore = jQuery('#explore');
-        var button = jQuery('#toggle-explore');
+        var toggle = jQuery('#toggle-explore');
 
         explore.hide();
 
-        button.on('click', function() {
+        toggle.on('click', function(e) {
+            e.preventDefault();
             explore.slideToggle('fast');
-            button.toggleClass('close');
+            toggle.toggleClass('close');
         });
     }
     toggleExplore();

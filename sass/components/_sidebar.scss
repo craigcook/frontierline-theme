@@ -20,7 +20,12 @@
     width: 33%;
     z-index: 9;
 
+    .widget {
+        margin-bottom: 40px;
+    }
+
     .widget-title {
+        @include font-size-level3;
         color: $color-mozred;
         margin: 0;
         padding-bottom: .5em;

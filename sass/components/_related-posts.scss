@@ -1,0 +1,29 @@
+#related-posts {
+    .in-category,
+    .popular {
+        @include span(6);
+    }
+
+    .module-title {
+        @include font-size-level3;
+        color: $color-mozred;
+        margin: 0;
+        padding-bottom: .5em;
+    }
+
+    li {
+        border-bottom: 1px solid rgba(0, 0, 0, .05);
+        margin-bottom: .5em;
+        padding-bottom: .5em;
+    }
+
+    .date {
+        @include font-size(14px);
+        color: $color-text-secondary;
+    }
+
+    .wpp-post-title {
+        font-weight: bold;
+        display: block;
+    }
+}

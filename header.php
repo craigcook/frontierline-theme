@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js" id="mozilla-blog">
+<html <?php language_attributes('html'); ?> dir="<?php bloginfo('text_direction'); ?>" class="no-js">
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- For sharing -->
   <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
   <meta property="og:title" content="<?php if (is_singular()) : single_post_title(); else : bloginfo('name'); endif; ?>">
   <meta property="og:url" content="<?php if (is_singular()) : the_permalink(); else : bloginfo('url'); endif; ?>">
@@ -53,14 +52,14 @@
 
   <title><?php
     if ( is_single() ) { single_post_title(); echo ' | '; bloginfo('name'); }
-    elseif ( is_home() || is_front_page() ) { bloginfo('name'); if (get_bloginfo('description','display')) { echo ' | '. get_bloginfo('description','display'); } fc_page_number(); }
+    elseif ( is_home() || is_front_page() ) { bloginfo('name'); if (get_bloginfo('description','display')) { echo ' | '. get_bloginfo('description','display'); } moz_page_number(); }
     elseif ( is_page() ) { single_post_title(''); echo ' | '; bloginfo('name'); }
-    elseif ( is_search() ) { printf( __('Search results for “%s”', 'onemozilla'), esc_html( $s ) ); fc_page_number(); echo ' | '; bloginfo('name'); }
-    elseif ( is_day() ) { $post = $posts[0]; printf(__('Posts from %s', 'onemozilla'), get_the_date()); echo ' | '; bloginfo('name'); fc_page_number(); }
-    elseif ( is_month() ) { $post = $posts[0]; printf(__('Posts from %s', 'onemozilla'), get_the_date('F, Y')); echo ' | '; bloginfo('name'); fc_page_number(); }
-    elseif ( is_year() ) { $post = $posts[0]; printf(__('Posts from %s', 'onemozilla'), get_the_date('Y')); echo ' | '; bloginfo('name'); fc_page_number(); }
+    elseif ( is_search() ) { printf( __('Search results for “%s”', 'onemozilla'), esc_html( $s ) ); moz_page_number(); echo ' | '; bloginfo('name'); }
+    elseif ( is_day() ) { $post = $posts[0]; printf(__('Posts from %s', 'onemozilla'), get_the_date()); echo ' | '; bloginfo('name'); moz_page_number(); }
+    elseif ( is_month() ) { $post = $posts[0]; printf(__('Posts from %s', 'onemozilla'), get_the_date('F, Y')); echo ' | '; bloginfo('name'); moz_page_number(); }
+    elseif ( is_year() ) { $post = $posts[0]; printf(__('Posts from %s', 'onemozilla'), get_the_date('Y')); echo ' | '; bloginfo('name'); moz_page_number(); }
     elseif ( is_404() ) { _e('Not Found', 'onemozilla'); echo ' | '; bloginfo('name'); }
-    else { wp_title(''); echo ' | '; bloginfo('name'); fc_page_number(); }
+    else { wp_title(''); echo ' | '; bloginfo('name'); moz_page_number(); }
   ?></title>
 
   <?php wp_head(); ?>
@@ -74,12 +73,8 @@
 
   <div class="site-wrap">
 
-    <nav id="nav-util">
-      <button aria-controls="sidebar" id="toggle-sidebar">Sidebar</button>
-      <button aria-controls="explore" id="toggle-explore">Explore</button>
-    </nav>
+    <?php get_template_part('nav-util'); ?>
 
     <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => 'nav', 'container_id' => 'nav-primary', 'fallback_cb' => 'false',)); ?>
 
-  <main id="content" class="section" role="main">
-    <div class="content">
+  <main id="content" role="main">

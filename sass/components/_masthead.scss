@@ -28,7 +28,8 @@
         margin: 0 auto;
         display: inline-block;
         max-width: $width-tablet;
-        text-shadow: 0 0 2px rgba(255, 255, 255, .5), 0 1px 0 rgba(255, 255, 255, .8);
+        background: rgba(255, 255, 255, .8);
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
 
         a {
             color: $color-mozred;
@@ -37,14 +38,31 @@
     }
 }
 
+#site-title {
+    @include font-size-level1;
 
-#nav-util {
-    background: #fff;
-    border-bottom: 1px solid #ccc;
-    padding: 10px 40px;
-    position: relative;
-    z-index: 10;
+    // background: rgba(255, 255, 255, .75);
+    // margin: -.45em -80px -.25em -30px;
+    // padding: .45em 80px .2em 30px;
+    // display: inline-block;
+    // position: relative;
+    // z-index: 3;
 }
+
+#site-description {
+    @include font-size-level2;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 0;
+
+    // background: rgba(255, 255, 255, .75);
+    // display: inline-block;
+    // margin: 0 -20px 0 -90px;
+    // padding: .35em 20px .225em 90px;
+    // position: relative;
+    // z-index: 2;
+}
+
 
 
 // .single #masthead .site-id {

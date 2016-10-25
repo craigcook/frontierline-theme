@@ -7,55 +7,61 @@
 
 // We most frequently use lists for semantic structure and don't actually
 // want to display them as lists. It's simpler to reset lists globally
-// and only display them as lists in text when needed with the .prose class.
+// and only display them as lists when they appear in post content.
 ul, ol {
     list-style: none;
 }
 
-ul.prose {
-    list-style: disc;
-    margin-left: 30px;
-
+.entry-content,
+.entry-summary {
     ul {
-        list-style: circle;
-        margin-left: 20px;
-        margin-bottom: 0;
+        list-style: disc;
+        margin-left: 30px;
+
+        ul {
+            list-style: circle;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
+
+        ol {
+            list-style: decimal;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
     }
 
     ol {
         list-style: decimal;
-        margin-left: 20px;
-        margin-bottom: 0;
-    }
-}
+        margin-left: 30px;
 
-ol.prose {
-    list-style: decimal;
-    margin-left: 30px;
+        ol {
+            list-style: lower-alpha;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
 
-    ol {
-        list-style: lower-alpha;
-        margin-left: 20px;
-        margin-bottom: 0;
-    }
-
-    ul {
-        list-style: disc;
-        margin-left: 20px;
-        margin-bottom: 0;
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 0;
+        }
     }
 }
 
 [dir='rtl'] {
-    ul.prose,
-    ol.prose {
-        margin-left: 0;
-        margin-right: 30px;
-
+    .entry-content,
+    .entry-summary {
         ul,
         ol {
             margin-left: 0;
-            margin-right: 20px;
+            margin-right: 30px;
+
+            ul,
+            ol {
+                margin-left: 0;
+                margin-right: 20px;
+            }
         }
     }
 }

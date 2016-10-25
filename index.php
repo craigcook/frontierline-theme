@@ -9,10 +9,10 @@ get_header(); ?>
   <?php if ( have_posts() ) : ?>
 
     <?php /* Start the Loop */ ?>
-    <div class="posts-wrap">
+    <div class="content posts-wrap">
     <?php while ( have_posts() ) : the_post(); ?>
 
-      <?php get_template_part( 'content-summary', get_post_format() ); ?>
+      <?php get_template_part( 'template-parts/content-summary', get_post_format() ); ?>
 
     <?php endwhile; ?>
     </div>
