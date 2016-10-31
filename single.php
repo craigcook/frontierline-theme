@@ -2,14 +2,14 @@
 
   <?php while ( have_posts() ) : the_post(); ?>
 
-    <?php get_template_part('template-parts/content'); ?>
+    <?php get_template_part('views/post'); ?>
 
-    <?php get_template_part('template-parts/nav-paging'); ?>
+    <?php get_template_part('parts/nav-paging'); ?>
 
-    <?php get_template_part('template-parts/related-posts'); ?>
+    <?php get_template_part('parts/related-posts'); ?>
 
   <?php if (is_singular()) : ?>
-    <?php get_template_part('template-parts/newsletter-form'); ?>
+    <?php get_template_part('parts/newsletter-form'); ?>
   <?php endif; ?>
 
   <?php comments_template( '', true ); ?>

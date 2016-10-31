@@ -67,13 +67,13 @@
 
 <body <?php body_class(); ?>>
   <?php
-    get_template_part('nav-global');
-    get_template_part('masthead');
+    get_template_part('parts/nav-global');
+    get_template_part('parts/masthead');
   ?>
 
   <div class="site-wrap">
 
-    <?php get_template_part('nav-util'); ?>
+    <?php get_template_part('parts/nav-util'); ?>
 
     <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => 'nav', 'container_id' => 'nav-primary', 'fallback_cb' => 'false',)); ?>
 

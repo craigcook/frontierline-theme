@@ -16,7 +16,7 @@
           <ul class="category-posts">
           <?php while( $posts->have_posts() ) : $posts->the_post(); ?>
             <li class="category-post">
-              <?php get_template_part( 'template-parts/content-mini' ); ?>
+              <?php get_template_part( 'views/post-mini' ); ?>
             </li>
           <?php endwhile; ?>
           <?php wp_reset_query(); ?>
