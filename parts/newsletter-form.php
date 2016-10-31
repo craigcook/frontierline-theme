@@ -1,3 +1,8 @@
+<?php
+/**
+ * Newsletter subscription form.
+ */
+?>
 <aside id="newsletter-subscribe" class="section">
 
   <form class="content newsletter-form footer-newsletter-form" id="newsletter-form" action="#" method="post" data-spinner-color="#fff">

@@ -1,4 +1,8 @@
 <?php
+/**
+ * Links to next and previous posts.
+ */
+
   $date_format = get_option('date_format');
 ?>
 

@@ -23,9 +23,9 @@
         <h4 class="category-title"><?php echo esc_html($category->name); ?></h4>
         <?php
           $posts = new WP_Query('cat='.$category->term_id.'&showposts=5');
-          if( $posts->have_posts() ): ?>
+          if ($posts->have_posts()) : ?>
           <ul class="category-posts">
-          <?php while($posts->have_posts()) : $posts->the_post(); ?>
+          <?php while ($posts->have_posts()) : $posts->the_post(); ?>
             <li class="category-post">
               <?php get_template_part('views/post-mini'); ?>
             </li>
