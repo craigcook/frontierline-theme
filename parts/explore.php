@@ -1,22 +1,33 @@
+<?php
+/**
+ * Explore posts in top categories.
+ *
+ * Lists the top 8 categories (by number of posts), and lists the five most recent posts in each category.
+ */
+
+  $categories = get_categories('number=8&orderby=count&order=desc&hierarchical=0&depth=1');
+?>
+
 <aside id="explore" role="complementary">
   <div class="content">
+
     <ul class="cat-list" role="navigation">
-      <?php wp_list_categories('number=8&orderby=count&order=desc&hierarchical=0&depth=1&title_li='); ?>
+    <?php foreach($categories as $category) : ?>
+      <li><a href="#cat-<?php echo esc_html($category->slug); ?>"><?php echo esc_html($category->name) ?></a></li>
+    <?php endforeach; ?>
     </ul>
 
-    <?php $categories = get_categories('number=8&orderby=count&order=desc&hierarchical=0'); ?>
-
     <div class="categories">
-    <?php foreach( $categories as $category ) : ?>
-      <div class="category">
-        <h4 class="category-title"><a href="<?php echo esc_url(get_category_link($category->term_id)); ?>"><?php echo esc_html($category->name) ?></a></h4>
+    <?php foreach($categories as $category) : ?>
+      <div class="category" id="cat-<?php echo esc_html($category->slug); ?>">
+        <h4 class="category-title"><?php echo esc_html($category->name); ?></h4>
         <?php
           $posts = new WP_Query('cat='.$category->term_id.'&showposts=5');
           if( $posts->have_posts() ): ?>
           <ul class="category-posts">
-          <?php while( $posts->have_posts() ) : $posts->the_post(); ?>
+          <?php while($posts->have_posts()) : $posts->the_post(); ?>
             <li class="category-post">
-              <?php get_template_part( 'views/post-mini' ); ?>
+              <?php get_template_part('views/post-mini'); ?>
             </li>
           <?php endwhile; ?>
           <?php wp_reset_query(); ?>

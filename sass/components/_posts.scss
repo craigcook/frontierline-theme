@@ -151,9 +151,10 @@
 
 // Full posts
 .single .post-image {
+    @include gradient-horizontal-three-colors(#fff, #ccc, 50%, #fff);
     margin: 0 auto 40px;
+    padding: 0;
     text-align: center;
-    @include gradient-horizontal-three-colors(#fff, #eee, 50%, #fff);
 
     img {
         display: block;

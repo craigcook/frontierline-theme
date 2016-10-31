@@ -5,7 +5,7 @@
 ?>
 
 <?php if ( has_post_thumbnail() ) : ?>
-  <div class="post-image">
+  <div class="post-image content">
     <?php the_post_thumbnail( 'post-full-size' ); ?>
   </div>
 <?php endif; ?>

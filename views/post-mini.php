@@ -7,9 +7,12 @@
 <div <?php post_class('post post-mini'); ?>>
   <a class="entry-link" href="<?php the_permalink(); ?>">
   <?php if ( has_post_thumbnail() ) :
-    the_post_thumbnail('post-thumbnail');
-  else : ?>
-    <img class="wp-post-image" width="300" height="165" src="<?php echo get_template_directory_uri(); ?>/img/fallback-thumb.png">
+    $thumb_id = get_post_thumbnail_id();
+    $thumb_url = wp_get_attachment_image_src($thumb_id,'post-thumbnail', true);
+  ?>
+    <img class="post-image" width="300" height="165" alt="" src="<?php echo get_template_directory_uri(); ?>/img/fallback-thumb.png" data-src="<?php echo $thumb_url[0]; ?>">
+  <?php else : ?>
+    <img class="post-image" width="300" height="165" alt="" src="<?php echo get_template_directory_uri(); ?>/img/fallback-thumb.png">
   <?php endif; ?>
     <h5 class="entry-title"><?php the_title(); ?></h5>
   </a>

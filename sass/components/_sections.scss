@@ -12,6 +12,10 @@
     position: relative;
 }
 
+.section {
+    width: 100%;
+}
+
 .content {
     @include border-box;
     margin: 0 auto;
