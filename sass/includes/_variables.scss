@@ -60,3 +60,7 @@ $mq-tall:           '(min-height: 600px)';
 $column-width:  8.333%; // 100% / 12 columns
 $gutter-width:  40px;
 
+
+// Animation timings
+$pebbles-timing-snap: cubic-bezier(.30, -0.5, .60, 1.5);
+

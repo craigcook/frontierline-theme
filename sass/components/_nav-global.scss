@@ -21,8 +21,9 @@
         margin: 8px 0 0;
 
         a {
-            @include at2x('img/mozilla-wordmark-white.svg', 93px, 24px);
+            @include background-size(93px 24px);
             @include image-replaced;
+            background: url('img/mozilla-wordmark-white.svg');
             display: inline-block;
             height: 24px;
             width: 93px;

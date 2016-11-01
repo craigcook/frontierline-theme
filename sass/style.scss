@@ -21,7 +21,8 @@ Tags: none yet
 
     // Components - specific purpose blocks with sub-elements and modifiers
     'components/sections',
-    'components/posts',
+    'components/post',
+    'components/post-summary',
     'components/related-posts',
     'components/explore',
     'components/nav-paging',
@@ -45,10 +46,17 @@ Tags: none yet
 }
 
 
-#masthead .site-title-wrap {
-//    background: rgba(255, 255, 255, .8);
+.entry-content > p:first-child:first-letter {
+    @include font-size(60px);
+    line-height: 1;
+    vertical-align: bottom;
+    float: left;
+    font-weight: bold;
+    padding-top: .125em;
+    initial-letter: 2;
+    letter-spacing: .075em;
+    font-style: normal;
 }
-
 
 .pagination {
     @include font-size(22px);

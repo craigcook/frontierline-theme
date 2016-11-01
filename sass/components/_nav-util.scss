@@ -5,9 +5,9 @@
 @import '../includes/lib';
 
 #nav-util {
-    background: $color-mozgray;
+    background: #eee;
     color: #fff;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
     position: relative;
     z-index: 10;
 
@@ -34,7 +34,7 @@
     }
 
     a {
-        color: #fff;
+        color: $color-text-secondary;
         font-weight: bold;
         text-decoration: none;
 

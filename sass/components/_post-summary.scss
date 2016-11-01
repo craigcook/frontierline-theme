@@ -1,0 +1,43 @@
+// Post summaries in a grid
+.post-summary {
+    margin-bottom: 40px;
+
+    .wp-post-image {
+        margin-bottom: 20px;
+        max-height: 330px;
+    }
+
+    .entry-title,
+    .entry-info,
+    .entry-summary,
+    .entry-meta {
+        padding: 0 20px;
+    }
+
+    .entry-title {
+        @include font-size-level4;
+    }
+
+    .entry-summary .go {
+        @include font-size(18px);
+        @include trailing-arrow;
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+
+        &:after {
+            @include transition(right 150ms $pebbles-timing-snap);
+            display: inline-block;
+            font-size: 1.15em;
+            position: relative;
+            right: 0;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+
+        &:hover:after,
+        &:focus:after {
+            right: -4px;
+        }
+    }
+}

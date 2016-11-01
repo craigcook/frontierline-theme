@@ -53,23 +53,23 @@
 
 .alignleft {
     float: left;
-    margin: 0 20px .5em 0;
+    margin: 0 20px .5em -80px;
 }
 
 .alignright {
     float: right;
-    margin: 0 0 .5em 20px;
+    margin: 0 -80px .5em 20px;
 }
 
 [dir='rtl'] {
     .alignleft {
         float: right;
-        margin: 0 0 .5em 20px;
+        margin: 0 -80px .5em 20px;
     }
 
     .alignright {
         float: left;
-        margin: 0 20px .5em 0;
+        margin: 0 20px .5em -80px;
     }
 }
 
@@ -103,54 +103,8 @@
 }
 
 
-// Post summaries in a grid
-.posts-wrap {
-    .post {
-        margin-bottom: 40px;
-
-        .wp-post-image {
-            margin-bottom: 20px;
-            max-height: 330px;
-        }
-
-        .entry-title,
-        .entry-info,
-        .entry-summary,
-        .entry-meta {
-            padding: 0 20px;
-        }
-
-        .entry-title {
-            @include font-size-level4;
-        }
-
-        .entry-summary .go {
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-            @include trailing-arrow;
-
-            &:after {
-                @include transition(right 150ms cubic-bezier(.30, -0.5, .60, 1.5));
-                display: inline-block;
-                font-size: 1.15em;
-                position: relative;
-                right: 0;
-                text-decoration: none;
-                vertical-align: middle;
-            }
-
-            &:hover:after,
-            &:focus:after {
-                right: -4px;
-            }
-        }
-    }
-}
-
-
 // Full posts
-.single .post-image {
+.post-image-full {
     @include gradient-horizontal-three-colors(#fff, #ccc, 50%, #fff);
     margin: 0 auto 40px;
     padding: 0;
@@ -167,7 +121,8 @@
     .entry-content,
     .entry-meta,
     .comments {
-        max-width: $width-desktop - 40px;
+        max-width: $width-desktop;
+        padding: 0 80px;
         margin: 0 auto;
     }
 
@@ -258,7 +213,8 @@
             }
         }
 
-        .entry-comments {
+        .entry-comments,
+        .edit {
             display: inline;
             border-left: 1px solid #ccc;
             margin-left: 10px;
@@ -268,6 +224,16 @@
 }
 
 .entry-content {
+    @include clearfix;
+
+    p:first-child {
+        @include font-size(22px);
+    }
+
+    p:first-child:first-line {
+        @include font-size(24px);
+    }
+
     ul {
         list-style: disc;
         margin-left: 30px;

@@ -71,7 +71,7 @@
         position: absolute;
         top: 50%;
         margin-top: -25px;
-        @include transition(left 250ms cubic-bezier(.30, -0.5, .60, 1.5), right 250ms cubic-bezier(.30, -0.5, .60, 1.5));
+        @include transition(left 250ms $pebbles-timing-snap, right 250ms $pebbles-timing-snap);
 
         .cls-1 {
             stroke: $color-mozgray;
@@ -97,6 +97,8 @@
 
 .nav-paging-prev {
     float: left;
+    border-right: 1px solid #ccc;
+    margin-right: -1px;
 }
 
 .nav-paging-next {
