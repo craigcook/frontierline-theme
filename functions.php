@@ -102,24 +102,36 @@ add_action('after_switch_theme', 'onemozilla_activate');
 function onemozilla_admin_init(){
   register_setting(
     'reading',
-    'onemozilla_share_posts'
+    'rebrand_share_posts'
   );
   add_settings_field(
     'share_posts',
-    __( 'Social sharing for posts', 'onemozilla' ),
-    'onemozilla_settings_field_share_posts',
+    __( 'Social sharing for posts', 'rebrand' ),
+    'rebrand_settings_field_share_posts',
     'reading',
     'default'
   );
 
   register_setting(
     'reading',
-    'onemozilla_share_pages'
+    'rebrand_share_pages'
   );
   add_settings_field(
     'share_pages',
-    __( 'Social sharing for pages', 'onemozilla' ),
-    'onemozilla_settings_field_share_pages',
+    __( 'Social sharing for Pages', 'rebrand' ),
+    'rebrand_settings_field_share_pages',
+    'reading',
+    'default'
+  );
+
+  register_setting(
+    'reading',
+    'rebrand_twitter_username'
+  );
+  add_settings_field(
+    'twitter_username',
+    __( 'Twitter username', 'rebrand' ),
+    'rebrand_settings_field_twitter_username',
     'reading',
     'default'
   );
@@ -141,14 +153,14 @@ add_action('admin_init', 'onemozilla_admin_init');
 /**
  * Renders the Add Sharing setting field for posts.
  */
-function onemozilla_settings_field_share_posts() { ?>
+function rebrand_settings_field_share_posts() { ?>
   <div class="layout share-posts">
   <label>
-    <input type="checkbox" id="onemozilla_share_posts" name="onemozilla_share_posts" value="1" <?php checked( '1', get_option('onemozilla_share_posts') ); ?> />
+    <input type="checkbox" id="rebrand_share_posts" name="rebrand_share_posts" value="1" <?php checked( '1', get_option('rebrand_share_posts') ); ?> />
     <span>
-      <?php _e('Add social sharing buttons to posts', 'onemozilla'); ?>
+      <?php _e('Add social sharing buttons to posts', 'rebrand'); ?>
     </span>
-    <p class="description"><?php _e('Adds buttons for Facebook, Twitter, and Google+.', 'onemozilla' ); ?></p>
+    <p class="description"><?php _e('Adds buttons for Twitter and Facebook to blog posts.', 'rebrand' ); ?></p>
   </label>
   </div>
   <?php
@@ -157,14 +169,14 @@ function onemozilla_settings_field_share_posts() { ?>
 /**
  * Renders the Add Sharing setting field for pages.
  */
-function onemozilla_settings_field_share_pages() { ?>
+function rebrand_settings_field_share_pages() { ?>
   <div class="layout share-pages">
   <label>
-    <input type="checkbox" id="onemozilla_share_pages" name="onemozilla_share_pages" value="1" <?php checked( '1', get_option('onemozilla_share_pages') ); ?> />
+    <input type="checkbox" id="rebrand_share_pages" name="rebrand_share_pages" value="1" <?php checked( '1', get_option('rebrand_share_pages') ); ?> />
     <span>
-      <?php _e('Add social sharing buttons to pages', 'onemozilla'); ?>
+      <?php _e('Add social sharing buttons to Pages', 'rebrand'); ?>
     </span>
-    <p class="description"><?php _e('Adds buttons for Facebook, Twitter, and Google+.', 'onemozilla' ); ?></p>
+    <p class="description"><?php _e('Adds buttons for Twitter and Facebook to static Pages.', 'rebrand' ); ?></p>
   </label>
   </div>
   <?php
@@ -186,6 +198,18 @@ function onemozilla_settings_field_hide_authors() { ?>
   <?php
 }
 
+/**
+* Renders the Twitter account setting field to share via.
+*/
+function rebrand_settings_field_twitter_username() { ?>
+  <div class="layout twitter-username">
+  <label>
+    <input type="text" id="rebrand_twitter_username" name="rebrand_twitter_username" value="<?php echo get_option('rebrand_twitter_username'); ?>" />
+    <p class="description"><?php _e('The Twitter account for attribution when sharing.', 'rebrand' ); ?></p>
+  </label>
+  </div>
+  <?php
+}
 
 /*********
  * Adds classes to the array of post classes. We'll use these as style hooks for post headers.

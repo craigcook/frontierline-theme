@@ -18,13 +18,15 @@
         <?php the_category(' ') ?>
       </div>
 
+    <?php if ( get_option('rebrand_share_posts') == 1 ) : ?>
       <div class="share">
-        <b>Share:</b>
+        <b><?php _e('Share:', 'rebrand'); ?></b>
         <ul>
-          <li><a href="#" class="twitter">Twitter</a></li>
-          <li><a href="#" class="facebook">Facebook</a></li>
+          <li><a rel="external nofollow noopener" target="_blank" class="twitter" href="https://twitter.com/intent/tweet/?text=<?php echo urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8')); ?>&url=<?php echo urlencode(wp_get_shortlink()); ?><?php if ( get_option('rebrand_twitter_username') ) {  echo '&via=' . sanitize_text_field(get_option('rebrand_twitter_username')); } ?>">Twitter</a></li>
+          <li><a rel="external nofollow noopener" target="_blank" class="facebook" href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo urlencode(wp_get_shortlink()); ?>&p[title]=<?php echo urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8')); ?>">Facebook</a></li>
         </ul>
       </div>
+    <?php endif; ?>
     </div>
 
     <h2 class="entry-title">

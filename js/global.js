@@ -74,5 +74,19 @@
         }
     }
 
+    // Open social sharing links in a popup
+    jQuery('.share a[rel]').on('click', function(e) {
+        var top = (screen.availHeight - 500) / 2;
+        var left = (screen.availWidth - 500) / 2;
+
+        window.open(
+            this.href,
+            'share',
+            'width=550,height=420,left='+ left +',top='+ top +',location=0,menubar=0,toolbar=0,status=0,scrollbars=1,resizable=1'
+        ).focus();
+
+        e.preventDefault();
+        return false;
+    });
 
 })(window.jQuery);
