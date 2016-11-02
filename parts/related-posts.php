@@ -16,10 +16,10 @@
       $category = $categories[0];
       $cat_ID = $category->cat_ID;
 
-      $catposts = get_posts('showposts=5&cat='.$cat_ID);
+      $catposts = get_posts('showposts=5&cat='.$cat_ID.'&exclude='.$post->ID);
     ?>
-
       <h4 class="module-title"><?php printf( __('More articles in “%s”', 'rebrand'), esc_html($category->name)); ?></h4>
+    <?php if ($catposts) : ?>
       <ul class="cat-posts">
       <?php foreach($catposts as $post) : ?>
         <li>
@@ -27,8 +27,11 @@
           <time class="date" datetime="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php echo get_the_date(); ?></time>
         </li>
       <?php endforeach; ?>
-      <?php wp_reset_query(); ?>
       </ul>
+    <?php else : ?>
+      <p><?php _e('There are no other articles in this category.', 'rebrand'); ?></p>
+    <?php endif; ?>
+      <?php wp_reset_query(); ?>
     </div>
 
     <div class="popular">

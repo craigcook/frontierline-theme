@@ -34,14 +34,11 @@ function onemozilla_setup() {
   // This theme uses Featured Images (also known as post thumbnails)
   add_theme_support( 'post-thumbnails' );
 
-  // Full post image
-  add_image_size( 'post-full-size', 1600, 400, true );
-
-  // Large post image
-  add_image_size( 'post-large', 600, 330, true );
-
-  // Thumbnail post image
-  add_image_size( 'post-thumbnail', 300, 165, true );
+  // Set up some custom sizes
+  add_image_size( 'post-full-size', 1600, 400, true ); // Full post image - used at the top of single articles
+  add_image_size( 'post-large', 600, 330, true ); // Large post image - used in grid summary view
+  add_image_size( 'post-thumbnail', 300, 165, true ); // Thumbnail post image - used in mini view
+  add_image_size( 'extra-large', 1000, 0, true ); // Extra large image - for big images embedded in posts
 
   $header_defaults = array(
     'width'         => 1600,
@@ -135,18 +132,6 @@ function onemozilla_admin_init(){
     'reading',
     'default'
   );
-
-  register_setting(
-    'reading',
-    'onemozilla_hide_authors'
-  );
-  add_settings_field(
-    'hide_authors',
-    __( 'Hide post authors', 'onemozilla' ),
-    'onemozilla_settings_field_hide_authors',
-    'reading',
-    'default'
-  );
 }
 add_action('admin_init', 'onemozilla_admin_init');
 
@@ -237,6 +222,16 @@ function onemozilla_post_classes( $classes ) {
 }
 add_filter( 'post_class', 'onemozilla_post_classes' );
 
+
+/*********
+* Make custom image sizes available in admin
+*/
+function fc_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'extra-large' => __( 'Extra Large' ),
+    ) );
+}
+add_filter( 'image_size_names_choose', 'fc_custom_sizes' );
 
 /*********
 * Use auto-excerpts for meta description if hand-crafted exerpt is missing

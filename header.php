@@ -4,30 +4,37 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <meta name="title" content="<?php if (is_singular()) : single_post_title(); else : bloginfo('name'); endif; ?>">
+  <meta name="description" content="<?php fc_meta_desc(); ?>">
+
+  <!-- Metadata for Facebook -->
   <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
-  <meta property="og:title" content="<?php if (is_singular()) : single_post_title(); else : bloginfo('name'); endif; ?>">
   <meta property="og:url" content="<?php if (is_singular()) : the_permalink(); else : bloginfo('url'); endif; ?>">
+  <meta property="og:title" content="<?php if (is_singular()) : single_post_title(); else : bloginfo('name'); endif; ?>">
   <meta property="og:description" content="<?php fc_meta_desc(); ?>">
 <?php if (is_singular()) : ?>
   <?php if ($thumbs = get_attached_media('image')) : ?>
     <?php foreach ($thumbs as $thumb) : ?>
-      <?php $thumb = wp_get_attachment_image_src( $thumb->ID, 'medium' ); ?>
+      <?php $thumb = wp_get_attachment_image_src( $thumb->ID, 'large' ); ?>
       <meta property="og:image" content="<?php echo $thumb['0']; ?>">
     <?php endforeach; ?>
   <?php endif; ?>
-  <?php if (has_post_thumbnail()) : ?>
-  <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' ); ?>
-    <meta property="og:image" content="<?php echo $thumb['0']; ?>">
-  <?php else : ?>
-    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/mozilla-wordmark.png">
-  <?php endif; ?>
-<?php elseif (get_header_image()) : ?>
-  <meta property="og:image" content="<?php echo get_header_image(); ?>">
 <?php endif; ?>
-  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/mozilla-wordmark.png">
 
-  <meta name="title" content="<?php if (is_singular()) : single_post_title(); echo ' | '; endif; bloginfo('name'); ?>">
-  <meta name="description" content="<?php fc_meta_desc(); ?>">
+  <!-- Metadata for Twitter -->
+  <meta property="twitter:title" content="<?php if (is_singular()) : single_post_title(); else : bloginfo('name'); endif; ?>">
+  <meta property="twitter:description" content="<?php fc_meta_desc(); ?>">
+<?php if (is_singular() && has_post_thumbnail()) : ?>
+  <meta name="twitter:card" content="summary_large_image">
+  <?php $post_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large', true); ?>
+  <meta property="twitter:image" content="<?php echo $post_image_url[0]; ?>">
+<?php else : ?>
+  <meta name="twitter:card" content="summary">
+<?php endif; ?>
+<?php if (get_option('rebrand_twitter_username')) : ?>
+  <meta name="twitter:site" content="@<?php echo sanitize_text_field(get_option('rebrand_twitter_username')); ?>">
+<?php endif; ?>
+
 
   <meta name="Rating" content="General">
   <!--[if IE]>

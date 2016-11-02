@@ -6,11 +6,11 @@
 
 <?php if ( has_post_thumbnail() ) : ?>
   <div class="post-image post-image-full content">
-    <?php the_post_thumbnail( 'post-full-size' ); ?>
+    <?php the_post_thumbnail('post-full-size'); ?>
   </div>
 <?php endif; ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
   <header class="entry-header">
     <div class="entry-tools">
       <div class="categories">
@@ -22,8 +22,8 @@
       <div class="share">
         <b><?php _e('Share:', 'rebrand'); ?></b>
         <ul>
-          <li><a rel="external nofollow noopener" target="_blank" class="twitter" href="https://twitter.com/intent/tweet/?text=<?php echo urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8')); ?>&url=<?php echo urlencode(wp_get_shortlink()); ?><?php if ( get_option('rebrand_twitter_username') ) {  echo '&via=' . sanitize_text_field(get_option('rebrand_twitter_username')); } ?>">Twitter</a></li>
-          <li><a rel="external nofollow noopener" target="_blank" class="facebook" href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo urlencode(wp_get_shortlink()); ?>&p[title]=<?php echo urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8')); ?>">Facebook</a></li>
+          <li><a rel="external nofollow noopener" target="_blank" class="twitter" href="https://twitter.com/intent/tweet/?text=<?php echo urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8')); ?>&amp;url=<?php echo urlencode(wp_get_shortlink()); ?><?php if (get_option('rebrand_twitter_username')) : ?>&amp;via=<?php echo sanitize_text_field(get_option('rebrand_twitter_username')); endif ?>">Twitter</a></li>
+          <li><a rel="external nofollow noopener" target="_blank" class="facebook" href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<?php echo urlencode(wp_get_shortlink()); ?>&amp;p[title]=<?php echo urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8')); ?>">Facebook</a></li>
         </ul>
       </div>
     <?php endif; ?>
@@ -39,24 +39,18 @@
     <?php endif; ?>
     </h2>
 
-  <?php if ( (get_option('onemozilla_hide_authors') != 1) || comments_open() || get_comments_number() ) : ?>
     <div class="entry-info">
-    <?php if ( get_option('onemozilla_hide_authors') != 1 ) : ?>
       <address class="vcard">
       <?php if (function_exists(coauthors_posts_links)) : coauthors_posts_links(); else : the_author_posts_link(); endif; ?>
       </address>
-    <?php endif; ?>
-
       <time class="date" title="<?php the_time('Y-m-d\TH:i:sP'); ?>" datetime="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php echo get_the_date(); ?></time>
-
     <?php if ( comments_open() || get_comments_number() ) : ?>
       <p class="entry-comments">
         <?php comments_popup_link( __( 'No responses yet', 'onemozilla' ), __( '1 response', 'onemozilla' ), __( '% responses', 'onemozilla' ) ); ?>
       </p>
     <?php endif; ?>
     <?php edit_post_link( __( 'Edit Post', 'onemozilla' ), '<p class="edit">', '</p>' ); ?>
-  </div>
-  <?php endif; ?>
+    </div>
   </header>
 
   <div class="entry-content">
@@ -64,9 +58,9 @@
     <?php wp_link_pages( array( 'before' => '<p class="pages" role="navigation"><span>' . __( 'Pages:', 'onemozilla' ) . '</span>', 'after' => '</p>' ) ); ?>
   </div><!-- .entry-content -->
 
-  <?php if ( has_tag() ) : // No need for a footer if there's nothing to show ?>
-    <footer class="entry-meta">
-      <p class="meta"><b><?php _e('Tags','onemozilla'); ?>:</b> <?php $tags_list = the_tags('',', ',''); ?></p>
+  <?php if (has_tag()) : ?>
+    <footer class="entry-tags">
+      <p><b><?php _e('Tags:','onemozilla'); ?></b> <?php $tags_list = the_tags('',', ',''); ?></p>
     </footer>
   <?php endif; ?>
 

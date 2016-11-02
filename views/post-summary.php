@@ -11,7 +11,7 @@
     <?php if (has_post_thumbnail()) :
       the_post_thumbnail('post-large');
     else : ?>
-      <img class="wp-post-image" width="600" height="330" src="<?php echo get_template_directory_uri(); ?>/img/fallback-large.png">
+    <img class="wp-post-image" width="600" height="330" src="<?php echo get_template_directory_uri(); ?>/img/fallbacks/glitch-0<?php echo rand(1, 5); ?>.jpg">
     <?php endif; ?>
       <h2 class="entry-title"><?php the_title(); ?></h2>
     </a>

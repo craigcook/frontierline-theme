@@ -481,62 +481,63 @@ label {
 /* line 54, sass/components/_post.scss */
 .alignleft {
   float: left;
-  margin: 0 20px .5em -80px;
+  margin: 0 30px .5em -80px;
 }
 
 /* line 59, sass/components/_post.scss */
 .alignright {
   float: right;
-  margin: 0 -80px .5em 20px;
+  margin: 0 -80px .5em 30px;
 }
 
 /* line 65, sass/components/_post.scss */
 [dir='rtl'] .alignleft {
   float: right;
-  margin: 0 -80px .5em 20px;
+  margin: 0 -80px .5em 30px;
 }
 /* line 70, sass/components/_post.scss */
 [dir='rtl'] .alignright {
   float: left;
-  margin: 0 20px .5em -80px;
+  margin: 0 30px .5em -80px;
 }
 
 /* line 76, sass/components/_post.scss */
 .aligncenter {
+  clear: both;
   display: block;
   margin: 0 auto 1.5em;
 }
 
-/* line 81, sass/components/_post.scss */
+/* line 82, sass/components/_post.scss */
 .wp-caption {
   margin-bottom: .75em;
   max-width: 100%;
 }
 
-/* line 86, sass/components/_post.scss */
+/* line 87, sass/components/_post.scss */
 .wp-caption.aligncenter {
   clear: both;
   margin: 0 auto 1.5em;
 }
 
-/* line 91, sass/components/_post.scss */
+/* line 92, sass/components/_post.scss */
 .wp-caption img {
   display: block;
 }
 
-/* line 95, sass/components/_post.scss */
+/* line 96, sass/components/_post.scss */
 .wp-caption.aligncenter img {
   margin: 0 auto;
 }
 
-/* line 99, sass/components/_post.scss */
+/* line 100, sass/components/_post.scss */
 .wp-caption .wp-caption-text {
   font-style: italic;
   margin: .75em 10px 0;
   text-align: center;
 }
 
-/* line 107, sass/components/_post.scss */
+/* line 108, sass/components/_post.scss */
 .post-image-full {
   background-image: -webkit-linear-gradient(left, #fff, #ccc 50%, #fff);
   background-image: linear-gradient(to right, #fff, #ccc 50%, #fff);
@@ -545,35 +546,32 @@ label {
   padding: 0;
   text-align: center;
 }
-/* line 113, sass/components/_post.scss */
+/* line 114, sass/components/_post.scss */
 .post-image-full img {
   display: block;
   margin: 0 auto;
 }
 
-/* line 120, sass/components/_post.scss */
-.single .entry-header,
-.single .entry-content,
-.single .entry-meta,
-.single .comments {
+/* line 122, sass/components/_post.scss */
+.single .post {
   max-width: 980px;
   padding: 0 80px;
   margin: 0 auto;
 }
-/* line 130, sass/components/_post.scss */
+/* line 129, sass/components/_post.scss */
 .single .entry-header .entry-title {
   font-size: 38px;
   font-size: 2.375rem;
   margin-top: .5em;
 }
 @media screen and (min-width: 760px) {
-  /* line 130, sass/components/_post.scss */
+  /* line 129, sass/components/_post.scss */
   .single .entry-header .entry-title {
     font-size: 50px;
     font-size: 3.125rem;
   }
 }
-/* line 135, sass/components/_post.scss */
+/* line 134, sass/components/_post.scss */
 .single .entry-header .entry-tools {
   margin: 0 -20px 20px;
   zoom: 1;
@@ -586,7 +584,7 @@ label {
   height: 0;
   visibility: hidden;
 }
-/* line 139, sass/components/_post.scss */
+/* line 138, sass/components/_post.scss */
 .single .entry-header .entry-tools b {
   border: 0;
   clip: rect(0 0 0 0);
@@ -597,7 +595,7 @@ label {
   position: absolute !important;
   width: 1px;
 }
-/* line 144, sass/components/_post.scss */
+/* line 143, sass/components/_post.scss */
 .single .entry-header .categories {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -608,7 +606,7 @@ label {
   padding-right: 20px;
   margin-bottom: 20px;
 }
-/* line 148, sass/components/_post.scss */
+/* line 147, sass/components/_post.scss */
 .single .entry-header .categories a {
   -webkit-transition: color 150ms ease, background-color 150ms ease;
   transition: color 150ms ease, background-color 150ms ease;
@@ -625,7 +623,7 @@ label {
   color: #0081ad;
   background: #e3e3e3;
 }
-/* line 153, sass/components/_post.scss */
+/* line 152, sass/components/_post.scss */
 .single .entry-header .share {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -636,16 +634,16 @@ label {
   padding-right: 20px;
   text-align: right;
 }
-/* line 157, sass/components/_post.scss */
+/* line 156, sass/components/_post.scss */
 .single .entry-header .share ul {
   float: right;
 }
-/* line 161, sass/components/_post.scss */
+/* line 160, sass/components/_post.scss */
 .single .entry-header .share li {
   display: inline;
   margin: 0 5px .25em;
 }
-/* line 166, sass/components/_post.scss */
+/* line 165, sass/components/_post.scss */
 .single .entry-header .share a {
   font-size: 18px;
   font-size: 1.125rem;
@@ -668,7 +666,7 @@ label {
   padding: 2px 10px 2px 35px;
 }
 @media screen and (min-width: 760px) {
-  /* line 166, sass/components/_post.scss */
+  /* line 165, sass/components/_post.scss */
   .single .entry-header .share a {
     font-size: 20px;
     font-size: 1.25rem;
@@ -689,40 +687,40 @@ label {
   font-size: 0.875rem;
   padding: .25em 10px;
 }
-/* line 172, sass/components/_post.scss */
+/* line 171, sass/components/_post.scss */
 .single .entry-header .share a.twitter {
   background: #1da1f2 url("img/twitter.svg") 6px center no-repeat;
   -webkit-background-size: 18px, 18px;
   background-size: 18px, 18px;
   border-color: #0d95e8;
 }
-/* line 177, sass/components/_post.scss */
+/* line 176, sass/components/_post.scss */
 .single .entry-header .share a.twitter:hover, .single .entry-header .share a.twitter:focus {
   background-color: #0d95e8;
 }
-/* line 183, sass/components/_post.scss */
+/* line 182, sass/components/_post.scss */
 .single .entry-header .share a.facebook {
   background: #3b5998 url("img/facebook.svg") 6px center no-repeat;
   -webkit-background-size: 18px, 18px;
   background-size: 18px, 18px;
   border-color: #344e86;
 }
-/* line 188, sass/components/_post.scss */
+/* line 187, sass/components/_post.scss */
 .single .entry-header .share a.facebook:hover, .single .entry-header .share a.facebook:focus {
   background-color: #344e86;
 }
 @media screen and (min-width: 760px) {
-  /* line 166, sass/components/_post.scss */
+  /* line 165, sass/components/_post.scss */
   .single .entry-header .share a {
     font-size: 16px;
     font-size: 1rem;
   }
 }
-/* line 200, sass/components/_post.scss */
+/* line 199, sass/components/_post.scss */
 .single .entry-header .entry-info {
   margin-bottom: 20px;
 }
-/* line 203, sass/components/_post.scss */
+/* line 202, sass/components/_post.scss */
 .single .entry-header .entry-info .vcard {
   border-right: 1px solid #ccc;
   display: inline;
@@ -730,11 +728,11 @@ label {
   margin-right: 10px;
   padding-right: 10px;
 }
-/* line 211, sass/components/_post.scss */
+/* line 210, sass/components/_post.scss */
 .single .entry-header .entry-info .date {
   display: inline;
 }
-/* line 216, sass/components/_post.scss */
+/* line 215, sass/components/_post.scss */
 .single .entry-header .entry-comments,
 .single .entry-header .edit {
   display: inline;
@@ -742,71 +740,90 @@ label {
   margin-left: 10px;
   padding-left: 10px;
 }
+/* line 224, sass/components/_post.scss */
+.single .entry-meta .meta {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #ccc;
+}
 
-/* line 226, sass/components/_post.scss */
-.entry-content {
+/* line 231, sass/components/_post.scss */
+.post .entry-content {
   zoom: 1;
 }
 /* line 36, sass/includes/_mixins.scss */
-.entry-content:after {
+.post .entry-content:after {
   clear: both;
   content: '';
   display: block;
   height: 0;
   visibility: hidden;
 }
-/* line 229, sass/components/_post.scss */
-.entry-content p:first-child {
-  font-size: 22px;
-  font-size: 1.375rem;
+/* line 234, sass/components/_post.scss */
+.post .entry-content p:first-child {
+  font-size: 20px;
+  font-size: 1.25rem;
 }
-/* line 233, sass/components/_post.scss */
-.entry-content p:first-child:first-line {
+/* line 237, sass/components/_post.scss */
+.post .entry-content p:first-child:first-line {
   font-size: 24px;
   font-size: 1.5rem;
 }
-/* line 237, sass/components/_post.scss */
-.entry-content ul {
+/* line 241, sass/components/_post.scss */
+.post .entry-content p:first-child:first-letter {
+  font-size: 60px;
+  font-size: 3.75rem;
+  line-height: 1;
+  vertical-align: bottom;
+  float: left;
+  font-weight: bold;
+  padding-top: .125em;
+  initial-letter: 2;
+  letter-spacing: .075em;
+  font-style: normal;
+}
+/* line 254, sass/components/_post.scss */
+.post .entry-content ul {
   list-style: disc;
   margin-left: 30px;
 }
-/* line 241, sass/components/_post.scss */
-.entry-content ul ul {
+/* line 258, sass/components/_post.scss */
+.post .entry-content ul ul {
   list-style: circle;
   margin-left: 20px;
   margin-bottom: 0;
 }
-/* line 247, sass/components/_post.scss */
-.entry-content ul ol {
+/* line 264, sass/components/_post.scss */
+.post .entry-content ul ol {
   list-style: decimal;
   margin-left: 20px;
   margin-bottom: 0;
 }
-/* line 254, sass/components/_post.scss */
-.entry-content ol {
+/* line 271, sass/components/_post.scss */
+.post .entry-content ol {
   list-style: decimal;
   margin-left: 30px;
 }
-/* line 258, sass/components/_post.scss */
-.entry-content ol ol {
+/* line 275, sass/components/_post.scss */
+.post .entry-content ol ol {
   list-style: lower-alpha;
   margin-left: 20px;
   margin-bottom: 0;
 }
-/* line 264, sass/components/_post.scss */
-.entry-content ol ul {
+/* line 281, sass/components/_post.scss */
+.post .entry-content ol ul {
   list-style: disc;
   margin-left: 20px;
   margin-bottom: 0;
 }
 
 @media screen and (min-width: 760px) {
-  /* line 275, sass/components/_post.scss */
+  /* line 292, sass/components/_post.scss */
   .posts-wrap {
     display: flex;
     flex-wrap: wrap;
   }
-  /* line 279, sass/components/_post.scss */
+  /* line 296, sass/components/_post.scss */
   .posts-wrap .post {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -818,7 +835,7 @@ label {
   }
 }
 @media screen and (min-width: 1000px) {
-  /* line 286, sass/components/_post.scss */
+  /* line 303, sass/components/_post.scss */
   .posts-wrap .post {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -887,6 +904,12 @@ label {
 }
 
 /* line 2, sass/components/_related-posts.scss */
+#related-posts .content {
+  max-width: 1020px;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+/* line 8, sass/components/_related-posts.scss */
 #related-posts .in-category,
 #related-posts .popular {
   -webkit-box-sizing: border-box;
@@ -897,7 +920,7 @@ label {
   padding-left: 20px;
   padding-right: 20px;
 }
-/* line 7, sass/components/_related-posts.scss */
+/* line 13, sass/components/_related-posts.scss */
 #related-posts .module-title {
   font-size: 21px;
   font-size: 1.3125rem;
@@ -906,28 +929,45 @@ label {
   padding-bottom: .5em;
 }
 @media screen and (min-width: 760px) {
-  /* line 7, sass/components/_related-posts.scss */
+  /* line 13, sass/components/_related-posts.scss */
   #related-posts .module-title {
     font-size: 28px;
     font-size: 1.75rem;
   }
 }
-/* line 14, sass/components/_related-posts.scss */
+/* line 20, sass/components/_related-posts.scss */
 #related-posts li {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   margin-bottom: .5em;
   padding-bottom: .5em;
 }
-/* line 20, sass/components/_related-posts.scss */
+/* line 25, sass/components/_related-posts.scss */
+#related-posts li:last-child {
+  border-bottom: 0;
+}
+/* line 30, sass/components/_related-posts.scss */
 #related-posts .date {
   font-size: 14px;
   font-size: 0.875rem;
   color: #484848;
 }
-/* line 25, sass/components/_related-posts.scss */
+/* line 35, sass/components/_related-posts.scss */
 #related-posts .wpp-post-title {
   font-weight: bold;
   display: block;
+}
+/* line 40, sass/components/_related-posts.scss */
+#related-posts a:link,
+#related-posts a:visited {
+  color: #444;
+  text-decoration: none;
+}
+/* line 46, sass/components/_related-posts.scss */
+#related-posts a:hover,
+#related-posts a:focus,
+#related-posts a:active {
+  color: #00a7e0;
+  text-decoration: underline;
 }
 
 /* line 10, sass/components/_explore.scss */
@@ -1044,7 +1084,7 @@ label {
   display: -webkit-flex;
   display: flex;
   text-align: center;
-  margin: 30px 0;
+  margin: 40px 0 30px;
   background: #eee;
 }
 /* line 36, sass/includes/_mixins.scss */
@@ -1067,7 +1107,7 @@ label {
   font-size: 1.125rem;
   display: block;
   font-weight: bold;
-  margin: 20px 20% 0;
+  margin: 10px 20% 0;
 }
 /* line 28, sass/components/_nav-paging.scss */
 .nav-paging .date {
@@ -1184,6 +1224,7 @@ h3#comments {
 #masthead .site-id {
   -webkit-background-size: cover;
   background-size: cover;
+  background-color: #eee;
   background-position: center center;
   background-repeat: no-repeat;
   padding: 40px 20px;
@@ -1196,7 +1237,7 @@ h3#comments {
     padding: 80px 20px;
   }
 }
-/* line 24, sass/components/_masthead.scss */
+/* line 25, sass/components/_masthead.scss */
 #masthead .site-title-wrap {
   text-align: center;
   color: #c13832;
@@ -1207,26 +1248,26 @@ h3#comments {
   background: rgba(255, 255, 255, 0.8);
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
-/* line 34, sass/components/_masthead.scss */
+/* line 35, sass/components/_masthead.scss */
 #masthead .site-title-wrap a {
   color: #c13832;
   text-decoration: none;
 }
 
-/* line 41, sass/components/_masthead.scss */
+/* line 42, sass/components/_masthead.scss */
 #site-title {
   font-size: 38px;
   font-size: 2.375rem;
 }
 @media screen and (min-width: 760px) {
-  /* line 41, sass/components/_masthead.scss */
+  /* line 42, sass/components/_masthead.scss */
   #site-title {
     font-size: 50px;
     font-size: 3.125rem;
   }
 }
 
-/* line 52, sass/components/_masthead.scss */
+/* line 53, sass/components/_masthead.scss */
 #site-description {
   font-size: 28px;
   font-size: 1.75rem;
@@ -1235,7 +1276,7 @@ h3#comments {
   margin: 0;
 }
 @media screen and (min-width: 760px) {
-  /* line 52, sass/components/_masthead.scss */
+  /* line 53, sass/components/_masthead.scss */
   #site-description {
     font-size: 38px;
     font-size: 2.375rem;
@@ -2131,42 +2172,28 @@ input[type='button'].form-button.red:focus {
   padding-top: 20px;
 }
 
-/* line 49, sass/style.scss */
-.entry-content > p:first-child:first-letter {
-  font-size: 60px;
-  font-size: 3.75rem;
-  line-height: 1;
-  vertical-align: bottom;
-  float: left;
-  font-weight: bold;
-  padding-top: .125em;
-  initial-letter: 2;
-  letter-spacing: .075em;
-  font-style: normal;
-}
-
-/* line 61, sass/style.scss */
+/* line 48, sass/style.scss */
 .pagination {
   font-size: 22px;
   font-size: 1.375rem;
   margin: 40px 0;
   text-align: center;
 }
-/* line 66, sass/style.scss */
+/* line 53, sass/style.scss */
 .pagination a,
 .pagination .current {
   padding: 5px 15px;
   margin: 0 2px;
   background: #eee;
 }
-/* line 72, sass/style.scss */
+/* line 59, sass/style.scss */
 .pagination a:hover, .pagination a:focus,
 .pagination .current:hover,
 .pagination .current:focus {
   background: #e3e3e3;
 }
 
-/* line 79, sass/style.scss */
+/* line 66, sass/style.scss */
 .comment-list .entry-title {
   font-size: 16px;
   font-size: 1rem;

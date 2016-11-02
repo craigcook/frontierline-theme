@@ -10,7 +10,7 @@
     @include clearfix;
     @include flexbox;
     text-align: center;
-    margin: 30px 0;
+    margin: 40px 0 30px;
     background: #eee;
 
     .label {
@@ -22,7 +22,7 @@
         @include font-size(18px);
         display: block;
         font-weight: bold;
-        margin: 20px 20% 0;
+        margin: 10px 20% 0;
     }
 
     .date {
