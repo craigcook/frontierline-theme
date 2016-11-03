@@ -104,7 +104,7 @@ body {
   background: #fff;
   color: #444;
   font-family: "Fira Sans", X-LocaleSpecific, sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* line 22, sass/base/elements/_document.scss */
@@ -1389,64 +1389,106 @@ label {
 #masthead {
   position: relative;
   overflow: hidden;
+  background-color: #bbb;
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 10, sass/components/_masthead.scss */
+/* line 11, sass/components/_masthead.scss */
 #masthead .site-id {
   padding: 40px 20px;
   text-align: center;
 }
 @media screen and (min-width: 1000px) and (min-height: 600px) {
-  /* line 10, sass/components/_masthead.scss */
+  /* line 11, sass/components/_masthead.scss */
   #masthead .site-id {
     padding: 80px 20px;
   }
 }
-/* line 19, sass/components/_masthead.scss */
+/* line 20, sass/components/_masthead.scss */
 #masthead .site-title-wrap {
-  text-align: center;
   color: #c13832;
-  padding: 20px 40px;
   margin: 0 auto;
-  display: inline-block;
   max-width: 740px;
-  background: rgba(255, 255, 255, 0.8);
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
-/* line 29, sass/components/_masthead.scss */
+/* line 26, sass/components/_masthead.scss */
 #masthead .site-title-wrap a {
   color: #c13832;
   text-decoration: none;
 }
 
-/* line 36, sass/components/_masthead.scss */
+/* line 33, sass/components/_masthead.scss */
 #site-title {
-  font-size: 38px;
-  font-size: 2.375rem;
+  font-size: 28px;
+  font-size: 1.75rem;
+  background: rgba(255, 255, 255, 0.75);
+  display: inline-block;
+  margin: -4% -5% -.25em -11.5%;
+  padding: 4% 5% .2em 11.5%;
+  position: relative;
+  z-index: 3;
+  min-width: 50%;
 }
 @media screen and (min-width: 760px) {
-  /* line 36, sass/components/_masthead.scss */
+  /* line 33, sass/components/_masthead.scss */
+  #site-title {
+    font-size: 38px;
+    font-size: 2.375rem;
+  }
+}
+@media screen and (min-width: 760px) {
+  /* line 33, sass/components/_masthead.scss */
+  #site-title {
+    font-size: 38px;
+    font-size: 2.375rem;
+  }
+}
+@media screen and (min-width: 760px) and (min-width: 760px) {
+  /* line 33, sass/components/_masthead.scss */
   #site-title {
     font-size: 50px;
     font-size: 3.125rem;
   }
 }
 
-/* line 47, sass/components/_masthead.scss */
+/* line 48, sass/components/_masthead.scss */
 #site-description {
-  font-size: 28px;
-  font-size: 1.75rem;
-  font-weight: bold;
+  font-size: 21px;
+  font-size: 1.3125rem;
+  background: rgba(255, 255, 255, 0.75);
+  display: inline-block;
   line-height: 1.1;
-  margin: 0;
+  margin: 0 -12% -2% -7.5%;
+  padding: .35em 12% 2.75% 7.5%;
+  position: relative;
+  z-index: 2;
+  min-width: 50%;
 }
 @media screen and (min-width: 760px) {
-  /* line 47, sass/components/_masthead.scss */
+  /* line 48, sass/components/_masthead.scss */
+  #site-description {
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 760px) {
+  /* line 48, sass/components/_masthead.scss */
+  #site-description {
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 760px) and (min-width: 760px) {
+  /* line 48, sass/components/_masthead.scss */
   #site-description {
     font-size: 38px;
     font-size: 2.375rem;
   }
+}
+
+/* line 66, sass/components/_masthead.scss */
+.single #masthead .site-id {
+  padding: 20px;
 }
 
 /* line 5, sass/components/_nav-global.scss */
@@ -1653,10 +1695,11 @@ label {
   background: #eee;
   color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 10;
 }
-/* line 14, sass/components/_nav-util.scss */
+/* line 15, sass/components/_nav-util.scss */
 #nav-util .content {
   display: -webkit-box;
   display: -moz-box;
@@ -1665,24 +1708,24 @@ label {
   display: flex;
   padding: 10px 20px;
 }
-/* line 19, sass/components/_nav-util.scss */
+/* line 20, sass/components/_nav-util.scss */
 #nav-util li {
   display: inline-block;
   width: 33%;
 }
-/* line 23, sass/components/_nav-util.scss */
+/* line 24, sass/components/_nav-util.scss */
 #nav-util li.nav-util-sidebar {
   text-align: left;
 }
-/* line 27, sass/components/_nav-util.scss */
+/* line 28, sass/components/_nav-util.scss */
 #nav-util li.nav-util-explore {
   text-align: center;
 }
-/* line 31, sass/components/_nav-util.scss */
+/* line 32, sass/components/_nav-util.scss */
 #nav-util li.nav-util-home {
   text-align: right;
 }
-/* line 36, sass/components/_nav-util.scss */
+/* line 37, sass/components/_nav-util.scss */
 #nav-util a {
   color: #484848;
   font-weight: bold;
@@ -1690,11 +1733,11 @@ label {
   padding-left: 25px;
   position: relative;
 }
-/* line 43, sass/components/_nav-util.scss */
+/* line 44, sass/components/_nav-util.scss */
 #nav-util a:hover, #nav-util a:focus {
   text-decoration: underline;
 }
-/* line 48, sass/components/_nav-util.scss */
+/* line 49, sass/components/_nav-util.scss */
 #nav-util a:before {
   background-image: url("img/icon-sprite.svg");
   background-repeat: no-repeat;
@@ -1708,23 +1751,23 @@ label {
   position: absolute;
   width: 20px;
 }
-/* line 62, sass/components/_nav-util.scss */
+/* line 63, sass/components/_nav-util.scss */
 #nav-util .nav-util-sidebar a:before {
   background-position: 0 0;
 }
-/* line 66, sass/components/_nav-util.scss */
+/* line 67, sass/components/_nav-util.scss */
 #nav-util .nav-util-sidebar a.close:before {
   background-position: 0 -20px;
 }
-/* line 70, sass/components/_nav-util.scss */
+/* line 71, sass/components/_nav-util.scss */
 #nav-util .nav-util-explore a:before {
   background-position: 0 -40px;
 }
-/* line 74, sass/components/_nav-util.scss */
+/* line 75, sass/components/_nav-util.scss */
 #nav-util .nav-util-explore a.close:before {
   background-position: 0 -60px;
 }
-/* line 78, sass/components/_nav-util.scss */
+/* line 79, sass/components/_nav-util.scss */
 #nav-util .nav-util-home a:before {
   background-position: 0 -80px;
 }
@@ -1817,58 +1860,291 @@ label {
   left: 0;
 }
 
-/* line 1, sass/components/_newsletter-form.scss */
+@-webkit-keyframes pebbles-bounce-down {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -500px, 0);
+    transform: translate3d(0, -500px, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes pebbles-bounce-down {
+  0%, 60%, 75%, 90%, 100% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -500px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    transform: translate3d(0, 0, 0);
+  }
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    transform: none;
+  }
+}
+@-webkit-keyframes pebbles-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes pebbles-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes pebbles-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes pebbles-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* line 8, sass/components/_newsletter-form.scss */
 #newsletter-subscribe {
   background: #c13832;
   color: #fff;
-  margin: 0;
 }
-/* line 6, sass/components/_newsletter-form.scss */
-#newsletter-subscribe .content {
-  width: 980px;
-}
-/* line 10, sass/components/_newsletter-form.scss */
-#newsletter-subscribe h3,
-#newsletter-subscribe h4 {
-  color: #fff;
-  text-shadow: none;
-}
-/* line 16, sass/components/_newsletter-form.scss */
+/* line 13, sass/components/_newsletter-form.scss */
 #newsletter-subscribe .form-title {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  width: 41.665%;
-  padding-left: 20px;
-  padding-right: 20px;
-  background: url(img/mozorg-newsletter.svg) left top no-repeat;
-  -webkit-background-size: 150px, 150px;
-  background-size: 150px, 150px;
-  min-height: 150px;
-  padding: 10px 0 20px 180px;
+  background: url("img/mozorg-newsletter.svg") center top no-repeat;
+  -webkit-background-size: 100px 100px;
+  background-size: 100px 100px;
+  padding: 120px 0 20px 0px;
+  text-align: center;
 }
-/* line 24, sass/components/_newsletter-form.scss */
-#newsletter-subscribe .form-contents {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  width: 49.998%;
-  padding-left: 20px;
-  padding-right: 20px;
+/* line 21, sass/components/_newsletter-form.scss */
+#newsletter-subscribe h3 {
+  font-size: 32px;
+  font-size: 2rem;
+  margin: 0 0 0.2em;
+  text-align: center;
 }
-/* line 27, sass/components/_newsletter-form.scss */
-#newsletter-subscribe .form-contents label {
+/* line 28, sass/components/_newsletter-form.scss */
+#newsletter-subscribe h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+@media screen and (min-width: 1000px) {
+  /* line 28, sass/components/_newsletter-form.scss */
+  #newsletter-subscribe h4 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.1;
+  }
+}
+/* line 38, sass/components/_newsletter-form.scss */
+#newsletter-subscribe .field {
+  margin-bottom: 10px;
+}
+/* line 41, sass/components/_newsletter-form.scss */
+#newsletter-subscribe .field label {
   display: block;
+  margin-bottom: 0.25em;
 }
-/* line 31, sass/components/_newsletter-form.scss */
-#newsletter-subscribe .form-contents input[type='email'] {
+/* line 48, sass/components/_newsletter-form.scss */
+#newsletter-subscribe .field-format label {
+  display: inline;
+  margin-right: 20px;
+}
+/* line 54, sass/components/_newsletter-form.scss */
+#newsletter-subscribe .field-privacy {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+/* line 57, sass/components/_newsletter-form.scss */
+#newsletter-subscribe .field-privacy input {
+  float: left;
+}
+/* line 61, sass/components/_newsletter-form.scss */
+#newsletter-subscribe .field-privacy .title {
+  display: block;
+  padding-left: 25px;
+}
+/* line 67, sass/components/_newsletter-form.scss */
+#newsletter-subscribe a {
+  color: #fff;
+}
+/* line 71, sass/components/_newsletter-form.scss */
+#newsletter-subscribe input[type='email'] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-size: 1rem;
+  -webkit-transition: all 100ms linear;
+  transition: all 100ms linear;
+  border: 0;
+  border-radius: 4px;
+  line-height: 1.1;
+  padding: 0.75em 20px;
   width: 100%;
 }
-/* line 36, sass/components/_newsletter-form.scss */
-#newsletter-subscribe .form-submit {
+/* line 82, sass/components/_newsletter-form.scss */
+#newsletter-subscribe select {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  line-height: 1.5;
+  max-width: 80%;
+}
+/* line 89, sass/components/_newsletter-form.scss */
+#newsletter-subscribe .form-submit .form-button {
+  width: 100%;
+}
+/* line 94, sass/components/_newsletter-form.scss */
+#newsletter-subscribe p.form-details {
+  line-height: 1;
+  margin-top: 8px;
+}
+/* line 100, sass/components/_newsletter-form.scss */
+#newsletter-subscribe .thank {
+  padding-top: 20px;
+}
+/* line 103, sass/components/_newsletter-form.scss */
+#newsletter-subscribe .thank p {
+  -webkit-animation: pebbles-fade-in 500ms ease-in 800ms 1 normal both;
+  animation: pebbles-fade-in 500ms ease-in 800ms 1 normal both;
   margin-top: 20px;
+}
+/* line 109, sass/components/_newsletter-form.scss */
+#newsletter-subscribe .errorlist {
+  background: #fff;
+  color: #c13832;
+  padding: 10px 20px;
+}
+@media screen and (min-width: 760px) {
+  /* line 116, sass/components/_newsletter-form.scss */
+  #newsletter-subscribe .form-title {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 49.998%;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-background-size: 120px 120px;
+    background-size: 120px 120px;
+    background-position: left 10px;
+    float: left;
+    padding: 10px 0 20px 140px;
+    text-align: left;
+  }
+  /* line 125, sass/components/_newsletter-form.scss */
+  #newsletter-subscribe .form-contents {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 49.998%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  /* line 129, sass/components/_newsletter-form.scss */
+  #newsletter-subscribe h3 {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1000px) {
+  /* line 135, sass/components/_newsletter-form.scss */
+  #newsletter-subscribe .form-title {
+    -webkit-background-size: 150px 150px;
+    background-size: 150px 150px;
+    background-position: left top;
+    min-height: 120px;
+    padding: 10px 0 20px 180px;
+  }
+  /* line 142, sass/components/_newsletter-form.scss */
+  #newsletter-subscribe h3 {
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 1000px) and (min-width: 760px) {
+  /* line 142, sass/components/_newsletter-form.scss */
+  #newsletter-subscribe h3 {
+    font-size: 38px;
+    font-size: 2.375rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  /* line 146, sass/components/_newsletter-form.scss */
+  #newsletter-subscribe h4 {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1000px) and (min-width: 760px) {
+  /* line 146, sass/components/_newsletter-form.scss */
+  #newsletter-subscribe h4 {
+    font-size: 21px;
+    font-size: 1.3125rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  /* line 152, sass/components/_newsletter-form.scss */
+  #newsletter-subscribe .content {
+    width: 980px;
+  }
+}
+
+/* line 161, sass/components/_newsletter-form.scss */
+.js .thanks,
+.js .form-details,
+.js #form-details {
+  display: none;
+}
+/* line 168, sass/components/_newsletter-form.scss */
+.js #newsletter-spinner {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 /* line 8, sass/components/_footer.scss */

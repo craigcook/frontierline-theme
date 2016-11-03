@@ -1,39 +1,175 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../includes/animations';
+@import '../includes/lib';
+
 #newsletter-subscribe {
     background: $color-mozred;
     color: #fff;
-    margin: 0;
 
-    .content {
-        width: $width-desktop;
-    }
-
-    h3,
-    h4 {
-        color: #fff;
-        text-shadow: none;
-    }
-
+    // container for <h3> and <h4>
     .form-title {
-        @include span(5);
-        background: url(img/mozorg-newsletter.svg) left top no-repeat;
-        @include background-size(150px, 150px);
-        min-height: 150px;
-        padding: 10px 0 20px 180px;
+        background: url('img/mozorg-newsletter.svg') center top no-repeat;
+        @include background-size(100px 100px);
+        padding: 120px 0 20px 0px;
+        text-align: center;
     }
 
-    .form-contents {
-        @include span(6);
+    // newsletter title and "Thanks!" after submission
+    h3 {
+        @include font-size(32px);
+        margin: 0 0 0.2em;
+        text-align: center;
+    }
+
+    // newsletter subtitle
+    h4 {
+        @include font-size(20px);
+        font-weight: normal;
+
+        @media #{$mq-desktop} {
+            @include font-size(24px);
+            line-height: 1.1;
+        }
+    }
+
+    .field {
+        margin-bottom: 10px;
 
         label {
             display: block;
-        }
-
-        input[type='email'] {
-            width: 100%;
+            margin-bottom: 0.25em;
         }
     }
 
-    .form-submit {
-        margin-top: 20px;
+    // html/text radio buttons
+    .field-format label {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    // privacy checkbox
+    .field-privacy {
+        @include font-size(12px);
+
+        input {
+            float: left;
+        }
+
+        .title {
+            display: block;
+            padding-left: 25px;
+        }
+    }
+
+    a {
+        color: #fff;
+    }
+
+    input[type='email'] {
+        @include border-box;
+        @include font-size(16px);
+        @include transition(all 100ms linear);
+        border: 0;
+        border-radius: 4px;
+        line-height: 1.1;
+        padding: 0.75em 20px;
+        width: 100%;
+    }
+
+    select {
+        @include font-size(14px);
+        font-family: inherit;
+        line-height: 1.5;
+        max-width: 80%;
+    }
+
+    .form-submit .form-button {
+        width: 100%;
+    }
+
+    // copy underneath "Sign Up Now" button
+    p.form-details {
+        line-height: 1;
+        margin-top: 8px;
+    }
+
+    // wrapper for thank you elements
+    .thank {
+        padding-top: 20px;
+
+        p {
+            @include animation(pebbles-fade-in 500ms ease-in 800ms 1 normal both);
+            margin-top: 20px;
+        }
+    }
+
+    .errorlist {
+        background: #fff;
+        color: $color-mozred;
+        padding: 10px 20px;
+    }
+
+    @media #{$mq-tablet} {
+        .form-title {
+            @include span(6);
+            @include background-size(120px 120px);
+            background-position: left 10px;
+            float: left;
+            padding: 10px 0 20px 140px;
+            text-align: left;
+        }
+
+        .form-contents {
+            @include span(6);
+        }
+
+        h3 {
+            text-align: left;
+        }
+    }
+
+    @media #{$mq-desktop} {
+        .form-title {
+            @include background-size(150px 150px);
+            background-position: left top;
+            min-height: 120px;
+            padding: 10px 0 20px 180px;
+        }
+
+        h3 {
+            @include font-size-level2;
+        }
+
+        h4 {
+            @include font-size-level4;
+        }
+    }
+
+    @media #{$mq-desktop-wide} {
+        .content {
+            width: $width-desktop;
+        }
+    }
+}
+
+.js {
+    // hide details for JS users
+    // (displayed when email field is focused)
+    .thanks,
+    .form-details,
+    #form-details {
+        display: none;
+    }
+
+    // spinner circa the web 2 point oh
+    #newsletter-spinner {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 }

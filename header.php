@@ -53,6 +53,16 @@
 
   <!--[if lte IE 8]><link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/sass/base/oldIE.css"><![endif]-->
 
+  <?php if (get_header_image()) : ?>
+  <style type="text/css">
+  @media screen and (min-width: 760px) {
+    #masthead {
+      background-image: url('<?php header_image(); ?>');
+    }
+  }
+  </style>
+  <?php endif; ?>
+
   <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>">
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
