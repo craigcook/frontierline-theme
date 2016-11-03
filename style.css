@@ -1687,10 +1687,46 @@ label {
   color: #484848;
   font-weight: bold;
   text-decoration: none;
+  padding-left: 25px;
+  position: relative;
 }
-/* line 41, sass/components/_nav-util.scss */
+/* line 43, sass/components/_nav-util.scss */
 #nav-util a:hover, #nav-util a:focus {
   text-decoration: underline;
+}
+/* line 48, sass/components/_nav-util.scss */
+#nav-util a:before {
+  background-image: url("img/icon-sprite.svg");
+  background-repeat: no-repeat;
+  -webkit-background-size: 20px, 100px;
+  background-size: 20px, 100px;
+  bottom: .15em;
+  content: '';
+  display: inline-block;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  width: 20px;
+}
+/* line 62, sass/components/_nav-util.scss */
+#nav-util .nav-util-sidebar a:before {
+  background-position: 0 0;
+}
+/* line 66, sass/components/_nav-util.scss */
+#nav-util .nav-util-sidebar a.close:before {
+  background-position: 0 -20px;
+}
+/* line 70, sass/components/_nav-util.scss */
+#nav-util .nav-util-explore a:before {
+  background-position: 0 -40px;
+}
+/* line 74, sass/components/_nav-util.scss */
+#nav-util .nav-util-explore a.close:before {
+  background-position: 0 -60px;
+}
+/* line 78, sass/components/_nav-util.scss */
+#nav-util .nav-util-home a:before {
+  background-position: 0 -80px;
 }
 
 /* the basis for all buttons on bedrock */

@@ -37,10 +37,45 @@
         color: $color-text-secondary;
         font-weight: bold;
         text-decoration: none;
+        padding-left: 25px;
+        position: relative;
 
         &:hover,
         &:focus {
             text-decoration: underline;
         }
+
+        &:before {
+            background-image: url('img/icon-sprite.svg');
+            background-repeat: no-repeat;
+            @include background-size(20px, 100px);
+            bottom: .15em;
+            content: '';
+            display: inline-block;
+            height: 18px;
+            left: 0;
+            position: absolute;
+            width: 20px;
+        }
+    }
+
+    .nav-util-sidebar a:before {
+        background-position: 0 0;
+    }
+
+    .nav-util-sidebar a.close:before {
+        background-position: 0 -20px;
+    }
+
+    .nav-util-explore a:before {
+        background-position: 0 -40px;
+    }
+
+    .nav-util-explore a.close:before {
+        background-position: 0 -60px;
+    }
+
+    .nav-util-home a:before {
+        background-position: 0 -80px;
     }
 }
