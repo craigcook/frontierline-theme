@@ -2,7 +2,7 @@
   </main>
 
   <?php get_sidebar(); ?>
-  <?php get_template_part('parts/explore'); ?>
+  <?php get_template_part('includes/explore'); ?>
 
 
   <?php if (!is_singular()) : ?>

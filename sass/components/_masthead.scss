@@ -3,18 +3,12 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 #masthead {
-    .content {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
+    position: relative;
+    overflow: hidden;
+    @include background-size(cover);
 
     .site-id {
-        @include background-size(cover);
-        background-color: #eee;
-        background-position: center center;
-        background-repeat: no-repeat;
         padding: 40px 20px;
-        position: relative;
         text-align: center;
 
         @media #{$mq-desktop} and #{$mq-tall} {

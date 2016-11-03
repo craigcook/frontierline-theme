@@ -552,10 +552,13 @@ label {
   margin: 0 auto;
 }
 
-/* line 122, sass/components/_post.scss */
+/* line 121, sass/components/_post.scss */
 .single .post {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   max-width: 980px;
-  padding: 0 80px;
+  padding: 0 60px;
   margin: 0 auto;
 }
 /* line 129, sass/components/_post.scss */
@@ -601,7 +604,7 @@ label {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
-  width: 66.664%;
+  width: 58.331%;
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 20px;
@@ -629,7 +632,7 @@ label {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
-  width: 33.332%;
+  width: 41.665%;
   padding-left: 20px;
   padding-right: 20px;
   text-align: right;
@@ -770,47 +773,46 @@ label {
   font-size: 1.5rem;
 }
 /* line 241, sass/components/_post.scss */
-.post .entry-content p:first-child:first-letter {
-  font-size: 60px;
-  font-size: 3.75rem;
-  line-height: 1;
+.post .entry-content p:first-child::first-letter {
+  font-size: 72px;
+  font-size: 4.5rem;
+  line-height: .8;
   vertical-align: bottom;
   float: left;
   font-weight: bold;
   padding-top: .125em;
-  initial-letter: 2;
   letter-spacing: .075em;
   font-style: normal;
 }
-/* line 254, sass/components/_post.scss */
+/* line 253, sass/components/_post.scss */
 .post .entry-content ul {
   list-style: disc;
   margin-left: 30px;
 }
-/* line 258, sass/components/_post.scss */
+/* line 257, sass/components/_post.scss */
 .post .entry-content ul ul {
   list-style: circle;
   margin-left: 20px;
   margin-bottom: 0;
 }
-/* line 264, sass/components/_post.scss */
+/* line 263, sass/components/_post.scss */
 .post .entry-content ul ol {
   list-style: decimal;
   margin-left: 20px;
   margin-bottom: 0;
 }
-/* line 271, sass/components/_post.scss */
+/* line 270, sass/components/_post.scss */
 .post .entry-content ol {
   list-style: decimal;
   margin-left: 30px;
 }
-/* line 275, sass/components/_post.scss */
+/* line 274, sass/components/_post.scss */
 .post .entry-content ol ol {
   list-style: lower-alpha;
   margin-left: 20px;
   margin-bottom: 0;
 }
-/* line 281, sass/components/_post.scss */
+/* line 280, sass/components/_post.scss */
 .post .entry-content ol ul {
   list-style: disc;
   margin-left: 20px;
@@ -818,12 +820,12 @@ label {
 }
 
 @media screen and (min-width: 760px) {
-  /* line 292, sass/components/_post.scss */
+  /* line 291, sass/components/_post.scss */
   .posts-wrap {
     display: flex;
     flex-wrap: wrap;
   }
-  /* line 296, sass/components/_post.scss */
+  /* line 295, sass/components/_post.scss */
   .posts-wrap .post {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -835,7 +837,7 @@ label {
   }
 }
 @media screen and (min-width: 1000px) {
-  /* line 303, sass/components/_post.scss */
+  /* line 302, sass/components/_post.scss */
   .posts-wrap .post {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -905,11 +907,14 @@ label {
 
 /* line 2, sass/components/_related-posts.scss */
 #related-posts .content {
-  max-width: 1020px;
-  padding: 20px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 980px;
+  padding: 20px 60px;
   margin: 0 auto;
 }
-/* line 8, sass/components/_related-posts.scss */
+/* line 9, sass/components/_related-posts.scss */
 #related-posts .in-category,
 #related-posts .popular {
   -webkit-box-sizing: border-box;
@@ -920,7 +925,7 @@ label {
   padding-left: 20px;
   padding-right: 20px;
 }
-/* line 13, sass/components/_related-posts.scss */
+/* line 14, sass/components/_related-posts.scss */
 #related-posts .module-title {
   font-size: 21px;
   font-size: 1.3125rem;
@@ -929,40 +934,40 @@ label {
   padding-bottom: .5em;
 }
 @media screen and (min-width: 760px) {
-  /* line 13, sass/components/_related-posts.scss */
+  /* line 14, sass/components/_related-posts.scss */
   #related-posts .module-title {
     font-size: 28px;
     font-size: 1.75rem;
   }
 }
-/* line 20, sass/components/_related-posts.scss */
+/* line 21, sass/components/_related-posts.scss */
 #related-posts li {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  margin-bottom: .5em;
-  padding-bottom: .5em;
+  margin-bottom: .75em;
+  padding-bottom: .75em;
 }
-/* line 25, sass/components/_related-posts.scss */
+/* line 26, sass/components/_related-posts.scss */
 #related-posts li:last-child {
   border-bottom: 0;
 }
-/* line 30, sass/components/_related-posts.scss */
+/* line 31, sass/components/_related-posts.scss */
 #related-posts .date {
   font-size: 14px;
   font-size: 0.875rem;
   color: #484848;
 }
-/* line 35, sass/components/_related-posts.scss */
+/* line 36, sass/components/_related-posts.scss */
 #related-posts .wpp-post-title {
   font-weight: bold;
   display: block;
 }
-/* line 40, sass/components/_related-posts.scss */
+/* line 41, sass/components/_related-posts.scss */
 #related-posts a:link,
 #related-posts a:visited {
   color: #444;
   text-decoration: none;
 }
-/* line 46, sass/components/_related-posts.scss */
+/* line 47, sass/components/_related-posts.scss */
 #related-posts a:hover,
 #related-posts a:focus,
 #related-posts a:active {
@@ -1200,44 +1205,205 @@ label {
   float: left;
 }
 
-/* line 1, sass/components/_comments.scss */
-h3#comments,
-ol.commentlist,
-.comment-respond {
-  max-width: 940px;
-  margin: 0 auto;
+/* line 2, sass/components/_comments.scss */
+#comments .content {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 980px;
+  padding: 20px 80px;
 }
 
 /* line 9, sass/components/_comments.scss */
-h3#comments {
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 2px solid #ccc;
+.comments-head {
+  margin: 20px auto;
+}
+/* line 12, sass/components/_comments.scss */
+.comments-head .cmt-post {
+  font-size: 14px;
+  font-size: 0.875rem;
 }
 
-/* line 6, sass/components/_masthead.scss */
-#masthead .content {
-  padding-top: 0;
-  padding-bottom: 0;
+/* line 17, sass/components/_comments.scss */
+.comment-list {
+  margin: 0;
 }
-/* line 11, sass/components/_masthead.scss */
-#masthead .site-id {
+/* line 20, sass/components/_comments.scss */
+.comment-list .comment,
+.comment-list .pingback,
+.comment-list .trackback {
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+/* line 26, sass/components/_comments.scss */
+.comment-list .comment:last-child,
+.comment-list .pingback:last-child,
+.comment-list .trackback:last-child {
+  border-bottom: 0;
+}
+/* line 31, sass/components/_comments.scss */
+.comment-list .avatar {
+  float: left;
+  margin-left: -80px;
+}
+/* line 36, sass/components/_comments.scss */
+.comment-list .entry-title {
+  font-weight: normal;
+  margin: 0 0 1em;
+}
+/* line 40, sass/components/_comments.scss */
+.comment-list .entry-title cite {
+  font-weight: bold;
+  font-style: normal;
+}
+/* line 46, sass/components/_comments.scss */
+.comment-list .comment-meta {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+/* line 49, sass/components/_comments.scss */
+.comment-list .comment-meta a {
+  color: #484848;
+  text-decoration: none;
+}
+/* line 53, sass/components/_comments.scss */
+.comment-list .comment-meta a:hover, .comment-list .comment-meta a:focus {
+  color: #00a7e0;
+  text-decoration: underline;
+}
+/* line 61, sass/components/_comments.scss */
+.comment-list .comment-util {
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin: 0;
+}
+/* line 66, sass/components/_comments.scss */
+.comment-list .children {
+  margin: 0;
+}
+/* line 69, sass/components/_comments.scss */
+.comment-list .children .comment {
+  border-bottom: 0;
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+  padding-bottom: 0;
+  padding-left: 20px;
+}
+/* line 77, sass/components/_comments.scss */
+.comment-list .children .avatar {
+  width: 40px;
+  height: 40px;
+}
+/* line 83, sass/components/_comments.scss */
+.comment-list .mod-message {
+  background: #fff2db;
+  border: 1px solid #f0dfc0;
+  margin-top: 1em;
+  padding: .5em 20px;
+  text-align: center;
+}
+/* line 91, sass/components/_comments.scss */
+.comment-list #comment-form {
+  border-top: 0;
+  padding-top: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/* @Comment @Form *********/
+/* line 103, sass/components/_comments.scss */
+#comment-form {
+  border-top: 1px solid #ccc;
+  margin-top: 30px;
+  padding-top: 30px;
+}
+/* line 108, sass/components/_comments.scss */
+#comment-form legend span {
+  font-size: 16px;
+  font-size: 1rem;
+}
+@media screen and (min-width: 760px) {
+  /* line 108, sass/components/_comments.scss */
+  #comment-form legend span {
+    font-size: 21px;
+    font-size: 1.3125rem;
+  }
+}
+/* line 112, sass/components/_comments.scss */
+#comment-form li {
+  margin: 0 0 1em;
+}
+/* line 116, sass/components/_comments.scss */
+#comment-form label {
+  display: block;
+  margin: 0 0 .25em;
+}
+/* line 121, sass/components/_comments.scss */
+#comment-form input,
+#comment-form textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* line 128, sass/components/_comments.scss */
+#cancel-comment-reply a {
+  font-size: 14px;
+  font-size: 0.875rem;
+  background: #eee;
+  border-radius: 4px;
+  border: 2px solid #ccc;
+  color: #484848;
+  display: inline-block;
+  padding: .25em 10px;
+  text-decoration: none;
+}
+
+/* line 139, sass/components/_comments.scss */
+#comment-form #errors {
+  background: #ffeef0;
+  border: 1px solid #fac4c7;
+  margin-bottom: 1em;
+  padding: .5em 15px .25em;
+}
+
+/* line 146, sass/components/_comments.scss */
+#comment-form .err {
+  background: #ffeef0;
+}
+
+/* line 150, sass/components/_comments.scss */
+#comment-form #cmt-ackbar {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+}
+
+/* line 5, sass/components/_masthead.scss */
+#masthead {
+  position: relative;
+  overflow: hidden;
   -webkit-background-size: cover;
   background-size: cover;
-  background-color: #eee;
-  background-position: center center;
-  background-repeat: no-repeat;
+}
+/* line 10, sass/components/_masthead.scss */
+#masthead .site-id {
   padding: 40px 20px;
-  position: relative;
   text-align: center;
 }
 @media screen and (min-width: 1000px) and (min-height: 600px) {
-  /* line 11, sass/components/_masthead.scss */
+  /* line 10, sass/components/_masthead.scss */
   #masthead .site-id {
     padding: 80px 20px;
   }
 }
-/* line 25, sass/components/_masthead.scss */
+/* line 19, sass/components/_masthead.scss */
 #masthead .site-title-wrap {
   text-align: center;
   color: #c13832;
@@ -1248,26 +1414,26 @@ h3#comments {
   background: rgba(255, 255, 255, 0.8);
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
-/* line 35, sass/components/_masthead.scss */
+/* line 29, sass/components/_masthead.scss */
 #masthead .site-title-wrap a {
   color: #c13832;
   text-decoration: none;
 }
 
-/* line 42, sass/components/_masthead.scss */
+/* line 36, sass/components/_masthead.scss */
 #site-title {
   font-size: 38px;
   font-size: 2.375rem;
 }
 @media screen and (min-width: 760px) {
-  /* line 42, sass/components/_masthead.scss */
+  /* line 36, sass/components/_masthead.scss */
   #site-title {
     font-size: 50px;
     font-size: 3.125rem;
   }
 }
 
-/* line 53, sass/components/_masthead.scss */
+/* line 47, sass/components/_masthead.scss */
 #site-description {
   font-size: 28px;
   font-size: 1.75rem;
@@ -1276,7 +1442,7 @@ h3#comments {
   margin: 0;
 }
 @media screen and (min-width: 760px) {
-  /* line 53, sass/components/_masthead.scss */
+  /* line 47, sass/components/_masthead.scss */
   #site-description {
     font-size: 38px;
     font-size: 2.375rem;

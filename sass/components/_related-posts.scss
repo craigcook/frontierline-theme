@@ -1,7 +1,8 @@
 #related-posts {
     .content {
-        max-width: $width-desktop + 40px;
-        padding: 20px 0;
+        @include border-box;
+        max-width: $width-desktop;
+        padding: 20px 60px;
         margin: 0 auto;
     }
 
@@ -19,8 +20,8 @@
 
     li {
         border-bottom: 1px solid rgba(0, 0, 0, .05);
-        margin-bottom: .5em;
-        padding-bottom: .5em;
+        margin-bottom: .75em;
+        padding-bottom: .75em;
 
         &:last-child {
             border-bottom: 0;

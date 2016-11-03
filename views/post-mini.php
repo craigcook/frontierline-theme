@@ -4,7 +4,7 @@
  */
 ?>
 
-<div <?php post_class('post-mini'); ?>>
+<div class="post-mini">
   <a class="entry-link" href="<?php the_permalink(); ?>">
   <?php if ( has_post_thumbnail() ) :
     $thumb_id = get_post_thumbnail_id();

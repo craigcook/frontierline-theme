@@ -35,7 +35,6 @@
   <meta name="twitter:site" content="@<?php echo sanitize_text_field(get_option('rebrand_twitter_username')); ?>">
 <?php endif; ?>
 
-
   <meta name="Rating" content="General">
   <!--[if IE]>
   <meta name="MSSmartTagsPreventParsing" content="true">
@@ -74,13 +73,13 @@
 
 <body <?php body_class(); ?>>
   <?php
-    get_template_part('parts/nav-global');
-    get_template_part('parts/masthead');
+    get_template_part('includes/nav-global');
+    get_template_part('includes/masthead');
   ?>
 
   <div class="site-wrap">
 
-    <?php get_template_part('parts/nav-util'); ?>
+    <?php get_template_part('includes/nav-util'); ?>
 
     <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => 'nav', 'container_id' => 'nav-primary', 'fallback_cb' => 'false',)); ?>
 

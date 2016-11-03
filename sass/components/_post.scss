@@ -118,10 +118,10 @@
 }
 
 .single {
-
     .post {
+        @include border-box;
         max-width: $width-desktop;
-        padding: 0 80px;
+        padding: 0 60px;
         margin: 0 auto;
     }
 
@@ -141,7 +141,7 @@
         }
 
         .categories {
-            @include span(8);
+            @include span(7);
             margin-bottom: 20px;
 
             a {
@@ -150,7 +150,7 @@
         }
 
         .share {
-            @include span(4);
+            @include span(5);
             text-align: right;
 
             ul {
@@ -238,14 +238,13 @@
             @include font-size(24px);
         }
 
-        &:first-letter {
-            @include font-size(60px);
-            line-height: 1;
+        &::first-letter {
+            @include font-size(72px);
+            line-height: .8;
             vertical-align: bottom;
             float: left;
             font-weight: bold;
             padding-top: .125em;
-            initial-letter: 2;
             letter-spacing: .075em;
             font-style: normal;
         }

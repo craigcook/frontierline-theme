@@ -34,41 +34,40 @@ function onemozilla_setup() {
   // This theme uses Featured Images (also known as post thumbnails)
   add_theme_support( 'post-thumbnails' );
 
-  // Set up some custom sizes
-  add_image_size( 'post-full-size', 1600, 400, true ); // Full post image - used at the top of single articles
+  // Set up some custom image sizes
+  add_image_size( 'post-full-size', 1400, 400, true ); // Full post image - used at the top of single articles
   add_image_size( 'post-large', 600, 330, true ); // Large post image - used in grid summary view
   add_image_size( 'post-thumbnail', 300, 165, true ); // Thumbnail post image - used in mini view
   add_image_size( 'extra-large', 1000, 0, true ); // Extra large image - for big images embedded in posts
 
+  add_image_size( 'masthead-phone', 450, 300, true );
+  add_image_size( 'masthead-tablet', 1000, 600, true );
+
   $header_defaults = array(
-    'width'         => 1600,
-    'height'        => 600,
-    'header-text'   => false,
+    'header-text'            => false,
+    'width'                  => 1600,
+    'height'                 => 600,
+    'flex-width'             => false,
+    'flex-height'            => false,
   );
-  add_theme_support( 'custom-header', $header_defaults );
+  add_theme_support('custom-header', $header_defaults);
+
+  // if (! function_exists('fc_header_style')) :
+  // function fc_header_style() {
+  //   ? >
+  //   <style type="text/css">
+  //     #masthead {
+  //       background-image: url();
+  //     }
+  //   </style>
+  //   <?php
+  // }
+  // endif;
 
   // Disable the header text and color options
   define( 'NO_HEADER_TEXT', true );
 
   // ... and thus ends the changeable header business.
-
-  // We've moved the share_posts and hide_authors out of theme options but we'll bring over those settings (if they exist)
-
-  // Stash the values in variables
-  if (isset($options['share_posts'])) {
-    $share_posts = $options['share_posts'];
-  }
-
-  if (isset($options['hide_author'])) {
-    $hide_authors = $options['hide_author'];
-  }
-
-  if ( isset($share_posts) && (get_option('onemozilla_share_posts') == null) ) {
-    update_option('onemozilla_share_posts', $share_posts);
-  }
-  if ( isset($hide_authors) && (get_option('onemozilla_hide_authors') == null) ) {
-    update_option('onemozilla_hide_authors', $hide_authors);
-  }
 
 }
 endif; // onemozilla_setup
@@ -553,71 +552,74 @@ function fc_next_post($in_same_cat = false, $excluded_categories = '') {
 /*********
 * Comment Template
 */
-if ( ! function_exists( 'onemozilla_comment' ) ) :
+if (! function_exists('onemozilla_comment')) :
 function onemozilla_comment($comment, $args, $depth) {
   $GLOBALS['comment'] = $comment;
   $comment_type = get_comment_type();
-  $date_format = get_option("date_format");
-  $time_format = get_option("time_format");
+  $date_format = get_option('date_format');
+  $time_format = get_option('time_format');
 ?>
 
  <li id="comment-<?php comment_ID(); ?>" <?php comment_class('hentry'); ?>>
-  <?php if ( $comment_type == 'trackback' ) : ?>
-    <h3 class="entry-title"><?php _e( 'Trackback from ', 'onemozilla' ); ?> <cite><?php esc_html(comment_author_link()); ?></cite>
-      <?php /* L10N: Trackback headings read "Trackback from <Site> on <Date> at <Time>:" */ ?>
-      <span class="comment-meta"><?php _e('on', 'onemozilla'); ?>
-      <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>" rel="bookmark" title=" <?php _e('Permanent link to this comment by ','onemozilla'); comment_author(); ?>">
-      <time class="published" datetime="<?php comment_date('Y-m-d'); ?>" title="<?php comment_date('Y-m-d'); ?>">
-      <?php /* L10N: Trackback headings read "Trackback from <Site> on <Date> at <Time>:" */ ?>
-      <?php printf( __('%1$s at %2$s','onemozilla'), get_comment_date($date_format), get_comment_time($time_format) ); ?></time></a>:</span>
-    </h3>
-  <?php elseif ( $comment_type == 'pingback' ) : ?>
-    <h3 class="entry-title"><?php _e( 'Pingback from ', 'onemozilla' ); ?> <cite><?php esc_html(comment_author_link()); ?></cite>
-      <?php /* L10N: Pingback headings read "Pingback from <Site> on <Date> at <Time>:" */ ?>
-      <span class="comment-meta"><?php _e('on', 'onemozilla'); ?>
-      <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>" rel="bookmark" title="<?php _e('Permanent link to this comment by ','onemozilla'); comment_author(); ?>">
-      <time class="published" datetime="<?php comment_date('Y-m-d'); ?>" title="<?php comment_date('Y-m-d'); ?>">
-      <?php /* L10N: Pingback headings read "Pingback from <Site> on <Date> at <Time>:" */ ?>
-      <?php printf( __('%1$s at %2$s','onemozilla'), get_comment_date($date_format), get_comment_time($time_format) ); ?></time></a>:</span>
-    </h3>
-  <?php else : ?>
-    <?php if ( ( $comment->comment_author_url != "http://" ) && ( $comment->comment_author_url != "" ) ) : // if author has a link ?>
-      <h3 class="entry-title vcard">
-        <cite class="author fn"><?php esc_html(comment_author()); ?></cite>
-        <?php if (function_exists('get_avatar')) : echo ('<span class="photo">'.get_avatar( $comment, 48 ).'</span>'); endif; ?>
-        <span class="comment-meta">
-        <?php /* L10N: Comment headings read "<Name> wrote on <Date> at <Time>:" */ ?>
-        <?php _e('wrote on', 'onemozilla'); ?>
-          <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>" rel="bookmark" title="<?php _e('Permanent link to this comment by ','onemozilla'); comment_author(); ?>">
-            <time class="published" datetime="<?php comment_date('Y-m-d'); ?>" title="<?php comment_date('Y-m-d'); ?>">
-            <?php /* L10N: Comment headings read "<Name> wrote on <Date> at <Time>:" */ ?>
-            <?php printf( __('%1$s at %2$s','onemozilla'), get_comment_date($date_format), get_comment_time($time_format) ); ?></time>
-          </a>:
-        </span>
-     </h3>
-    <?php else : // author has no link ?>
-      <h3 class="entry-title vcard">
-        <cite class="author fn"><?php esc_html(comment_author()); ?></cite>
-        <?php if (function_exists('get_avatar')) : echo ('<span class="photo">'.get_avatar( $comment, 64 ).'</span>'); endif; ?>
-        <span class="comment-meta"><?php _e('wrote on', 'onemozilla'); ?>
+  <?php if ($comment_type == 'trackback') : ?>
+    <h4 class="entry-title"><?php _e( 'Trackback from ', 'onemozilla' ); ?> <cite><?php esc_html(comment_author_link()); ?></cite>
+      <?php /* L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:" */ ?>
+      <span class="comment-meta">
+        <?php _e('on', 'onemozilla'); ?>
+        <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>" rel="bookmark" title=" <?php _e('Permanent link to this comment by ','onemozilla'); comment_author(); ?>">
+          <time class="published" datetime="<?php comment_date('Y-m-d'); ?>" title="<?php comment_date('Y-m-d'); ?>">
+          <?php /* L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:" */ ?>
+          <?php printf( __('%1$s at %2$s:','onemozilla'), get_comment_date($date_format), get_comment_time($time_format) ); ?>
+          </time>
+        </a>
+      </span>
+    </h4>
+  <?php elseif ($comment_type == 'pingback') : ?>
+    <h4 class="entry-title"><?php _e( 'Ping from ', 'onemozilla' ); ?> <cite><?php esc_html(comment_author_link()); ?></cite>
+      <?php /* L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:" */ ?>
+      <span class="comment-meta">
+        <?php _e('on', 'onemozilla'); ?>
         <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>" rel="bookmark" title="<?php _e('Permanent link to this comment by ','onemozilla'); comment_author(); ?>">
-        <time class="published" datetime="<?php comment_date('Y-m-d'); ?>" title="<?php comment_date('Y-m-d'); ?>">
-        <?php /* L10N: Comment headings read "<Name> wrote on <Date> at <Time>:" */ ?>
-        <?php printf( __('%1$s at %2$s','onemozilla'), get_comment_date($date_format), get_comment_time($time_format) ); ?></time></a>:</span>
-      </h3>
-    <?php endif; ?>
+          <time class="published" datetime="<?php comment_date('Y-m-d'); ?>" title="<?php comment_date('Y-m-d'); ?>">
+          <?php /* L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:" */ ?>
+          <?php printf( __('%1$s at %2$s:','onemozilla'), get_comment_date($date_format), get_comment_time($time_format) ); ?>
+          </time>
+        </a>
+      </span>
+    </h4>
+  <?php else : ?>
+    <h4 class="entry-title vcard">
+      <cite class="author fn"><?php esc_html(comment_author()); ?></cite>
+      <?php if (function_exists('get_avatar')) : echo ('<span class="photo">'.get_avatar( $comment, 60 ).'</span>'); endif; ?>
+      <span class="comment-meta">
+        <?php _e('wrote on', 'onemozilla'); ?>
+        <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>" rel="bookmark" title="<?php _e('Permanent link to this comment by ','onemozilla'); comment_author(); ?>">
+          <time class="published" datetime="<?php comment_date('Y-m-d'); ?>" title="<?php comment_date('Y-m-d'); ?>">
+          <?php /* L10n: Comment headings read "<Name> wrote on <Date> at <Time>:" */ ?>
+          <?php printf( __('%1$s at %2$s:','onemozilla'), get_comment_date($date_format), get_comment_time($time_format) ); ?>
+          </time>
+        </a>
+      </span>
+    </h4>
   <?php endif; ?>
 
-    <?php if ($comment->comment_approved == '0') : ?>
-      <p class="mod"><strong><?php _e('Your comment is awaiting moderation.', 'onemozilla'); ?></strong></p>
-    <?php endif; ?>
+  <?php if ($comment->comment_approved == '0') : ?>
+    <p class="mod-message">
+      <strong><?php _e('Your comment is awaiting moderation.', 'onemozilla'); ?></strong>
+    </p>
+  <?php endif; ?>
 
     <blockquote class="entry-content">
       <?php esc_html(comment_text()); ?>
     </blockquote>
 
-  <?php if ( (get_option('thread_comments') == true) || (current_user_can('edit_post', $comment->comment_post_ID)) ) : ?>
-    <p class="comment-util"><?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?> <?php if ( current_user_can('edit_post', $comment->comment_post_ID) ) : ?><span class="edit"><?php edit_comment_link(__('Edit Comment','onemozilla'),'',''); ?></span><?php endif; ?></p>
+  <?php if ((get_option('thread_comments') == true) || (current_user_can('edit_post', $comment->comment_post_ID))) : ?>
+    <p class="comment-util">
+      <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+      <?php if ( current_user_can('edit_post', $comment->comment_post_ID) ) : ?>
+      <span class="edit"><?php edit_comment_link(__('Edit Comment','onemozilla'),'',''); ?></span>
+      <?php endif; ?>
+    </p>
   <?php endif; ?>
 <?php
 } /* end onemozilla_comment */
