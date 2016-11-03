@@ -7,7 +7,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-summary'); ?>>
 
   <header class="entry-header">
-    <a href="<?php the_permalink(); ?>" class="entry-link" title="<?php printf(esc_attr__('Permanent link to “%s”', 'onemozilla'), the_title_attribute('echo=0')); ?>" rel="bookmark">
+    <a href="<?php the_permalink(); ?>" class="entry-link" title="<?php printf(esc_attr__('Permanent link to “%s”', 'frontierline'), the_title_attribute('echo=0')); ?>" rel="bookmark">
     <?php if (has_post_thumbnail()) :
       the_post_thumbnail('post-large');
     else : ?>
@@ -17,7 +17,6 @@
     </a>
 
     <div class="entry-info">
-    <?php if ( get_option('onemozilla_hide_authors') != 1 ) : ?>
       <address class="vcard">
       <?php if (function_exists('coauthors_posts_links')) :
         coauthors_posts_links();

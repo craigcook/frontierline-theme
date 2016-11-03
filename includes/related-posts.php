@@ -18,7 +18,7 @@
 
       $catposts = get_posts('showposts=5&cat='.$cat_ID.'&exclude='.$post->ID);
     ?>
-      <h4 class="module-title"><?php printf( __('More articles in “%s”', 'rebrand'), esc_html($category->name)); ?></h4>
+      <h4 class="module-title"><?php printf( __('More articles in “%s”', 'frontierline'), esc_html($category->name)); ?></h4>
     <?php if ($catposts) : ?>
       <ul class="cat-posts">
       <?php foreach($catposts as $post) : ?>
@@ -29,14 +29,14 @@
       <?php endforeach; ?>
       </ul>
     <?php else : ?>
-      <p><?php _e('There are no other articles in this category.', 'rebrand'); ?></p>
+      <p><?php _e('There are no other articles in this category.', 'frontierline'); ?></p>
     <?php endif; ?>
       <?php wp_reset_query(); ?>
     </div>
 
     <div class="popular">
-      <?php if ( function_exists('wpp_get_mostpopular') ) : ?>
-      <h4 class="module-title"><?php _e('Popular articles', 'rebrand'); ?></h4>
+      <?php if (function_exists('wpp_get_mostpopular')) : ?>
+      <h4 class="module-title"><?php _e('Popular articles', 'frontierline'); ?></h4>
       <?php
         $args = array(
           'limit' => '5',
@@ -49,7 +49,7 @@
         wpp_get_mostpopular($args); ?>
 
       <?php else : ?>
-      <h4 class="module-title"><?php _e('Recent articles', 'rebrand'); ?></h4>
+      <h4 class="module-title"><?php _e('Recent articles', 'frontierline'); ?></h4>
       <ul class="recent-posts">
         <li>recent posts</li>
       </ul>

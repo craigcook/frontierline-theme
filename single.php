@@ -14,7 +14,7 @@
     <?php get_template_part('includes/newsletter-form'); ?>
   <?php endif; ?>
 
-  <?php comments_template( '', true ); ?>
+  <?php comments_template('', true ); ?>
 
   <?php endwhile; // end of the loop. ?>
 

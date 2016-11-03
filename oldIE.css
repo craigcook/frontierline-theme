@@ -91,7 +91,7 @@ body {
   background: #fff;
   color: #444;
   font-family: "Fira Sans", X-LocaleSpecific, sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* line 22, sass/base/elements/_document.scss */
@@ -198,53 +198,64 @@ ul, ol {
   list-style: none;
 }
 
-/* line 15, sass/base/elements/_lists.scss */
-ul.prose {
+/* line 17, sass/base/elements/_lists.scss */
+.entry-content ul,
+.entry-summary ul {
   list-style: disc;
   margin-left: 30px;
 }
-/* line 19, sass/base/elements/_lists.scss */
-ul.prose ul {
+/* line 21, sass/base/elements/_lists.scss */
+.entry-content ul ul,
+.entry-summary ul ul {
   list-style: circle;
   margin-left: 20px;
   margin-bottom: 0;
 }
-/* line 25, sass/base/elements/_lists.scss */
-ul.prose ol {
+/* line 27, sass/base/elements/_lists.scss */
+.entry-content ul ol,
+.entry-summary ul ol {
   list-style: decimal;
   margin-left: 20px;
   margin-bottom: 0;
 }
-
-/* line 32, sass/base/elements/_lists.scss */
-ol.prose {
+/* line 34, sass/base/elements/_lists.scss */
+.entry-content ol,
+.entry-summary ol {
   list-style: decimal;
   margin-left: 30px;
 }
-/* line 36, sass/base/elements/_lists.scss */
-ol.prose ol {
+/* line 38, sass/base/elements/_lists.scss */
+.entry-content ol ol,
+.entry-summary ol ol {
   list-style: lower-alpha;
   margin-left: 20px;
   margin-bottom: 0;
 }
-/* line 42, sass/base/elements/_lists.scss */
-ol.prose ul {
+/* line 44, sass/base/elements/_lists.scss */
+.entry-content ol ul,
+.entry-summary ol ul {
   list-style: disc;
   margin-left: 20px;
   margin-bottom: 0;
 }
 
-/* line 50, sass/base/elements/_lists.scss */
-[dir='rtl'] ul.prose,
-[dir='rtl'] ol.prose {
+/* line 55, sass/base/elements/_lists.scss */
+[dir='rtl'] .entry-content ul,
+[dir='rtl'] .entry-content ol,
+[dir='rtl'] .entry-summary ul,
+[dir='rtl'] .entry-summary ol {
   margin-left: 0;
   margin-right: 30px;
 }
-/* line 55, sass/base/elements/_lists.scss */
-[dir='rtl'] ul.prose ul,
-[dir='rtl'] ul.prose ol,
-[dir='rtl'] ol.prose ul,
-[dir='rtl'] ol.prose ol {
+/* line 60, sass/base/elements/_lists.scss */
+[dir='rtl'] .entry-content ul ul,
+[dir='rtl'] .entry-content ul ol,
+[dir='rtl'] .entry-content ol ul,
+[dir='rtl'] .entry-content ol ol,
+[dir='rtl'] .entry-summary ul ul,
+[dir='rtl'] .entry-summary ul ol,
+[dir='rtl'] .entry-summary ol ul,
+[dir='rtl'] .entry-summary ol ol {
   margin-left: 0;
   margin-right: 20px;
 }
@@ -354,6 +365,11 @@ input.invalid {
   box-shadow: 0 0 0 2px rgba(255, 80, 80, 0.4);
 }
 
+/* line 68, sass/base/elements/_forms.scss */
+label {
+  display: block;
+}
+
 /* the basis for all buttons on bedrock */
 /* line 11, sass/components/_buttons.scss */
 .button,
@@ -406,6 +422,15 @@ a.button:link:focus,
 a.button:visited:hover,
 a.button:visited:focus {
   text-decoration: none;
+}
+/* line 38, sass/components/_base-button.scss */
+.button.button-minor,
+button.button.button-minor,
+a.button:link.button-minor,
+a.button:visited.button-minor {
+  font-size: 14px;
+  font-size: 0.875rem;
+  padding: .25em 10px;
 }
 /* line 20, sass/components/_buttons.scss */
 .button:hover, .button:focus,
@@ -557,6 +582,18 @@ input[type="submit"].form-button:focus,
 input[type='button'].form-button:hover,
 input[type='button'].form-button:focus {
   text-decoration: none;
+}
+/* line 38, sass/components/_base-button.scss */
+.button.hollow.button-minor,
+button.button.hollow.button-minor,
+a.button.hollow:link.button-minor,
+a.button.hollow:visited.button-minor,
+button.form-button.button-minor,
+input[type="submit"].form-button.button-minor,
+input[type='button'].form-button.button-minor {
+  font-size: 14px;
+  font-size: 0.875rem;
+  padding: .25em 10px;
 }
 /* line 82, sass/components/_buttons.scss */
 .button.hollow:hover, .button.hollow:focus,

@@ -4,7 +4,6 @@
   <?php get_sidebar(); ?>
   <?php get_template_part('includes/explore'); ?>
 
-
   <?php if (!is_singular()) : ?>
     <aside id="newsletter-subscribe" class="section">
 
@@ -42,21 +41,21 @@
       <section class="col col-1">
         <div class="logo"><a href="https://www.mozilla.org">Mozilla</a></div>
         <p id="license" class="license">
-        <?php printf(__('Portions of this content are ©1998-%1s by individual contributors. Content available under a <a href="%2s" rel="external license">Creative Commons license</a>', 'rebrand'), date('Y'), esc_attr('https://www.mozilla.org/foundation/licensing/website-content/') ); ?>
+        <?php printf(__('Portions of this content are ©1998-%1s by individual contributors. Content available under a <a href="%2s" rel="external license">Creative Commons license</a>', 'frontierline'), date('Y'), esc_attr('https://www.mozilla.org/foundation/licensing/website-content/') ); ?>
         </p>
       </section>
 
       <section class="col col-2">
         <ul class="links-join">
-          <li><a href="https://www.mozilla.org/contact/"><?php _e('Contact Us', 'rebrand'); ?></a></li>
-          <li class="wrap"><a class="donate" href="https://donate.mozilla.org/?presets=100,50,25,15&amp;amount=50&amp;currency=usd"><?php _e('Donate', 'rebrand'); ?></a></li>
+          <li><a href="https://www.mozilla.org/contact/"><?php _e('Contact Us', 'frontierline'); ?></a></li>
+          <li class="wrap"><a class="donate" href="https://donate.mozilla.org/?presets=100,50,25,15&amp;amount=50&amp;currency=usd"><?php _e('Donate', 'frontierline'); ?></a></li>
         </ul>
 
         <ul class="links-legal">
-          <li><a href="https://www.mozilla.org/privacy/"><?php _e('Privacy', 'rebrand'); ?></a></li>
-          <li class="wrap"><a href="https://www.mozilla.org/privacy/websites/#cookies"><?php _e('Cookies', 'rebrand'); ?></a></li>
-          <li class="wrap"><a href="https://www.mozilla.org/about/legal/"><?php _e('Legal', 'rebrand'); ?></a></li>
-          <li class="clear"><a href="https://www.mozilla.org/about/legal/fraud-report/"><?php _e('Report Trademark Abuse', 'rebrand'); ?></a></li>
+          <li><a href="https://www.mozilla.org/privacy/"><?php _e('Privacy', 'frontierline'); ?></a></li>
+          <li class="wrap"><a href="https://www.mozilla.org/privacy/websites/#cookies"><?php _e('Cookies', 'frontierline'); ?></a></li>
+          <li class="wrap"><a href="https://www.mozilla.org/about/legal/"><?php _e('Legal', 'frontierline'); ?></a></li>
+          <li class="clear"><a href="https://www.mozilla.org/about/legal/fraud-report/"><?php _e('Report Trademark Abuse', 'frontierline'); ?></a></li>
         </ul>
       </section>
 

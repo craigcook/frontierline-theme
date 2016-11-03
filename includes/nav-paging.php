@@ -11,7 +11,7 @@
       if (! empty($previous_post)) : ?>
       <p class="nav-paging-prev" role="navigation">
         <a href="<?php echo get_permalink( $previous_post->ID ); ?>">
-          <span class="label"><?php _e('Previous article', 'rebrand'); ?></span>
+          <span class="label"><?php _e('Previous article', 'frontierline'); ?></span>
           <strong class="entry-title"><?php echo $previous_post->post_title; ?></strong>
           <time class="date" datetime="<?php echo get_the_date('Y-m-d\TH:i:sP', $previous_post->ID); ?>"><?php echo get_the_date($date_format, $previous_post->ID); ?></time>
           <?php get_template_part('img/inline', 'arrow-left.svg'); ?>
@@ -23,7 +23,7 @@
       if (! empty($next_post)) : ?>
       <p class="nav-paging-next" role="navigation">
         <a href="<?php echo get_permalink( $next_post->ID ); ?>">
-          <span class="label"><?php _e('Next article', 'rebrand'); ?></span>
+          <span class="label"><?php _e('Next article', 'frontierline'); ?></span>
           <strong class="entry-title"><?php echo $next_post->post_title; ?></strong>
           <time class="date" datetime="<?php echo get_the_date('Y-m-d\TH:i:sP', $next_post->ID); ?>"><?php echo get_the_date($date_format, $next_post->ID); ?></time>
           <?php get_template_part('img/inline', 'arrow-right.svg'); ?>

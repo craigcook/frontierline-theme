@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="title" content="<?php if (is_singular()) : single_post_title(); else : bloginfo('name'); endif; ?>">
-  <meta name="description" content="<?php fc_meta_desc(); ?>">
+  <meta name="description" content="<?php frontierline_meta_desc(); ?>">
 
   <!-- Metadata for Facebook -->
   <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
   <meta property="og:url" content="<?php if (is_singular()) : the_permalink(); else : bloginfo('url'); endif; ?>">
   <meta property="og:title" content="<?php if (is_singular()) : single_post_title(); else : bloginfo('name'); endif; ?>">
-  <meta property="og:description" content="<?php fc_meta_desc(); ?>">
+  <meta property="og:description" content="<?php frontierline_meta_desc(); ?>">
 <?php if (is_singular()) : ?>
   <?php if ($thumbs = get_attached_media('image')) : ?>
     <?php foreach ($thumbs as $thumb) : ?>
@@ -23,7 +23,7 @@
 
   <!-- Metadata for Twitter -->
   <meta property="twitter:title" content="<?php if (is_singular()) : single_post_title(); else : bloginfo('name'); endif; ?>">
-  <meta property="twitter:description" content="<?php fc_meta_desc(); ?>">
+  <meta property="twitter:description" content="<?php frontierline_meta_desc(); ?>">
 <?php if (is_singular() && has_post_thumbnail()) : ?>
   <meta name="twitter:card" content="summary_large_image">
   <?php $post_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large', true); ?>
@@ -31,8 +31,8 @@
 <?php else : ?>
   <meta name="twitter:card" content="summary">
 <?php endif; ?>
-<?php if (get_option('rebrand_twitter_username')) : ?>
-  <meta name="twitter:site" content="@<?php echo sanitize_text_field(get_option('rebrand_twitter_username')); ?>">
+<?php if (get_option('frontierline_twitter_username')) : ?>
+  <meta name="twitter:site" content="@<?php echo sanitize_text_field(get_option('frontierline_twitter_username')); ?>">
 <?php endif; ?>
 
   <meta name="Rating" content="General">
@@ -68,13 +68,13 @@
 
   <title><?php
     if ( is_single() ) { single_post_title(); echo ' | '; bloginfo('name'); }
-    elseif ( is_home() || is_front_page() ) { bloginfo('name'); if (get_bloginfo('description','display')) { echo ' | '. get_bloginfo('description','display'); } moz_page_number(); }
+    elseif ( is_home() || is_front_page() ) { bloginfo('name'); if (get_bloginfo('description', 'display')) { echo ' | '. get_bloginfo('description', 'display'); } moz_page_number(); }
     elseif ( is_page() ) { single_post_title(''); echo ' | '; bloginfo('name'); }
-    elseif ( is_search() ) { printf( __('Search results for “%s”', 'onemozilla'), esc_html( $s ) ); moz_page_number(); echo ' | '; bloginfo('name'); }
-    elseif ( is_day() ) { $post = $posts[0]; printf(__('Posts from %s', 'onemozilla'), get_the_date()); echo ' | '; bloginfo('name'); moz_page_number(); }
-    elseif ( is_month() ) { $post = $posts[0]; printf(__('Posts from %s', 'onemozilla'), get_the_date('F, Y')); echo ' | '; bloginfo('name'); moz_page_number(); }
-    elseif ( is_year() ) { $post = $posts[0]; printf(__('Posts from %s', 'onemozilla'), get_the_date('Y')); echo ' | '; bloginfo('name'); moz_page_number(); }
-    elseif ( is_404() ) { _e('Not Found', 'onemozilla'); echo ' | '; bloginfo('name'); }
+    elseif ( is_search() ) { printf( __('Search results for “%s”', 'frontierline'), esc_html( $s ) ); moz_page_number(); echo ' | '; bloginfo('name'); }
+    elseif ( is_day() ) { $post = $posts[0]; printf(__('Posts from %s', 'frontierline'), get_the_date()); echo ' | '; bloginfo('name'); moz_page_number(); }
+    elseif ( is_month() ) { $post = $posts[0]; printf(__('Posts from %s', 'frontierline'), get_the_date('F, Y')); echo ' | '; bloginfo('name'); moz_page_number(); }
+    elseif ( is_year() ) { $post = $posts[0]; printf(__('Posts from %s', 'frontierline'), get_the_date('Y')); echo ' | '; bloginfo('name'); moz_page_number(); }
+    elseif ( is_404() ) { _e('Not Found', 'frontierline'); echo ' | '; bloginfo('name'); }
     else { wp_title(''); echo ' | '; bloginfo('name'); moz_page_number(); }
   ?></title>
 

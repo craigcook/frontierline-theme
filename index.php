@@ -12,7 +12,7 @@ get_header(); ?>
     <div class="content posts-wrap">
     <?php while ( have_posts() ) : the_post(); ?>
 
-      <?php get_template_part( 'views/post-summary' ); ?>
+      <?php get_template_part('views/post-summary'); ?>
 
     <?php endwhile; ?>
     </div>
@@ -25,11 +25,11 @@ get_header(); ?>
 
     <article id="post-0" class="post no-results not-found">
       <header class="entry-header">
-        <h1 class="entry-title"><?php _e( 'Nothing Found', 'onemozilla' ); ?></h1>
+        <h1 class="entry-title"><?php _e('Nothing Found', 'frontierline'); ?></h1>
       </header><!-- .entry-header -->
 
       <div class="entry-content">
-        <p><?php _e( 'Sorry, we couldn&#8217;t find any results for the requested archive. Perhaps try searching?', 'onemozilla' ); ?></p>
+        <p><?php _e('Sorry, we couldn&#8217;t find any results for the requested archive. Perhaps try searching?', 'frontierline'); ?></p>
         <?php get_search_form(); ?>
       </div><!-- .entry-content -->
     </article><!-- #post-0 -->
