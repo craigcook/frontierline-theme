@@ -96,10 +96,6 @@ body {
   line-height: 1.6;
 }
 
-#strings {
-  display: none;
-}
-
 .hidden {
   display: none;
 }
@@ -2208,11 +2204,11 @@ input[type='button'].form-button.red:focus {
   text-decoration: underline;
 }
 #nav-util a:before {
+  -webkit-background-size: 20px 100px;
+  background-size: 20px 100px;
   background-image: url("img/icon-sprite.svg");
   background-repeat: no-repeat;
-  -webkit-background-size: 20px, 100px;
-  background-size: 20px, 100px;
-  bottom: .15em;
+  bottom: 0;
   content: '';
   display: inline-block;
   height: 18px;

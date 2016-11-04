@@ -26,6 +26,9 @@
   <meta property="twitter:image" content="<?php echo $post_image_url['0']; ?>">
 <?php else : ?>
   <meta name="twitter:card" content="summary">
+  <?php if (get_header_image()) : ?>
+  <meta property="twitter:image" content="<?php header_image(); ?>">
+  <?php endif; ?>
 <?php endif; ?>
 <?php if (get_option('frontierline_twitter_username')) : ?>
   <meta name="twitter:site" content="@<?php echo sanitize_text_field(get_option('frontierline_twitter_username')); ?>">

@@ -1,20 +1,21 @@
-<svg version="1.1" id="utility-icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 100" style="enable-background:new 0 0 20 100;" xml:space="preserve">
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 100" style="enable-background:new 0 0 20 100;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;stroke:#444444;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
 <g>
-	<line class="st0" x1="1.8" y1="2.5" x2="17.8" y2="2.5"/>
-	<line class="st0" x1="1.8" y1="8.5" x2="17.8" y2="8.5"/>
-	<line class="st0" x1="1.8" y1="14.5" x2="17.8" y2="14.5"/>
+	<line class="st0" x1="2.8" y1="1.5" x2="16.8" y2="1.5"/>
+	<line class="st0" x1="2.8" y1="6.5" x2="16.8" y2="6.5"/>
+	<line class="st0" x1="2.8" y1="12.5" x2="16.8" y2="12.5"/>
 </g>
 <g>
-	<line class="st0" x1="2.8" y1="37" x2="17.1" y2="22.7"/>
-	<line class="st0" x1="17.1" y1="37" x2="2.8" y2="22.7"/>
+	<line class="st0" x1="3.8" y1="34.6" x2="16.7" y2="21.7"/>
+	<line class="st0" x1="16.7" y1="34.6" x2="3.8" y2="21.7"/>
 </g>
-<polyline class="st0" points="2.8,44.5 10.2,51.8 17.5,44.5"/>
-<polyline class="st0" points="17.5,71.1 10.2,63.8 2.8,71.1"/>
+<polyline class="st0" points="2.8,44.5 10.2,51.8 17.5,44.5 "/>
+<polyline class="st0" points="17.5,71.1 10.2,63.8 2.8,71.1 "/>
 <g>
-	<polyline class="st0" points="18.1,90.2 10.2,82.3 2.3,90.2"/>
-	<polyline class="st0" points="5.8,92.5 5.8,96.5 14.8,96.5 14.8,92.5"/>
+	<polyline class="st0" points="18.1,89.2 10.2,81.3 2.3,89.2"/>
+	<polyline class="st0" points="5.8,91.5 5.8,94.5 14.8,94.5 14.8,91.5"/>
 </g>
 </svg>

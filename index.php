@@ -9,7 +9,7 @@ get_header(); ?>
   <?php if ( have_posts() ) : ?>
 
     <?php /* Start the Loop */ ?>
-    <div class="content posts-wrap">
+    <div class="content posts-wrap hfeed">
     <?php while ( have_posts() ) : the_post(); ?>
 
       <?php get_template_part('views/content', 'summary'); ?>

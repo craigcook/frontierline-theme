@@ -49,10 +49,10 @@
         }
 
         &:before {
+            @include background-size(20px 100px);
             background-image: url('img/icon-sprite.svg');
             background-repeat: no-repeat;
-            @include background-size(20px, 100px);
-            bottom: .15em;
+            bottom: 0;
             content: '';
             display: inline-block;
             height: 18px;
