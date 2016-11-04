@@ -12,13 +12,9 @@
   <meta property="og:url" content="<?php if (is_singular()) : the_permalink(); else : bloginfo('url'); endif; ?>">
   <meta property="og:title" content="<?php if (is_singular()) : single_post_title(); else : bloginfo('name'); endif; ?>">
   <meta property="og:description" content="<?php frontierline_meta_desc(); ?>">
-<?php if (is_singular()) : ?>
-  <?php if ($thumbs = get_attached_media('image')) : ?>
-    <?php foreach ($thumbs as $thumb) : ?>
-      <?php $thumb = wp_get_attachment_image_src( $thumb->ID, 'large' ); ?>
-      <meta property="og:image" content="<?php echo $thumb['0']; ?>">
-    <?php endforeach; ?>
-  <?php endif; ?>
+<?php if (is_singular() && has_post_thumbnail()) : ?>
+  <?php $post_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large', true); ?>
+  <meta property="og:image" content="<?php echo $post_image_url['0']; ?>">
 <?php endif; ?>
 
   <!-- Metadata for Twitter -->
@@ -27,7 +23,7 @@
 <?php if (is_singular() && has_post_thumbnail()) : ?>
   <meta name="twitter:card" content="summary_large_image">
   <?php $post_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large', true); ?>
-  <meta property="twitter:image" content="<?php echo $post_image_url[0]; ?>">
+  <meta property="twitter:image" content="<?php echo $post_image_url['0']; ?>">
 <?php else : ?>
   <meta name="twitter:card" content="summary">
 <?php endif; ?>
@@ -48,6 +44,7 @@
   <link rel="copyright" href="#license">
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="shortcut icon" type="image/ico" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url'); echo '?v=' . filemtime(get_stylesheet_directory() . '/style.css'); ?>">
 
   <!--[if lte IE 8]><link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/oldIE.css"><![endif]-->
 

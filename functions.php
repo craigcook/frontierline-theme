@@ -69,13 +69,6 @@ add_action('after_switch_theme', 'frontierline_activate');
 
 
 /**
-* Cache-bust CSS
-*/
-wp_register_style('screen', get_template_directory_uri().'/style.css', array(), filemtime(get_template_directory().'/style.css'));
-wp_enqueue_style('screen');
-
-
-/**
  * Register and define the social sharing settings
  */
 function frontierline_admin_init(){
@@ -334,24 +327,9 @@ add_filter('preprocess_comment', 'frontierline_honeypot');
  * Removes the default styles that are packaged with the Recent Comments widget.
  */
 function frontierline_remove_recent_comments_style() {
-  add_filter( 'show_recent_comments_widget_style', '__return_false' );
+  add_filter('show_recent_comments_widget_style', '__return_false');
 }
-add_action( 'widgets_init', 'frontierline_remove_recent_comments_style' );
-
-
-/**
-* Customize the password protected form
-*/
-function frontierline_password_form() {
-  global $post;
-  $label = 'pwbox-'.(empty($post->ID) ? rand() : $post->ID);
-  $output = '<form class="pwform" action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
-            <p>'.__('This post is password protected. To view it, please enter the password.', 'frontierline').'</p>
-            <ol><li><label for="'.$label.'">'.__('Password', 'frontierline').'</label><input name="post_password" id="'.$label.'" type="password" size="20"></li><li><button type="submit" name="Submit">'.esc_attr__('Submit', 'frontierline').'</button></li></ol>
-            </form>';
-return $output;
-}
-add_filter('the_password_form', 'frontierline_password_form');
+add_action('widgets_init', 'frontierline_remove_recent_comments_style');
 
 
 /**
@@ -432,51 +410,6 @@ add_action('widgets_init', 'frontierline_widgets_init');
 
 
 /**
-* Determine if the page is paged and should show posts navigation
-*/
-function frontierline_show_posts_nav() {
- global $wp_query;
- return ($wp_query->max_num_pages > 1) ? TRUE : FALSE;
-}
-
-
-/**
-* Determine if a previous post exists (i.e. that this isn't the first one)
-*
-* @param bool $in_same_cat Optional. Whether link should be in same category.
-* @param string $excluded_categories Optional. Excluded categories IDs.
-*/
-function frontierline_previous_post($in_same_cat = false, $excluded_categories = '') {
-  if ( is_attachment() )
-    $post = & get_post($GLOBALS['post']->post_parent);
-  else
-    $post = get_previous_post($in_same_cat, $excluded_categories);
-  if ( !$post )
-    return false;
-  else
-    return true;
-}
-
-
-/**
-* Determine if a next post exists (i.e. that this isn't the last post)
-*
-* @param bool $in_same_cat Optional. Whether link should be in same category.
-* @param string $excluded_categories Optional. Excluded categories IDs.
-*/
-function frontierline_next_post($in_same_cat = false, $excluded_categories = '') {
-  if (is_attachment())
-    $post = & get_post($GLOBALS['post']->post_parent);
-  else
-    $post = get_next_post($in_same_cat, $excluded_categories);
-  if ( !$post )
-    return false;
-  else
-    return true;
-}
-
-
-/**
 * Comment Template
 */
 if (! function_exists('frontierline_comment')) :
@@ -552,21 +485,6 @@ function frontierline_comment($comment, $args, $depth) {
 }
 endif;
 
-/**
- * Disable the emoji scripts
- */
-function frontierline_disable_emojis() {
-  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-  remove_action( 'wp_print_styles', 'print_emoji_styles' );
-  remove_action( 'admin_print_styles', 'print_emoji_styles' );
-  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-  add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
-  add_filter( 'wp_resource_hints', 'disable_emojis_remove_dns_prefetch', 10, 2 );
-}
-add_action('init', 'frontierline_disable_emojis');
 
 /**
  * Filter function used to remove the tinymce emoji plugin.
@@ -591,12 +509,28 @@ function frontierline_disable_emojis_tinymce( $plugins ) {
  */
 function frontierline_disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
   if ( 'dns-prefetch' == $relation_type ) {
-    /** This filter is documented in wp-includes/formatting.php */
+    // This filter is documented in wp-includes/formatting.php
     $emoji_svg_url = apply_filters('emoji_svg_url', 'https://s.w.org/images/core/emoji/2/svg/');
 
     $urls = array_diff( $urls, array( $emoji_svg_url ) );
   }
   return $urls;
 }
+
+/**
+ * Disable the emoji scripts
+ */
+function frontierline_disable_emojis() {
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+  remove_action( 'admin_print_styles', 'print_emoji_styles' );
+  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+  add_filter( 'tiny_mce_plugins', 'frontierline_disable_emojis_tinymce' );
+  add_filter( 'wp_resource_hints', 'frontierline_disable_emojis_remove_dns_prefetch', 10, 2 );
+}
+add_action('init', 'frontierline_disable_emojis');
 
 ?>
