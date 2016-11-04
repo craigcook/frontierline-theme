@@ -49,8 +49,6 @@
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="shortcut icon" type="image/ico" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico">
 
-  <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url'); ?>">
-
   <!--[if lte IE 8]><link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/oldIE.css"><![endif]-->
 
   <?php if (get_header_image()) : ?>
@@ -63,14 +61,14 @@
   </style>
   <?php endif; ?>
 
-  <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>">
+  <link rel="alternate" type="application/rss+xml" title="<?php printf(__('%s – RSS Feed', 'frontierline'), bloginfo('name')) ; ?>" href="<?php bloginfo('rss2_url'); ?>">
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
   <title><?php
     if ( is_single() ) { single_post_title(); echo ' | '; bloginfo('name'); }
     elseif ( is_home() || is_front_page() ) { bloginfo('name'); if (get_bloginfo('description', 'display')) { echo ' | '. get_bloginfo('description', 'display'); } frontierline_page_number(); }
     elseif ( is_page() ) { single_post_title(''); echo ' | '; bloginfo('name'); }
-    elseif ( is_search() ) { printf( __('Search results for “%s”', 'frontierline'), esc_html( $s ) ); frontierline_page_number(); echo ' | '; bloginfo('name'); }
+    elseif ( is_search() ) { printf(__('Search results for “%s”', 'frontierline'), esc_html($s)); frontierline_page_number(); echo ' | '; bloginfo('name'); }
     elseif ( is_day() ) { $post = $posts[0]; printf(__('Posts from %s', 'frontierline'), get_the_date()); echo ' | '; bloginfo('name'); frontierline_page_number(); }
     elseif ( is_month() ) { $post = $posts[0]; printf(__('Posts from %s', 'frontierline'), get_the_date('F, Y')); echo ' | '; bloginfo('name'); frontierline_page_number(); }
     elseif ( is_year() ) { $post = $posts[0]; printf(__('Posts from %s', 'frontierline'), get_the_date('Y')); echo ' | '; bloginfo('name'); frontierline_page_number(); }

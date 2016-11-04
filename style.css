@@ -85,7 +85,7 @@ img, video, object, embed {
 
 html {
   font-size: 100%;
-  background: #fff;
+  background: #56565a;
 }
 
 body {
@@ -385,6 +385,7 @@ label {
 
 #content {
   padding-top: 20px;
+  min-height: 50vh;
 }
 
 #comments .content {
@@ -796,9 +797,9 @@ label {
   transition: left 600ms cubic-bezier(0.3, -0.5, 0.6, 1.1);
   background: #fff;
   box-shadow: 3px 0 1px rgba(0, 0, 0, 0.2);
-  height: 100%;
   left: 0;
   max-width: 600px;
+  min-height: 100%;
   min-width: 300px;
   padding: 80px 40px 40px;
   position: absolute;

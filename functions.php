@@ -17,17 +17,12 @@ if (! function_exists('frontierline_setup')):
  */
 function frontierline_setup() {
 
-  /* Make the theme available for translation.
-   * Translations can be added to the /languages/ directory.
-   */
+  // Make the theme available for translation.
+  // Translations can be added to the /languages/ directory.
   load_theme_textdomain('frontierline', get_template_directory() . '/languages');
 
-  $locale = get_locale();
-  $locale_file = get_template_directory() . '/languages/$locale.php';
-  if (is_readable($locale_file))
-    require_once($locale_file);
-
   // This theme uses wp_nav_menu() in one location.
+  // TODO: Commented out for now; I'll add this back later
   // register_nav_menu('primary', __('Primary Menu', 'frontierline'));
 
   // This theme uses Featured Images (also known as post thumbnails)
@@ -49,16 +44,13 @@ function frontierline_setup() {
   add_theme_support('custom-header', $header_defaults);
 
   // Disable the header text and color options
-  define( 'NO_HEADER_TEXT', true );
-
-  // ... and thus ends the changeable header business.
-
+  define('NO_HEADER_TEXT', true);
 }
 endif;
 add_action('after_setup_theme', 'frontierline_setup');
 
 
-/*********
+/**
  * Do some stuff when the theme is activated.
  */
 if (! function_exists('frontierline_activate')):
@@ -76,7 +68,14 @@ endif;
 add_action('after_switch_theme', 'frontierline_activate');
 
 
-/*********
+/**
+* Cache-bust CSS
+*/
+wp_register_style('screen', get_template_directory_uri().'/style.css', array(), filemtime(get_template_directory().'/style.css'));
+wp_enqueue_style('screen');
+
+
+/**
  * Register and define the social sharing settings
  */
 function frontierline_admin_init(){

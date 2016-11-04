@@ -7,7 +7,7 @@
 
 html {
     font-size: 100%;
-    background: #fff;
+    background: $color-mozgray;
 }
 
 body {
@@ -16,11 +16,6 @@ body {
     color: $color-text-primary;
     font-family: $base-font-stack;
     line-height: $base-line-height;
-}
-
-// An arbitrary container for translatable strings to use in scripts
-#strings {
-    display: none;
 }
 
 // A few places use a class to hide elements. We should try to avoid that.
