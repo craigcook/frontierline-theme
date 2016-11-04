@@ -91,9 +91,10 @@
     }
 
     // copy underneath "Sign Up Now" button
-    p.form-details {
-        line-height: 1;
-        margin-top: 8px;
+    p.promise {
+        line-height: 1.1;
+        margin-top: .5em;
+        text-align: center;
     }
 
     // wrapper for thank you elements

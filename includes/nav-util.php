@@ -3,6 +3,7 @@
  * Utility navigation.
  */
 ?>
+
 <nav id="nav-util">
   <ul class="content">
     <li class="nav-util-sidebar"><a href="#sidebar" aria-controls="sidebar" id="toggle-sidebar"><?php _e('Blog menu', 'frontierline'); ?></a></li>

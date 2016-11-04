@@ -5,11 +5,10 @@
 
 global $wp;
 $current_url = home_url(add_query_arg(array(),$wp->request));
-
 ?>
+
 <aside id="newsletter-subscribe" class="section">
   <form class="content newsletter_form" id="newsletter_form" name="newsletter_form" action="https://www.mozilla.org/newsletter/" method="post">
-    <input type="hidden" id="fmt" name="fmt" value="H">
     <input type="hidden" id="newsletters" name="newsletters" value="mozilla-foundation">
     <input type="hidden" name="source_url" value="<?php echo $current_url; ?>">
 
@@ -22,16 +21,12 @@ $current_url = home_url(add_query_arg(array(),$wp->request));
       <div id="newsletter_errors" class="newsletter_errors"></div>
 
       <div class="field field-email">
-          <label for="email"><?php _e('Your e-mail address', 'frontierline'); ?></label>
-          <?php // L10n: 'yourname' is used in an example e-mail address. ?>
-          <input type="email" id="email" name="email" required placeholder="<?php _e('yourname', 'frontierline'); ?>@example.com" size="30">
+        <label for="email"><?php _e('Your e-mail address', 'frontierline'); ?></label>
+        <?php // L10n: 'yourname' is used in an example e-mail address. ?>
+        <input type="email" id="email" name="email" required placeholder="<?php _e('yourname', 'frontierline'); ?>@example.com" size="30">
       </div>
 
-      <div id="form-details">
-        <div class="field field-country">
-          country
-        </div>
-
+      <div class="form-details">
         <div class="field field-language">
           <label for="lang"><?php _e('Language', 'frontierline'); ?></label>
           <select aria-required="true" id="id_lang" name="lang" required="required">
@@ -58,7 +53,7 @@ $current_url = home_url(add_query_arg(array(),$wp->request));
 
       <div class="form-submit">
         <button id="newsletter_submit" type="submit" class="form-button light"><?php _e('Sign up now', 'frontierline'); ?></button>
-        <p class="form-details">
+        <p class="form-details promise">
           <small><?php _e('We will only send you Mozilla-related information.', 'frontierline'); ?></small>
         </p>
       </div>

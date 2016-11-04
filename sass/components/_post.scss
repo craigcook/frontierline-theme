@@ -10,8 +10,8 @@
 // Common to all posts
 .entry-link:link,
 .entry-link:visited {
-    text-decoration: none;
     color: $color-text-primary;
+    text-decoration: none;
 
     &:hover,
     &:focus,
@@ -117,7 +117,8 @@
     }
 }
 
-.single {
+.single,
+.page {
     .post {
         @include border-box;
         max-width: $width-desktop;
@@ -192,7 +193,7 @@
         }
 
         &::first-letter {
-            @include font-size(72px);
+            @include font-size(76px);
             line-height: .8;
             vertical-align: bottom;
             float: left;

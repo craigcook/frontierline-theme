@@ -11,8 +11,9 @@
 
 // Common style for category links
 @mixin category-link {
-    @include transition(color 150ms ease, background-color 150ms ease);
+    @include transition(color 75ms ease-out, background-color 75ms ease-out);
     background: #eee;
+    border: 1px solid rgba(0, 0, 0, .05);
     color: $color-text-secondary;
     display: inline-block;
     margin: 0 5px .25em 0;
@@ -173,17 +174,20 @@
 // Adds a right-pointing arrow after
 @mixin trailing-arrow {
     &:after {
-        content: "\00A0\25B8"; // space+triangle
+        content: '\00A0\25B8'; // space+triangle
         white-space: nowrap;
     }
 }
 
 // Adds a left-pointing arrow before
+// There isn't a unicode left triangle so we resort to some trickery to flip it around.
 @mixin leading-arrow {
     &:before {
-        content: "\25B8\00A0"; // triangle+space
+        @include flip-horizontally;
+        content: '\00A0\25B8'; // space+triangle
+        display: inline-block;
+        vertical-align: top;
         white-space: nowrap;
-        @include transform(rotate, 180deg);
     }
 }
 

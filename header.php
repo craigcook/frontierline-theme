@@ -68,14 +68,14 @@
 
   <title><?php
     if ( is_single() ) { single_post_title(); echo ' | '; bloginfo('name'); }
-    elseif ( is_home() || is_front_page() ) { bloginfo('name'); if (get_bloginfo('description', 'display')) { echo ' | '. get_bloginfo('description', 'display'); } moz_page_number(); }
+    elseif ( is_home() || is_front_page() ) { bloginfo('name'); if (get_bloginfo('description', 'display')) { echo ' | '. get_bloginfo('description', 'display'); } frontierline_page_number(); }
     elseif ( is_page() ) { single_post_title(''); echo ' | '; bloginfo('name'); }
-    elseif ( is_search() ) { printf( __('Search results for “%s”', 'frontierline'), esc_html( $s ) ); moz_page_number(); echo ' | '; bloginfo('name'); }
-    elseif ( is_day() ) { $post = $posts[0]; printf(__('Posts from %s', 'frontierline'), get_the_date()); echo ' | '; bloginfo('name'); moz_page_number(); }
-    elseif ( is_month() ) { $post = $posts[0]; printf(__('Posts from %s', 'frontierline'), get_the_date('F, Y')); echo ' | '; bloginfo('name'); moz_page_number(); }
-    elseif ( is_year() ) { $post = $posts[0]; printf(__('Posts from %s', 'frontierline'), get_the_date('Y')); echo ' | '; bloginfo('name'); moz_page_number(); }
+    elseif ( is_search() ) { printf( __('Search results for “%s”', 'frontierline'), esc_html( $s ) ); frontierline_page_number(); echo ' | '; bloginfo('name'); }
+    elseif ( is_day() ) { $post = $posts[0]; printf(__('Posts from %s', 'frontierline'), get_the_date()); echo ' | '; bloginfo('name'); frontierline_page_number(); }
+    elseif ( is_month() ) { $post = $posts[0]; printf(__('Posts from %s', 'frontierline'), get_the_date('F, Y')); echo ' | '; bloginfo('name'); frontierline_page_number(); }
+    elseif ( is_year() ) { $post = $posts[0]; printf(__('Posts from %s', 'frontierline'), get_the_date('Y')); echo ' | '; bloginfo('name'); frontierline_page_number(); }
     elseif ( is_404() ) { _e('Not Found', 'frontierline'); echo ' | '; bloginfo('name'); }
-    else { wp_title(''); echo ' | '; bloginfo('name'); moz_page_number(); }
+    else { wp_title(''); echo ' | '; bloginfo('name'); frontierline_page_number(); }
   ?></title>
 
   <?php wp_head(); ?>
@@ -91,6 +91,6 @@
 
     <?php get_template_part('includes/nav-util'); ?>
 
-    <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => 'nav', 'container_id' => 'nav-primary', 'fallback_cb' => 'false',)); ?>
+    <?php /* wp_nav_menu(array('theme_location' => 'primary', 'container' => 'nav', 'container_id' => 'nav-primary', 'fallback_cb' => 'false',)); */ ?>
 
   <main id="content" role="main">

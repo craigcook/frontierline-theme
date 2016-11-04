@@ -6,6 +6,7 @@
 
 
 a {
+    @include transition(color 80ms ease-out);
     color: $color-link;
     text-decoration: underline;
 
@@ -20,6 +21,6 @@ a {
     }
 
     &:visited {
-        color: lighten(desaturate($color-link, 50%), 20%);
+        color: lighten(desaturate($color-link, 30%), 10%);
     }
 }

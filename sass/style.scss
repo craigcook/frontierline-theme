@@ -27,6 +27,7 @@ Tags: none yet
     'components/related-posts',
     'components/explore',
     'components/nav-paging',
+    'components/nav-pagination',
     'components/comments',
     'components/masthead',
     'components/nav-global',
@@ -44,26 +45,4 @@ Tags: none yet
 
 #content {
     padding-top: 20px;
-}
-
-.pagination {
-    @include font-size(22px);
-    margin: 40px 0;
-    text-align: center;
-
-    a,
-    .current {
-        padding: 5px 15px;
-        margin: 0 2px;
-        background: #eee;
-
-        &:hover,
-        &:focus {
-            background: #e3e3e3;
-        }
-    }
-}
-
-.comment-list .entry-title {
-    @include font-size(16px);
 }

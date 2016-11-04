@@ -8,7 +8,7 @@
     // !! this file assumes only one signup form per page !!
 
     var newsletterForm = document.getElementById('newsletter_form');
-    var newsletterWrapper = document.getElementById('newsletter_wrap');
+    var newsletterWrapper = document.getElementById('newsletter-subscribe');
 
     // handle errors
     var errorArray = [];
@@ -54,7 +54,7 @@
         newsletterErrors.style.display = 'none';
         while (newsletterErrors.firstChild) newsletterErrors.removeChild(newsletterErrors.firstChild);
 
-        var fmt = document.getElementById('fmt').value;
+        var fmt = document.getElementsByName('fmt').value;
         var email = document.getElementById('email').value;
         var newsletter = document.getElementById('newsletters').value;
         var privacy = document.querySelector('input[name="privacy"]:checked') ? '&privacy=true' : '';

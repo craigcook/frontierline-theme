@@ -1,14 +1,6 @@
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-@import '../includes/lib';
-
+// The "Explore Drawer" (say that five times fast)
 
 #explore {
-
-    .cat-list-old { display: none; }
-
     .cat-list {
         text-align: center;
 
@@ -48,9 +40,20 @@
         max-width: 300px;
     }
 
-    .post-mini .date {
-        @include font-size(14px);
-        color: $color-text-secondary;
+    .post-mini {
+        .entry-title {
+            padding: 0 10px;
+        }
+
+        .date {
+            @include font-size(14px);
+            color: $color-text-secondary;
+            padding: 0 10px;
+        }
+    }
+
+    .post-image {
+        display: none;
     }
 }
 
@@ -65,5 +68,10 @@
 
     .category-title {
         @include visually-hidden;
+    }
+
+    .post-image {
+        display: block;
+        margin: 0 auto 10px;
     }
 }

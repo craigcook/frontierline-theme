@@ -11,6 +11,7 @@
 // Appears at the top of posts and Pages.
 
 .social-share {
+    float: right;
     text-align: right;
 
     ul {
@@ -60,6 +61,7 @@
 
     @media #{$mq-tablet} {
         @include span(5);
+        float: right;
 
         a {
             @include font-size(16px);

@@ -3,6 +3,7 @@
  * The brand masthead, usually with a custom header image.
  */
 ?>
+
 <header id="masthead" class="section">
   <div class="site-id">
     <div class="site-title-wrap">

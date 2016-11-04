@@ -96,4 +96,30 @@
         return false;
     });
 
+    // Expand email form on input focus or submit if details aren't visible
+    function initEmailForm() {
+        var submitButton = jQuery('.newsletter_form button[type=submit]');
+        var formDetails = jQuery('.newsletter_form .form-details');
+
+        function showDetails() {
+            if (!formDetails.is(':visible')) {
+                formDetails.slideDown('normal');
+            }
+        }
+
+        if (jQuery('.newsletter_form #email').val() != '') {
+            showDetails();
+        }
+
+        jQuery('.newsletter_form').on('focus', 'select, input', showDetails);
+
+        submitButton.on('click', function(e) {
+            if (!formDetails.is(':visible')) {
+                e.preventDefault();
+                showDetails();
+            }
+        });
+    }
+    initEmailForm();
+
 })(window.jQuery);

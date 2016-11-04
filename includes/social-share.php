@@ -6,9 +6,6 @@
 global $post;
 
 $blog_name = sanitize_text_field(get_bloginfo('name'));
-
-// ga('send', 'event', '<blog-name> /interactions', 'share', '<network>');
-
 $share_url = urlencode(wp_get_shortlink($post->ID));
 $share_text = urlencode(html_entity_decode(get_the_title($post->ID), ENT_COMPAT, 'UTF-8'));
 $share_via = sanitize_text_field(get_option('frontierline_twitter_username'));

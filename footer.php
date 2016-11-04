@@ -1,36 +1,10 @@
-
   </main>
 
   <?php get_sidebar(); ?>
   <?php get_template_part('includes/explore'); ?>
 
   <?php if (!is_singular()) : ?>
-    <aside id="newsletter-subscribe" class="section">
-
-      <form class="content newsletter-form footer-newsletter-form" id="newsletter-form" action="#" method="post" data-spinner-color="#fff">
-        <input id="id_newsletters" maxlength="100" name="newsletters" type="hidden" value="mozilla-foundation" />
-        <input type="hidden" name="source_url" value="<?php the_permalink(); ?>">
-
-        <div class="form-title">
-          <h3>Love the Web?</h3>
-          <h4>Get the Mozilla newsletter and help us keep it open and free.</h4>
-        </div>
-
-        <div class="form-contents">
-          <div class="field field-email">
-            <label fpr="id_email">Your e-mail address</label>
-            <input id="id_email" name="email" placeholder="yourname@example.com" required="required" type="email">
-          </div>
-          <div class="form-submit">
-            <button type="submit" id="footer_email_submit" class="form-button hollow light">Sign Up Now</button>
-            <p class="form-details">
-              <small>We will only send you Mozilla-related information.</small>
-            </p>
-          </div>
-        </div>
-      </form>
-
-    </aside>
+  <?php get_template_part('includes/newsletter-form'); ?>
   <?php endif; ?>
 
 </div><!-- /.site-wrap -->
@@ -41,7 +15,7 @@
       <section class="col col-1">
         <div class="logo"><a href="https://www.mozilla.org">Mozilla</a></div>
         <p id="license" class="license">
-        <?php printf(__('Portions of this content are ©1998-%1s by individual contributors. Content available under a <a href="%2s" rel="external license">Creative Commons license</a>', 'frontierline'), date('Y'), esc_attr('https://www.mozilla.org/foundation/licensing/website-content/') ); ?>
+        <?php printf(__('Portions of this content are ©1998-%1s by individual contributors. Content available under a <a href="%2s" rel="external license">Creative Commons license</a>', 'frontierline'), date('Y'), esc_attr('https://www.mozilla.org/foundation/licensing/website-content/')); ?>
         </p>
       </section>
 

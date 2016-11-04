@@ -1,6 +1,6 @@
 <?php
 /**
- * Single post.
+ * Static Page (capital p).
  */
 ?>
 
@@ -11,10 +11,6 @@
     <div class="content">
       <?php get_template_part('views/content'); ?>
     </div>
-
-    <?php get_template_part('includes/nav-paging'); ?>
-
-    <?php get_template_part('includes/related-posts'); ?>
 
   <?php if (is_singular()) : // Probably redundant because this is the single template, but just to be safe... ?>
     <?php get_template_part('includes/newsletter-form'); ?>

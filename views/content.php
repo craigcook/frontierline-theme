@@ -13,10 +13,12 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
   <header class="entry-header">
     <div class="entry-tools">
+    <?php if (has_category()) : ?>
       <div class="categories">
         <b><?php _e('Categories:', 'frontierline'); ?></b>
         <?php the_category(' ') ?>
       </div>
+    <?php endif; ?>
 
     <?php if (get_option('frontierline_share_posts') == 1) :
         get_template_part('includes/social-share');
@@ -35,20 +37,20 @@
 
     <div class="entry-info">
       <address class="vcard">
-      <?php if (function_exists(coauthors_posts_links)) : coauthors_posts_links(); else : the_author_posts_link(); endif; ?>
+      <?php if (function_exists('coauthors_posts_links')) : coauthors_posts_links(); else : the_author_posts_link(); endif; ?>
       </address>
       <time class="date" title="<?php the_time('Y-m-d\TH:i:sP'); ?>" datetime="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php echo get_the_date(); ?></time>
-    <?php if ( comments_open() || get_comments_number() ) : ?>
+    <?php if (comments_open() || get_comments_number()) : ?>
       <p class="entry-comments">
         <?php comments_popup_link(__('No responses yet', 'frontierline'), __('1 response', 'frontierline'), __('% responses', 'frontierline')); ?>
       </p>
     <?php endif; ?>
-    <?php edit_post_link(__('Edit post', 'frontierline' ), '<p class="edit">', '</p>'); ?>
+    <?php edit_post_link(__('Edit', 'frontierline' ), '<p class="edit">', '</p>'); ?>
     </div>
   </header>
 
   <div class="entry-content">
-    <?php the_content(__('Continue reading &hellip;', 'frontierline')); ?>
+    <?php the_content(__('Continue reading&hellip;', 'frontierline')); ?>
     <?php wp_link_pages(array('before' => '<p class="pages" role="navigation"><span>' . __('Pages:', 'frontierline') . '</span>', 'after' => '</p>')); ?>
   </div><!-- .entry-content -->
 

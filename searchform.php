@@ -1,3 +1,9 @@
+<?php
+/**
+ * The search form.
+ */
+?>
+
 <form id="search" class="fm-search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
   <fieldset>
     <p>

@@ -28,7 +28,7 @@ function frontierline_setup() {
     require_once($locale_file);
 
   // This theme uses wp_nav_menu() in one location.
-  register_nav_menu('primary', __('Primary Menu', 'frontierline'));
+  // register_nav_menu('primary', __('Primary Menu', 'frontierline'));
 
   // This theme uses Featured Images (also known as post thumbnails)
   add_theme_support('post-thumbnails');
@@ -226,10 +226,12 @@ function frontierline_meta_desc() {
   }
 }
 
+
 /**
 * Disable the embedded styles when using [gallery] shortcode
 */
 add_filter('use_default_gallery_style', '__return_false');
+
 
 /**
 * Disable comments on Pages by default
@@ -241,7 +243,7 @@ add_filter('use_default_gallery_style', '__return_false');
 * don't need to remember. Comments can still be enabled for Pages on an individual
 * basis.
 */
-function fc_page_comments_off() {
+function frontierline_page_comments_off() {
   if(isset($_REQUEST['post_type'])) {
     if ( $_REQUEST['post_type'] == "page" ) {
       echo '<script>
@@ -257,37 +259,21 @@ function fc_page_comments_off() {
     }
   }
 }
-add_action ( 'admin_footer', 'fc_page_comments_off' );
+add_action ('admin_footer', 'frontierline_page_comments_off');
 
 
-
-
-
-/*********
+/**
 * Prints the page number currently being browsed, with a pipe before it.
 * Used in header.php to add the page number to the <title>.
 */
-if ( ! function_exists( 'moz_page_number' ) ) :
-function moz_page_number() {
+if (! function_exists('frontierline_page_number')) :
+function frontierline_page_number() {
   global $paged; // Contains page number.
   if ( $paged >= 2 )
-    echo ' | ' . sprintf( __( 'Page %s' , 'wordpress' ), $paged );
+    echo ' | ' . sprintf(__('Page %s', 'frontierline'), $paged);
 }
 endif;
 
-/*********
-* Allow uploading some additional MIME types
-*/
-function moz_add_mimes( $mimes=array() ) {
-  $mimes['webm'] = 'video/webm';
-  $mimes['ogv']  = 'video/ogg';
-  $mimes['mp4']  = 'video/mp4';
-  $mimes['m4v']  = 'video/mp4';
-  $mimes['flv']  = 'video/x-flv';
-  $mimes['svg']  = 'image/svg+xml';
-  return $mimes;
-}
-add_filter('upload_mimes', 'moz_add_mimes');
 
 /*********
 * Load various JavaScripts
@@ -311,7 +297,7 @@ function frontierline_load_scripts() {
 
   // Check required fields on comment form
   wp_register_script('checkcomments', get_template_directory_uri() . '/js/fc-checkcomment.js', 'jquery', '1.0', true);
-  if ( get_option('require_name_email') && is_singular() && comments_open() ) {
+  if (get_option('require_name_email') && is_singular() && comments_open()) {
     wp_enqueue_script('checkcomments');
   }
 }
@@ -352,6 +338,7 @@ function frontierline_remove_recent_comments_style() {
   add_filter( 'show_recent_comments_widget_style', '__return_false' );
 }
 add_action( 'widgets_init', 'frontierline_remove_recent_comments_style' );
+
 
 /**
 * Customize the password protected form
