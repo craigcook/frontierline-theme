@@ -75,9 +75,16 @@
     }
 
     // Open social sharing links in a popup
-    jQuery('.share a[rel]').on('click', function(e) {
+    jQuery('.social-share a[rel]').on('click', function(e) {
         var top = (screen.availHeight - 500) / 2;
         var left = (screen.availWidth - 500) / 2;
+
+        var blog = jQuery(this).data('blog');
+        var network = jQuery(this).data('network');
+
+        if (typeof ga === 'function') {
+            ga('send', 'event', blog + ' /interactions', 'share', network);
+        }
 
         window.open(
             this.href,

@@ -1,14 +1,14 @@
 /*********
 * This checks that a commenter has filled required fields.
 * It also checks that the provided e-mail is well formed.
-* Requires jQuery. 
+* Requires jQuery.
 */
 
 function fc_checkform(req) {
   author  = document.getElementById("author");
   email   = document.getElementById("email");
   comment = document.getElementById("comment");
-  
+
 if (jQuery("#errors").length > 0) { jQuery("#errors").remove(); }
 jQuery("#author, #email, #comment").removeClass("err");
 
@@ -49,7 +49,7 @@ else {
   jQuery("#errors").html("<p>" + objectL10n.bademail + "</p>");
   return false;
 }
-  
+
 if ( comment.value == "" ) {
   comment.focus();
   jQuery("#comment").addClass("err");
@@ -60,7 +60,7 @@ if ( comment.value == "" ) {
 else {
   jQuery("#comment").removeClass("err");
 }
-  
+
 /* if everything checks out, return true */
 return true;
 }

@@ -50,8 +50,8 @@
     background: rgba(255, 255, 255, .75);
     display: inline-block;
     line-height: 1.1;
-    margin: 0 -12% -2% -7.5%;
-    padding: .35em 12% 2.75% 7.5%;
+    margin: 0 -12% -2% -5.5%;
+    padding: .35em 12% 2.75% 5.5%;
     position: relative;
     z-index: 2;
     min-width: 50%;
@@ -59,10 +59,4 @@
     @media #{$mq-tablet} {
         @include font-size-level2;
     }
-}
-
-
-
-.single #masthead .site-id {
-    padding: 20px;
 }

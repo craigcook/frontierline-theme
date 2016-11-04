@@ -51,7 +51,7 @@
 
   <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url'); ?>">
 
-  <!--[if lte IE 8]><link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/sass/base/oldIE.css"><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/oldIE.css"><![endif]-->
 
   <?php if (get_header_image()) : ?>
   <style type="text/css">

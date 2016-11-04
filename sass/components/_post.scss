@@ -149,53 +149,6 @@
             }
         }
 
-        .share {
-            @include span(5);
-            text-align: right;
-
-            ul {
-                float: right;
-            }
-
-            li {
-                display: inline;
-                margin: 0 5px .25em;
-            }
-
-            a {
-                @include base-button;
-                @include font-size(16px);
-                color: #fff;
-                padding: 2px 10px 2px 35px;
-
-                &.twitter {
-                    background: #1da1f2 url('img/twitter.svg') 6px center no-repeat;
-                    @include background-size(18px, 18px);
-                    border-color: darken(#1da1f2, 5%);
-
-                    &:hover,
-                    &:focus {
-                        background-color: darken(#1da1f2, 5%);
-                    }
-                }
-
-                &.facebook {
-                    background: #3b5998 url('img/facebook.svg') 6px center no-repeat;
-                    @include background-size(18px, 18px);
-                    border-color: darken(#3b5998, 5%);
-
-                    &:hover,
-                    &:focus {
-                        background-color: darken(#3b5998, 5%);
-                    }
-                }
-
-                @media #{$mq-tablet} {
-                    @include font-size(16px);
-                }
-            }
-        }
-
         .entry-info {
             margin-bottom: 20px;
 
