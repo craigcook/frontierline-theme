@@ -91,23 +91,23 @@
     }
 
     // copy underneath "Sign Up Now" button
-    p.promise {
+    .promise {
         line-height: 1.1;
         margin-top: .5em;
         text-align: center;
     }
 
     // wrapper for thank you elements
-    .thank {
-        padding-top: 20px;
+    .thanks {
+        padding-top: 10px;
 
         p {
-            @include animation(pebbles-fade-in 500ms ease-in 800ms 1 normal both);
+            @include animation(pebbles-fade-in 150ms ease-in 800ms 1 normal both);
             margin-top: 20px;
         }
     }
 
-    .errorlist {
+    .newsletter_errors > ul {
         background: #fff;
         color: $color-mozred;
         padding: 10px 20px;
@@ -123,7 +123,8 @@
             text-align: left;
         }
 
-        .form-contents {
+        .form-contents,
+        .thanks {
             @include span(6);
         }
 

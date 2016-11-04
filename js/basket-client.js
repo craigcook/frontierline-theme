@@ -8,7 +8,7 @@
     // !! this file assumes only one signup form per page !!
 
     var newsletterForm = document.getElementById('newsletter_form');
-    var newsletterWrapper = document.getElementById('newsletter-subscribe');
+    var newsletterWrapper = document.getElementById('form-contents');
 
     // handle errors
     var errorArray = [];
@@ -54,15 +54,18 @@
         newsletterErrors.style.display = 'none';
         while (newsletterErrors.firstChild) newsletterErrors.removeChild(newsletterErrors.firstChild);
 
-        var fmt = document.getElementsByName('fmt').value;
         var email = document.getElementById('email').value;
         var newsletter = document.getElementById('newsletters').value;
         var privacy = document.querySelector('input[name="privacy"]:checked') ? '&privacy=true' : '';
+        var lang = document.getElementById('lang').value;
+        var fmt = document.querySelector('input[name="fmt"]:checked').value;
+        var source_url = document.getElementById('source_url').value;
         var params = 'email=' + encodeURIComponent(email) +
                      '&newsletters=' + newsletter +
                      privacy +
+                     '&lang=' + lang +
                      '&fmt=' + fmt +
-                     '&source_url=' + encodeURIComponent(document.location.href);
+                     '&source_url=' + source_url;
 
         var xhr = new XMLHttpRequest();
 
@@ -75,7 +78,7 @@
                 }
                 var response = r.target.response;
                 if (response.success === true) {
-                    newsletterForm.style.display = 'none';
+                    newsletterWrapper.style.display = 'none';
                     newsletterThanks();
                 }
                 else {

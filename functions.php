@@ -287,7 +287,7 @@ function frontierline_load_scripts() {
   wp_enqueue_script('global');
 
   // Load the newsletter script
-  wp_register_script('basket-client', get_template_directory_uri() . '/js/basket-client.js', '', '1.0', true);
+  wp_register_script('basket-client', get_template_directory_uri() . '/js/basket-client.js', '', '', true);
   wp_enqueue_script('basket-client');
 
   // Load the threaded comment reply script

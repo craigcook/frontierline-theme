@@ -1157,6 +1157,8 @@ label {
   margin-left: -80px;
 }
 .comment-list .entry-title {
+  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
   margin: 0 0 1em;
 }
@@ -1841,20 +1843,20 @@ label {
 #newsletter-subscribe .form-submit .form-button {
   width: 100%;
 }
-#newsletter-subscribe p.promise {
+#newsletter-subscribe .promise {
   line-height: 1.1;
   margin-top: .5em;
   text-align: center;
 }
-#newsletter-subscribe .thank {
-  padding-top: 20px;
+#newsletter-subscribe .thanks {
+  padding-top: 10px;
 }
-#newsletter-subscribe .thank p {
-  -webkit-animation: pebbles-fade-in 500ms ease-in 800ms 1 normal both;
-  animation: pebbles-fade-in 500ms ease-in 800ms 1 normal both;
+#newsletter-subscribe .thanks p {
+  -webkit-animation: pebbles-fade-in 150ms ease-in 800ms 1 normal both;
+  animation: pebbles-fade-in 150ms ease-in 800ms 1 normal both;
   margin-top: 20px;
 }
-#newsletter-subscribe .errorlist {
+#newsletter-subscribe .newsletter_errors > ul {
   background: #fff;
   color: #c13832;
   padding: 10px 20px;
@@ -1875,7 +1877,8 @@ label {
     padding: 10px 0 20px 140px;
     text-align: left;
   }
-  #newsletter-subscribe .form-contents {
+  #newsletter-subscribe .form-contents,
+  #newsletter-subscribe .thanks {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;

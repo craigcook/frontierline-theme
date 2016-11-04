@@ -4,20 +4,20 @@
  */
 
 global $wp;
-$current_url = home_url(add_query_arg(array(),$wp->request));
+$current_url = esc_attr(home_url(add_query_arg(array(),$wp->request)));
 ?>
 
 <aside id="newsletter-subscribe" class="section">
-  <form class="content newsletter_form" id="newsletter_form" name="newsletter_form" action="https://www.mozilla.org/newsletter/" method="post">
+  <form id="newsletter_form" class="content newsletter_form" name="newsletter_form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
     <input type="hidden" id="newsletters" name="newsletters" value="mozilla-foundation">
-    <input type="hidden" name="source_url" value="<?php echo $current_url; ?>">
+    <input type="hidden" id="source_url" name="source_url" value="<?php echo $current_url; ?>">
 
     <div class="form-title">
       <h3><?php _e('Love the Web?', 'frontierline'); ?></h3>
       <h4><?php _e('Get the Mozilla newsletter and help us keep it open and free.', 'frontierline'); ?></h4>
     </div>
 
-    <div class="form-contents">
+    <div id="form-contents" class="form-contents">
       <div id="newsletter_errors" class="newsletter_errors"></div>
 
       <div class="field field-email">
@@ -29,7 +29,7 @@ $current_url = home_url(add_query_arg(array(),$wp->request));
       <div class="form-details">
         <div class="field field-language">
           <label for="lang"><?php _e('Language', 'frontierline'); ?></label>
-          <select aria-required="true" id="id_lang" name="lang" required="required">
+          <select aria-required="true" id="lang" name="lang" required="required">
             <option value="de">Deutsch</option>
             <option value="en" selected="selected">English</option>
             <option value="es">Español</option>
@@ -57,13 +57,15 @@ $current_url = home_url(add_query_arg(array(),$wp->request));
           <small><?php _e('We will only send you Mozilla-related information.', 'frontierline'); ?></small>
         </p>
       </div>
-      <div id="newsletter_thanks" class="thanks">
-        <h2><?php _e('Thanks!', 'frontierline'); ?></h2>
-        <p>
-          <?php _e('If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so.', 'frontierline'); ?>
-          <?php _e('Please check your inbox or your spam filter for an e-mail from us.', 'frontierline'); ?>
-        </p>
-      </div>
     </div>
+
+    <div id="newsletter_thanks" class="thanks">
+      <h2><?php _e('Thanks!', 'frontierline'); ?></h2>
+      <p>
+        <?php _e('If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so.', 'frontierline'); ?>
+        <?php _e('Please check your inbox or your spam filter for an e-mail from us.', 'frontierline'); ?>
+      </p>
+    </div>
+
   </form>
 </aside>
