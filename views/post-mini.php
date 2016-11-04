@@ -12,7 +12,7 @@
   ?>
     <img class="post-image" width="300" height="165" alt="" src="<?php echo get_template_directory_uri(); ?>/img/fallback-thumb.png" data-src="<?php echo $thumb_url[0]; ?>">
   <?php else : ?>
-    <img class="post-image" width="300" height="165" alt="" src="<?php echo get_template_directory_uri(); ?>/img/fallbacks/glitch-0<?php echo rand(1, 5); ?>.jpg">
+    <img class="post-image" width="300" height="165" alt="" src="<?php echo get_template_directory_uri(); ?>/img/fallbacks/glitch-<?php echo rand(1, 6); ?>.jpg">
   <?php endif; ?>
     <h5 class="entry-title"><?php the_title(); ?></h5>
   </a>
