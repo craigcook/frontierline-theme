@@ -2,10 +2,9 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../includes/lib';
-
 
 // Link to previous and next posts
+
 .nav-paging {
     @include clearfix;
     @include flexbox;

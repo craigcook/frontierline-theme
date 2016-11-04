@@ -2,10 +2,9 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../includes/lib';
 
+// the basis for all buttons
 
-/* the basis for all buttons on bedrock */
 @mixin base-button {
     @include font-size(18px);
     @include transition(background-color 100ms ease-in-out);

@@ -20,29 +20,7 @@ Tags: none yet
     'base/elements',
 
     // Components - specific purpose blocks with sub-elements and modifiers
-    'components/sections',
-    'components/post',
-    'components/social-share',
-    'components/post-summary',
-    'components/related-posts',
-    'components/explore',
-    'components/nav-paging',
-    'components/nav-pagination',
-    'components/comments',
-    'components/masthead',
-    'components/nav-global',
-    'components/nav-util',
-    'components/sidebar',
-    'components/newsletter-form',
-    'components/footer',
-    'components/buttons';
-
-
-
-.site-wrap {
-    position: relative;
-}
-
-#content {
-    padding-top: 20px;
-}
+    'components/page-sections',
+    'components/content-types',
+    'components/utilities',
+    'components/navigation';
