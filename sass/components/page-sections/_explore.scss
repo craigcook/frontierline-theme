@@ -46,18 +46,6 @@
         max-width: 300px;
     }
 
-    .post-mini {
-        .entry-title {
-            padding: 0 10px;
-        }
-
-        .date {
-            @include font-size(14px);
-            color: $color-text-secondary;
-            padding: 0 10px;
-        }
-    }
-
     .post-image {
         display: none;
     }

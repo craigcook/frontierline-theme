@@ -9,7 +9,7 @@
   <?php while ( have_posts() ) : the_post(); ?>
 
     <div class="content">
-      <?php get_template_part('views/content'); ?>
+      <?php get_template_part('content-views/content'); ?>
     </div>
 
   <?php if (is_singular()) : // Probably redundant because this is the single template, but just to be safe... ?>

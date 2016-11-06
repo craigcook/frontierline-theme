@@ -1,0 +1,213 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+// Full posts and pages
+
+.post-image-full {
+    @include gradient-horizontal-three-colors(#fff, #ccc, 50%, #fff);
+    margin: -20px auto 20px;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    max-height: 200px;
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    @media #{$mq-desktop} {
+        margin: 0 auto 40px;
+        max-height: 400px;
+    }
+}
+
+.single,
+.page {
+    .entry-header {
+        .entry-title {
+            @include font-size-level1;
+            margin-top: .5em;
+        }
+
+        .entry-tools {
+            @include clearfix;
+            margin: 0 0 40px;
+
+            b {
+                @include visually-hidden;
+            }
+
+            @media #{$mq-tablet} {
+                margin-bottom: 20px;
+            }
+        }
+
+        .categories {
+            margin-bottom: 20px;
+
+            a {
+                @include category-link;
+            }
+
+            @media #{$mq-tablet} {
+                float: left;
+                width: 50%;
+                margin-bottom: 0;
+            }
+
+            @media #{$mq-desktop} {
+                width: 60%;
+            }
+        }
+
+        .entry-info {
+            margin-bottom: 20px;
+
+            .vcard {
+                border-right: 1px solid #ccc;
+                display: inline;
+                font-style: normal;
+                margin-right: 10px;
+                padding-right: 10px;
+            }
+
+            .date {
+                display: inline;
+            }
+        }
+
+        .entry-comments,
+        .edit {
+            display: inline;
+            border-left: 1px solid #ccc;
+            margin-left: 10px;
+            padding-left: 10px;
+        }
+    }
+
+    .post {
+        @include border-box;
+        max-width: $width-desktop;
+        margin: 0 auto;
+
+        .alignleft {
+            float: left;
+            margin: 0 30px .5em 0;
+
+            &.size-large,
+            &.size-medium,
+            &.size-extra-large {
+                float: none;
+                display: block;
+                margin: 0 0 1.5em;
+            }
+        }
+
+        .alignright {
+            float: right;
+            margin: 0 0 .5em 30px;
+
+            &.size-large,
+            &.size-medium
+            &.size-extra-large {
+                float: none;
+                display: block;
+                margin: 0 0 1.5em;
+            }
+        }
+
+        @media #{$mq-phone-wide} {
+            padding: 0 20px;
+
+            .alignleft.size-medium {
+                float: left;
+                margin: 0 30px .5em -20px;
+            }
+
+            .alignright.size-medium {
+                float: right;
+                margin: 0 -20px .5em 30px;
+            }
+        }
+
+        @media #{$mq-tablet} {
+            padding: 0 60px;
+
+            .alignleft {
+                margin-left: -80px;
+
+                &.size-medium {
+                    margin-left: -80px;
+                }
+            }
+
+            .alignright {
+                margin-right: -80px;
+
+                &.size-medium {
+                    margin-right: -80px;
+                }
+            }
+        }
+
+        @media #{$mq-desktop} {
+            .alignleft.size-large {
+                float: left;
+                margin: 0 30px .5em -80px;
+            }
+
+            .alignright.size-large, {
+                float: right;
+                margin: 0 -80px .5em 30px;
+            }
+        }
+
+        // First paragraph gets special treatment
+        @media #{$mq-tablet} {
+            .entry-content p:first-child {
+                @include font-size(20px);
+
+                &:first-line {
+                    @include font-size(24px);
+                }
+
+                &::first-letter {
+                    @include font-size(76px);
+                    line-height: .8;
+                    vertical-align: bottom;
+                    float: left;
+                    font-weight: bold;
+                    padding-top: .125em;
+                    letter-spacing: .075em;
+                    font-style: normal;
+                }
+            }
+        }
+    }
+
+    .entry-meta .meta {
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 1px solid #ccc;
+    }
+}
+
+@media #{$mq-tablet} {
+    .posts-wrap {
+        display: flex;
+        flex-wrap: wrap;
+
+        .post {
+            @include span(6);
+        }
+    }
+}
+
+@media #{$mq-desktop} {
+    .posts-wrap .post {
+        @include span(4);
+    }
+}

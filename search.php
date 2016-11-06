@@ -21,7 +21,7 @@ get_header();
     <div class="content posts-wrap">
     <?php while (have_posts()) : the_post(); ?>
 
-      <?php get_template_part('views/content', 'summary'); ?>
+      <?php get_template_part('content-views/content', 'summary'); ?>
 
     <?php endwhile; ?>
     </div>

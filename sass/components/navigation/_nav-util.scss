@@ -8,9 +8,9 @@
 
 #nav-util {
     background: #eee;
-    color: #fff;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
     border-top: 1px solid rgba(0, 0, 0, .1);
+    color: #fff;
     position: relative;
     z-index: 10;
 
@@ -21,18 +21,27 @@
 
     li {
         display: inline-block;
-        width: 33%;
+        width: 50%;
 
         &.nav-util-sidebar {
             text-align: left;
         }
 
         &.nav-util-explore {
+            display: none; // hidden on mobile
             text-align: center;
         }
 
         &.nav-util-home {
             text-align: right;
+        }
+
+        @media #{$mq-phone-wide} {
+            width: 33%;
+
+            &.nav-util-explore {
+                display: inline-block;
+            }
         }
     }
 

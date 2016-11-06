@@ -21,7 +21,7 @@
     }
 
     .entry-title {
-        @include font-size-level4;
+        @include font-size(20px);
     }
 
     .entry-summary .go {

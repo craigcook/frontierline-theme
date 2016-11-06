@@ -5,15 +5,6 @@ if (! function_exists('frontierline_setup')):
  *
  * To override frontierline_setup() in a child theme, add your own frontierline_setup
  * function to your child theme's functions.php file.
- *
- * @uses load_theme_textdomain() For translation/localization support.
- * @uses add_editor_style() To style the visual editor.
- * @uses add_theme_support() To add support for post thumbnails.
- * @uses register_nav_menus() To add support for navigation menus.
- * @uses add_custom_image_header() To add support for a custom header.
- * @uses register_default_headers() To register the default custom header images provided with the theme.
- * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
- *
  */
 function frontierline_setup() {
 
@@ -29,17 +20,17 @@ function frontierline_setup() {
   add_theme_support('post-thumbnails');
 
   // Set up some custom image sizes
-  add_image_size('post-full-size', 1400, 400, true); // Full post image - used at the top of single articles
-  add_image_size('post-large', 600, 330, true); // Large post image - used in grid summary view
-  add_image_size('post-thumbnail', 300, 165, true); // Thumbnail post image - used in mini view
-  add_image_size('extra-large', 1000, 0, true); // Extra large image - for big images embedded in posts
+  add_image_size('post-full-size', 1400, 770, array('center', 'center')); // Full post image - used at the top of single articles
+  add_image_size('post-large', 600, 330, array('center', 'center')); // Large post image - used in grid summary view
+  add_image_size('post-thumbnail', 300, 165, array('center', 'center')); // Thumbnail post image - used in mini view
+  add_image_size('extra-large', 1000, 0); // Extra large image - for big images embedded in posts
 
   $header_defaults = array(
     'header-text'            => false,
     'width'                  => 1600,
     'height'                 => 600,
-    'flex-width'             => false,
-    'flex-height'            => false,
+//    'flex-width'             => false,
+//    'flex-height'            => false,
   );
   add_theme_support('custom-header', $header_defaults);
 

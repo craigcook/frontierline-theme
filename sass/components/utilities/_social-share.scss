@@ -11,13 +11,6 @@
 // Appears at the top of posts and Pages.
 
 .social-share {
-    float: right;
-    text-align: right;
-
-    ul {
-        float: right;
-    }
-
     li {
         display: inline;
         margin: 0 5px .25em;
@@ -60,12 +53,17 @@
     }
 
     @media #{$mq-tablet} {
-        @include span(5);
+        width: 50%;
         float: right;
+        text-align: right;
 
         a {
-            @include font-size(16px);
+            @include font-size(16px); // keep the buttons small
         }
+    }
+
+    @media #{$mq-desktop} {
+        width: 40%;
     }
 }
 

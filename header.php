@@ -53,7 +53,7 @@
 
   <?php if (get_header_image()) : ?>
   <style type="text/css">
-  @media screen and (min-width: 760px) {
+  @media screen and (min-width: 480px) {
     #masthead {
       background-image: url('<?php header_image(); ?>');
     }

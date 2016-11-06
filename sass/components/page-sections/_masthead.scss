@@ -8,12 +8,16 @@
 #masthead {
     position: relative;
     overflow: hidden;
-    background-color: #bbb;
+    background-color: $color-mozgray;
     @include background-size(cover);
 
     .site-id {
-        padding: 40px 20px;
+        padding: 20px;
         text-align: center;
+
+        @media #{$mq-tablet} {
+            padding: 40px 20px;
+        }
 
         @media #{$mq-desktop} and #{$mq-tall} {
             padding: 80px 20px;
@@ -26,7 +30,8 @@
         max-width: $width-tablet;
         text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
 
-        a {
+        a:link,
+        a:visited {
             color: $color-mozred;
             text-decoration: none;
         }
@@ -36,12 +41,17 @@
 #site-title {
     @include font-size-level2;
     background: rgba(255, 255, 255, .75);
-    display: inline-block;
-    margin: -4% -5% -.25em -11.5%;
-    padding: 4% 5% .2em 11.5%;
+    margin: 0 auto;
+    min-width: 50%;
+    padding: .25em 20px;
     position: relative;
     z-index: 3;
-    min-width: 50%;
+
+    @media #{$mq-phone-wide} {
+        display: inline-block;
+        margin: -4% -5% -.25em -11.5%;
+        padding: 4% 5% .2em 11.5%;
+    }
 
     @media #{$mq-tablet} {
         @include font-size-level1;
@@ -51,13 +61,18 @@
 #site-description {
     @include font-size-level3;
     background: rgba(255, 255, 255, .75);
-    display: inline-block;
     line-height: 1.1;
-    margin: 0 -12% -2% -5.5%;
-    padding: .35em 12% 2.75% 5.5%;
+    margin: 0 auto;
+    min-width: 50%;
+    padding: .25em 20px;
     position: relative;
     z-index: 2;
-    min-width: 50%;
+
+    @media #{$mq-phone-wide} {
+        display: inline-block;
+        margin: 0 -12% -2% -5.5%;
+        padding: .35em 12% 2.75% 5.5%;
+    }
 
     @media #{$mq-tablet} {
         @include font-size-level2;
