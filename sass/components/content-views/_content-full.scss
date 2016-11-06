@@ -197,7 +197,7 @@
 
 @media #{$mq-tablet} {
     .posts-wrap {
-        display: flex;
+        @include flexbox;
         flex-wrap: wrap;
 
         .post {

@@ -36,7 +36,7 @@
             text-align: right;
         }
 
-        @media #{$mq-phone-wide} {
+        @media #{$mq-tablet} {
             width: 33%;
 
             &.nav-util-explore {

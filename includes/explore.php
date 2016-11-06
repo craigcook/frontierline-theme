@@ -10,6 +10,7 @@
 
 <aside id="explore" role="complementary">
   <div class="content">
+    <h3 class="module-title"><?php _e('Explore more articles', 'frontierline'); ?></h3>
 
     <ul class="cat-list" role="navigation">
     <?php foreach($categories as $category) : ?>

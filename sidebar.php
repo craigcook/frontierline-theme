@@ -4,6 +4,8 @@
  */
 ?>
 
-<section id="sidebar" class="widgets" role="complementary">
+<section id="sidebar" class="section widgets" role="complementary">
+  <div class="content">
   <?php dynamic_sidebar('sidebar'); ?>
+  </div>
 </section>

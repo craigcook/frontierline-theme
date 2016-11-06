@@ -7,23 +7,63 @@
 
 // The global sidebar (blog menu)
 
+.js #sidebar {
+    @include hidden;
+}
+
 #sidebar {
     @include border-box;
-    @include transition(left 600ms cubic-bezier(.30, -0.5, .60, 1.1));
-    background: #fff;
-    box-shadow: 3px 0 1px rgba(0, 0, 0, .2);
-    left: 0;
-    max-width: 600px;
-    min-height: 100%;
-    min-width: 300px;
-    padding: 80px 40px 40px;
-    position: absolute;
-    top: 0;
-    width: 33%;
-    z-index: 9;
+    flex-wrap: wrap;
+    background: #eee;
+    padding: 20px;
+
+    &.active {
+        @include transition(transform 600ms cubic-bezier(.30, -0.5, .60, 1.1));
+        background: #fff;
+        box-shadow: 3px 0 1px rgba(0, 0, 0, .2);
+        left: 0;
+        max-width: 600px;
+        min-height: 100%;
+        min-width: 260px;
+        padding: 80px 20px 40px;
+        position: absolute;
+        top: 0;
+        transform: translateX(-101%); // Extra 1% to hide the shadow
+        width: 33%;
+        z-index: 9;
+
+        @media #{$mq-tablet} {
+            padding: 80px 40px 40px;
+        }
+
+        &.show {
+            display: block;
+            transform: none;
+        }
+
+        .content {
+            display: block;
+            flex-wrap: nowrap;
+            min-width: 0;
+            padding: 0;
+            width: auto;
+        }
+
+        .widget {
+            margin-bottom: 40px;
+            padding: 0;
+            width: auto;
+            float: none;
+        }
+    }
+
+    .content {
+        @include flexbox;
+        flex-wrap: wrap;
+    }
 
     .widget {
-        margin-bottom: 40px;
+        @include span(4);
     }
 
     .widget-title {
@@ -36,9 +76,10 @@
     .widget_nav_menu,
     .widget_categories,
     .widget_recent_entries,
-    .widget_recent_comments {
+    .widget_recent_comments,
+    .widget_pages {
         ul {
-            border-bottom: 1px solid rgba(0, 0, 0, .05);
+            border-top: 1px solid rgba(0, 0, 0, .05);
         }
 
         li {
@@ -47,7 +88,7 @@
         }
 
         a {
-            @include transition(background-color 100ms ease);
+            @include transition(background-color 80ms ease-out);
             display: block;
             padding: .25em 4px;
             text-decoration: none;
@@ -60,12 +101,13 @@
         }
     }
 
-}
+    .widget_tag_cloud .tagcloud {
+        line-height: 1.2;
+        text-align: center;
 
-.js #sidebar {
-    left: -33.3%;
-
-    &.show {
-        left: 0;
+        a {
+            vertical-align: middle;
+        }
     }
+
 }

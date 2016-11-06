@@ -36,10 +36,12 @@
     </h2>
 
     <div class="entry-info">
+    <?php if (!is_page()) : // No author or date on Pages ?>
       <address class="vcard">
       <?php if (function_exists('coauthors_posts_links')) : coauthors_posts_links(); else : the_author_posts_link(); endif; ?>
       </address>
       <time class="date" title="<?php the_time('Y-m-d\TH:i:sP'); ?>" datetime="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php echo get_the_date(); ?></time>
+    <?php endif; ?>
     <?php if (comments_open() || get_comments_number()) : ?>
       <p class="entry-comments">
         <?php comments_popup_link(__('No responses yet', 'frontierline'), __('1 response', 'frontierline'), __('% responses', 'frontierline')); ?>
@@ -52,7 +54,7 @@
   <div class="entry-content">
     <?php the_content(__('Continue reading&hellip;', 'frontierline')); ?>
     <?php wp_link_pages(array('before' => '<p class="pages" role="navigation"><span>' . __('Pages:', 'frontierline') . '</span>', 'after' => '</p>')); ?>
-  </div><!-- .entry-content -->
+  </div>
 
   <?php if (has_tag()) : ?>
     <footer class="entry-tags">

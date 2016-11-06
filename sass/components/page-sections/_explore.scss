@@ -7,7 +7,14 @@
 // Shows top categories and recent posts in each.
 
 #explore {
+    position: static;
+
+    .module-title {
+        @include font-size-level2;
+    }
+
     .cat-list {
+        @include hidden;
         text-align: center;
 
         li {
@@ -28,44 +35,64 @@
     }
 
     .category-title {
+        @include font-size-level3;
         color: $color-mozred;
-        margin: 1em 10px;
+        margin: 1em 0;
         padding-top: 1em;
         border-top: 1px solid #ccc;
     }
 
-    .category-posts {
-        @include flexbox;
-        margin: 0 auto 20px;
-        max-width: 1500px;
-    }
-
     .category-post {
-        @include border-box;
-        @include span(2.4);
-        max-width: 300px;
+        margin: 0 0 1em;
     }
 
     .post-image {
         display: none;
     }
-}
 
-.js #explore {
-    background: #fff;
-    box-shadow: 0 3px 1px rgba(0, 0, 0, .2);
-    left: 0;
-    min-height: 100px;
-    position: absolute;
-    top: 50px;
-    width: 100%;
+    &.active {
+        background: #fff;
+        box-shadow: 0 3px 1px rgba(0, 0, 0, .2);
+        left: 0;
+        min-height: 100px;
+        padding-top: 3em;
+        position: absolute;
+        top: 0;
+        width: 100%;
 
-    .category-title {
-        @include visually-hidden;
-    }
+        .cat-list {
+            display: block;
+        }
 
-    .post-image {
-        display: block;
-        margin: 0 auto 10px;
+        .module-title,
+        .category-title {
+            @include visually-hidden;
+        }
+
+        .category-posts {
+            @include flexbox;
+            flex-wrap: wrap;
+            margin: 0 auto 20px;
+            max-width: $width-desktop-wide;
+        }
+
+        .category-post {
+            @include border-box;
+            margin-bottom: 20px;
+
+            @media #{$mq-tablet} {
+                @include span(4);
+                max-width: 300px;
+            }
+
+            @media #{$mq-desktop} {
+                @include span(2.4);
+            }
+        }
+
+        .post-image {
+            display: block;
+            margin: 0 auto 10px;
+        }
     }
 }

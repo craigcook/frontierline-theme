@@ -56,6 +56,11 @@
     </div>
   </footer>
 
-<?php wp_footer(); ?>
+  <!--[if IE 9]>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/matchMedia.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/matchMedia.addListener.js"></scrip>
+  <![endif]-->
+
+  <?php wp_footer(); ?>
 </body>
 </html>
