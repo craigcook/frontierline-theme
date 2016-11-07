@@ -4,7 +4,7 @@
  */
 ?>
 
-<nav class="nav-global">
+<nav id="nav-global" class="nav-global">
   <div class="content">
     <div class="logo"><a href="https://www.mozilla.org" rel="external" title="<?php _e('Visit mozilla.org', 'frontierline'); ?>">Mozilla</a></div>
 

@@ -2184,7 +2184,7 @@ input[type='button'].form-button.red:focus {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   min-height: 40px;
   position: relative;
-  z-index: 10;
+  z-index: 90;
 }
 .nav-global:after {
   clear: both;
@@ -2284,8 +2284,8 @@ input[type='button'].form-button.red:focus {
   text-decoration: underline;
 }
 
-.nav-mozilla:hover .nav-mozilla-menu,
-.nav-mozilla-menu:target {
+.nav-mozilla:hover #nav-mozilla-menu,
+#nav-mozilla-menu:target {
   left: auto;
 }
 

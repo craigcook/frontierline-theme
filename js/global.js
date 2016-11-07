@@ -154,4 +154,15 @@
     }
     initEmailForm();
 
+
+    function navGlobal() {
+        var navMoz = jQuery('#nav-mozilla-menu');
+        var navMozToggle = jQuery('#nav-global .nav-mozilla .toggle');
+
+        navMozToggle.on('click', function(){
+            navMoz.slideToggle('fast');
+        });
+    }
+    navGlobal();
+
 })(window.jQuery);
