@@ -79,6 +79,7 @@
         }
 
         .entry-comments,
+        .meta,
         .edit {
             display: inline;
             border-left: 1px solid #ccc;
@@ -89,9 +90,7 @@
 
     .post,
     .page {
-        @include border-box;
-        max-width: $width-desktop;
-        margin: 0 auto;
+        @include single-size;
 
         .alignleft {
             float: left;
@@ -120,8 +119,6 @@
         }
 
         @media #{$mq-phone-wide} {
-            padding: 0 20px;
-
             .alignleft.size-medium {
                 float: left;
                 margin: 0 30px .5em -20px;
@@ -134,21 +131,19 @@
         }
 
         @media #{$mq-tablet} {
-            padding: 0 60px;
-
             .alignleft {
-                margin-left: -80px;
+                margin-left: -60px;
 
                 &.size-medium {
-                    margin-left: -80px;
+                    margin-left: -60px;
                 }
             }
 
             .alignright {
-                margin-right: -80px;
+                margin-right: -60px;
 
                 &.size-medium {
-                    margin-right: -80px;
+                    margin-right: -60px;
                 }
             }
         }
@@ -156,12 +151,12 @@
         @media #{$mq-desktop} {
             .alignleft.size-large {
                 float: left;
-                margin: 0 30px .5em -80px;
+                margin: 0 30px .5em -60px;
             }
 
             .alignright.size-large, {
                 float: right;
-                margin: 0 -80px .5em 30px;
+                margin: 0 -60px .5em 30px;
             }
         }
 
@@ -188,9 +183,14 @@
         }
     }
 
-    .entry-meta .meta {
+    .entry-tags {
         margin-top: 30px;
         padding-top: 30px;
         border-top: 1px solid #ccc;
     }
+}
+
+.image-attachment,
+.not-found {
+    @include single-size;
 }

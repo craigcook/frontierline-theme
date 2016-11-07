@@ -651,15 +651,17 @@ label {
   padding: 20px 40px;
   margin: 0 auto;
 }
-#related-posts .in-category,
-#related-posts .popular {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  width: 49.998%;
-  padding-left: 20px;
-  padding-right: 20px;
+@media screen and (min-width: 480px) {
+  #related-posts .in-category,
+  #related-posts .popular {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 49.998%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 #related-posts .module-title {
   font-size: 21px;
@@ -781,6 +783,7 @@ label {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 8;
 }
 #explore.active .cat-list {
   display: block;
@@ -1204,6 +1207,7 @@ label {
   display: inline;
 }
 .single .entry-header .entry-comments,
+.single .entry-header .meta,
 .single .entry-header .edit {
   display: inline;
   border-left: 1px solid #ccc;
@@ -1215,8 +1219,20 @@ label {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 980px;
   margin: 0 auto;
+  max-width: 940px;
+}
+@media screen and (min-width: 480px) {
+  .single .post,
+  .single .page {
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 760px) {
+  .single .post,
+  .single .page {
+    padding: 0 60px;
+  }
 }
 .single .post .alignleft,
 .single .page .alignleft {
@@ -1249,10 +1265,6 @@ label {
   margin: 0 0 1.5em;
 }
 @media screen and (min-width: 480px) {
-  .single .post,
-  .single .page {
-    padding: 0 20px;
-  }
   .single .post .alignleft.size-medium,
   .single .page .alignleft.size-medium {
     float: left;
@@ -1265,37 +1277,33 @@ label {
   }
 }
 @media screen and (min-width: 760px) {
-  .single .post,
-  .single .page {
-    padding: 0 60px;
-  }
   .single .post .alignleft,
   .single .page .alignleft {
-    margin-left: -80px;
+    margin-left: -60px;
   }
   .single .post .alignleft.size-medium,
   .single .page .alignleft.size-medium {
-    margin-left: -80px;
+    margin-left: -60px;
   }
   .single .post .alignright,
   .single .page .alignright {
-    margin-right: -80px;
+    margin-right: -60px;
   }
   .single .post .alignright.size-medium,
   .single .page .alignright.size-medium {
-    margin-right: -80px;
+    margin-right: -60px;
   }
 }
 @media screen and (min-width: 1000px) {
   .single .post .alignleft.size-large,
   .single .page .alignleft.size-large {
     float: left;
-    margin: 0 30px .5em -80px;
+    margin: 0 30px .5em -60px;
   }
   .single .post .alignright.size-large,
   .single .page .alignright.size-large {
     float: right;
-    margin: 0 -80px .5em 30px;
+    margin: 0 -60px .5em 30px;
   }
 }
 @media screen and (min-width: 760px) {
@@ -1322,10 +1330,31 @@ label {
     font-style: normal;
   }
 }
-.single .entry-meta .meta {
+.single .entry-tags {
   margin-top: 30px;
   padding-top: 30px;
   border-top: 1px solid #ccc;
+}
+
+.image-attachment,
+.not-found {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 940px;
+}
+@media screen and (min-width: 480px) {
+  .image-attachment,
+  .not-found {
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 760px) {
+  .image-attachment,
+  .not-found {
+    padding: 0 60px;
+  }
 }
 
 .post-summary {
@@ -2553,29 +2582,31 @@ input[type='button'].form-button.red:focus {
   right: 10px;
 }
 
-.nav-paging-prev,
-.nav-paging-next {
-  position: relative;
-  width: 50%;
-  margin-bottom: 0;
-  height: 100%;
-}
+@media screen and (min-width: 480px) {
+  .nav-paging-prev,
+  .nav-paging-next {
+    height: 100%;
+    margin-bottom: 0;
+    position: relative;
+    width: 50%;
+  }
 
-.nav-paging-prev {
-  float: left;
-  border-right: 1px solid #ccc;
-  margin-right: -1px;
-}
+  .nav-paging-prev {
+    border-right: 1px solid #ccc;
+    float: left;
+    margin-right: -1px;
+  }
 
-.nav-paging-next {
-  float: right;
-}
+  .nav-paging-next {
+    float: right;
+  }
 
-[dir='rtl'] .nav-paging-prev {
-  float: right;
-}
-[dir='rtl'] .nav-paging-next {
-  float: left;
+  [dir='rtl'] .nav-paging-prev {
+    float: right;
+  }
+  [dir='rtl'] .nav-paging-next {
+    float: left;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -14,9 +14,11 @@
         margin: 0 auto;
     }
 
-    .in-category,
-    .popular {
-        @include span(6);
+    @media #{$mq-phone-wide} {
+        .in-category,
+        .popular {
+            @include span(6);
+        }
     }
 
     .module-title {

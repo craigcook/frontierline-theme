@@ -15,24 +15,28 @@
         <div class="entry-info">
           <?php
             $metadata = wp_get_attachment_metadata();
-            printf( __( 'Published <time class="published" title="%1$s" datetime="%1$s">%2$s</time> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a>', 'frontierline' ),
+            printf(__('<time class="date published" title="%1$s" datetime="%1$s">%2$s</time>', 'frontierline'),
               esc_attr( get_the_time('Y-m-d\TH:i:sP') ),
-              get_the_date(get_option('date_format')),
+              get_the_date(get_option('date_format'))
+            );
+          ?>
+          <p class="meta">
+            <?php printf(__('Original size: <a href="%1$s">%2$s &times; %3$s</a>', 'frontierline'),
               esc_url(wp_get_attachment_url()),
               $metadata['width'],
               $metadata['height']
-            );
-          ?>
+            ); ?>
+          </p>
           <?php edit_post_link( __( 'Edit', 'frontierline' ), '<p class="edit">', '</p>' ); ?>
         </div>
       </header>
 
       <div class="entry-content">
-        <figure class="entry-attachment">
+        <figure class="entry-attachment wp-caption aligncenter">
         <?php echo wp_get_attachment_image( get_the_ID(), 'extra-large' ); ?>
 
         <?php if (! empty($post->post_excerpt)) : ?>
-          <figcaption class="entry-caption">
+          <figcaption class="wp-caption-text">
             <?php the_excerpt(); ?>
           </figcaption>
         <?php endif; ?>

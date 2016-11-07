@@ -6,19 +6,18 @@
  * Shows 5 most popular posts in the last 30 days.
  * Uses WordPress Popular Posts plugin. If the plugin is absent, falls back to 5 most recent posts across all categories.
  */
+
+  global $post;
+  $categories = get_the_category();
+  $category = $categories[0];
+  $cat_ID = $category->cat_ID;
+
+  $catposts = get_posts('showposts=5&post_status=publish&cat='.$cat_ID.'&exclude='.$post->ID);
 ?>
 
 <aside id="related-posts" class="section">
   <div class="content">
     <div class="in-category">
-    <?php
-      global $post;
-      $categories = get_the_category();
-      $category = $categories[0];
-      $cat_ID = $category->cat_ID;
-
-      $catposts = get_posts('showposts=5&post_status=publish&cat='.$cat_ID.'&exclude='.$post->ID);
-    ?>
       <h4 class="module-title"><?php printf( __('More articles in “%s”', 'frontierline'), esc_html($category->name)); ?></h4>
 
     <?php if ($catposts) : ?>
@@ -39,10 +38,9 @@
     </div>
 
     <div class="popular">
-      <?php if (function_exists('wpp_get_mostpopular')) : ?>
+    <?php if (function_exists('wpp_get_mostpopular')) : ?>
 
       <h4 class="module-title"><?php _e('Popular articles', 'frontierline'); ?></h4>
-
       <?php
         $args = array(
           'limit' => '5',
@@ -54,10 +52,9 @@
         );
         wpp_get_mostpopular($args); ?>
 
-      <?php else : ?>
+    <?php else : ?>
 
       <h4 class="module-title"><?php _e('Recent articles', 'frontierline'); ?></h4>
-
       <?php $recentposts = get_posts('showposts=5&post_status=publish&exclude='.$post->ID);
         if ($recentposts) : ?>
       <ul class="recent-posts">
@@ -70,7 +67,7 @@
       </ul>
       <?php endif; wp_reset_query(); ?>
 
-      <?php endif; ?>
+    <?php endif; ?>
     </div>
   </div>
 </aside>

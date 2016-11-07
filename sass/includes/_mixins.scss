@@ -29,6 +29,21 @@
     }
 }
 
+// Narrower width for singular pages
+@mixin single-size {
+    @include border-box;
+    margin: 0 auto;
+    max-width: $width-desktop - 40px;
+
+    @media #{$mq-phone-wide} {
+        padding: 0 20px;
+    }
+
+    @media #{$mq-tablet} {
+        padding: 0 60px;
+    }
+}
+
 
 // Clear floats
 @mixin clearfix {
