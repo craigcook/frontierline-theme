@@ -36,7 +36,7 @@
     </h2>
 
     <div class="entry-info">
-    <?php if (!is_page()) : // No author or date on Pages ?>
+    <?php if ($post->post_type === 'post') : ?>
       <address class="vcard">
       <?php if (function_exists('coauthors_posts_links')) : coauthors_posts_links(); else : the_author_posts_link(); endif; ?>
       </address>
@@ -52,7 +52,7 @@
   </header>
 
   <div class="entry-content">
-    <?php the_content(__('Continue reading&hellip;', 'frontierline')); ?>
+    <?php the_content(__('Continue reading…', 'frontierline')); ?>
     <?php wp_link_pages(array('before' => '<p class="pages" role="navigation"><span>' . __('Pages:', 'frontierline') . '</span>', 'after' => '</p>')); ?>
   </div>
 

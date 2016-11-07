@@ -121,3 +121,23 @@
     margin: .75em 10px 0;
     text-align: center;
 }
+
+// Content summaries in a grid view.
+.posts-wrap {
+    @include clearfix;
+
+    @media #{$mq-tablet} {
+        @include flexbox;
+        flex-wrap: wrap;
+
+        .post-summary {
+            @include span(6);
+        }
+    }
+
+    @media #{$mq-desktop} {
+        .post-summary {
+            @include span(4);
+        }
+    }
+}

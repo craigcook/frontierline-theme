@@ -16,6 +16,7 @@
       <h2 class="entry-title"><?php the_title(); ?></h2>
     </a>
 
+  <?php if ($post->post_type !== 'page') : ?>
     <div class="entry-info">
       <address class="vcard">
       <?php if (function_exists('coauthors_posts_links')) :
@@ -27,6 +28,7 @@
 
       <time class="date" title="<?php the_time('Y-m-d\TH:i:sP'); ?>" datetime="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php the_date(); ?></time>
     </div>
+  <?php endif; ?>
   </header>
 
   <div class="entry-summary">

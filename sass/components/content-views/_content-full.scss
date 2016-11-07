@@ -24,8 +24,7 @@
     }
 }
 
-.single,
-.page {
+.single {
     .entry-header {
         .entry-title {
             @include font-size-level1;
@@ -88,7 +87,8 @@
         }
     }
 
-    .post {
+    .post,
+    .page {
         @include border-box;
         max-width: $width-desktop;
         margin: 0 auto;
@@ -192,22 +192,5 @@
         margin-top: 30px;
         padding-top: 30px;
         border-top: 1px solid #ccc;
-    }
-}
-
-@media #{$mq-tablet} {
-    .posts-wrap {
-        @include flexbox;
-        flex-wrap: wrap;
-
-        .post {
-            @include span(6);
-        }
-    }
-}
-
-@media #{$mq-desktop} {
-    .posts-wrap .post {
-        @include span(4);
     }
 }
