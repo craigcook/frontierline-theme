@@ -26,7 +26,7 @@
       endif; ?>
       </address>
 
-      <time class="date" title="<?php the_time('Y-m-d\TH:i:sP'); ?>" datetime="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php the_date(); ?></time>
+      <time class="date published" datetime="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php echo get_the_date(); ?></time>
     </div>
   <?php endif; ?>
   </header>

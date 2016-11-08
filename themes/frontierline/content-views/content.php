@@ -20,7 +20,7 @@
       </div>
     <?php endif; ?>
 
-    <?php if (get_option('frontierline_share_posts') == 1) :
+    <?php if ( (is_single() && get_option('frontierline_share_posts') == 1) || (is_page() && get_option('frontierline_share_pages') == 1) ) :
         get_template_part('includes/social-share');
        endif; ?>
     </div>
@@ -40,7 +40,7 @@
       <address class="vcard">
       <?php if (function_exists('coauthors_posts_links')) : coauthors_posts_links(); else : the_author_posts_link(); endif; ?>
       </address>
-      <time class="date" title="<?php the_time('Y-m-d\TH:i:sP'); ?>" datetime="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php echo get_the_date(); ?></time>
+      <time class="date published" datetime="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php the_date(); ?></time>
     <?php endif; ?>
     <?php if (comments_open() || get_comments_number()) : ?>
       <p class="entry-comments">
