@@ -16,6 +16,10 @@
         margin: 0 5px .25em;
     }
 
+    b {
+        @include visually-hidden;
+    }
+
     a {
         @include base-button;
         @include font-size(16px);

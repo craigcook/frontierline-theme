@@ -18,13 +18,26 @@
         margin: 0 auto;
     }
 
+    @media #{$mq-tablet} {
+        img.size-post-full-size {
+            @include transform(translateY(-25%));
+            position: relative;
+            top: 50%;
+        }
+    }
+
     @media #{$mq-desktop} {
         margin: 0 auto 40px;
         max-height: 400px;
+
+        img.size-post-full-size {
+            @include transform(translateY(-15%));
+        }
     }
 }
 
-.single {
+.single,
+.page {
     .entry-header {
         .entry-title {
             @include font-size-level1;
@@ -88,13 +101,13 @@
         }
     }
 
-    .post,
-    .page {
+    .post {
         @include single-size;
     }
 
     .entry-content {
         @include clearfix;
+        margin-bottom: 40px;
 
         dt {
             font-style: italic;
@@ -205,23 +218,26 @@
 
     // First paragraph gets special treatment
     @media #{$mq-tablet} {
-        .entry-content > p:first-child {
-            @include font-size(20px);
-            min-height: 70px;
+        .post,
+        .page {
+            .entry-content > p:first-child {
+                @include font-size(20px);
+                min-height: 70px;
 
-            &:first-line {
-                @include font-size(24px);
-            }
+                &:first-line {
+                    @include font-size(24px);
+                }
 
-            &::first-letter {
-                @include font-size(76px);
-                line-height: .8;
-                vertical-align: bottom;
-                float: left;
-                font-weight: bold;
-                padding-top: .125em;
-                letter-spacing: .075em;
-                font-style: normal;
+                &::first-letter {
+                    @include font-size(76px);
+                    line-height: .8;
+                    vertical-align: bottom;
+                    float: left;
+                    font-weight: bold;
+                    padding-top: .125em;
+                    letter-spacing: .075em;
+                    font-style: normal;
+                }
             }
         }
     }
