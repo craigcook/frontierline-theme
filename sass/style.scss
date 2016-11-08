@@ -1,16 +1,25 @@
 /*
 Theme Name: Mozilla Frontierline
-Theme URI: https://github.com/mozilla/repo-tbd
+Theme URI: https://github.com/mozilla/Frontierline-theme
 Author: Craig Cook, Michael Ham, and all your other friends at Mozilla
 Author URI: https://www.mozilla.org
-Description: Description to come.
+Description: A theme for official Mozilla blogs.
 Version: 1.0
 License: MPL Mozilla Public License v2 or later
 License URI: https://www.mozilla.org/MPL/2.0/
 Text Domain: frontierline
 Domain Path: /languages/
-Tags: none yet
+Tags: Mozilla, light, white, three-columns, responsive-layout, editor-style, featured-images, theme-options, translation-ready, social, social-sharing
 */
+
+/**********
+* This theme uses Sass as a CSS preprocessor. Source files are in
+* the /sass/ folder and should be compiled to style.css in the
+* theme's root folder. To make style edits, modify the source
+* files and recompile.
+*
+* Don't edit style.css directly!
+**********/
 
 @import
     // Fonts

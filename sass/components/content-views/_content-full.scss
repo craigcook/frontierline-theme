@@ -91,6 +91,48 @@
     .post,
     .page {
         @include single-size;
+    }
+
+    .entry-content {
+        @include clearfix;
+
+        dt {
+            font-style: italic;
+        }
+
+        dd {
+            padding-left: 30px;
+        }
+
+        blockquote {
+            border-left: 2px solid #ccc;
+            color: $color-text-secondary;
+            padding: .25em 30px;
+
+            > :last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        pre {
+          overflow: auto;
+        }
+
+        code {
+          @include font-size(14px);
+        }
+
+        hr {
+          background: transparent;
+          border-top: 1px solid #ccc;
+          clear: both;
+          color: transparent;
+          margin: 30px auto;
+        }
+
+        iframe {
+          max-width: 100%;
+        }
 
         .alignleft {
             float: left;
@@ -159,26 +201,27 @@
                 margin: 0 -60px .5em 30px;
             }
         }
+    }
 
-        // First paragraph gets special treatment
-        @media #{$mq-tablet} {
-            .entry-content p:first-child {
-                @include font-size(20px);
+    // First paragraph gets special treatment
+    @media #{$mq-tablet} {
+        .entry-content > p:first-child {
+            @include font-size(20px);
+            min-height: 70px;
 
-                &:first-line {
-                    @include font-size(24px);
-                }
+            &:first-line {
+                @include font-size(24px);
+            }
 
-                &::first-letter {
-                    @include font-size(76px);
-                    line-height: .8;
-                    vertical-align: bottom;
-                    float: left;
-                    font-weight: bold;
-                    padding-top: .125em;
-                    letter-spacing: .075em;
-                    font-style: normal;
-                }
+            &::first-letter {
+                @include font-size(76px);
+                line-height: .8;
+                vertical-align: bottom;
+                float: left;
+                font-weight: bold;
+                padding-top: .125em;
+                letter-spacing: .075em;
+                font-style: normal;
             }
         }
     }

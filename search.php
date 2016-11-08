@@ -17,7 +17,7 @@ get_header();
     </h2>
 
     <?php /* Start the Loop */ ?>
-    <div class="content posts-wrap">
+    <div class="content posts-grid">
     <?php while (have_posts()) : the_post(); ?>
 
       <?php get_template_part('content-views/content', 'summary'); ?>

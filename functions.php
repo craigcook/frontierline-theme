@@ -16,6 +16,9 @@ function frontierline_setup() {
   // TODO: Commented out for now; I'll add this back later
   // register_nav_menu('primary', __('Primary Menu', 'frontierline'));
 
+  // Add styles to post editor (editor-style.css)
+  add_editor_style();
+
   // This theme uses Featured Images (also known as post thumbnails)
   add_theme_support('post-thumbnails');
 
@@ -29,8 +32,6 @@ function frontierline_setup() {
     'header-text'            => false,
     'width'                  => 1600,
     'height'                 => 600,
-//    'flex-width'             => false,
-//    'flex-height'            => false,
   );
   add_theme_support('custom-header', $header_defaults);
 
