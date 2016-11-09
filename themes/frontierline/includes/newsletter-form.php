@@ -3,12 +3,12 @@
  * Newsletter subscription form.
  */
 
-global $wp;
+$blog_name = sanitize_text_field(get_bloginfo('name'));
 $current_url = esc_attr(home_url(add_query_arg(array(),$wp->request)));
 ?>
 
 <aside id="newsletter-subscribe" class="section">
-  <form id="newsletter_form" class="content newsletter_form" name="newsletter_form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+  <form id="newsletter_form" class="content newsletter_form" name="newsletter_form" action="https://www.mozilla.org/en-US/newsletter/" method="post" data-blog="<?php echo $blog_name; ?>">
     <input type="hidden" id="newsletters" name="newsletters" value="mozilla-foundation">
     <input type="hidden" id="source_url" name="source_url" value="<?php echo $current_url; ?>">
 

@@ -113,6 +113,7 @@
         var blog = jQuery(this).data('blog');
         var network = jQuery(this).data('network');
 
+        // Count the clicks
         if (typeof ga === 'function') {
             ga('send', 'event', blog + ' /interactions', 'share', network);
         }
@@ -155,6 +156,7 @@
     initEmailForm();
 
 
+    // Show/hide the global nav in small viewports
     function navGlobal() {
         var navMoz = jQuery('#nav-mozilla-menu');
         var navMozToggle = jQuery('#nav-global .nav-mozilla .toggle');

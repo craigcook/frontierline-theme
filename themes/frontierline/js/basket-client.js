@@ -9,6 +9,7 @@
 
     var newsletterForm = document.getElementById('newsletter_form');
     var newsletterWrapper = document.getElementById('form-contents');
+    var blogName = newsletterForm.getAttribute('data-blog');
 
     // handle errors
     var errorArray = [];
@@ -80,6 +81,16 @@
                 if (response.success === true) {
                     newsletterWrapper.style.display = 'none';
                     newsletterThanks();
+
+                    // Count signups in Google Analytics
+                    if (typeof ga === 'function') {
+                        ga('send', {
+                          hitType: 'event',
+                          eventCategory: blogName + ' /interactions',
+                          eventAction: 'newsletter subscription',
+                          eventLabel: newsletter,
+                        });
+                    }
                 }
                 else {
                     if(response.errors) {
