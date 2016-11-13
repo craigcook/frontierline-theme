@@ -325,17 +325,14 @@ add_action('widgets_init', 'frontierline_remove_recent_comments_style');
 
 
 /**
- * Enable a few more buttons in the visual editor
+ * Set available formats for the visual editor.
+ * This removes Heading 1 and Heading 2, which authors shouldn't use.
  */
-function frontierline_add_more_buttons($buttons) {
-  $buttons[] = 'hr';
-  $buttons[] = 'del';
-  $buttons[] = 'sub';
-  $buttons[] = 'sup';
-  $buttons[] = 'cleanup';
-  return $buttons;
+function frontierline_post_formats($formats) {
+  $formats['block_formats'] = "Paragraph=p; Heading 3=h3; Heading 4=h4; Heading 5=h5; Heading 6=h6; Preformatted=pre; Code=code;";
+  return $formats;
 }
-add_filter("mce_buttons_3", "frontierline_add_more_buttons");
+add_filter('tiny_mce_before_init', 'frontierline_post_formats');
 
 
 /**
