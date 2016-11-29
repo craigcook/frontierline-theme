@@ -11,10 +11,10 @@
     <div class="nav-mozilla">
       <span class="toggle" role="button" aria-controls="nav-mozilla-menu" aria-expanded="false" tabindex="0"><?php _e('Menu', 'frontierline'); ?></span>
       <ul class="nav-mozilla-menu" id="nav-mozilla-menu">
-        <li><a href="https://www.mozilla.org/about/" rel="external"><?php _e('About', 'frontierline'); ?></a></li>
+        <li><a href="https://www.mozilla.org/internet-health/" rel="external"><?php _e('Internet Health', 'frontierline'); ?></a></li>
         <li><a href="https://www.mozilla.org/technology/" rel="external"><?php _e('Web Innovations', 'frontierline'); ?></a></li>
-        <li><a href="https://www.mozilla.org/firefox/products/" rel="external">Firefox</a></li>
         <li><a href="https://donate.mozilla.org/" rel="external"><?php _e('Donate', 'frontierline'); ?></a></li>
+        <li><a href="https://www.mozilla.org/firefox/products/" rel="external">Firefox</a></li>
       </ul>
     </div>
   </div>
