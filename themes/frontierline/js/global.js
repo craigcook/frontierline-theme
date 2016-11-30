@@ -8,6 +8,8 @@
     // Add class to reflect javascript availability for CSS
     document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
 
+    var navMoz = jQuery('#nav-mozilla-menu');
+    var navMozToggle = jQuery('#nav-global .nav-mozilla .toggle');
     var explore = jQuery('#explore');
     var expToggle = jQuery('#toggle-explore');
     var expCats = jQuery('#explore .category');
@@ -85,6 +87,7 @@
         if (mqIsTablet) {
             if (mqIsTablet.matches) {
                 initExplore();
+                navMoz.show();
             } else {
                 explore.removeClass('active');
                 expCats.show();
@@ -93,6 +96,7 @@
             mqIsTablet.addListener(function(mq) {
                 if (mq.matches) {
                     initExplore();
+                    navMoz.show();
                 } else {
                     explore.removeClass('active');
                     expCats.show();
@@ -157,14 +161,8 @@
 
 
     // Show/hide the global nav in small viewports
-    function navGlobal() {
-        var navMoz = jQuery('#nav-mozilla-menu');
-        var navMozToggle = jQuery('#nav-global .nav-mozilla .toggle');
-
-        navMozToggle.on('click', function(){
-            navMoz.slideToggle('fast');
-        });
-    }
-    navGlobal();
+    navMozToggle.on('click', function(){
+        navMoz.slideToggle('fast');
+    });
 
 })(window.jQuery);
