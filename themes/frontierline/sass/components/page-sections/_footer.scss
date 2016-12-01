@@ -31,11 +31,11 @@
 
         a {
             background: transparent url('img/mozilla-wordmark-white.svg') no-repeat;
-            @include background-size(93px, 24px);
+            @include background-size(92px, 24px);
             @include image-replaced;
             display: inline-block;
             height: 24px;
-            width: 93px;
+            width: 92px;
         }
     }
 
