@@ -1,13 +1,10 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-
 (function() {
     'use strict';
 
     // Add class to reflect javascript availability for CSS
     document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
 
+    var blogname = jQuery('body').data('blogname');
     var navMoz = jQuery('#nav-mozilla-menu');
     var navMozToggle = jQuery('#nav-global .nav-mozilla .toggle');
     var explore = jQuery('#explore');
@@ -22,6 +19,16 @@
 
         sideToggle.on('click', function(e) {
             e.preventDefault();
+            if (explore.is(':visible')) {
+                explore.slideUp('fast');
+                expToggle.removeClass('close');
+            }
+
+            // Count the sidebar opening
+            if ((typeof ga === 'function') && !sidebar.hasClass('show')) {
+                ga('send', 'event', blogname + ' Interactions', 'sidebar click', 'sidebar-open');
+            }
+
             sidebar.toggleClass('show');
             sideToggle.toggleClass('close');
         });
@@ -38,10 +45,20 @@
             jQuery('#' + firstCatId).show();
             firstCatLink.addClass('on');
             expImages('#' + firstCatId);
-        })
+        });
 
         expToggle.on('click', function(e) {
             e.preventDefault();
+            if (sidebar.hasClass('show')) {
+                sidebar.removeClass('show');
+                sideToggle.removeClass('close');
+            }
+
+            // Count the drawer opening
+            if ((typeof ga === 'function') && explore.is(':hidden')) {
+                ga('send', 'event', blogname + ' Interactions', 'explore click', 'explore-open');
+            }
+
             explore.slideToggle('fast');
             expToggle.toggleClass('close');
         });
@@ -60,6 +77,10 @@
 
             jQuery('#explore .cat-list a.on').removeClass('on');
             catLink.addClass('on');
+
+            if (typeof ga === 'function') {
+                ga('send', 'event', blogname + ' Interactions', 'explore click', 'Explore category: ' + catLink.text());
+            }
         });
     }
 
@@ -114,12 +135,11 @@
     jQuery('.social-share a[rel]').on('click', function(e) {
         var top = (screen.availHeight - 500) / 2;
         var left = (screen.availWidth - 500) / 2;
-        var blog = jQuery(this).data('blog');
         var network = jQuery(this).data('network');
 
         // Count the clicks
         if (typeof ga === 'function') {
-            ga('send', 'event', blog + ' /interactions', 'share', network);
+            ga('send', 'event', blogname + ' Interactions', 'share', network);
         }
 
         window.open(
@@ -139,19 +159,19 @@
         var formDetails = jQuery('.newsletter_form .form-details');
 
         function showDetails() {
-            if (!formDetails.is(':visible')) {
+            if (formDetails.is(':hidden')) {
                 formDetails.slideDown('normal');
             }
         }
 
-        if (jQuery('.newsletter_form #email').val() != '') {
+        if (jQuery('.newsletter_form #email').val() !== '') {
             showDetails();
         }
 
         jQuery('.newsletter_form').on('focus', 'select, input', showDetails);
 
         submitButton.on('click', function(e) {
-            if (!formDetails.is(':visible')) {
+            if (formDetails.is(':hidden')) {
                 e.preventDefault();
                 showDetails();
             }
@@ -164,5 +184,64 @@
     navMozToggle.on('click', function(){
         navMoz.slideToggle('fast');
     });
+
+
+    // Analyze All The Things
+    if (typeof ga === 'function') {
+        var search = jQuery('#search');
+        var searchField = jQuery('#s');
+        var prev = jQuery('#adjacent-posts .nav-paging-prev a');
+        var next = jQuery('#adjacent-posts .nav-paging-next a');
+        var incat = jQuery('.in-category .cat-posts a');
+        var popular = jQuery('.popular .wpp-list a');
+        var recent = jQuery('.popular .recent-posts a');
+        var expLinks = jQuery('#explore .entry-link');
+        var sideLinks = jQuery('#sidebar a');
+
+        // Global nav
+        navMoz.find('a').on('click', function() {
+            ga('send', 'event', blogname + ' Interactions', 'nav click', 'Global nav: ' + jQuery(this).text());
+        });
+
+        // Links in explore drawer
+        expLinks.on('click', function() {
+            ga('send', 'event', blogname + ' Interactions', 'explore click', 'Explore link: ' + jQuery(this).find('.entry-title').text());
+        });
+
+        // Links in sidebar
+        sideLinks.on('click', function() {
+            ga('send', 'event', blogname + ' Interactions', 'explore click', 'Sidebar link: ' + jQuery(this).text());
+        });
+
+        // Searches
+        search.on('submit', function() {
+            ga('send', 'event', blogname + ' Interactions', 'search', 'Search: ' + searchField.val());
+        });
+
+        // Previous article
+        prev.on('click', function() {
+            ga('send', 'event', blogname + ' Interactions', 'adjacent click', 'Previous: ' + jQuery(this).find('.entry-title').text());
+        });
+
+        // Next article
+        next.on('click', function() {
+            ga('send', 'event', blogname + ' Interactions', 'adjacent click', 'Next: ' + jQuery(this).find('.entry-title').text());
+        });
+
+        // In category
+        incat.on('click', function() {
+            ga('send', 'event', blogname + ' Interactions', 'related click', 'In category: ' + jQuery(this).text());
+        });
+
+        // Popular
+        popular.on('click', function() {
+            ga('send', 'event', blogname + ' Interactions', 'related click', 'Popular: ' + jQuery(this).text());
+        });
+
+        // Recent (only visible if popular is disabled)
+        recent.on('click', function() {
+            ga('send', 'event', blogname + ' Interactions', 'related click', 'Recent: ' + jQuery(this).text());
+        });
+    }
 
 })(window.jQuery);

@@ -1,4 +1,4 @@
-  </main>
+    </main>
 
   <?php get_sidebar(); ?>
   <?php get_template_part('includes/explore'); ?>
@@ -7,7 +7,7 @@
   <?php get_template_part('includes/newsletter-form'); ?>
   <?php endif; ?>
 
-</div><!-- /.site-wrap -->
+  </div><!-- /.site-wrap -->
 
   <footer id="site-info" class="section">
     <div class="content">

@@ -12,10 +12,6 @@ function frontierline_setup() {
   // Translations can be added to the /languages/ directory.
   load_theme_textdomain('frontierline', get_template_directory() . '/languages');
 
-  // This theme uses wp_nav_menu() in one location.
-  // TODO: Commented out for now; I'll add this back later
-  // register_nav_menu('primary', __('Primary Menu', 'frontierline'));
-
   // Add styles to post editor (editor-style.css)
   add_editor_style();
 
@@ -267,7 +263,7 @@ function frontierline_load_scripts() {
   wp_enqueue_script('jquery');
 
   // Load the global script
-  wp_register_script('global', get_template_directory_uri() . '/js/global.js', 'jquery', '1.1', true);
+  wp_register_script('global', get_template_directory_uri() . '/js/global.js', 'jquery', '1.2', true);
   wp_enqueue_script('global');
 
   // Load the newsletter script
@@ -489,25 +485,9 @@ function frontierline_disable_emojis_tinymce( $plugins ) {
   }
 }
 
-/**
- * Remove emoji CDN hostname from DNS prefetching hints.
- *
- * @param  array  $urls          URLs to print for resource hints.
- * @param  string $relation_type The relation type the URLs are printed for.
- * @return array                 Difference betwen the two arrays.
- */
-function frontierline_disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
-  if ( 'dns-prefetch' == $relation_type ) {
-    // This filter is documented in wp-includes/formatting.php
-    $emoji_svg_url = apply_filters('emoji_svg_url', 'https://s.w.org/images/core/emoji/2/svg/');
-
-    $urls = array_diff( $urls, array( $emoji_svg_url ) );
-  }
-  return $urls;
-}
 
 /**
- * Disable the emoji scripts
+ * Disable the emoji scripts and prefetch
  */
 function frontierline_disable_emojis() {
   remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -517,8 +497,8 @@ function frontierline_disable_emojis() {
   remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
   remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
   remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+  add_filter( 'emoji_svg_url', '__return_false' );
   add_filter( 'tiny_mce_plugins', 'frontierline_disable_emojis_tinymce' );
-  add_filter( 'wp_resource_hints', 'frontierline_disable_emojis_remove_dns_prefetch', 10, 2 );
 }
 add_action('init', 'frontierline_disable_emojis');
 

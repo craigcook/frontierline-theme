@@ -5,7 +5,7 @@
   $date_format = get_option('date_format');
 ?>
 
-<nav class="section nav-paging">
+<nav id="adjacent-posts" class="section nav-paging">
   <div class="content">
     <?php $previous_post = get_previous_post();
       if (! empty($previous_post)) : ?>

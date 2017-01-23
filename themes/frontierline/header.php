@@ -79,7 +79,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-blogname="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
   <?php
     get_template_part('includes/nav-global');
     get_template_part('includes/masthead');
@@ -89,6 +89,4 @@
 
     <?php get_template_part('includes/nav-util'); ?>
 
-    <?php /* wp_nav_menu(array('theme_location' => 'primary', 'container' => 'nav', 'container_id' => 'nav-primary', 'fallback_cb' => 'false',)); */ ?>
-
-  <main id="content" role="main">
+    <main id="content" role="main">
