@@ -15,8 +15,6 @@
 
         <p><?php printf(__('Sorry, we didn’t find anything for “%s”. Try another search?', 'frontierline'), esc_html(get_search_query())); ?></p>
 
-        <?php get_search_form(); ?>
-
       <?php else : ?>
 
         <p><?php _e('Sorry, we looked everywhere, but we couldn’t find the page or file you were looking for. A few possible explanations:', 'frontierline'); ?></p>
@@ -32,8 +30,6 @@
           <li><?php printf(__('Visit <a href="%s">mozilla.org</a>.', 'frontierline'), 'https://www.mozilla.org'); ?></li>
           <li><?php _e('Try searching this blog.', 'frontierline'); ?></li>
         </ul>
-
-        <?php get_search_form(); ?>
 
       <?php endif; ?>
     </div>

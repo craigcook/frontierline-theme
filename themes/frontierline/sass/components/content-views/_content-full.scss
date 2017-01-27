@@ -1,8 +1,3 @@
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-
 // Full posts and pages
 
 .post-image-full {
@@ -118,7 +113,7 @@
         }
 
         blockquote {
-            border-left: 2px solid #ccc;
+            border-left: 2px solid #000;
             color: $color-text-secondary;
             padding: .25em 30px;
 
@@ -209,7 +204,7 @@
                 margin: 0 30px .5em -60px;
             }
 
-            .alignright.size-large, {
+            .alignright.size-large {
                 float: right;
                 margin: 0 -60px .5em 30px;
             }
@@ -229,14 +224,17 @@
                 }
 
                 &::first-letter {
-                    @include font-size(76px);
-                    line-height: .8;
-                    vertical-align: bottom;
+                    @include font-size(72px);
+                    background: #000;
+                    color: #fff;
                     float: left;
-                    font-weight: bold;
-                    padding-top: .125em;
-                    letter-spacing: .075em;
                     font-style: normal;
+                    font-weight: normal;
+                    letter-spacing: .075em;
+                    line-height: .8;
+                    margin-right: 4px;
+                    padding: .125em 0 .125em 5px;
+                    vertical-align: bottom;
                 }
             }
         }

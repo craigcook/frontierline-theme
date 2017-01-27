@@ -4,9 +4,9 @@ Theme URI: https://github.com/mozilla/Frontierline-theme
 Author: Craig Cook, Michael Ham, and all your other friends at Mozilla
 Author URI: https://www.mozilla.org
 Description: A theme for official Mozilla blogs.
-Version: 1.0
-License: MPL Mozilla Public License v2 or later
-License URI: https://www.mozilla.org/MPL/2.0/
+Version: 2.0
+License: GPL GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: frontierline
 Domain Path: /languages/
 Tags: Mozilla, light, white, three-columns, responsive-layout, editor-style, featured-images, theme-options, translation-ready, social, social-sharing
@@ -31,5 +31,5 @@ Tags: Mozilla, light, white, three-columns, responsive-layout, editor-style, fea
     // Components - specific purpose blocks with sub-elements and modifiers
     'components/page-sections',
     'components/content-views',
-    'components/utilities',
+    'components/common',
     'components/navigation';

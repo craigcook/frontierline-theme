@@ -1,0 +1,580 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2017-02-23 14:25-0800\n"
+"PO-Revision-Date: 2017-02-23 14:32-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: archive.php:17
+#, php-format
+msgid "Articles in “%s”"
+msgstr ""
+
+#: archive.php:18
+#, php-format
+msgid "Articles tagged with “%s”"
+msgstr ""
+
+#: archive.php:19 archive.php:20 archive.php:21
+#, php-format
+msgid "Articles from %s"
+msgstr ""
+
+#: archive.php:22
+#, php-format
+msgid "Articles by %s"
+msgstr ""
+
+#: archive.php:23
+msgid "Archives"
+msgstr ""
+
+#: comments.php:41
+msgid "No comments yet"
+msgstr ""
+
+#: comments.php:45
+msgid "Post a comment"
+msgstr ""
+
+#: comments.php:55
+msgid "More comments:"
+msgstr ""
+
+#: comments.php:64
+#, php-format
+msgid ""
+"Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post"
+"\">trackbacks</a> are open."
+msgstr ""
+
+#: comments.php:72
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: comments.php:76
+msgid "Post your comment"
+msgstr ""
+
+#: comments.php:76
+#, php-format
+msgid "Reply to %s"
+msgstr ""
+
+#: comments.php:77
+msgid "Cancel reply"
+msgstr ""
+
+#: comments.php:80
+#, php-format
+msgid ""
+"You are logged in as <a href=\"%1$s\">%2$s</a>. <a class=\"logout\" href="
+"\"%3$s\">Log out?</a>"
+msgstr ""
+
+#: comments.php:83
+msgid "Your name"
+msgstr ""
+
+#: comments.php:83
+msgid "(required)"
+msgstr ""
+
+#: comments.php:87 includes/newsletter-form.php:24
+msgid "Your e-mail address"
+msgstr ""
+
+#: comments.php:87
+msgid "(required, will not be published)"
+msgstr ""
+
+#: comments.php:91
+msgid ""
+"Spamming robots, please fill in this field. Real humans should leave it "
+"blank."
+msgstr ""
+
+#: comments.php:96
+msgid "Your comment"
+msgstr ""
+
+#: comments.php:100
+msgid "Submit"
+msgstr ""
+
+#: content-views/content-none.php:10
+msgid "Nothing Found"
+msgstr ""
+
+#: content-views/content-none.php:16
+#, php-format
+msgid "Sorry, we didn’t find anything for “%s”. Try another search?"
+msgstr ""
+
+#: content-views/content-none.php:20
+msgid ""
+"Sorry, we looked everywhere, but we couldn’t find the page or file you were "
+"looking for. A few possible explanations:"
+msgstr ""
+
+#: content-views/content-none.php:22
+msgid "You may have followed an out-dated link or bookmark."
+msgstr ""
+
+#: content-views/content-none.php:23
+msgid "If you entered the address by hand, you may have mistyped it."
+msgstr ""
+
+#: content-views/content-none.php:24
+msgid "You might have just discovered an error. Congratulations!"
+msgstr ""
+
+#: content-views/content-none.php:27
+msgid "So what do we do now?"
+msgstr ""
+
+#: content-views/content-none.php:29
+#, php-format
+msgid "Go to the <a href=\"%s\">front page</a>."
+msgstr ""
+
+#: content-views/content-none.php:30
+#, php-format
+msgid "Visit <a href=\"%s\">mozilla.org</a>."
+msgstr ""
+
+#: content-views/content-none.php:31
+msgid "Try searching this blog."
+msgstr ""
+
+#: content-views/content.php:18
+msgid "Categories:"
+msgstr ""
+
+#: content-views/content.php:47
+msgid "No responses yet"
+msgstr ""
+
+#: content-views/content.php:47
+msgid "1 response"
+msgstr ""
+
+#: content-views/content.php:47
+msgid "% responses"
+msgstr ""
+
+#: content-views/content.php:50 image.php:30
+msgid "Edit"
+msgstr ""
+
+#: content-views/content.php:55
+msgid "Continue reading…"
+msgstr ""
+
+#: content-views/content.php:56
+msgid "Pages:"
+msgstr ""
+
+#: content-views/content.php:61
+msgid "Tags:"
+msgstr ""
+
+#: footer.php:23
+#, php-format
+msgid ""
+"Portions of this content are ©1998-%1s by individual contributors. Content "
+"available under a <a href=\"%2s\" rel=\"external license\">Creative Commons "
+"license</a>"
+msgstr ""
+
+#: footer.php:29
+msgid "Contact Us"
+msgstr ""
+
+#: footer.php:30 includes/nav-global.php:16
+msgid "Give"
+msgstr ""
+
+#: footer.php:34
+msgid "Privacy"
+msgstr ""
+
+#: footer.php:35
+msgid "Cookies"
+msgstr ""
+
+#: footer.php:36
+msgid "Legal"
+msgstr ""
+
+#: footer.php:37
+msgid "Report Trademark Abuse"
+msgstr ""
+
+#: functions.php:38
+msgid "Site Menu"
+msgstr ""
+
+#: functions.php:78
+msgid "Social sharing for posts"
+msgstr ""
+
+#: functions.php:90
+msgid "Social sharing for Pages"
+msgstr ""
+
+#: functions.php:102
+msgid "Twitter username"
+msgstr ""
+
+#: functions.php:118
+msgid "Add social sharing buttons to posts"
+msgstr ""
+
+#: functions.php:120
+msgid "Adds buttons for Twitter and Facebook to the top of blog articles."
+msgstr ""
+
+#: functions.php:134
+msgid "Add social sharing buttons to Pages"
+msgstr ""
+
+#: functions.php:136
+msgid "Adds buttons for Twitter and Facebook to the top of static Pages."
+msgstr ""
+
+#: functions.php:149
+msgid ""
+"The Twitter account for attribution when sharing. Appears as \"via @username"
+"\" at the end of the tweet, and Twitter may suggest related accounts to "
+"follow. Leave this blank for no attribution."
+msgstr ""
+
+#: functions.php:161
+msgid "Extra Large"
+msgstr ""
+
+#: functions.php:262
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: functions.php:305
+msgid ""
+"Sorry, you appear to be a spamming robot because you filled in the hidden "
+"spam trap field. To show you are not a spammer, submit your comment again "
+"and leave the field blank."
+msgstr ""
+
+#: functions.php:306
+msgid "Spam Prevention"
+msgstr ""
+
+#: functions.php:353
+msgid "Read more"
+msgstr ""
+
+#: functions.php:389
+msgid "Sidebar Menu"
+msgstr ""
+
+#: functions.php:414
+msgid "Trackback from "
+msgstr ""
+
+#: functions.php:417 functions.php:430
+msgid "on"
+msgstr ""
+
+#: functions.php:418 functions.php:431 functions.php:445
+msgid "Permanent link to this comment by "
+msgstr ""
+
+#: functions.php:421 functions.php:434 functions.php:448
+#, php-format
+msgid "%1$s at %2$s:"
+msgstr ""
+
+#: functions.php:427
+msgid "Ping from "
+msgstr ""
+
+#: functions.php:444
+msgid "wrote on"
+msgstr ""
+
+#: functions.php:457
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:469
+msgid "Edit comment"
+msgstr ""
+
+#: functions.php:515
+msgid ""
+"Remember to include a featured image! It should be at least 1400 by 770 "
+"pixels. Posts without a featured image will show a standard placeholder "
+"image."
+msgstr ""
+
+#: header.php:64
+#, php-format
+msgid "%s – RSS Feed"
+msgstr ""
+
+#: header.php:71
+#, php-format
+msgid "Search results for “%s”"
+msgstr ""
+
+#: header.php:72 header.php:73 header.php:74
+#, php-format
+msgid "Posts from %s"
+msgstr ""
+
+#: header.php:75
+msgid "Not Found"
+msgstr ""
+
+#: image.php:18
+#, php-format
+msgid ""
+"<time class=\"date published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time>"
+msgstr ""
+
+#: image.php:24
+#, php-format
+msgid "Original size: <a href=\"%1$s\">%2$s &times; %3$s</a>"
+msgstr ""
+
+#: inc/customizer.php:22
+msgid "Accent Color"
+msgstr ""
+
+#: inc/customizer.php:27 inc/customizer.php:53
+msgid "None (Default)"
+msgstr ""
+
+#: inc/customizer.php:28
+msgid "Cyan"
+msgstr ""
+
+#: inc/customizer.php:29
+msgid "Coral"
+msgstr ""
+
+#: inc/customizer.php:30
+msgid "Yellow"
+msgstr ""
+
+#: inc/customizer.php:31
+msgid "Lilac"
+msgstr ""
+
+#: inc/customizer.php:32
+msgid "Orange"
+msgstr ""
+
+#: inc/customizer.php:33
+msgid "Lime"
+msgstr ""
+
+#: inc/customizer.php:34
+msgid "Neon Blue"
+msgstr ""
+
+#: inc/customizer.php:35
+msgid "Neon Pink"
+msgstr ""
+
+#: inc/customizer.php:36
+msgid "Neon Green"
+msgstr ""
+
+#: inc/customizer.php:48
+msgid "Header Pattern"
+msgstr ""
+
+#: inc/customizer.php:54
+msgid "Arrows"
+msgstr ""
+
+#: inc/customizer.php:55
+msgid "Basket Weave"
+msgstr ""
+
+#: inc/customizer.php:56
+msgid "Confetti"
+msgstr ""
+
+#: inc/customizer.php:57
+msgid "Emoticons"
+msgstr ""
+
+#: inc/customizer.php:58
+msgid "Slashes and Brackets"
+msgstr ""
+
+#: inc/customizer.php:59
+msgid "Trade Winds"
+msgstr ""
+
+#: includes/categories.php:13
+msgid "More articles"
+msgstr ""
+
+#: includes/masthead.php:16
+msgid "Go to the front page"
+msgstr ""
+
+#: includes/nav-global.php:9
+msgid "Visit mozilla.org"
+msgstr ""
+
+#: includes/nav-global.php:12
+msgid "Menu"
+msgstr ""
+
+#: includes/nav-global.php:14
+msgid "Internet Health"
+msgstr ""
+
+#: includes/nav-global.php:15
+msgid "Web Innovations"
+msgstr ""
+
+#: includes/nav-global.php:17
+msgid "Discover Firefox"
+msgstr ""
+
+#: includes/nav-global.php:21
+msgid "Go to the top of the page"
+msgstr ""
+
+#: includes/nav-global.php:21
+msgid "Top"
+msgstr ""
+
+#: includes/nav-pagination.php:5
+msgid "Page"
+msgstr ""
+
+#: includes/nav-pagination.php:13
+msgid "Previous"
+msgstr ""
+
+#: includes/nav-pagination.php:14
+msgid "Next"
+msgstr ""
+
+#: includes/nav-paging.php:14
+msgid "Previous article"
+msgstr ""
+
+#: includes/nav-paging.php:26
+msgid "Next article"
+msgstr ""
+
+#: includes/nav-util.php:9
+msgid "Explore"
+msgstr ""
+
+#: includes/nav-util.php:11
+msgid "Categories"
+msgstr ""
+
+#: includes/newsletter-form.php:16
+msgid "Love the Web?"
+msgstr ""
+
+#: includes/newsletter-form.php:17
+msgid "Get the Mozilla newsletter and help us keep it open and free."
+msgstr ""
+
+# This appears as a the first part of a placeholder email address: yourname@example.com
+#: includes/newsletter-form.php:26
+msgid "yourname"
+msgstr ""
+
+#: includes/newsletter-form.php:31
+msgid "Language"
+msgstr ""
+
+#: includes/newsletter-form.php:42
+msgid "HTML"
+msgstr ""
+
+#: includes/newsletter-form.php:43
+msgid "Text"
+msgstr ""
+
+#: includes/newsletter-form.php:49
+#, php-format
+msgid ""
+"I’m okay with Mozilla handling my info as explained in this <a href=\"%s"
+"\">Privacy Policy</a>."
+msgstr ""
+
+#: includes/newsletter-form.php:55
+msgid "Sign up now"
+msgstr ""
+
+#: includes/newsletter-form.php:57
+msgid "We will only send you Mozilla-related information."
+msgstr ""
+
+#: includes/newsletter-form.php:63
+msgid "Thanks!"
+msgstr ""
+
+#: includes/newsletter-form.php:65
+msgid ""
+"If you haven’t previously confirmed a subscription to a Mozilla-related "
+"newsletter you may have to do so."
+msgstr ""
+
+#: includes/newsletter-form.php:66
+msgid "Please check your inbox or your spam filter for an e-mail from us."
+msgstr ""
+
+#: includes/related-posts.php:21
+#, php-format
+msgid "More articles in “%s”"
+msgstr ""
+
+#: includes/related-posts.php:35
+msgid "There are no other articles in this category."
+msgstr ""
+
+#: includes/related-posts.php:43
+msgid "Popular articles"
+msgstr ""
+
+#: includes/related-posts.php:57
+msgid "Recent articles"
+msgstr ""
+
+#: includes/social-share.php:15
+msgid "Share:"
+msgstr ""
+
+#: searchform.php:10
+msgid "Search this site"
+msgstr ""
+
+#: searchform.php:12
+msgid "Search"
+msgstr ""

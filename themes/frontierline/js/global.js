@@ -1,92 +1,98 @@
 (function() {
     'use strict';
 
-    // Add class to reflect javascript availability for CSS
-    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
-
+    var $doc = document.documentElement;
+    var $window = jQuery(window);
     var blogname = jQuery('body').data('blogname');
     var navMoz = jQuery('#nav-mozilla-menu');
     var navMozToggle = jQuery('#nav-global .nav-mozilla .toggle');
-    var explore = jQuery('#explore');
-    var expToggle = jQuery('#toggle-explore');
-    var expCats = jQuery('#explore .category');
+    var categories = jQuery('#categories');
+    var catToggle = jQuery('#toggle-categories');
+    var catCats = jQuery('#categories .category');
     var sidebar = jQuery('#sidebar');
     var sideToggle = jQuery('#toggle-sidebar');
+    var navGlobal = jQuery('#nav-global');
+    var navUtil = jQuery('#nav-util');
+    var navUtilTop = navUtil.offset();
+    var siteWrap = jQuery('.site-wrap');
+    var canStick = jQuery('.can-stick');
+    var topLink = jQuery('.page-top');
+
+    // Add class to reflect javascript availability for CSS
+    $doc.className = $doc.className.replace(/\bno-js\b/, 'js');
 
     // Set up the sidebar
     function initSidebar() {
-        sidebar.addClass('active').show();
+        sidebar.addClass('is-active').show();
 
         sideToggle.on('click', function(e) {
             e.preventDefault();
-            if (explore.is(':visible')) {
-                explore.slideUp('fast');
-                expToggle.removeClass('close');
+
+            if (categories.is(':visible')) {
+                categories.slideUp('fast').addClass('is-closed');
+                catToggle.removeClass('close');
             }
 
             // Count the sidebar opening
-            if ((typeof ga === 'function') && !sidebar.hasClass('show')) {
+            if ((typeof ga === 'function') && !sidebar.hasClass('is-open')) {
                 ga('send', 'event', blogname + ' Interactions', 'sidebar click', 'sidebar-open');
             }
 
-            sidebar.toggleClass('show');
+            sidebar.toggleClass('is-open');
             sideToggle.toggleClass('close');
         });
     }
     initSidebar();
 
-    // Set up the Explore Drawer
-    function initExplore() {
-        var firstCatId = jQuery('#explore .category:first-child').attr('id');
-        var firstCatLink = jQuery('#explore .cat-list li:first-child > a');
+    // Set up the Category Drawer
+    function initCategories() {
+        var firstCatId = jQuery('#categories .category:first-child').attr('id');
+        var firstCatLink = jQuery('#categories .cat-list li:first-child > a');
 
-        explore.hide().addClass('active');
-        expCats.hide(function() {
+        categories.hide().addClass('is-active');
+
+        catCats.hide(function() {
             jQuery('#' + firstCatId).show();
             firstCatLink.addClass('on');
-            expImages('#' + firstCatId);
+            catImages('#' + firstCatId);
         });
 
-        expToggle.on('click', function(e) {
+        catToggle.on('click', function(e) {
             e.preventDefault();
-            if (sidebar.hasClass('show')) {
-                sidebar.removeClass('show');
-                sideToggle.removeClass('close');
+
+            if (sidebar.hasClass('is-open')) {
+                sidebar.toggleClass('is-open');
+                sideToggle.toggleClass('close');
             }
 
-            // Count the drawer opening
-            if ((typeof ga === 'function') && explore.is(':hidden')) {
-                ga('send', 'event', blogname + ' Interactions', 'explore click', 'explore-open');
-            }
-
-            explore.slideToggle('fast');
-            expToggle.toggleClass('close');
+            categories.slideToggle('fast').toggleClass('is-closed');
+            catToggle.toggleClass('close');
         });
 
-        jQuery('#explore .cat-list a[href^="#cat-"]').on('click', function(e) {
+        jQuery('#categories .cat-list a[href^="#cat-"]').on('click', function(e) {
             e.preventDefault();
             var catLink = jQuery(this);
             // Extract the target element's ID from the link's href.
             var categoryId = catLink.attr('href').replace( /.*?(#.*)/g, '$1');
 
-            jQuery('#explore .category:visible').fadeOut('fast', function() {
+            jQuery('#categories .category:visible').fadeOut('fast', function() {
                 jQuery(categoryId).fadeIn('fast', function() {
-                    expImages(categoryId);
+                    catImages(categoryId);
                 });
             });
 
-            jQuery('#explore .cat-list a.on').removeClass('on');
+            jQuery('#categories .cat-list a.on').removeClass('on');
             catLink.addClass('on');
 
             if (typeof ga === 'function') {
-                ga('send', 'event', blogname + ' Interactions', 'explore click', 'Explore category: ' + catLink.text());
+                ga('send', 'event', blogname + ' Interactions', 'category drawer click', 'Category: ' + catLink.text());
             }
         });
     }
 
-    // Lazyload images in explore category.
+    // Lazyload images in category drawer.
     // Takes a fully-formed ID selector, including #
-    function expImages(categoryId) {
+    function catImages(categoryId) {
         var img = jQuery(categoryId + ' .post-image[data-src]');
 
         for (var i=0; i<img.length; i++) {
@@ -106,27 +112,27 @@
         }
 
         if (mqIsTablet) {
-            if (mqIsTablet.matches) {
-                initExplore();
-                navMoz.show();
+            if ((mqIsTablet.matches) && (categories.length > 0)) {
+                initCategories();
+                navMoz.attr('style', '');
             } else {
-                explore.removeClass('active');
-                expCats.show();
+                categories.removeClass('is-active');
+                catCats.show();
             }
 
             mqIsTablet.addListener(function(mq) {
-                if (mq.matches) {
-                    initExplore();
-                    navMoz.show();
+                if ((mq.matches) && (categories.length > 0)) {
+                    initCategories();
+                    navMoz.attr('style', '');
                 } else {
-                    explore.removeClass('active');
-                    expCats.show();
+                    categories.removeClass('is-active');
+                    catCats.show();
                 }
             });
-        // if browser doesn't support matchMedia, assume it's probably
-        // an older desktop browser and can handle the explore drawer.
-        } else {
-            initExplore();
+        // If browser doesn't support matchMedia, assume it's probably
+        // an older desktop browser and can handle the category drawer.
+        } else if (categories.length > 0) {
+            initCategories();
         }
     });
 
@@ -185,7 +191,6 @@
         navMoz.slideToggle('fast');
     });
 
-
     // Analyze All The Things
     if (typeof ga === 'function') {
         var search = jQuery('#search');
@@ -195,7 +200,7 @@
         var incat = jQuery('.in-category .cat-posts a');
         var popular = jQuery('.popular .wpp-list a');
         var recent = jQuery('.popular .recent-posts a');
-        var expLinks = jQuery('#explore .entry-link');
+        var catLinks = jQuery('#categories .entry-link');
         var sideLinks = jQuery('#sidebar a');
 
         // Global nav
@@ -203,14 +208,14 @@
             ga('send', 'event', blogname + ' Interactions', 'nav click', 'Global nav: ' + jQuery(this).text());
         });
 
-        // Links in explore drawer
-        expLinks.on('click', function() {
-            ga('send', 'event', blogname + ' Interactions', 'explore click', 'Explore link: ' + jQuery(this).find('.entry-title').text());
+        // Links in categories drawer
+        catLinks.on('click', function() {
+            ga('send', 'event', blogname + ' Interactions', 'category drawer click', 'Category link: ' + jQuery(this).find('.entry-title').text());
         });
 
         // Links in sidebar
         sideLinks.on('click', function() {
-            ga('send', 'event', blogname + ' Interactions', 'explore click', 'Sidebar link: ' + jQuery(this).text());
+            ga('send', 'event', blogname + ' Interactions', 'sidebar click', 'Sidebar link: ' + jQuery(this).text());
         });
 
         // Searches
@@ -244,4 +249,65 @@
         });
     }
 
-})(window.jQuery);
+    // Sticky navigation
+    var fixed = false;
+    var didScroll = false;
+
+    $window.scroll(function() {
+        didScroll = true;
+    });
+
+    $window.resize(function() {
+        navUtilTop = navUtil.offset();
+    });
+
+    jQuery(document).ready(function() {
+        var scrollTop = $window.scrollTop();
+        if (scrollTop >= navUtilTop.top) {
+            didScroll = true;
+        }
+    });
+
+    function adjustScrollbar() {
+        if (didScroll) {
+            didScroll = false;
+            var scrollTop = $window.scrollTop();
+
+            if (scrollTop >= 40) {
+                navGlobal.addClass('is-minified');
+            } else {
+                navGlobal.removeClass('is-minified');
+            }
+
+            if (scrollTop >= navUtilTop.top - 30) {
+                if (!fixed) {
+                    fixed = true;
+                    canStick.addClass('is-sticky');
+                    siteWrap.css({
+                        'padding-top' : '3em'
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    canStick.removeClass('is-sticky');
+                    siteWrap.css({
+                        'padding-top' : '0'
+                    });
+                }
+            }
+        }
+    }
+
+    // Check for an adjusted scrollbar every 100ms.
+    setInterval(adjustScrollbar, 100);
+
+    // Smooth scroll to top
+    topLink.on('click', function(e) {
+        e.preventDefault();
+        jQuery('html, body').animate({
+            scrollTop: 0
+        }, 400);
+    });
+
+})(jQuery);

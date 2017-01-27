@@ -1,8 +1,3 @@
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-
 // Link to previous and next posts
 
 .nav-paging {
@@ -33,14 +28,11 @@
         text-decoration: none;
         height: 100%;
 
-        .label {
-            color: $color-mozred;
-        }
-
         .entry-title {
             color: $color-text-primary;
         }
 
+        .label,
         .date {
             color: $color-text-secondary;
         }
@@ -73,7 +65,7 @@
         @include transition(left 250ms $pebbles-timing-snap, right 250ms $pebbles-timing-snap);
 
         .cls-1 {
-            stroke: $color-mozgray;
+            stroke: #000;
         }
     }
 

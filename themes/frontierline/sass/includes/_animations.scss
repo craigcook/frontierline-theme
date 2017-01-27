@@ -1,12 +1,8 @@
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-
+// Bounce updward
 @-webkit-keyframes pebbles-bounce-down {
     0%, 60%, 75%, 90%, 100% {
-        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-                transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        -webkit-transition-timing-function: cubic-bezier(.215, .6, .35, 1);
+                transition-timing-function: cubic-bezier(.215, .6, .35, 1);
     }
     0% {
         opacity: 0;
@@ -29,7 +25,7 @@
 
 @keyframes pebbles-bounce-down {
     0%, 60%, 75%, 90%, 100% {
-        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(.215, 0.6, 0.35, 1);
     }
     0% {
         opacity: 0;
@@ -50,6 +46,8 @@
     }
 }
 
+
+// Fade in
 @-webkit-keyframes pebbles-fade-in {
     0% {
         opacity: 0;
@@ -68,6 +66,8 @@
     }
 }
 
+
+// Fade out
 @-webkit-keyframes pebbles-fade-out {
     0% {
         opacity: 1;

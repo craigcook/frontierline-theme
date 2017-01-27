@@ -52,7 +52,7 @@ $current_url = esc_attr(home_url(add_query_arg(array(),$wp->request)));
       </div>
 
       <div class="form-submit">
-        <button id="newsletter_submit" type="submit" class="form-button light"><?php _e('Sign up now', 'frontierline'); ?></button>
+        <button id="newsletter_submit" type="submit" class="form-button button-dark"><?php _e('Sign up now', 'frontierline'); ?></button>
         <p class="form-details promise">
           <small><?php _e('We will only send you Mozilla-related information.', 'frontierline'); ?></small>
         </p>

@@ -1,22 +1,19 @@
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-@import '../../includes/animations';
-@import '../../includes/lib';
+@import
+    '../../includes/animations',
+    '../../includes/lib';
 
 
 // The newsletter signup form.
 
 #newsletter-subscribe {
-    background: $color-mozred;
-    color: #fff;
+    background-color: brand-color(cyan);
+    color: #000;
 
     // container for <h3> and <h4>
     .form-title {
         background: url('img/mozorg-newsletter.svg') center top no-repeat;
         @include background-size(100px 100px);
-        padding: 120px 0 20px 0px;
+        padding: 120px 0 20px;
         text-align: center;
     }
 
@@ -68,15 +65,16 @@
     }
 
     a {
-        color: #fff;
+        color: #000;
     }
 
     input[type='email'] {
         @include border-box;
         @include font-size(16px);
         @include transition(all 100ms linear);
+        background-color: #000;
         border: 0;
-        border-radius: 4px;
+        color: #fff;
         line-height: 1.1;
         padding: 0.75em 20px;
         width: 100%;

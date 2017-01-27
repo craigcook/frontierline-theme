@@ -1,8 +1,4 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-
-;(function() {
+(function(ga) {
     'use strict';
 
     // !! this file assumes only one signup form per page !!
@@ -14,7 +10,7 @@
     // handle errors
     var errorArray = [];
     var newsletterErrors = document.getElementById('newsletter_errors');
-    function newsletterError(e) {
+    function newsletterError() {
         var errorList = document.createElement('ul');
 
         if(errorArray.length) {
@@ -53,20 +49,22 @@
         // new submission, clear old errors
         errorArray = [];
         newsletterErrors.style.display = 'none';
-        while (newsletterErrors.firstChild) newsletterErrors.removeChild(newsletterErrors.firstChild);
+        while (newsletterErrors.firstChild) {
+            newsletterErrors.removeChild(newsletterErrors.firstChild);
+        }
 
         var email = document.getElementById('email').value;
         var newsletter = document.getElementById('newsletters').value;
         var privacy = document.querySelector('input[name="privacy"]:checked') ? '&privacy=true' : '';
         var lang = document.getElementById('lang').value;
         var fmt = document.querySelector('input[name="fmt"]:checked').value;
-        var source_url = document.getElementById('source_url').value;
+        var sourceUrl = document.getElementById('source_url').value;
         var params = 'email=' + encodeURIComponent(email) +
                      '&newsletters=' + newsletter +
                      privacy +
                      '&lang=' + lang +
                      '&fmt=' + fmt +
-                     '&source_url=' + source_url;
+                     '&source_url=' + sourceUrl;
 
         var xhr = new XMLHttpRequest();
 
@@ -85,10 +83,10 @@
                     // Count signups in Google Analytics
                     if (typeof ga === 'function') {
                         ga('send', {
-                          hitType: 'event',
-                          eventCategory: blogName + ' /interactions',
-                          eventAction: 'newsletter subscription',
-                          eventLabel: newsletter,
+                            hitType: 'event',
+                            eventCategory: blogName + ' /interactions',
+                            eventAction: 'newsletter subscription',
+                            eventLabel: newsletter
                         });
                     }
                 }

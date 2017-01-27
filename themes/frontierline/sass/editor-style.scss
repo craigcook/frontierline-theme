@@ -1,7 +1,5 @@
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
+/* !important used for forceful overrides */
+/* stylelint-disable declaration-no-important  */
 
 @import 'includes/lib';
 
@@ -12,7 +10,6 @@
 html {
     font-size: 100%;
 }
-
 
 body.wp-autoresize.mceContentBody {
     @include border-box;
@@ -51,14 +48,17 @@ body.wp-autoresize.mceContentBody {
         }
 
         &::first-letter {
-            @include font-size(76px);
-            line-height: .8;
-            vertical-align: bottom;
+            @include font-size(72px);
+            background: #000;
+            color: #fff;
             float: left;
-            font-weight: bold;
-            padding-top: .125em;
-            letter-spacing: .075em;
             font-style: normal;
+            font-weight: normal;
+            letter-spacing: .075em;
+            line-height: .8;
+            margin-right: 4px;
+            padding: .125em 0 .125em 5px;
+            vertical-align: bottom;
         }
     }
 
@@ -161,7 +161,7 @@ body.wp-autoresize.mceContentBody {
 
         caption {
             text-align: left;
-            padding-bottom: 1px; /* fix to get it to look nice in many browsers */
+            padding-bottom: 1px; // fix to get it to look nice in many browsers
             margin-bottom: -1px;
             width: 100%;
         }
@@ -189,7 +189,7 @@ body.wp-autoresize.mceContentBody {
     }
 
     blockquote {
-        border-left: 2px solid #ccc;
+        border-left: 2px solid #000;
         color: $color-text-secondary;
         padding: .25em 30px;
 
@@ -273,7 +273,7 @@ body.wp-autoresize.mceContentBody {
             margin: 0 30px .5em -60px;
         }
 
-        .alignright.size-large, {
+        .alignright.size-large {
             float: right;
             margin: 0 -60px .5em 30px;
         }

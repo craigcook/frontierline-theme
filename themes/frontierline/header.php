@@ -7,7 +7,7 @@
   <meta name="title" content="<?php if (is_singular()) : single_post_title(); else : bloginfo('name'); endif; ?>">
   <meta name="description" content="<?php frontierline_meta_desc(); ?>">
 
-  <!-- Metadata for Facebook -->
+  <?php /* Metadata for Facebook */ ?>
   <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
   <meta property="og:url" content="<?php if (is_singular()) : the_permalink(); else : bloginfo('url'); endif; ?>">
   <meta property="og:title" content="<?php if (is_singular()) : single_post_title(); else : bloginfo('name'); endif; ?>">
@@ -17,7 +17,7 @@
   <meta property="og:image" content="<?php echo $post_image_url['0']; ?>">
 <?php endif; ?>
 
-  <!-- Metadata for Twitter -->
+  <?php /* Metadata for Twitter */ ?>
   <meta property="twitter:title" content="<?php if (is_singular()) : single_post_title(); else : bloginfo('name'); endif; ?>">
   <meta property="twitter:description" content="<?php frontierline_meta_desc(); ?>">
 <?php if (is_singular() && has_post_thumbnail()) : ?>
@@ -88,5 +88,9 @@
   <div class="site-wrap">
 
     <?php get_template_part('includes/nav-util'); ?>
+
+    <?php wp_nav_menu(array('theme_location' => 'site_menu', 'container' => 'nav', 'container_id' => 'nav-local', 'container_class' => 'nav-local section', 'menu_class' => 'content', 'fallback_cb' => 'false',)); ?>
+
+    <?php get_template_part('includes/site-intro'); ?>
 
     <main id="content" role="main">

@@ -1,18 +1,18 @@
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-
 // Global navigation bar at the top of the page.
 // Features Mozilla logo and links to other Mozilla sites.
 
 .nav-global {
     @include clearfix;
-    background: $color-mozred;
-    color: #fff;
+    @include transition(height 250ms ease-in-out, padding 250ms ease-in-out);
+    background: #fff;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
-    min-height: 40px;
-    position: relative;
+    color: $color-text-primary;
+    left: 0;
+    height: 1.2em;
+    padding: .5em 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 90;
 
     .content {
@@ -21,151 +21,239 @@
 
     .logo {
         @include font-size(16px);
+        @include transition(width 250ms ease-in-out, height 250ms ease-in-out);
         float: right;
-        margin: 8px 0 0;
+        height: 20px;
+        line-height: 1;
+        width: 63px;
 
         a {
-            @include background-size(88px 28px);
+            @include background-size(cover);
             @include image-replaced;
-            background: transparent url('img/mozilla-wordmark-light.svg') no-repeat;
-            display: inline-block;
-            height: 28px;
-            width: 88px;
+            @include transition(background-size 250ms ease-in-out, -webkit-background-size 250ms ease-in-out);
+            background-image: url('img/mozilla-wordmark-black.svg');
+            background-repeat: no-repeat;
+            display: block;
+            height: 100%;
+            width: 100%;
         }
 
         @media #{$mq-tablet} {
             float: left;
         }
     }
+
+    .page-top {
+        @include transition(margin-top 250ms ease-in-out);
+        color: $color-text-primary;
+        float: right;
+        margin-right: 30px;
+        margin-top: -4em;
+        text-decoration: none;
+        text-transform: lowercase;
+
+        @media #{$mq-tablet} {
+            margin-right: 0;
+        }
+
+        &:before {
+            @include background-size(25px 200px);
+            background-image: url('img/icon-sprite.svg');
+            background-position: center -180px;
+            background-repeat: no-repeat;
+            content: '';
+            display: inline-block;
+            height: 20px;
+            margin: 0 5px -.35em -30px;
+            width: 25px;
+        }
+    }
+
+    &.is-minified .page-top {
+        margin-top: -.25em;
+        @include transition-delay(150ms);
+    }
 }
 
 .nav-mozilla {
-    @include fira-sans-light;
-    @include font-size(14px);
     left: 0;
     position: absolute;
-    text-transform: uppercase;
-    top: 0;
+    top: -.5em;
+    z-index: 98;
+
+    .toggle {
+        @include image-replaced;
+        background: #000 url('img/icon-menu-white.svg') center center no-repeat;
+        @include background-size(22px auto);
+        cursor: pointer;
+        display: block;
+        height: 2.2em;
+        overflow: hidden;
+        position: relative;
+        width: 2.2em;
+    }
+}
+
+.nav-mozilla-menu {
+    background-color: #fff;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, .2);
+    left: -300px;
+    line-height: 1.1;
+    margin: 0;
+    overflow: visible;
+    position: absolute;
+    text-transform: lowercase;
+    top: 2.2em;
+    width: 200px;
     z-index: 99;
 
+    li {
+        border-bottom: 1px solid #ccc;
+
+        &:last-child {
+            border: 0;
+        }
+    }
+
     a {
+        @include transition(background-color 150ms ease, border-width 150ms ease, padding 150ms ease);
+        background: #fff;
+        color: $color-text-primary;
+        display: block;
+        padding: 10px 20px;
         text-decoration: none;
-        color: #fff;
 
         &:hover,
-        &:focus,
-        &:active {
+        &:focus {
+            background-color: #f5f5f5;
+            border-right: 6px solid #000;
             text-decoration: underline;
         }
     }
 
-    .toggle {
-        @include image-replaced;
-        background: $color-mozred url('img/icon-menu-light.svg') center center no-repeat;
-        @include background-size(22px auto);
-        cursor: pointer;
-        display: block;
-        height: 40px;
-        overflow: hidden;
-        position: relative;
-        width: 40px;
+    .nav-global-donate a,
+    .nav-global-firefox a {
+        padding-left: 30px;
+
+        &:before {
+            @include background-size(25px 200px);
+            background-image: url('img/icon-sprite.svg');
+            background-repeat: no-repeat;
+            content: '';
+            display: inline-block;
+            height: 20px;
+            margin: 0 5px -.35em -30px;
+            width: 25px;
+        }
     }
 
-    .nav-mozilla-menu {
-        background: #fff;
-        box-shadow: 2px 2px 0 rgba(0, 0, 0, .2);
-        left: -300px;
-        margin: 0;
-        overflow: visible;
-        position: absolute;
-        top: 40px;
-        width: 200px;
-        z-index: 99;
-
-        li {
-            border-bottom: 1px solid #ccc;
-
-            &:last-child {
-                border: 0;
-            }
+    .nav-global-donate a {
+        &:before {
+            background-position: 0 -100px;
         }
 
-        a {
-            background: #fff;
-            color: $color-text-primary;
-            display: block;
-            padding: 10px 20px;
-            text-decoration: none;
-            @include transition(background-color 150ms ease, border-width 150ms ease, color 150ms ease, padding 150ms ease);
+        &:hover:before,
+        &:focus:before {
+            background-position: 0 -120px;
+        }
+    }
 
-            &:hover,
-            &:focus {
-                background-color: #f5f5f5;
-                border-right: 6px solid $color-mozred;
-                color: $color-mozred;
-                text-decoration: underline;
-            }
+    .nav-global-firefox a {
+        &:before {
+            background-position: 0 -140px;
+        }
+
+        &:hover:before,
+        &:focus:before {
+            background-position: 0 -160px;
         }
     }
 }
 
-.nav-mozilla:hover #nav-mozilla-menu,
-#nav-mozilla-menu:target {
+.nav-mozilla:hover .nav-mozilla-menu,
+.nav-mozilla-menu:target {
     left: auto;
 }
 
-.js .nav-mozilla .nav-mozilla-menu {
+.js .nav-mozilla-menu {
     left: auto;
     display: none;
 }
 
 @media #{$mq-tablet} {
-    .nav-mozilla {
-        float: right;
-        margin: 0 20px;
-        position: relative;
+    .nav-global {
+        height: 2.5em;
+        padding: 1em 0;
 
-        .nav-mozilla-menu {
-            width: auto;
-            position: static;
-            background: transparent;
-            box-shadow: none;
-            padding: 10px 0;
+        .logo {
+            height: 40px;
+            width: 126px;
+        }
 
-            li {
-                display: inline;
-                border: 0;
-                padding: 0 10px;
+        &.is-minified {
+            height: 1.2em;
+            padding: .5em 0;
+
+            .logo {
+                height: 20px;
+                width: 63px;
             }
 
-            a {
-                background: transparent;
-                display: inline-block;
-                padding: 0;
-                color: #fff;
+            .nav-mozilla {
+                margin-top: -4em;
 
-                &:hover,
-                &:focus {
-                    background: transparent;
-                    border: 0;
-                    color: #fff;
+                a:focus {
+                    margin-top: 3em;
                 }
             }
         }
+    }
+
+    .nav-mozilla {
+        @include transition(margin-top 250ms ease-in);
+        float: right;
+        max-width: 75%;
+        position: relative;
 
         .toggle {
             @include hidden;
         }
-
     }
 
-    .js .nav-mozilla .nav-mozilla-menu {
+    .nav-mozilla-menu {
+        background: transparent;
+        box-shadow: none;
+        margin-top: .25em;
+        padding: 1em 0;
+        position: static;
+        width: auto;
+
+        li {
+            display: inline;
+            border: 0;
+            padding: 0 10px;
+        }
+
+        a {
+            background: transparent;
+            display: inline-block;
+            padding: 0;
+
+            &:hover,
+            &:focus {
+                background: transparent;
+                border: 0;
+            }
+        }
+    }
+
+    .js .nav-mozilla-menu {
         display: block;
     }
 }
 
 @media #{$mq-desktop} {
-    .nav-mozilla .nav-mozilla-menu li {
+    .nav-mozilla-menu li {
             padding: 0 20px;
     }
 }

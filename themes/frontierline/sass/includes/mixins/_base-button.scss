@@ -1,15 +1,10 @@
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-
-// the basis for all buttons
+// The basis for all buttons
 
 @mixin base-button {
     @include font-size(18px);
     @include transition(background-color 100ms ease-in-out);
     background: none;
-    border-radius: 4px;
+    border-radius: 0;
     border-style: solid;
     border-width: 2px;
     cursor: pointer;

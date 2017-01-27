@@ -12,7 +12,7 @@
   ?>
     <img class="post-image" width="300" height="165" alt="" src="<?php echo get_template_directory_uri(); ?>/img/place-thumb.png" data-src="<?php echo $thumb_url[0]; ?>">
   <?php else : ?>
-    <img class="post-image" width="300" height="165" alt="" src="<?php echo get_template_directory_uri(); ?>/img/place-thumb.png" data-src="<?php echo get_template_directory_uri(); ?>/img/fallbacks/glitch-<?php echo rand(1, 6); ?>.jpg">
+    <img class="post-image image-fallback color-<?php echo rand(1, 6); ?>" width="300" height="165" alt="" src="<?php echo get_template_directory_uri(); ?>/img/place-thumb.png" data-src="<?php echo get_template_directory_uri(); ?>/img/fallbacks/pattern-<?php echo rand(1, 6); ?>.png">
   <?php endif; ?>
     <h5 class="entry-title"><?php the_title(); ?></h5>
   </a>

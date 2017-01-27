@@ -1,13 +1,8 @@
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-
 // The global footer.
 
 #site-info {
     @include font-size(14px);
-    background: $color-mozgray;
+    background: #000;
     color: #fff;
     line-height: 1.5;
     padding: 40px 0;
@@ -15,7 +10,7 @@
 
     a {
         text-decoration: none;
-        color: lighten($color-link, 30%);
+        color: lighten($color-link, 40%);
 
         &:hover,
         &:focus,
@@ -30,9 +25,9 @@
         margin-bottom: .5em;
 
         a {
-            background: transparent url('img/mozilla-wordmark-light.svg') no-repeat;
-            @include background-size(88px, 28px);
             @include image-replaced;
+            background: transparent url('img/mozilla-wordmark-white.svg') no-repeat;
+            @include background-size(88px 28px);
             display: inline-block;
             height: 28px;
             width: 88px;
@@ -127,7 +122,7 @@
 }
 
 @media #{$mq-tablet} {
-    [dir='rtl'] #colophon {
+    [dir='rtl'] #site-info {
         .col,
         .col-2 ul li {
             float: right;

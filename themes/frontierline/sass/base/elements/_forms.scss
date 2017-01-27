@@ -1,9 +1,4 @@
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-@import '../../includes/lib';
-
+// Forms
 
 button,
 input,
@@ -30,7 +25,7 @@ input[type=time] {
     @include border-box;
     @include transition(all 100ms linear);
     background: #fff;
-    border-radius: .3em;
+    border-radius: 0;
     border: 1px solid #b2b2b2;
     display: inline-block;
     line-height: 1.25;
