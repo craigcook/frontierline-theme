@@ -30,12 +30,12 @@
         margin-bottom: .5em;
 
         a {
-            background: transparent url('img/mozilla-wordmark-white.svg') no-repeat;
-            @include background-size(92px, 24px);
+            background: transparent url('img/mozilla-wordmark-light.svg') no-repeat;
+            @include background-size(88px, 28px);
             @include image-replaced;
             display: inline-block;
-            height: 24px;
-            width: 92px;
+            height: 28px;
+            width: 88px;
         }
     }
 

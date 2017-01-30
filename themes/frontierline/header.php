@@ -34,22 +34,22 @@
   <meta name="twitter:site" content="@<?php echo sanitize_text_field(get_option('frontierline_twitter_username')); ?>">
 <?php endif; ?>
 
-  <meta name="Rating" content="General">
-  <!--[if IE]>
-  <meta name="MSSmartTagsPreventParsing" content="true">
-  <meta http-equiv="imagetoolbar" content="no">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <![endif]-->
-  <!--[if lte IE 8]>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
-  <![endif]-->
-
   <link rel="copyright" href="#license">
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png">
   <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url'); echo '?v=' . filemtime(get_stylesheet_directory() . '/style.css'); ?>">
 
-  <!--[if lte IE 8]><link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/oldIE.css"><![endif]-->
+  <!--[if IE]>
+  <meta name="MSSmartTagsPreventParsing" content="true">
+  <meta http-equiv="imagetoolbar" content="no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <![endif]-->
+
+  <!--[if lte IE 8]>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/oldIE.css">
+  <![endif]-->
 
   <?php if (get_header_image()) : ?>
   <style type="text/css">

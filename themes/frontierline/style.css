@@ -228,7 +228,7 @@ label { display: block; }
 #site-info a { text-decoration: none; color: #7addff; }
 #site-info a:hover, #site-info a:focus, #site-info a:active { text-decoration: underline; color: #fff; }
 #site-info .logo { font-size: 16px; font-size: 1rem; margin-bottom: .5em; }
-#site-info .logo a { background: transparent url("img/mozilla-wordmark-white.svg") no-repeat; -webkit-background-size: 92px, 24px; background-size: 92px, 24px; overflow: hidden; text-indent: 120%; white-space: nowrap; display: inline-block; height: 24px; width: 92px; }
+#site-info .logo a { background: transparent url("img/mozilla-wordmark-light.svg") no-repeat; -webkit-background-size: 88px, 28px; background-size: 88px, 28px; overflow: hidden; text-indent: 120%; white-space: nowrap; display: inline-block; height: 28px; width: 88px; }
 #site-info li { margin: 0; list-style-type: none; }
 #site-info .row { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; zoom: 1; margin: 0 auto; padding: 0 20px; min-width: 300px; }
 #site-info .row:after { clear: both; content: ''; display: block; height: 0; visibility: hidden; }
@@ -456,7 +456,7 @@ label { display: block; }
 .nav-global:after { clear: both; content: ''; display: block; height: 0; visibility: hidden; }
 .nav-global .content { padding: 0 20px; }
 .nav-global .logo { font-size: 16px; font-size: 1rem; float: right; margin: 8px 0 0; }
-.nav-global .logo a { -webkit-background-size: 92px 24px; background-size: 92px 24px; overflow: hidden; text-indent: 120%; white-space: nowrap; background: transparent url("img/mozilla-wordmark-white.svg") no-repeat; display: inline-block; height: 24px; width: 92px; }
+.nav-global .logo a { -webkit-background-size: 88px 28px; background-size: 88px 28px; overflow: hidden; text-indent: 120%; white-space: nowrap; background: transparent url("img/mozilla-wordmark-light.svg") no-repeat; display: inline-block; height: 28px; width: 88px; }
 @media screen and (min-width: 760px) { .nav-global .logo { float: left; } }
 
 .nav-mozilla { font-family: "Fira Sans Light", X-LocaleSpecific-Light, "Fira Sans", X-LocaleSpecific, sans-serif; font-weight: normal; font-size: 14px; font-size: 0.875rem; left: 0; position: absolute; text-transform: uppercase; top: 0; z-index: 99; }

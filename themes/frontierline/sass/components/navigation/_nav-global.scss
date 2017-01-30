@@ -25,12 +25,12 @@
         margin: 8px 0 0;
 
         a {
-            @include background-size(92px 24px);
+            @include background-size(88px 28px);
             @include image-replaced;
-            background: transparent url('img/mozilla-wordmark-white.svg') no-repeat;
+            background: transparent url('img/mozilla-wordmark-light.svg') no-repeat;
             display: inline-block;
-            height: 24px;
-            width: 92px;
+            height: 28px;
+            width: 88px;
         }
 
         @media #{$mq-tablet} {
