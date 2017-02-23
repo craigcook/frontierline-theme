@@ -8,9 +8,9 @@
   $categories = get_categories('number=8&orderby=count&order=desc&hierarchical=0&depth=1');
 ?>
 
-<aside id="explore" role="complementary">
+<aside id="categories" role="complementary" class="can-stick">
   <div class="content">
-    <h3 class="module-title"><?php _e('Explore more articles', 'frontierline'); ?></h3>
+    <h3 class="module-title"><?php _e('More articles', 'frontierline'); ?></h3>
 
     <ul class="cat-list" role="navigation">
     <?php foreach($categories as $category) : ?>

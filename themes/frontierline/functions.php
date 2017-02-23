@@ -31,8 +31,11 @@ function frontierline_setup() {
   );
   add_theme_support('custom-header', $header_defaults);
 
-  // Disable the header text and color options
-  define('NO_HEADER_TEXT', true);
+  // Indicate widgets can use selective refresh in the Customizer.
+  add_theme_support('customize-selective-refresh-widgets');
+
+  // Register custom menu
+  register_nav_menu('site_menu', __('Site Menu', 'frontierline'));
 }
 endif;
 add_action('after_setup_theme', 'frontierline_setup');
@@ -54,6 +57,12 @@ if (! function_exists('frontierline_activate')):
   }
 endif;
 add_action('after_switch_theme', 'frontierline_activate');
+
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
 
 
 /**
@@ -263,7 +272,7 @@ function frontierline_load_scripts() {
   wp_enqueue_script('jquery');
 
   // Load the global script
-  wp_register_script('global', get_template_directory_uri() . '/js/global.js', 'jquery', '1.2', true);
+  wp_register_script('global', get_template_directory_uri() . '/js/global.js', 'jquery', '2.0', true);
   wp_enqueue_script('global');
 
   // Load the newsletter script
@@ -271,14 +280,8 @@ function frontierline_load_scripts() {
   wp_enqueue_script('basket-client');
 
   // Load the threaded comment reply script
-  if ( get_option('thread_comments') && is_singular() ) {
+  if (get_option('thread_comments') && is_singular() && comments_open()) {
     wp_enqueue_script('comment-reply', true);
-  }
-
-  // Check required fields on comment form
-  wp_register_script('checkcomments', get_template_directory_uri() . '/js/fc-checkcomment.js', 'jquery', '1.0', true);
-  if (get_option('require_name_email') && is_singular() && comments_open()) {
-    wp_enqueue_script('checkcomments');
   }
 }
 add_action( 'wp_enqueue_scripts', 'frontierline_load_scripts' );
@@ -385,8 +388,9 @@ function frontierline_widgets_init() {
   register_sidebar( array(
     'name' => __('Sidebar Menu', 'frontierline'),
     'id' => 'sidebar',
+    'description'   => esc_html__('Widgets added here will appear in the flyout sidebar.', 'frontierline'),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget' => "</aside>",
+    'after_widget' => '</aside>',
     'before_title' => '<h3 class="widget-title">',
     'after_title' => '</h3>',
   ) );
@@ -487,7 +491,7 @@ function frontierline_disable_emojis_tinymce( $plugins ) {
 
 
 /**
- * Disable the emoji scripts and prefetch
+ * Disable the emoji scripts and prefetch.
  */
 function frontierline_disable_emojis() {
   remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -501,5 +505,36 @@ function frontierline_disable_emojis() {
   add_filter( 'tiny_mce_plugins', 'frontierline_disable_emojis_tinymce' );
 }
 add_action('init', 'frontierline_disable_emojis');
+
+
+/**
+ * Remind authors to set a featured image.
+ */
+function frontierline_image_reminder() {
+  global $pagenow;
+  $message = __('Remember to include a featured image! It should be at least 1400 by 770 pixels. Posts without a featured image will show a standard placeholder image.', 'frontierline');
+  if ($pagenow === 'post-new.php') {
+    echo '<div class="updated"><p>' . $message . '</p></div>';
+  }
+}
+add_action('admin_notices', 'frontierline_image_reminder');
+
+
+/**
+ * Adds custom classes to the array of body classes.
+ */
+function frontierline_body_classes($classes) {
+
+  // Get the color scheme, or the default if there isn't one.
+  $colors = frontierline_sanitize_color_scheme(get_theme_mod('frontierline_color_scheme', 'none'));
+  $classes[] = 'color-scheme-' . $colors;
+
+  // Get the header pattern, or the default if there isn't one.
+  $patterns = frontierline_sanitize_head_pattern(get_theme_mod('frontierline_head_pattern', 'none'));
+  $classes[] = 'pattern-' . $patterns;
+
+  return $classes;
+}
+add_filter('body_class', 'frontierline_body_classes');
 
 ?>

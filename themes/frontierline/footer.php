@@ -1,13 +1,18 @@
     </main>
 
   <?php get_sidebar(); ?>
-  <?php get_template_part('includes/explore'); ?>
+
+  <?php if ('enabled' === get_theme_mod('frontierline_category_drawer', 'enabled')) : ?>
+    <?php get_template_part('includes/categories'); ?>
+  <?php endif; ?>
 
   <?php if (!is_singular()) : ?>
-  <?php get_template_part('includes/newsletter-form'); ?>
+    <?php get_template_part('includes/newsletter-form'); ?>
   <?php endif; ?>
 
   </div><!-- /.site-wrap -->
+
+
 
   <footer id="site-info" class="section">
     <div class="content">
@@ -22,7 +27,7 @@
       <section class="col col-2">
         <ul class="links-join">
           <li><a href="https://www.mozilla.org/contact/"><?php _e('Contact Us', 'frontierline'); ?></a></li>
-          <li class="wrap"><a class="donate" href="https://donate.mozilla.org/?presets=100,50,25,15&amp;amount=50&amp;currency=usd"><?php _e('Donate', 'frontierline'); ?></a></li>
+          <li class="wrap"><a class="donate" href="https://donate.mozilla.org/?presets=100,50,25,15&amp;amount=50&amp;currency=usd"><?php _e('Give', 'frontierline'); ?></a></li>
         </ul>
 
         <ul class="links-legal">

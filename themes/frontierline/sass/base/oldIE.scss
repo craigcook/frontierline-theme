@@ -1,46 +1,10 @@
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+@import
+    '../includes/lib',
+    'elements';
+
 
 // This style sheet is served exclusively to Internet Explorer 8 and older.
 // Old versions get this minimal style while IE9 and up recieve more advanced styling.
-
-// @Fonts
-// oldIE only supports EOT so we needn't include TTF or Woff.
-@font-face {
-    font-family: 'Fira Sans';
-    font-style: normal;
-    font-weight: normal;
-    src: url('fonts/FiraSans-Regular.eot?#iefix') format('embedded-opentype');
-}
-
-@font-face {
-    font-family: 'Fira Sans';
-    font-style: normal;
-    font-weight: bold;
-    src: url('fonts/FiraSans-Bold.eot?#iefix') format('embedded-opentype');
-}
-
-@font-face {
-    font-family: 'Fira Sans';
-    font-style: italic;
-    font-weight: normal;
-    src: url('fonts/FiraSans-Italic.eot?#iefix') format('embedded-opentype');
-}
-
-@font-face {
-    font-family: 'Fira Sans';
-    font-style: italic;
-    font-weight: bold;
-    src: url('fonts/FiraSans-BoldItalic.eot?#iefix') format('embedded-opentype');
-}
-
-
-@import
-    '../includes/lib',
-    'elements',
-    '../components/utilities/buttons';
-
 
 body {
     margin: 20px 30px;

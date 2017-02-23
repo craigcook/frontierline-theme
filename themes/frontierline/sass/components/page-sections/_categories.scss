@@ -1,12 +1,6 @@
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+// The Category Drawer - Shows top categories and recent posts in each.
 
-
-// The "Explore Drawer" (say that five times fast).
-// Shows top categories and recent posts in each.
-
-#explore {
+#categories {
     position: static;
 
     .module-title {
@@ -36,10 +30,10 @@
 
     .category-title {
         @include font-size-level3;
-        color: $color-mozred;
+        color: $color-text-primary;
         margin: 1em 0;
         padding-top: 1em;
-        border-top: 1px solid #ccc;
+        border-top: 1px solid #000;
     }
 
     .category-post {
@@ -50,16 +44,21 @@
         display: none;
     }
 
-    &.active {
+    &.is-active {
         background: #fff;
         box-shadow: 0 3px 1px rgba(0, 0, 0, .2);
         left: 0;
         min-height: 100px;
-        padding-top: 3em;
+        padding-top: 40px;
         position: absolute;
         top: 0;
         width: 100%;
         z-index: 8;
+
+        &.is-sticky {
+            position: fixed;
+            top: 30px;
+        }
 
         .cat-list {
             display: block;

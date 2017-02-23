@@ -4,7 +4,7 @@
  */
 ?>
 
-<?php if ( has_post_thumbnail() ) : ?>
+<?php if (has_post_thumbnail()) : ?>
   <div class="post-image post-image-full">
     <?php the_post_thumbnail('post-full-size'); ?>
   </div>
@@ -20,7 +20,7 @@
       </div>
     <?php endif; ?>
 
-    <?php if ( (is_single() && get_option('frontierline_share_posts') == 1) || (is_page() && get_option('frontierline_share_pages') == 1) ) :
+    <?php if ((is_single() && get_option('frontierline_share_posts') == 1) || (is_page() && get_option('frontierline_share_pages') == 1)) :
         get_template_part('includes/social-share');
        endif; ?>
     </div>

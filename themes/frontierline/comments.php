@@ -106,21 +106,6 @@ if (post_password_required()) {
     </form>
   <?php endif; // end if reg required and not logged in ?>
   </div><?php // end #respond ?>
-
-  <?php if (get_option('require_name_email')) :
-    wp_enqueue_script('fc-checkcomment', get_template_directory_uri() . '/js/fc-checkcomment.js');
-    wp_localize_script('fc-checkcomment', 'objectL10n', array(
-      'nonameemail' => __('You must provide a name and e-mail address (your e-mail won’t be published).', 'frontierline'),
-      'noname' => __('You must provide a name.', 'frontierline'),
-      'noemail' => __('You must provide an e-mail address (it won’t be published).', 'frontierline'),
-      'bademail' => __('The e-mail address you entered doesn’t look like a complete e-mail address. It should look like “yourname@example.com”.', 'frontierline'),
-      'nocomment' => __('You must enter a comment.', 'frontierline')
-    ) );
-  ?>
-
-  <script type="text/javascript">jQuery("#comment-form").submit(function() { return fc_checkform(<?php if ($req) : echo "'req'"; endif; ?>); });</script>
-
-  <?php endif; ?>
 <?php endif; // end if comments open ?>
   </div>
 </section><?php // end #comments ?>

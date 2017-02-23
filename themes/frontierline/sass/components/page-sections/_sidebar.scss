@@ -1,10 +1,3 @@
-// This Source Code Form is subject to the terms of the Mozilla Public
-// License, v. 2.0. If a copy of the MPL was not distributed with this
-// file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-@import '../../includes/mixins/base-button';
-
-
 // The global sidebar (blog menu)
 
 .js #sidebar {
@@ -17,35 +10,37 @@
     background: #eee;
     padding: 20px;
 
-    &.active {
-        @include transition(transform 600ms cubic-bezier(.30, -0.5, .60, 1.1));
+    &.is-active {
+        @include transition(transform 600ms cubic-bezier(.3, -0.5, .6, 1.1));
         background: #fff;
         box-shadow: 3px 0 1px rgba(0, 0, 0, .2);
         left: 0;
         max-width: 600px;
-        min-height: 100%;
+        height: 100%;
         min-width: 260px;
-        padding: 80px 20px 40px;
         position: absolute;
-        top: 0;
+        top: 40px;
         transform: translateX(-101%); // Extra 1% to hide the shadow
         width: 33%;
         z-index: 9;
+        padding: 0;
 
-        @media #{$mq-tablet} {
-            padding: 80px 40px 40px;
-        }
-
-        &.show {
+        &.is-open {
             display: block;
             transform: none;
+        }
+
+        &.is-sticky {
+            position: fixed;
+            top: 70px;
+            overflow-y: auto;
         }
 
         .content {
             display: block;
             flex-wrap: nowrap;
             min-width: 0;
-            padding: 0;
+            padding: 40px;
             width: auto;
         }
 
@@ -68,9 +63,9 @@
 
     .widget-title {
         @include font-size-level3;
-        color: $color-mozred;
-        margin: 0;
-        padding-bottom: .5em;
+        border-bottom: 2px solid;
+        margin: 0 0 .75em;
+        padding: 0 0 .25em;
     }
 
     .widget_nav_menu,
@@ -79,11 +74,11 @@
     .widget_recent_comments,
     .widget_pages {
         ul {
-            border-top: 1px solid rgba(0, 0, 0, .05);
+            border-top: 1px solid rgba(0, 0, 0, .1);
         }
 
         li {
-            border-bottom: 1px solid rgba(0, 0, 0, .05);
+            border-bottom: 1px solid rgba(0, 0, 0, .1);
             margin: 0;
         }
 
@@ -97,6 +92,7 @@
             &:focus,
             &:active {
                 background-color: rgba(0, 0, 0, .02);
+                text-decoration: underline;
             }
         }
     }
