@@ -488,7 +488,7 @@ label { display: block; }
 #newsletter-subscribe select { font-size: 14px; font-size: 0.875rem; font-family: inherit; line-height: 1.5; max-width: 80%; }
 #newsletter-subscribe .form-submit .form-button { width: 100%; }
 #newsletter-subscribe .promise { line-height: 1.1; margin-top: .5em; text-align: center; }
-#newsletter-subscribe .thanks { padding-top: 10px; }
+#newsletter-subscribe .thanks { display: none; padding-top: 10px; }
 #newsletter-subscribe .thanks p { -webkit-animation: pebbles-fade-in 150ms ease-in 800ms 1 normal both; animation: pebbles-fade-in 150ms ease-in 800ms 1 normal both; margin-top: 20px; }
 #newsletter-subscribe .newsletter_errors > ul { background: #fff; color: #c13832; padding: 10px 20px; }
 @media screen and (min-width: 760px) { #newsletter-subscribe .form-title { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; float: left; width: 49.998%; padding-left: 10px; padding-right: 10px; -webkit-background-size: 120px 120px; background-size: 120px 120px; background-position: left 10px; float: left; padding: 10px 0 20px 140px; text-align: left; }
@@ -502,8 +502,8 @@ label { display: block; }
 
 @media screen and (min-width: 1400px) { #newsletter-subscribe .content { width: 980px; } }
 
-.js .thanks, .js .form-details, .js #form-details { display: none; }
-.js #newsletter-spinner { bottom: 0; left: 0; position: absolute; right: 0; top: 0; }
+.js #newsletter-subscribe .form-details, .js #newsletter-subscribe #form-details { display: none; }
+.js #newsletter-subscribe #newsletter-spinner { bottom: 0; left: 0; position: absolute; right: 0; top: 0; }
 
 .social-share li { display: inline-block; margin: 0 5px .25em; }
 .social-share b { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; /* !important required to ensure element is hidden when mixin is applied */ position: absolute !important; /* stylelint-disable-line declaration-no-important */ width: 1px; }

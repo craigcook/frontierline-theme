@@ -100,6 +100,7 @@
 
     // wrapper for thank you elements
     .thanks {
+        display: none;
         padding-top: 10px;
 
         p {
@@ -159,20 +160,21 @@
 }
 
 .js {
-    // hide details for JS users
-    // (displayed when email field is focused)
-    .thanks,
-    .form-details,
-    #form-details {
-        display: none;
-    }
+    #newsletter-subscribe {
+        // hide details for JS users
+        // (displayed when email field is focused)
+        .form-details,
+        #form-details {
+            display: none;
+        }
 
-    // spinner circa the web 2 point oh
-    #newsletter-spinner {
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
+        // spinner circa the web 2 point oh
+        #newsletter-spinner {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
     }
 }
