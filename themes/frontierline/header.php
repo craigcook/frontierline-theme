@@ -13,7 +13,7 @@
   <meta property="og:title" content="<?php if (is_singular()) : single_post_title(); else : bloginfo('name'); endif; ?>">
   <meta property="og:description" content="<?php frontierline_meta_desc(); ?>">
 <?php if (is_singular() && has_post_thumbnail()) : ?>
-  <?php $post_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-large', true); ?>
+  <?php $post_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-full-size', true); ?>
   <meta property="og:image" content="<?php echo $post_image_url['0']; ?>">
 <?php endif; ?>
 
@@ -22,7 +22,7 @@
   <meta property="twitter:description" content="<?php frontierline_meta_desc(); ?>">
 <?php if (is_singular() && has_post_thumbnail()) : ?>
   <meta name="twitter:card" content="summary_large_image">
-  <?php $post_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-large', true); ?>
+  <?php $post_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-full-size', true); ?>
   <meta property="twitter:image" content="<?php echo $post_image_url['0']; ?>">
 <?php else : ?>
   <meta name="twitter:card" content="summary">
