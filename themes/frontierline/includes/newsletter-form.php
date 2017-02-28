@@ -3,14 +3,12 @@
  * Newsletter subscription form.
  */
 
-$blog_name = sanitize_text_field(get_bloginfo('name'));
-$current_url = esc_attr(home_url(add_query_arg(array(),$wp->request)));
 ?>
 
 <aside id="newsletter-subscribe" class="section">
-  <form id="newsletter_form" class="content newsletter_form" name="newsletter_form" action="https://www.mozilla.org/en-US/newsletter/" method="post" data-blog="<?php echo $blog_name; ?>">
+  <form id="newsletter_form" class="content newsletter_form" name="newsletter_form" action="https://www.mozilla.org/en-US/newsletter/" method="post" data-blog="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
     <input type="hidden" id="newsletters" name="newsletters" value="mozilla-foundation">
-    <input type="hidden" id="source_url" name="source_url" value="<?php echo $current_url; ?>">
+    <input type="hidden" id="source_url" name="source_url" value="<?php frontierline_current_url(); ?>">
 
     <div class="form-title">
       <h3><?php _e('Love the Web?', 'frontierline'); ?></h3>
@@ -22,7 +20,7 @@ $current_url = esc_attr(home_url(add_query_arg(array(),$wp->request)));
 
       <div class="field field-email">
         <label for="email"><?php _e('Your e-mail address', 'frontierline'); ?></label>
-        <?php // L10n: 'yourname' is used in an example e-mail address. ?>
+        <?php // L10n: 'yourname' is used as the first part of an example e-mail address, as in 'yourname@example.com' ?>
         <input type="email" id="email" name="email" required placeholder="<?php _e('yourname', 'frontierline'); ?>@example.com" size="30">
       </div>
 

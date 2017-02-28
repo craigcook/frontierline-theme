@@ -14,15 +14,22 @@ get_header();
   <?php if (have_posts()) : ?>
 
     <h2 class="page-title content">
-    <?php if (is_category()) : ?><?php printf( __('Articles in “%s”', 'frontierline'), single_cat_title('',false) ); ?>
-    <?php elseif (is_tag()) : ?><?php printf( __('Articles tagged with “%s”','frontierline'), single_tag_title('',false) ); ?>
-    <?php elseif (is_day()) : ?><?php printf( __('Articles from %s', 'frontierline'), get_the_date() ); ?>
-    <?php elseif (is_month()) : ?><?php printf( __('Articles from %s', 'frontierline'), get_the_date('F, Y') ); ?>
-    <?php elseif (is_year()) : ?><?php printf( __('Articles from %s', 'frontierline'), get_the_date('Y') ); ?>
-    <?php elseif (is_author()) : ?><?php printf( __('Articles by %s','frontierline'), esc_html(get_userdata(intval($author))->display_name) ); ?>
-    <?php else : ?><?php _e('Archives', 'frontierline'); ?>
+    <?php if (is_category()) : ?>
+      <?php printf(__('Articles in “%s”', 'frontierline'), single_cat_title('',false)); ?>
+    <?php elseif (is_tag()) : ?>
+      <?php printf(__('Articles tagged with “%s”','frontierline'), single_tag_title('',false)); ?>
+    <?php elseif (is_day()) : ?>
+      <?php printf(__('Articles from %s', 'frontierline'), get_the_date()); ?>
+    <?php elseif (is_month()) : ?>
+      <?php printf(__('Articles from %s', 'frontierline'), get_the_date('F, Y')); ?>
+    <?php elseif (is_year()) : ?>
+      <?php printf(__('Articles from %s', 'frontierline'), get_the_date('Y')); ?>
+    <?php elseif (is_author()) : ?>
+      <?php printf(__('Articles by %s','frontierline'), get_the_author()); ?>
+    <?php else : ?>
+      <?php the_archive_title(); ?>
     <?php endif; ?>
-    </h1>
+    </h2>
 
     <?php /* Start the Loop */ ?>
     <div class="content posts-grid hfeed">

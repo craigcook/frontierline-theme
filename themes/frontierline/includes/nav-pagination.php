@@ -10,8 +10,8 @@
             'current'             => max( 1, get_query_var('paged')),
             'total'               => $wp_query->max_num_pages,
             'before_page_number'  => '<span class="a11y">'.$translated.'</span>',
-            'prev_text'           => __('Previous'),
-            'next_text'           => __('Next'),
+            'prev_text'           => __('Previous', 'frontierline'),
+            'next_text'           => __('Next', 'frontierline'),
             'type'                => 'list',
           );
 ?>

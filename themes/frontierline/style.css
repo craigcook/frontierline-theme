@@ -1,7 +1,7 @@
 /*
-Theme Name: Mozilla Frontierline
-Theme URI: https://github.com/mozilla/Frontierline-theme
-Author: Craig Cook, Michael Ham, and all your other friends at Mozilla
+Theme Name: Frontierline
+Theme URI: https://github.com/craigcook/frontierline-theme
+Author: Craig Cook, Michael Ham, and all your friends at Mozilla
 Author URI: https://www.mozilla.org
 Description: A theme for official Mozilla blogs.
 Version: 2.0
@@ -9,7 +9,6 @@ License: GPL GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: frontierline
 Domain Path: /languages/
-Tags: Mozilla, light, white, three-columns, responsive-layout, editor-style, featured-images, theme-options, translation-ready, social, social-sharing
 */
 /**********
 * This theme uses Sass as a CSS preprocessor. Source files are in

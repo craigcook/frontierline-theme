@@ -18,6 +18,12 @@ function frontierline_setup() {
   // This theme uses Featured Images (also known as post thumbnails)
   add_theme_support('post-thumbnails');
 
+  // Let WordPress generate document titles
+  add_theme_support('title-tag');
+
+  // Let WordPress generate feeds
+  add_theme_support('automatic-feed-links');
+
   // Set up some custom image sizes
   add_image_size('post-full-size', 1400, 770, array('center', 'center')); // Full post image - used at the top of single articles
   add_image_size('post-large', 600, 330, array('center', 'center')); // Large post image - used in grid summary view
@@ -252,19 +258,78 @@ add_action ('admin_footer', 'frontierline_page_comments_off');
 
 
 /**
-* Prints the page number currently being browsed, with a pipe before it.
-* Used in header.php to add the page number to the <title>.
+* Returns the page number currently being browsed.
 */
-if (! function_exists('frontierline_page_number')) :
 function frontierline_page_number() {
   global $paged; // Contains page number.
-  if ( $paged >= 2 )
-    echo ' | ' . sprintf(__('Page %s', 'frontierline'), $paged);
+  $sep = ' – '; // this is en dash, not a hyphen
+  if ($paged >= 2) {
+    return $sep . sprintf(__('Page %s', 'frontierline'), $paged);
+  }
 }
-endif;
 
 
-/*********
+/**
+* Prints a nice multipart page title.
+* Used in the meta tags where wp_title() doesn't cut it.
+*/
+function frontierline_meta_page_title() {
+    $sep = ' – '; // this is en dash, not a hyphen
+    $pagenum = frontierline_page_number();
+    $sitename = get_bloginfo('name');
+
+    if (is_single()) {
+        $title = single_post_title('', false) . $sep . $sitename;
+    }
+    elseif (is_home() || is_front_page()) {
+        $title = $sitename . $pagenum;
+        if (get_bloginfo('description', 'display')) {
+            $title .= $sep . get_bloginfo('description', 'display');
+        }
+    }
+    elseif (is_page()) {
+        $title = single_post_title('', false) . $sep . $sitename;
+    }
+    elseif (is_archive()) {
+        if (is_category()) {
+            $title = sprintf(__('Articles in “%s”', 'frontierline'), single_cat_title('', false)) . $pagenum . $sep . $sitename;
+        } elseif (is_tag()) {
+            $title = sprintf(__('Articles tagged with “%s”','frontierline'), single_tag_title('', false)) . $pagenum . $sep . $sitename;
+        } elseif (is_author()) {
+            $title = sprintf(__('Articles by %s', 'frontierline'), get_the_author()) . $pagenum . $sep . $sitename;
+        } elseif (is_day()) {
+            $title = sprintf(__('Articles from %s', 'frontierline'), get_the_date()) . $pagenum . $sep . $sitename;
+        } elseif (is_month()) {
+            $title = sprintf(__('Articles from %s', 'frontierline'), get_the_date('F, Y')) . $pagenum . $sep . $sitename;
+        } elseif (is_year()) {
+            $title = sprintf(__('Articles from %s', 'frontierline'), get_the_date('Y')) . $pagenum . $sep . $sitename;
+        } else {
+            $title = get_the_archive_title() . $pagenum . $sep . $sitename;
+        }
+    } elseif (is_search()) {
+        $title = sprintf(__('Search results for “%s”', 'frontierline'), esc_html(get_search_query())) . $pagenum . $sep . $sitename;
+    } elseif (is_404()) {
+      $title = __('Not Found', 'frontierline') . $sep . $sitename;
+    } else {
+      $title = wp_title('', false, 'right') . $pagenum . $sep . $sitename;
+    }
+
+    echo $title;
+}
+
+
+/*
+* Print the current page URL.
+*/
+function frontierline_current_url() {
+    global $wp;
+    $current_url = home_url(add_query_arg(array(),$wp->request));
+
+    echo $current_url;
+}
+
+
+/**
 * Load various JavaScripts
 */
 function frontierline_load_scripts() {
@@ -312,6 +377,17 @@ function frontierline_honeypot( array $data ){
   }
 }
 add_filter('preprocess_comment', 'frontierline_honeypot');
+
+
+/**
+* Ask robots not to index some pages.
+*/
+function frontierline_norobots() {
+  if (is_paged() || is_date() || is_search()) :
+    wp_no_robots();
+  endif;
+}
+add_action('wp_head', 'frontierline_norobots');
 
 
 /**
@@ -372,8 +448,8 @@ add_filter('excerpt_more', 'frontierline_auto_excerpt_more');
  * To override this link in a child theme, remove the filter and add your own
  * function tied to the get_the_excerpt filter hook.
  */
-function frontierline_custom_excerpt_more( $output ) {
-  if ( has_excerpt() && ! is_attachment() ) {
+function frontierline_custom_excerpt_more($output) {
+  if (has_excerpt() && ! is_attachment()) {
     $output .= frontierline_read_more_link();
   }
   return $output;
@@ -481,7 +557,7 @@ endif;
  * @param    array  $plugins
  * @return   array  Difference betwen the two arrays
  */
-function frontierline_disable_emojis_tinymce( $plugins ) {
+function frontierline_disable_emojis_tinymce($plugins) {
   if (is_array($plugins)) {
     return array_diff($plugins, array('wpemoji'));
   } else {
@@ -494,15 +570,15 @@ function frontierline_disable_emojis_tinymce( $plugins ) {
  * Disable the emoji scripts and prefetch.
  */
 function frontierline_disable_emojis() {
-  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-  remove_action( 'wp_print_styles', 'print_emoji_styles' );
-  remove_action( 'admin_print_styles', 'print_emoji_styles' );
-  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-  add_filter( 'emoji_svg_url', '__return_false' );
-  add_filter( 'tiny_mce_plugins', 'frontierline_disable_emojis_tinymce' );
+  remove_action('wp_head', 'print_emoji_detection_script', 7);
+  remove_action('admin_print_scripts', 'print_emoji_detection_script');
+  remove_action('wp_print_styles', 'print_emoji_styles');
+  remove_action('admin_print_styles', 'print_emoji_styles');
+  remove_filter('the_content_feed', 'wp_staticize_emoji');
+  remove_filter('comment_text_rss', 'wp_staticize_emoji');
+  remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+  add_filter('emoji_svg_url', '__return_false');
+  add_filter('tiny_mce_plugins', 'frontierline_disable_emojis_tinymce');
 }
 add_action('init', 'frontierline_disable_emojis');
 
@@ -524,7 +600,6 @@ add_action('admin_notices', 'frontierline_image_reminder');
  * Adds custom classes to the array of body classes.
  */
 function frontierline_body_classes($classes) {
-
   // Get the color scheme, or the default if there isn't one.
   $colors = frontierline_sanitize_color_scheme(get_theme_mod('frontierline_color_scheme', 'none'));
   $classes[] = 'color-scheme-' . $colors;

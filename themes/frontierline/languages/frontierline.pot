@@ -1,7 +1,8 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-02-23 14:25-0800\n"
+"POT-Creation-Date: 2017-02-28 12:14-0800\n"
 "PO-Revision-Date: 2017-02-23 14:32-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,28 +17,25 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: archive.php:17
+#: archive.php:18 functions.php:295
 #, php-format
 msgid "Articles in “%s”"
 msgstr ""
 
-#: archive.php:18
+#: archive.php:20 functions.php:297
 #, php-format
 msgid "Articles tagged with “%s”"
 msgstr ""
 
-#: archive.php:19 archive.php:20 archive.php:21
+#: archive.php:22 archive.php:24 archive.php:26 functions.php:301
+#: functions.php:303 functions.php:305
 #, php-format
 msgid "Articles from %s"
 msgstr ""
 
-#: archive.php:22
+#: archive.php:28 functions.php:299
 #, php-format
 msgid "Articles by %s"
-msgstr ""
-
-#: archive.php:23
-msgid "Archives"
 msgstr ""
 
 #: comments.php:41
@@ -52,6 +50,7 @@ msgstr ""
 msgid "More comments:"
 msgstr ""
 
+#. L10n: 'trackbacks' are when another website refers to this blog post with a link notification
 #: comments.php:64
 #, php-format
 msgid ""
@@ -223,130 +222,125 @@ msgstr ""
 msgid "Report Trademark Abuse"
 msgstr ""
 
-#: functions.php:38
+#: functions.php:44
 msgid "Site Menu"
 msgstr ""
 
-#: functions.php:78
+#: functions.php:84
 msgid "Social sharing for posts"
 msgstr ""
 
-#: functions.php:90
+#: functions.php:96
 msgid "Social sharing for Pages"
 msgstr ""
 
-#: functions.php:102
+#: functions.php:108
 msgid "Twitter username"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:124
 msgid "Add social sharing buttons to posts"
 msgstr ""
 
-#: functions.php:120
+#: functions.php:126
 msgid "Adds buttons for Twitter and Facebook to the top of blog articles."
 msgstr ""
 
-#: functions.php:134
+#: functions.php:140
 msgid "Add social sharing buttons to Pages"
 msgstr ""
 
-#: functions.php:136
+#: functions.php:142
 msgid "Adds buttons for Twitter and Facebook to the top of static Pages."
 msgstr ""
 
-#: functions.php:149
+#: functions.php:155
 msgid ""
 "The Twitter account for attribution when sharing. Appears as \"via @username"
 "\" at the end of the tweet, and Twitter may suggest related accounts to "
 "follow. Leave this blank for no attribution."
 msgstr ""
 
-#: functions.php:161
+#: functions.php:167
 msgid "Extra Large"
 msgstr ""
 
-#: functions.php:262
+#: functions.php:267
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: functions.php:305
+#: functions.php:310
+#, php-format
+msgid "Search results for “%s”"
+msgstr ""
+
+#: functions.php:312
+msgid "Not Found"
+msgstr ""
+
+#: functions.php:370
 msgid ""
 "Sorry, you appear to be a spamming robot because you filled in the hidden "
 "spam trap field. To show you are not a spammer, submit your comment again "
 "and leave the field blank."
 msgstr ""
 
-#: functions.php:306
+#: functions.php:371
 msgid "Spam Prevention"
 msgstr ""
 
-#: functions.php:353
+#: functions.php:429
 msgid "Read more"
 msgstr ""
 
-#: functions.php:389
+#: functions.php:465
 msgid "Sidebar Menu"
 msgstr ""
 
-#: functions.php:414
+#: functions.php:490
 msgid "Trackback from "
 msgstr ""
 
-#: functions.php:417 functions.php:430
+#. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
+#. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
+#: functions.php:493 functions.php:506
 msgid "on"
 msgstr ""
 
-#: functions.php:418 functions.php:431 functions.php:445
+#: functions.php:494 functions.php:507 functions.php:521
 msgid "Permanent link to this comment by "
 msgstr ""
 
-#: functions.php:421 functions.php:434 functions.php:448
+#. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
+#. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
+#. L10n: Comment headings read "<Name> wrote on <Date> at <Time>:"
+#: functions.php:497 functions.php:510 functions.php:524
 #, php-format
 msgid "%1$s at %2$s:"
 msgstr ""
 
-#: functions.php:427
+#: functions.php:503
 msgid "Ping from "
 msgstr ""
 
-#: functions.php:444
+#: functions.php:520
 msgid "wrote on"
 msgstr ""
 
-#: functions.php:457
+#: functions.php:533
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:469
+#: functions.php:545
 msgid "Edit comment"
 msgstr ""
 
-#: functions.php:515
+#: functions.php:591
 msgid ""
 "Remember to include a featured image! It should be at least 1400 by 770 "
 "pixels. Posts without a featured image will show a standard placeholder "
 "image."
-msgstr ""
-
-#: header.php:64
-#, php-format
-msgid "%s – RSS Feed"
-msgstr ""
-
-#: header.php:71
-#, php-format
-msgid "Search results for “%s”"
-msgstr ""
-
-#: header.php:72 header.php:73 header.php:74
-#, php-format
-msgid "Posts from %s"
-msgstr ""
-
-#: header.php:75
-msgid "Not Found"
 msgstr ""
 
 #: image.php:18
@@ -504,7 +498,7 @@ msgstr ""
 msgid "Get the Mozilla newsletter and help us keep it open and free."
 msgstr ""
 
-# This appears as a the first part of a placeholder email address: yourname@example.com
+#. L10n: 'yourname' is used as the first part of an example e-mail address, as in 'yourname@example.com'
 #: includes/newsletter-form.php:26
 msgid "yourname"
 msgstr ""

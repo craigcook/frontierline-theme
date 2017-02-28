@@ -109,7 +109,7 @@ function frontierline_customize_register($wp_customize) {
   ));
 
   $wp_customize->add_control('frontierline_site_intro_text', array(
-    'label'       => esc_html__('Site Introduction', 'baseline'),
+    'label'       => esc_html__('Site Introduction', 'frontierline'),
     'description' => esc_html__('Some HTML is allowed.', 'frontierline'),
     'priority'    => 8,
     'section'     => 'frontierline_theme_options',
