@@ -174,7 +174,7 @@ add_filter('image_size_names_choose', 'frontierline_custom_sizes');
 * Use auto-excerpts for meta description if hand-crafted exerpt is missing
 */
 function frontierline_meta_desc() {
-  $post_desc_length = 40; // auto-excerpt length in number of words
+  $post_desc_length = 30; // auto-excerpt length in number of words
 
   global $cat, $cache_categories, $wp_query, $wp_version;
   if(is_single() || is_page()) {
@@ -258,11 +258,21 @@ add_action ('admin_footer', 'frontierline_page_comments_off');
 
 
 /**
+* Replace the default title separator.
+*/
+function frontierline_document_title_separator() {
+  $sep = '–'; // this is en dash, not a hyphen
+  return $sep;
+}
+add_filter('document_title_separator', 'frontierline_document_title_separator');
+
+
+/**
 * Returns the page number currently being browsed.
 */
 function frontierline_page_number() {
   global $paged; // Contains page number.
-  $sep = ' – '; // this is en dash, not a hyphen
+  $sep = ' ' . frontierline_document_title_separator() . ' ';
   if ($paged >= 2) {
     return $sep . sprintf(__('Page %s', 'frontierline'), $paged);
   }
@@ -274,8 +284,8 @@ function frontierline_page_number() {
 * Used in the meta tags where wp_title() doesn't cut it.
 */
 function frontierline_meta_page_title() {
-    $sep = ' – '; // this is en dash, not a hyphen
     $pagenum = frontierline_page_number();
+    $sep = ' ' . frontierline_document_title_separator() . ' ';
     $sitename = get_bloginfo('name');
 
     if (is_single()) {
@@ -383,11 +393,26 @@ add_filter('preprocess_comment', 'frontierline_honeypot');
 * Ask robots not to index some pages.
 */
 function frontierline_norobots() {
-  if (is_paged() || is_date() || is_search()) :
+  if (is_paged() || is_date() || is_search() || is_author()) :
     wp_no_robots();
   endif;
 }
 add_action('wp_head', 'frontierline_norobots');
+
+
+/**
+* Add featured images to feeds.
+*/
+function frontierline_feed_featured_image($content) {
+  global $post;
+
+  if(has_post_thumbnail($post->ID)) {
+    $content = '<p>' . get_the_post_thumbnail($post->ID, 'post-large') . '</p>' . get_the_content();
+  }
+  return $content;
+}
+add_filter('the_excerpt_rss', 'frontierline_feed_featured_image');
+add_filter('the_content_feed', 'frontierline_feed_featured_image');
 
 
 /**
@@ -411,13 +436,13 @@ add_filter('tiny_mce_before_init', 'frontierline_post_formats');
 
 
 /**
- * Sets the post excerpt length to 40 words.
+ * Sets the post excerpt length to 30 words.
  *
  * To override this length in a child theme, remove the filter and add your own
  * function tied to the excerpt_length filter hook.
  */
 function frontierline_excerpt_length( $length ) {
-  return 40;
+  return 30;
 }
 add_filter('excerpt_length', 'frontierline_excerpt_length');
 
