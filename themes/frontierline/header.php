@@ -4,35 +4,40 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<?php /* Let Yoast SEO handle meta title and desc when available. */ ?>
+<?php if (! method_exists('WPSEO_Frontend', 'title') || (method_exists('WPSEO_Frontend', 'title') && WPSEO_Meta::get_value('title') === '')) : ?>
   <meta name="title" content="<?php frontierline_meta_page_title(); ?>">
+<?php endif; ?>
+<?php if (! method_exists('WPSEO_Frontend', 'metadesc') || (method_exists('WPSEO_Frontend', 'metadesc') && WPSEO_Meta::get_value('metadesc') === '')) : ?>
   <meta name="description" content="<?php frontierline_meta_desc(); ?>">
+<?php endif; ?>
 
   <?php /* Metadata for Facebook */ ?>
   <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
   <meta property="og:url" content="<?php frontierline_current_url(); ?>">
   <meta property="og:title" content="<?php if (is_singular()) : single_post_title(); else : frontierline_meta_page_title(); endif; ?>">
-  <meta property="og:description" content="<?php frontierline_meta_desc(); ?>">
-<?php if (is_singular() && has_post_thumbnail()) : ?>
-  <?php $post_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-full-size', true); ?>
+  <meta property="og:description" content="<?php if (method_exists('WPSEO_Frontend', 'metadesc') && WPSEO_Meta::get_value('metadesc') !== '') : echo WPSEO_Meta::get_value('metadesc'); else : frontierline_meta_desc(); endif; ?>">
+  <?php if (is_singular() && has_post_thumbnail()) : ?>
+    <?php $post_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-full-size', true); ?>
   <meta property="og:image" content="<?php echo $post_image_url['0']; ?>">
-<?php endif; ?>
+  <?php endif; ?>
 
   <?php /* Metadata for Twitter */ ?>
   <meta property="twitter:title" content="<?php if (is_singular()) : single_post_title(); else : frontierline_meta_page_title(); endif; ?>">
-  <meta property="twitter:description" content="<?php frontierline_meta_desc(); ?>">
-<?php if (is_singular() && has_post_thumbnail()) : ?>
+  <meta property="twitter:description" content="<?php if (method_exists('WPSEO_Frontend', 'metadesc') && WPSEO_Meta::get_value('metadesc') !== '') : echo WPSEO_Meta::get_value('metadesc'); else : frontierline_meta_desc(); endif; ?>">
+  <?php if (is_singular() && has_post_thumbnail()) : ?>
   <meta name="twitter:card" content="summary_large_image">
   <?php $post_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-full-size', true); ?>
   <meta property="twitter:image" content="<?php echo $post_image_url['0']; ?>">
-<?php else : ?>
+  <?php else : ?>
   <meta name="twitter:card" content="summary">
-  <?php if (get_header_image()) : ?>
+    <?php if (get_header_image()) : ?>
   <meta property="twitter:image" content="<?php header_image(); ?>">
+    <?php endif; ?>
   <?php endif; ?>
-<?php endif; ?>
-<?php if (get_option('frontierline_twitter_username')) : ?>
+  <?php if (get_option('frontierline_twitter_username')) : ?>
   <meta name="twitter:site" content="@<?php echo sanitize_text_field(get_option('frontierline_twitter_username')); ?>">
-<?php endif; ?>
+  <?php endif; ?>
 
   <link rel="copyright" href="#license">
   <link rel="profile" href="http://gmpg.org/xfn/11">

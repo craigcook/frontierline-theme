@@ -174,7 +174,7 @@ add_filter('image_size_names_choose', 'frontierline_custom_sizes');
 * Use auto-excerpts for meta description if hand-crafted exerpt is missing
 */
 function frontierline_meta_desc() {
-  $post_desc_length  = 25; // auto-excerpt length in number of words
+  $post_desc_length = 40; // auto-excerpt length in number of words
 
   global $cat, $cache_categories, $wp_query, $wp_version;
   if(is_single() || is_page()) {
