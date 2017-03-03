@@ -1,7 +1,7 @@
 // Full posts and pages
 
 .post-image-full {
-    @include gradient-horizontal-three-colors(#fff, #ccc, 50%, #fff);
+    @include gradient-horizontal-three-colors(#fff, #eee, 50%, #fff);
     margin: -20px auto 20px;
     padding: 0;
     text-align: center;
@@ -11,23 +11,30 @@
     img {
         display: block;
         margin: 0 auto;
+
+        &.size-post-full-size {
+            @include transform(translateY(-15%));
+            position: relative;
+            top: 50%;
+
+            @media #{$mq-phone-wide} {
+                @include transform(translateY(-25%));
+            }
+        }
     }
 
     @media #{$mq-tablet} {
+        margin: 0 auto 40px;
+        max-height: none;
+        height: 200px;
+
         img.size-post-full-size {
-            @include transform(translateY(-25%));
-            position: relative;
-            top: 50%;
+            @include transform(translateY(-50%));
         }
     }
 
-    @media #{$mq-desktop} {
-        margin: 0 auto 40px;
-        max-height: 400px;
-
-        img.size-post-full-size {
-            @include transform(translateY(-15%));
-        }
+    @media #{$mq-desktop} and #{$mq-tall} {
+        height: 400px;
     }
 }
 

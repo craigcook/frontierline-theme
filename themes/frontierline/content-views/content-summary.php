@@ -8,11 +8,14 @@
 
   <header class="entry-header">
     <a href="<?php the_permalink(); ?>" class="entry-link" title="<?php printf(esc_attr__('Permanent link to “%s”', 'frontierline'), the_title_attribute('echo=0')); ?>" rel="bookmark">
-    <?php if (has_post_thumbnail()) :
-      the_post_thumbnail('post-large');
-    else : ?>
-    <img class="wp-post-image image-fallback color-<?php echo rand(1, 6); ?>" width="600" height="330" src="<?php echo get_template_directory_uri(); ?>/img/fallbacks/pattern-<?php echo rand(1, 6); ?>.png">
-    <?php endif; ?>
+      <div class="post-image post-image-large">
+      <?php if (has_post_thumbnail()) :
+        the_post_thumbnail('post-large');
+      else : ?>
+        <img class="wp-post-image image-fallback color-<?php echo rand(1, 6); ?>" width="600" height="330" src="<?php echo get_template_directory_uri(); ?>/img/fallbacks/pattern-<?php echo rand(1, 6); ?>.png">
+      <?php endif; ?>
+      </div>
+
       <h2 class="entry-title"><?php the_title(); ?></h2>
     </a>
 
