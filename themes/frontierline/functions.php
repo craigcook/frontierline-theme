@@ -401,10 +401,10 @@ add_action('widgets_init', 'frontierline_remove_recent_comments_style');
 
 /**
  * Set available formats for the visual editor.
- * This removes Heading 1 and Heading 2, which authors shouldn't use.
+ * This removes Heading 1, which is reserved for the post tile.
  */
 function frontierline_post_formats($formats) {
-  $formats['block_formats'] = "Paragraph=p; Heading 3=h3; Heading 4=h4; Heading 5=h5; Heading 6=h6; Preformatted=pre; Code=code;";
+  $formats['block_formats'] = "Paragraph=p; Heading 2=h2; Heading 3=h3; Heading 4=h4; Heading 5=h5; Heading 6=h6; Preformatted=pre; Code=code;";
   return $formats;
 }
 add_filter('tiny_mce_before_init', 'frontierline_post_formats');

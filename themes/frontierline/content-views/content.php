@@ -25,7 +25,7 @@
        endif; ?>
     </div>
 
-    <h2 class="entry-title">
+    <h1 class="entry-title">
     <?php if (!is_singular()) : ?>
       <a href="<?php the_permalink(); ?>" title="<?php printf(esc_attr__('Permanent link to “%s”', 'frontierline'), the_title_attribute('echo=0')); ?>" rel="bookmark">
         <?php the_title(); ?>
@@ -33,7 +33,7 @@
     <?php else : ?>
       <?php the_title(); ?>
     <?php endif; ?>
-    </h2>
+    </h1>
 
     <div class="entry-info">
     <?php if ($post->post_type === 'post') : ?>

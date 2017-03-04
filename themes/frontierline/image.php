@@ -11,7 +11,7 @@
 
     <article id="post-<?php the_ID(); ?>" <?php post_class('image-attachment'); ?>>
       <header class="entry-header">
-        <h2 class="entry-title"><?php the_title(); ?></h2>
+        <h1 class="entry-title"><?php the_title(); ?></h2>
         <div class="entry-info">
           <?php
             $metadata = wp_get_attachment_metadata();

@@ -7,7 +7,7 @@
 <div class="content">
   <article <?php post_class('no-results not-found'); ?>>
     <header class="entry-header">
-      <h2 class="entry-title"><?php _e('Nothing Found', 'frontierline'); ?></h2>
+      <h1 class="entry-title"><?php _e('Nothing Found', 'frontierline'); ?></h1>
     </header>
 
     <div class="entry-content">

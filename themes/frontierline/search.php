@@ -12,9 +12,9 @@ get_header();
 ?>
 
   <?php if (have_posts()) : ?>
-    <h2 class="page-title content">
+    <h1 class="page-title content">
     <?php printf(_n('We found one result for “%2$s”', 'We found %1$s results for “%2$s”', $total_results, 'frontierline'), $total_results, esc_html(get_search_query())); ?>
-    </h2>
+    </h1>
 
     <?php /* Start the Loop */ ?>
     <div class="content posts-grid">

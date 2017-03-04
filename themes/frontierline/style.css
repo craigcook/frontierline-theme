@@ -326,6 +326,11 @@ label { display: block; }
 @media screen and (min-width: 760px) { .single .post, .page .post { padding: 0 60px; } }
 .single .entry-content, .page .entry-content { zoom: 1; margin-bottom: 40px; }
 .single .entry-content:after, .page .entry-content:after { clear: both; content: ''; display: block; height: 0; visibility: hidden; }
+.single .entry-content h2, .page .entry-content h2 { font-size: 21px; font-size: 1.3125rem; }
+@media screen and (min-width: 760px) { .single .entry-content h2, .page .entry-content h2 { font-size: 28px; font-size: 1.75rem; } }
+.single .entry-content h3, .page .entry-content h3 { font-size: 16px; font-size: 1rem; }
+@media screen and (min-width: 760px) { .single .entry-content h3, .page .entry-content h3 { font-size: 21px; font-size: 1.3125rem; } }
+.single .entry-content h4, .single .entry-content h5, .single .entry-content h6, .page .entry-content h4, .page .entry-content h5, .page .entry-content h6 { font-size: 16px; font-size: 1rem; }
 .single .entry-content dt, .page .entry-content dt { font-style: italic; }
 .single .entry-content dd, .page .entry-content dd { padding-left: 30px; }
 .single .entry-content blockquote, .page .entry-content blockquote { border-left: 2px solid #000; color: #484848; padding: .25em 30px; }

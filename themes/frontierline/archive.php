@@ -13,7 +13,7 @@ get_header();
 
   <?php if (have_posts()) : ?>
 
-    <h2 class="page-title content">
+    <h1 class="page-title content">
     <?php if (is_category()) : ?>
       <?php printf(__('Articles in “%s”', 'frontierline'), single_cat_title('',false)); ?>
     <?php elseif (is_tag()) : ?>
@@ -29,7 +29,7 @@ get_header();
     <?php else : ?>
       <?php the_archive_title(); ?>
     <?php endif; ?>
-    </h2>
+    </h1>
 
     <?php /* Start the Loop */ ?>
     <div class="content posts-grid hfeed">
