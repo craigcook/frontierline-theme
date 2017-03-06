@@ -185,9 +185,9 @@ label { display: block; }
 #masthead .site-title-wrap a:link, #masthead .site-title-wrap a:visited { color: #000; text-decoration: none; }
 @media screen and (min-width: 760px) { #masthead { padding-top: 5.5em; }
   #masthead .site-id { margin-top: -5.5em; padding: 6.5em 20px 2em; } }
-@media screen and (min-width: 1000px) and (min-height: 600px) { #masthead { padding-top: 8.5em; }
-  #masthead .site-id { margin-top: -7.5em; padding: 9.5em 20px 5em; } }
 
+@media screen and (min-width: 1000px) and (min-height: 600px) { .home #masthead { padding-top: 8.5em; }
+  .home #masthead .site-id { margin-top: -7.5em; padding: 9.5em 20px 5em; } }
 .pattern-tradewinds #masthead .site-id { background-image: url("img/headers/pattern-tradewinds.png"); }
 
 .pattern-slashbracket #masthead .site-id { background-image: url("img/headers/pattern-slashbracket.png"); }
