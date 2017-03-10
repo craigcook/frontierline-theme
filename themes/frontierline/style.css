@@ -538,7 +538,7 @@ label { display: block; }
 .nav-global .page-top { -webkit-transition: margin-top 250ms ease-in-out; transition: margin-top 250ms ease-in-out; color: #000; float: right; margin-right: 30px; margin-top: -4em; text-decoration: none; text-transform: lowercase; }
 @media screen and (min-width: 760px) { .nav-global .page-top { margin-right: 0; } }
 .nav-global .page-top:before { -webkit-background-size: 25px 200px; background-size: 25px 200px; background-image: url("img/icon-sprite.svg"); background-position: center -180px; background-repeat: no-repeat; content: ''; display: inline-block; height: 20px; margin: 0 5px -.35em -30px; width: 25px; }
-.nav-global.is-minified .page-top { margin-top: -.25em; -webkit-transition-delay: 150ms; transition-delay: 150ms; }
+.nav-global.is-minified .page-top { -webkit-transition-delay: 150ms; transition-delay: 150ms; margin-top: -.25em; }
 
 .nav-mozilla { left: 0; position: absolute; top: -.5em; z-index: 98; }
 .nav-mozilla .toggle { overflow: hidden; text-indent: 120%; white-space: nowrap; background: #000 url("img/icon-menu-white.svg") center center no-repeat; -webkit-background-size: 22px auto; background-size: 22px auto; cursor: pointer; display: block; height: 2.2em; overflow: hidden; position: relative; width: 2.2em; }

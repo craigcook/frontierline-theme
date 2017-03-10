@@ -1,0 +1,53 @@
+/*
+Theme Name:     Frontierline - Firefox
+Description:    The Firefox blog, a child theme of Frontierline.
+Author:         Craig Cook
+Template:       frontierline
+Version:        1.0
+*/
+
+@import url('../frontierline/style.css');
+
+.nav-global .fx-cta {
+    display: none;
+}
+
+.nav-global .fx-cta .button {
+    font-size: 12px;
+    font-size: .75rem;
+    padding: .15em 20px;
+    margin: -.25em 0 0;
+}
+
+@media screen and (min-width: 460px) {
+    .nav-global .fx-cta {
+        display: inline-block;
+        float: right;
+        margin: -.25em 20px 0;
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .nav-global .fx-cta {
+        float: right;
+        margin: .25em 0 0 10px;
+    }
+
+    .nav-global .fx-cta .button {
+        padding: .25em 20px;
+        font-size: 16px;
+        font-size: 1rem;
+        border-width: 2px;
+        -webkit-transition: font-size 250ms ease-in-out, padding 250ms ease-in-out;
+                transition: font-size 250ms ease-in-out, padding 250ms ease-in-out;
+    }
+
+    .nav-global.is-minified .fx-cta {
+        margin: -.25em 0 0 20px;
+    }
+
+    .nav-global.is-minified .fx-cta .button {
+        font-size: 12px;
+        padding: .15em 20px;
+    }
+}

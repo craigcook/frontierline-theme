@@ -70,8 +70,8 @@
     }
 
     &.is-minified .page-top {
-        margin-top: -.25em;
         @include transition-delay(150ms);
+        margin-top: -.25em;
     }
 }
 
