@@ -9,7 +9,7 @@
         margin: 0 auto;
     }
 
-    @media #{$mq-phone-wide} {
+    @media #{$mq-tablet} {
         .in-category,
         .popular {
             @include span(6);

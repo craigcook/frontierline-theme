@@ -29,7 +29,7 @@ img, video, object, embed { -ms-interpolation-mode: bicubic; height: auto; max-w
 html { font-size: 100%; background: #fff; height: 100%; }
 
 /* line 12, sass/base/elements/_document.scss */
-body { font-size: 100%; background: #fff; color: #000; font-family: "Fira Sans", X-LocaleSpecific, sans-serif; line-height: 1.6; height: 100%; }
+body { font-size: 100%; background: #fff; color: #000; font-family: "Open Sans", X-LocaleSpecific, sans-serif; line-height: 1.6; height: 100%; }
 
 /* line 22, sass/base/elements/_document.scss */
 .hidden { display: none; }
