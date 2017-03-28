@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-02-28 12:14-0800\n"
+"POT-Creation-Date: 2017-03-28 12:13-0700\n"
 "PO-Revision-Date: 2017-02-23 14:32-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -11,186 +11,305 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.7\n"
-"X-Poedit-Basepath: ..\n"
+"X-Poedit-Basepath: ../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-0: frontierline\n"
+"X-Poedit-SearchPath-1: frontierline-firefox\n"
 
-#: archive.php:18 functions.php:295
+#: frontierline-firefox/content-views/content.php:12
+#: frontierline/content-views/content.php:18
+msgid "Categories:"
+msgstr ""
+
+#: frontierline-firefox/content-views/content.php:41
+#: frontierline/content-views/content.php:47
+msgid "No responses yet"
+msgstr ""
+
+#: frontierline-firefox/content-views/content.php:41
+#: frontierline/content-views/content.php:47
+msgid "1 response"
+msgstr ""
+
+#: frontierline-firefox/content-views/content.php:41
+#: frontierline/content-views/content.php:47
+msgid "% responses"
+msgstr ""
+
+#: frontierline-firefox/content-views/content.php:44
+#: frontierline/content-views/content.php:50 frontierline/image.php:30
+msgid "Edit"
+msgstr ""
+
+#: frontierline-firefox/content-views/content.php:49
+#: frontierline/content-views/content.php:55
+msgid "Continue reading…"
+msgstr ""
+
+#: frontierline-firefox/content-views/content.php:50
+#: frontierline/content-views/content.php:56
+msgid "Pages:"
+msgstr ""
+
+#: frontierline-firefox/content-views/content.php:55
+#: frontierline/content-views/content.php:61
+msgid "Tags:"
+msgstr ""
+
+#: frontierline-firefox/includes/nav-global.php:9
+#: frontierline/includes/nav-global.php:9
+msgid "Visit mozilla.org"
+msgstr ""
+
+#: frontierline-firefox/includes/nav-global.php:11
+msgid "Download Firefox"
+msgstr ""
+
+#: frontierline-firefox/includes/nav-global.php:14
+#: frontierline/includes/nav-global.php:12
+msgid "Menu"
+msgstr ""
+
+#: frontierline-firefox/includes/nav-global.php:16
+#: frontierline/includes/nav-global.php:14
+msgid "Internet Health"
+msgstr ""
+
+#: frontierline-firefox/includes/nav-global.php:17
+#: frontierline/includes/nav-global.php:15
+msgid "Web Innovations"
+msgstr ""
+
+#: frontierline-firefox/includes/nav-global.php:18 frontierline/footer.php:30
+#: frontierline/includes/nav-global.php:16
+msgid "Give"
+msgstr ""
+
+#: frontierline-firefox/includes/nav-global.php:22
+#: frontierline/includes/nav-global.php:21
+msgid "Go to the top of the page"
+msgstr ""
+
+#: frontierline-firefox/includes/nav-global.php:22
+#: frontierline/includes/nav-global.php:21
+msgid "Top"
+msgstr ""
+
+#. L10n: line break for visual formatting
+#: frontierline-firefox/includes/newsletter-form.php:15
+msgid "Keep up with<br> all things Firefox."
+msgstr ""
+
+#: frontierline-firefox/includes/newsletter-form.php:22
+#: frontierline/comments.php:87 frontierline/includes/newsletter-form.php:22
+msgid "Your e-mail address"
+msgstr ""
+
+#. L10n: 'yourname' is used as the first part of an example e-mail address, as in 'yourname@example.com'
+#: frontierline-firefox/includes/newsletter-form.php:24
+#: frontierline/includes/newsletter-form.php:24
+msgid "yourname"
+msgstr ""
+
+#: frontierline-firefox/includes/newsletter-form.php:29
+msgid "Country"
+msgstr ""
+
+#: frontierline-firefox/includes/newsletter-form.php:31
+msgid "- select -"
+msgstr ""
+
+#: frontierline-firefox/includes/newsletter-form.php:308
+#: frontierline/includes/newsletter-form.php:29
+msgid "Language"
+msgstr ""
+
+#: frontierline-firefox/includes/newsletter-form.php:323
+#: frontierline/includes/newsletter-form.php:40
+msgid "HTML"
+msgstr ""
+
+#: frontierline-firefox/includes/newsletter-form.php:324
+#: frontierline/includes/newsletter-form.php:41
+msgid "Text"
+msgstr ""
+
+#: frontierline-firefox/includes/newsletter-form.php:330
+#: frontierline/includes/newsletter-form.php:47
+#, php-format
+msgid ""
+"I’m okay with Mozilla handling my info as explained in this <a href=\"%s"
+"\">Privacy Policy</a>."
+msgstr ""
+
+#: frontierline-firefox/includes/newsletter-form.php:336
+#: frontierline/includes/newsletter-form.php:53
+msgid "Sign up now"
+msgstr ""
+
+#: frontierline-firefox/includes/newsletter-form.php:338
+#: frontierline/includes/newsletter-form.php:55
+msgid "We will only send you Mozilla-related information."
+msgstr ""
+
+#: frontierline-firefox/includes/newsletter-form.php:344
+#: frontierline/includes/newsletter-form.php:61
+msgid "Thanks!"
+msgstr ""
+
+#: frontierline-firefox/includes/newsletter-form.php:346
+#: frontierline/includes/newsletter-form.php:63
+msgid ""
+"If you haven’t previously confirmed a subscription to a Mozilla-related "
+"newsletter you may have to do so."
+msgstr ""
+
+#: frontierline-firefox/includes/newsletter-form.php:347
+#: frontierline/includes/newsletter-form.php:64
+msgid "Please check your inbox or your spam filter for an e-mail from us."
+msgstr ""
+
+#: frontierline/archive.php:18 frontierline/functions.php:295
 #, php-format
 msgid "Articles in “%s”"
 msgstr ""
 
-#: archive.php:20 functions.php:297
+#: frontierline/archive.php:20 frontierline/functions.php:297
 #, php-format
 msgid "Articles tagged with “%s”"
 msgstr ""
 
-#: archive.php:22 archive.php:24 archive.php:26 functions.php:301
-#: functions.php:303 functions.php:305
+#: frontierline/archive.php:22 frontierline/archive.php:24
+#: frontierline/archive.php:26 frontierline/functions.php:301
+#: frontierline/functions.php:303 frontierline/functions.php:305
 #, php-format
 msgid "Articles from %s"
 msgstr ""
 
-#: archive.php:28 functions.php:299
+#: frontierline/archive.php:28 frontierline/functions.php:299
 #, php-format
 msgid "Articles by %s"
 msgstr ""
 
-#: comments.php:41
+#: frontierline/comments.php:41
 msgid "No comments yet"
 msgstr ""
 
-#: comments.php:45
+#: frontierline/comments.php:45
 msgid "Post a comment"
 msgstr ""
 
-#: comments.php:55
+#: frontierline/comments.php:55
 msgid "More comments:"
 msgstr ""
 
 #. L10n: 'trackbacks' are when another website refers to this blog post with a link notification
-#: comments.php:64
+#: frontierline/comments.php:64
 #, php-format
 msgid ""
 "Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post"
 "\">trackbacks</a> are open."
 msgstr ""
 
-#: comments.php:72
+#: frontierline/comments.php:72
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
-#: comments.php:76
+#: frontierline/comments.php:76
 msgid "Post your comment"
 msgstr ""
 
-#: comments.php:76
+#: frontierline/comments.php:76
 #, php-format
 msgid "Reply to %s"
 msgstr ""
 
-#: comments.php:77
+#: frontierline/comments.php:77
 msgid "Cancel reply"
 msgstr ""
 
-#: comments.php:80
+#: frontierline/comments.php:80
 #, php-format
 msgid ""
 "You are logged in as <a href=\"%1$s\">%2$s</a>. <a class=\"logout\" href="
 "\"%3$s\">Log out?</a>"
 msgstr ""
 
-#: comments.php:83
+#: frontierline/comments.php:83
 msgid "Your name"
 msgstr ""
 
-#: comments.php:83
+#: frontierline/comments.php:83
 msgid "(required)"
 msgstr ""
 
-#: comments.php:87 includes/newsletter-form.php:24
-msgid "Your e-mail address"
-msgstr ""
-
-#: comments.php:87
+#: frontierline/comments.php:87
 msgid "(required, will not be published)"
 msgstr ""
 
-#: comments.php:91
+#: frontierline/comments.php:91
 msgid ""
 "Spamming robots, please fill in this field. Real humans should leave it "
 "blank."
 msgstr ""
 
-#: comments.php:96
+#: frontierline/comments.php:96
 msgid "Your comment"
 msgstr ""
 
-#: comments.php:100
+#: frontierline/comments.php:100
 msgid "Submit"
 msgstr ""
 
-#: content-views/content-none.php:10
+#: frontierline/content-views/content-none.php:10
 msgid "Nothing Found"
 msgstr ""
 
-#: content-views/content-none.php:16
+#: frontierline/content-views/content-none.php:16
 #, php-format
 msgid "Sorry, we didn’t find anything for “%s”. Try another search?"
 msgstr ""
 
-#: content-views/content-none.php:20
+#: frontierline/content-views/content-none.php:20
 msgid ""
 "Sorry, we looked everywhere, but we couldn’t find the page or file you were "
 "looking for. A few possible explanations:"
 msgstr ""
 
-#: content-views/content-none.php:22
+#: frontierline/content-views/content-none.php:22
 msgid "You may have followed an out-dated link or bookmark."
 msgstr ""
 
-#: content-views/content-none.php:23
+#: frontierline/content-views/content-none.php:23
 msgid "If you entered the address by hand, you may have mistyped it."
 msgstr ""
 
-#: content-views/content-none.php:24
+#: frontierline/content-views/content-none.php:24
 msgid "You might have just discovered an error. Congratulations!"
 msgstr ""
 
-#: content-views/content-none.php:27
+#: frontierline/content-views/content-none.php:27
 msgid "So what do we do now?"
 msgstr ""
 
-#: content-views/content-none.php:29
+#: frontierline/content-views/content-none.php:29
 #, php-format
 msgid "Go to the <a href=\"%s\">front page</a>."
 msgstr ""
 
-#: content-views/content-none.php:30
+#: frontierline/content-views/content-none.php:30
 #, php-format
 msgid "Visit <a href=\"%s\">mozilla.org</a>."
 msgstr ""
 
-#: content-views/content-none.php:31
+#: frontierline/content-views/content-none.php:31
 msgid "Try searching this blog."
 msgstr ""
 
-#: content-views/content.php:18
-msgid "Categories:"
-msgstr ""
-
-#: content-views/content.php:47
-msgid "No responses yet"
-msgstr ""
-
-#: content-views/content.php:47
-msgid "1 response"
-msgstr ""
-
-#: content-views/content.php:47
-msgid "% responses"
-msgstr ""
-
-#: content-views/content.php:50 image.php:30
-msgid "Edit"
-msgstr ""
-
-#: content-views/content.php:55
-msgid "Continue reading…"
-msgstr ""
-
-#: content-views/content.php:56
-msgid "Pages:"
-msgstr ""
-
-#: content-views/content.php:61
-msgid "Tags:"
-msgstr ""
-
-#: footer.php:23
+#: frontierline/footer.php:23
 #, php-format
 msgid ""
 "Portions of this content are ©1998-%1s by individual contributors. Content "
@@ -198,377 +317,305 @@ msgid ""
 "license</a>"
 msgstr ""
 
-#: footer.php:29
+#: frontierline/footer.php:29
 msgid "Contact Us"
 msgstr ""
 
-#: footer.php:30 includes/nav-global.php:16
-msgid "Give"
-msgstr ""
-
-#: footer.php:34
+#: frontierline/footer.php:34
 msgid "Privacy"
 msgstr ""
 
-#: footer.php:35
+#: frontierline/footer.php:35
 msgid "Cookies"
 msgstr ""
 
-#: footer.php:36
+#: frontierline/footer.php:36
 msgid "Legal"
 msgstr ""
 
-#: footer.php:37
+#: frontierline/footer.php:37
 msgid "Report Trademark Abuse"
 msgstr ""
 
-#: functions.php:44
+#: frontierline/functions.php:44
 msgid "Site Menu"
 msgstr ""
 
-#: functions.php:84
+#: frontierline/functions.php:84
 msgid "Social sharing for posts"
 msgstr ""
 
-#: functions.php:96
+#: frontierline/functions.php:96
 msgid "Social sharing for Pages"
 msgstr ""
 
-#: functions.php:108
+#: frontierline/functions.php:108
 msgid "Twitter username"
 msgstr ""
 
-#: functions.php:124
+#: frontierline/functions.php:124
 msgid "Add social sharing buttons to posts"
 msgstr ""
 
-#: functions.php:126
+#: frontierline/functions.php:126
 msgid "Adds buttons for Twitter and Facebook to the top of blog articles."
 msgstr ""
 
-#: functions.php:140
+#: frontierline/functions.php:140
 msgid "Add social sharing buttons to Pages"
 msgstr ""
 
-#: functions.php:142
+#: frontierline/functions.php:142
 msgid "Adds buttons for Twitter and Facebook to the top of static Pages."
 msgstr ""
 
-#: functions.php:155
+#: frontierline/functions.php:155
 msgid ""
 "The Twitter account for attribution when sharing. Appears as \"via @username"
 "\" at the end of the tweet, and Twitter may suggest related accounts to "
 "follow. Leave this blank for no attribution."
 msgstr ""
 
-#: functions.php:167
+#: frontierline/functions.php:167
 msgid "Extra Large"
 msgstr ""
 
-#: functions.php:267
+#: frontierline/functions.php:267
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: functions.php:310
+#: frontierline/functions.php:310
 #, php-format
 msgid "Search results for “%s”"
 msgstr ""
 
-#: functions.php:312
+#: frontierline/functions.php:312
 msgid "Not Found"
 msgstr ""
 
-#: functions.php:370
+#: frontierline/functions.php:370
 msgid ""
 "Sorry, you appear to be a spamming robot because you filled in the hidden "
 "spam trap field. To show you are not a spammer, submit your comment again "
 "and leave the field blank."
 msgstr ""
 
-#: functions.php:371
+#: frontierline/functions.php:371
 msgid "Spam Prevention"
 msgstr ""
 
-#: functions.php:429
+#: frontierline/functions.php:429
 msgid "Read more"
 msgstr ""
 
-#: functions.php:465
+#: frontierline/functions.php:465
 msgid "Sidebar Menu"
 msgstr ""
 
-#: functions.php:490
+#: frontierline/functions.php:490
 msgid "Trackback from "
 msgstr ""
 
 #. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
 #. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
-#: functions.php:493 functions.php:506
+#: frontierline/functions.php:493 frontierline/functions.php:506
 msgid "on"
 msgstr ""
 
-#: functions.php:494 functions.php:507 functions.php:521
+#: frontierline/functions.php:494 frontierline/functions.php:507
+#: frontierline/functions.php:521
 msgid "Permanent link to this comment by "
 msgstr ""
 
 #. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
 #. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
 #. L10n: Comment headings read "<Name> wrote on <Date> at <Time>:"
-#: functions.php:497 functions.php:510 functions.php:524
+#: frontierline/functions.php:497 frontierline/functions.php:510
+#: frontierline/functions.php:524
 #, php-format
 msgid "%1$s at %2$s:"
 msgstr ""
 
-#: functions.php:503
+#: frontierline/functions.php:503
 msgid "Ping from "
 msgstr ""
 
-#: functions.php:520
+#: frontierline/functions.php:520
 msgid "wrote on"
 msgstr ""
 
-#: functions.php:533
+#: frontierline/functions.php:533
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:545
+#: frontierline/functions.php:545
 msgid "Edit comment"
 msgstr ""
 
-#: functions.php:591
+#: frontierline/functions.php:591
 msgid ""
 "Remember to include a featured image! It should be at least 1400 by 770 "
 "pixels. Posts without a featured image will show a standard placeholder "
 "image."
 msgstr ""
 
-#: image.php:18
+#: frontierline/image.php:18
 #, php-format
 msgid ""
 "<time class=\"date published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time>"
 msgstr ""
 
-#: image.php:24
+#: frontierline/image.php:24
 #, php-format
 msgid "Original size: <a href=\"%1$s\">%2$s &times; %3$s</a>"
 msgstr ""
 
-#: inc/customizer.php:22
+#: frontierline/inc/customizer.php:22
 msgid "Accent Color"
 msgstr ""
 
-#: inc/customizer.php:27 inc/customizer.php:53
+#: frontierline/inc/customizer.php:27 frontierline/inc/customizer.php:53
 msgid "None (Default)"
 msgstr ""
 
-#: inc/customizer.php:28
+#: frontierline/inc/customizer.php:28
 msgid "Cyan"
 msgstr ""
 
-#: inc/customizer.php:29
+#: frontierline/inc/customizer.php:29
 msgid "Coral"
 msgstr ""
 
-#: inc/customizer.php:30
+#: frontierline/inc/customizer.php:30
 msgid "Yellow"
 msgstr ""
 
-#: inc/customizer.php:31
+#: frontierline/inc/customizer.php:31
 msgid "Lilac"
 msgstr ""
 
-#: inc/customizer.php:32
+#: frontierline/inc/customizer.php:32
 msgid "Orange"
 msgstr ""
 
-#: inc/customizer.php:33
+#: frontierline/inc/customizer.php:33
 msgid "Lime"
 msgstr ""
 
-#: inc/customizer.php:34
+#: frontierline/inc/customizer.php:34
 msgid "Neon Blue"
 msgstr ""
 
-#: inc/customizer.php:35
+#: frontierline/inc/customizer.php:35
 msgid "Neon Pink"
 msgstr ""
 
-#: inc/customizer.php:36
+#: frontierline/inc/customizer.php:36
 msgid "Neon Green"
 msgstr ""
 
-#: inc/customizer.php:48
+#: frontierline/inc/customizer.php:48
 msgid "Header Pattern"
 msgstr ""
 
-#: inc/customizer.php:54
+#: frontierline/inc/customizer.php:54
 msgid "Arrows"
 msgstr ""
 
-#: inc/customizer.php:55
+#: frontierline/inc/customizer.php:55
 msgid "Basket Weave"
 msgstr ""
 
-#: inc/customizer.php:56
+#: frontierline/inc/customizer.php:56
 msgid "Confetti"
 msgstr ""
 
-#: inc/customizer.php:57
+#: frontierline/inc/customizer.php:57
 msgid "Emoticons"
 msgstr ""
 
-#: inc/customizer.php:58
+#: frontierline/inc/customizer.php:58
 msgid "Slashes and Brackets"
 msgstr ""
 
-#: inc/customizer.php:59
+#: frontierline/inc/customizer.php:59
 msgid "Trade Winds"
 msgstr ""
 
-#: includes/categories.php:13
+#: frontierline/includes/categories.php:13
 msgid "More articles"
 msgstr ""
 
-#: includes/masthead.php:16
+#: frontierline/includes/masthead.php:16
 msgid "Go to the front page"
 msgstr ""
 
-#: includes/nav-global.php:9
-msgid "Visit mozilla.org"
-msgstr ""
-
-#: includes/nav-global.php:12
-msgid "Menu"
-msgstr ""
-
-#: includes/nav-global.php:14
-msgid "Internet Health"
-msgstr ""
-
-#: includes/nav-global.php:15
-msgid "Web Innovations"
-msgstr ""
-
-#: includes/nav-global.php:17
+#: frontierline/includes/nav-global.php:17
 msgid "Discover Firefox"
 msgstr ""
 
-#: includes/nav-global.php:21
-msgid "Go to the top of the page"
-msgstr ""
-
-#: includes/nav-global.php:21
-msgid "Top"
-msgstr ""
-
-#: includes/nav-pagination.php:5
+#: frontierline/includes/nav-pagination.php:5
 msgid "Page"
 msgstr ""
 
-#: includes/nav-pagination.php:13
+#: frontierline/includes/nav-pagination.php:13
 msgid "Previous"
 msgstr ""
 
-#: includes/nav-pagination.php:14
+#: frontierline/includes/nav-pagination.php:14
 msgid "Next"
 msgstr ""
 
-#: includes/nav-paging.php:14
+#: frontierline/includes/nav-paging.php:14
 msgid "Previous article"
 msgstr ""
 
-#: includes/nav-paging.php:26
+#: frontierline/includes/nav-paging.php:26
 msgid "Next article"
 msgstr ""
 
-#: includes/nav-util.php:9
+#: frontierline/includes/nav-util.php:9
 msgid "Explore"
 msgstr ""
 
-#: includes/nav-util.php:11
+#: frontierline/includes/nav-util.php:11
 msgid "Categories"
 msgstr ""
 
-#: includes/newsletter-form.php:16
+#: frontierline/includes/newsletter-form.php:14
 msgid "Love the Web?"
 msgstr ""
 
-#: includes/newsletter-form.php:17
+#: frontierline/includes/newsletter-form.php:15
 msgid "Get the Mozilla newsletter and help us keep it open and free."
 msgstr ""
 
-#. L10n: 'yourname' is used as the first part of an example e-mail address, as in 'yourname@example.com'
-#: includes/newsletter-form.php:26
-msgid "yourname"
-msgstr ""
-
-#: includes/newsletter-form.php:31
-msgid "Language"
-msgstr ""
-
-#: includes/newsletter-form.php:42
-msgid "HTML"
-msgstr ""
-
-#: includes/newsletter-form.php:43
-msgid "Text"
-msgstr ""
-
-#: includes/newsletter-form.php:49
-#, php-format
-msgid ""
-"I’m okay with Mozilla handling my info as explained in this <a href=\"%s"
-"\">Privacy Policy</a>."
-msgstr ""
-
-#: includes/newsletter-form.php:55
-msgid "Sign up now"
-msgstr ""
-
-#: includes/newsletter-form.php:57
-msgid "We will only send you Mozilla-related information."
-msgstr ""
-
-#: includes/newsletter-form.php:63
-msgid "Thanks!"
-msgstr ""
-
-#: includes/newsletter-form.php:65
-msgid ""
-"If you haven’t previously confirmed a subscription to a Mozilla-related "
-"newsletter you may have to do so."
-msgstr ""
-
-#: includes/newsletter-form.php:66
-msgid "Please check your inbox or your spam filter for an e-mail from us."
-msgstr ""
-
-#: includes/related-posts.php:21
+#: frontierline/includes/related-posts.php:21
 #, php-format
 msgid "More articles in “%s”"
 msgstr ""
 
-#: includes/related-posts.php:35
+#: frontierline/includes/related-posts.php:35
 msgid "There are no other articles in this category."
 msgstr ""
 
-#: includes/related-posts.php:43
+#: frontierline/includes/related-posts.php:43
 msgid "Popular articles"
 msgstr ""
 
-#: includes/related-posts.php:57
+#: frontierline/includes/related-posts.php:57
 msgid "Recent articles"
 msgstr ""
 
-#: includes/social-share.php:15
+#: frontierline/includes/social-share.php:15
 msgid "Share:"
 msgstr ""
 
-#: searchform.php:10
+#: frontierline/searchform.php:10
 msgid "Search this site"
 msgstr ""
 
-#: searchform.php:12
+#: frontierline/searchform.php:12
 msgid "Search"
 msgstr ""
