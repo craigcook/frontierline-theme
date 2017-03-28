@@ -121,7 +121,7 @@
             @include background-size(120px 120px);
             background-position: left 10px;
             float: left;
-            padding: 10px 0 20px 140px;
+            padding: 10px 10px 20px 140px;
             text-align: left;
         }
 
@@ -140,7 +140,7 @@
             @include background-size(150px 150px);
             background-position: left top;
             min-height: 120px;
-            padding: 10px 0 20px 180px;
+            padding: 10px 10px 20px 180px;
         }
 
         h3 {

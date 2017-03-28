@@ -19,6 +19,32 @@ Version:        1.0
     margin: -.25em 0 0;
 }
 
+#newsletter-subscribe.newsletter-firefox {
+    background-color: #2d253a;
+    color: #fff;
+}
+
+#newsletter-subscribe.newsletter-firefox a:link,
+#newsletter-subscribe.newsletter-firefox a:visited {
+    color: #fff;
+}
+
+#newsletter-subscribe.newsletter-firefox input[type="email"] {
+    background-color: #fff;
+    color: #000;
+}
+
+#newsletter-subscribe.newsletter-firefox .form-title {
+    background-image: url('img/mailbox.svg');
+    background-size: 120px 82px;
+    padding: 100px 0 20px;
+}
+
+#newsletter-subscribe.newsletter-firefox .form-title h3 {
+    font-size: 21px;
+}
+
+
 @media screen and (min-width: 460px) {
     .nav-global .fx-cta {
         display: inline-block;
@@ -49,5 +75,20 @@ Version:        1.0
     .nav-global.is-minified .fx-cta .button {
         font-size: 12px;
         padding: .15em 20px;
+    }
+
+    #newsletter-subscribe.newsletter-firefox .form-title {
+        padding: 10px 10px 20px 140px;
+    }
+
+    #newsletter-subscribe.newsletter-firefox .form-title h3 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    #newsletter-subscribe.newsletter-firefox .form-title {
+        background-size: 160px 109px;
+        padding: 10px 10px 20px 180px;
     }
 }
