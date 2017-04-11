@@ -401,21 +401,6 @@ add_action('wp_head', 'frontierline_norobots');
 
 
 /**
-* Add featured images to feeds.
-*/
-function frontierline_feed_featured_image($content) {
-  global $post;
-
-  if(has_post_thumbnail($post->ID)) {
-    $content = '<p>' . get_the_post_thumbnail($post->ID, 'post-large') . '</p>' . get_the_content();
-  }
-  return $content;
-}
-add_filter('the_excerpt_rss', 'frontierline_feed_featured_image');
-add_filter('the_content_feed', 'frontierline_feed_featured_image');
-
-
-/**
  * Removes the default styles that are packaged with the Recent Comments widget.
  */
 function frontierline_remove_recent_comments_style() {
