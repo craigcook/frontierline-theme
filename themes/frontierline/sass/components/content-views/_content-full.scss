@@ -272,6 +272,13 @@
     }
 }
 
+.page--sidebar {
+  @media #{$mq-tablet} {
+    float: left;
+    width: 60%;
+  }
+}
+
 .image-attachment,
 .not-found {
     @include single-size;
