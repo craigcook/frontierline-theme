@@ -202,6 +202,8 @@
         var recent = jQuery('.popular .recent-posts a');
         var catLinks = jQuery('#categories .entry-link');
         var sideLinks = jQuery('#sidebar a');
+        var navDownload = jQuery('#nav-global .fx-cta .button');
+        var contentDownload = jQuery('.fx-footer .button');
 
         // Global nav
         navMoz.find('a').on('click', function() {
@@ -246,6 +248,14 @@
         // Recent (only visible if popular is disabled)
         recent.on('click', function() {
             ga('send', 'event', blogname + ' Interactions', 'related click', 'Recent: ' + jQuery(this).text());
+        });
+
+        navDownload.on('click', function() {
+            ga('send', 'event', blogname + ' Interactions', 'Firefox Download', 'nav-bar');
+        });
+
+        contentDownload.on('click', function() {
+            ga('send', 'event', blogname + ' Interactions', 'Firefox Download', 'content');
         });
     }
 

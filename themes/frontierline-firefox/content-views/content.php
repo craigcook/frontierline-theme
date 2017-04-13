@@ -53,4 +53,9 @@
     </footer>
   <?php endif; ?>
 
+  <footer class="fx-footer">
+    <h4><?php _e('Browse fast. Browse free.', 'frontierline'); ?></h4>
+    <p><a href="https://www.mozilla.org/firefox/new/?scene=2" rel="external" class="button button-green"><?php _e('Download Firefox', 'frontierline'); ?></a></p>
+  </div>
+
 </article><!-- #post -->
