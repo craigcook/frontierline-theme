@@ -347,7 +347,7 @@ function frontierline_load_scripts() {
   wp_enqueue_script('jquery');
 
   // Load the global script
-  wp_register_script('global', get_template_directory_uri() . '/js/global.js', 'jquery', '2.0', true);
+  wp_register_script('global', get_template_directory_uri() . '/js/global.js', 'jquery', '2.1', true);
   wp_enqueue_script('global');
 
   // Load the newsletter script

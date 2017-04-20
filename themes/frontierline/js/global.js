@@ -250,12 +250,24 @@
             ga('send', 'event', blogname + ' Interactions', 'related click', 'Recent: ' + jQuery(this).text());
         });
 
+        // Count download clicks in the navbar (Firefox blog)
         navDownload.on('click', function() {
-            ga('send', 'event', blogname + ' Interactions', 'Firefox Download', 'nav-bar');
+            ga('send', {
+                hitType: 'event',
+                eventCategory: blogname + ' Interactions',
+                eventAction: 'Firefox Download',
+                evenLabel: 'nav-bar'
+            });
         });
 
+        // Count download clicks in the post footer (Firefox blog)
         contentDownload.on('click', function() {
-            ga('send', 'event', blogname + ' Interactions', 'Firefox Download', 'content');
+            ga('send', {
+                hitType: 'event',
+                eventCategory: blogname + ' Interactions',
+                eventAction: 'Firefox Download',
+                evenLabel: 'content link'
+            });
         });
     }
 
