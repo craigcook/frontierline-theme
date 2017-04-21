@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-02-28 12:14-0800\n"
+"POT-Creation-Date: 2017-04-20 19:27-0700\n"
 "PO-Revision-Date: 2017-02-23 14:32-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,23 +17,23 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: archive.php:18 functions.php:295
+#: archive.php:18 functions.php:305
 #, php-format
 msgid "Articles in “%s”"
 msgstr ""
 
-#: archive.php:20 functions.php:297
+#: archive.php:20 functions.php:307
 #, php-format
 msgid "Articles tagged with “%s”"
 msgstr ""
 
-#: archive.php:22 archive.php:24 archive.php:26 functions.php:301
-#: functions.php:303 functions.php:305
+#: archive.php:22 archive.php:24 archive.php:26 functions.php:311
+#: functions.php:313 functions.php:315
 #, php-format
 msgid "Articles from %s"
 msgstr ""
 
-#: archive.php:28 functions.php:299
+#: archive.php:28 functions.php:309
 #, php-format
 msgid "Articles by %s"
 msgstr ""
@@ -91,7 +91,7 @@ msgstr ""
 msgid "(required)"
 msgstr ""
 
-#: comments.php:87 includes/newsletter-form.php:24
+#: comments.php:87 includes/newsletter-form.php:22
 msgid "Your e-mail address"
 msgstr ""
 
@@ -265,78 +265,78 @@ msgstr ""
 msgid "Extra Large"
 msgstr ""
 
-#: functions.php:267
+#: functions.php:277
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: functions.php:310
+#: functions.php:320
 #, php-format
 msgid "Search results for “%s”"
 msgstr ""
 
-#: functions.php:312
+#: functions.php:322
 msgid "Not Found"
 msgstr ""
 
-#: functions.php:370
+#: functions.php:380
 msgid ""
 "Sorry, you appear to be a spamming robot because you filled in the hidden "
 "spam trap field. To show you are not a spammer, submit your comment again "
 "and leave the field blank."
 msgstr ""
 
-#: functions.php:371
+#: functions.php:381
 msgid "Spam Prevention"
 msgstr ""
 
-#: functions.php:429
+#: functions.php:439
 msgid "Read more"
 msgstr ""
 
-#: functions.php:465
+#: functions.php:475
 msgid "Sidebar Menu"
 msgstr ""
 
-#: functions.php:490
+#: functions.php:500
 msgid "Trackback from "
 msgstr ""
 
 #. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
 #. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
-#: functions.php:493 functions.php:506
+#: functions.php:503 functions.php:516
 msgid "on"
 msgstr ""
 
-#: functions.php:494 functions.php:507 functions.php:521
+#: functions.php:504 functions.php:517 functions.php:531
 msgid "Permanent link to this comment by "
 msgstr ""
 
 #. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
 #. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
 #. L10n: Comment headings read "<Name> wrote on <Date> at <Time>:"
-#: functions.php:497 functions.php:510 functions.php:524
+#: functions.php:507 functions.php:520 functions.php:534
 #, php-format
 msgid "%1$s at %2$s:"
 msgstr ""
 
-#: functions.php:503
+#: functions.php:513
 msgid "Ping from "
 msgstr ""
 
-#: functions.php:520
+#: functions.php:530
 msgid "wrote on"
 msgstr ""
 
-#: functions.php:533
+#: functions.php:543
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:545
+#: functions.php:555
 msgid "Edit comment"
 msgstr ""
 
-#: functions.php:591
+#: functions.php:601
 msgid ""
 "Remember to include a featured image! It should be at least 1400 by 770 "
 "pixels. Posts without a featured image will show a standard placeholder "
@@ -490,57 +490,57 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
-#: includes/newsletter-form.php:16
+#: includes/newsletter-form.php:14
 msgid "Love the Web?"
 msgstr ""
 
-#: includes/newsletter-form.php:17
+#: includes/newsletter-form.php:15
 msgid "Get the Mozilla newsletter and help us keep it open and free."
 msgstr ""
 
 #. L10n: 'yourname' is used as the first part of an example e-mail address, as in 'yourname@example.com'
-#: includes/newsletter-form.php:26
+#: includes/newsletter-form.php:24
 msgid "yourname"
 msgstr ""
 
-#: includes/newsletter-form.php:31
+#: includes/newsletter-form.php:29
 msgid "Language"
 msgstr ""
 
-#: includes/newsletter-form.php:42
+#: includes/newsletter-form.php:40
 msgid "HTML"
 msgstr ""
 
-#: includes/newsletter-form.php:43
+#: includes/newsletter-form.php:41
 msgid "Text"
 msgstr ""
 
-#: includes/newsletter-form.php:49
+#: includes/newsletter-form.php:47
 #, php-format
 msgid ""
 "I’m okay with Mozilla handling my info as explained in this <a href=\"%s"
 "\">Privacy Policy</a>."
 msgstr ""
 
-#: includes/newsletter-form.php:55
+#: includes/newsletter-form.php:53
 msgid "Sign up now"
 msgstr ""
 
-#: includes/newsletter-form.php:57
+#: includes/newsletter-form.php:55
 msgid "We will only send you Mozilla-related information."
 msgstr ""
 
-#: includes/newsletter-form.php:63
+#: includes/newsletter-form.php:61
 msgid "Thanks!"
 msgstr ""
 
-#: includes/newsletter-form.php:65
+#: includes/newsletter-form.php:63
 msgid ""
 "If you haven’t previously confirmed a subscription to a Mozilla-related "
 "newsletter you may have to do so."
 msgstr ""
 
-#: includes/newsletter-form.php:66
+#: includes/newsletter-form.php:64
 msgid "Please check your inbox or your spam filter for an e-mail from us."
 msgstr ""
 
