@@ -622,4 +622,36 @@ function frontierline_body_classes($classes) {
 }
 add_filter('body_class', 'frontierline_body_classes');
 
+
+/**
+ * Metabox for Custom sidebar content (static pages)
+ */
+define('WYSIWYG_EDITOR_ID', 'myeditor');
+define('WYSIWYG_META_KEY', 'extra-content');
+
+// Register the metabox
+function frontierline_register_sidebar_metabox() {
+  add_meta_box(WYSIWYG_META_BOX_ID, __('Custom Sidebar Content'), 'frontierline_render_sidebar_metabox_cb', 'page');
+}
+
+// Callback. Renders the metabox
+function frontierline_render_sidebar_metabox_cb($post){
+  $editor_id = WYSIWYG_EDITOR_ID;
+
+  $content = get_post_meta($post->ID, WYSIWYG_META_KEY, true);
+  wp_editor($content, $editor_id);
+}
+
+// save contents of metabox
+function frontierline_save_sidebar_metabox(){
+  $editor_id = WYSIWYG_EDITOR_ID;
+  $meta_key = WYSIWYG_META_KEY;
+
+  if(isset($_REQUEST[$editor_id]))
+  update_post_meta($_REQUEST['post_ID'], WYSIWYG_META_KEY, $_REQUEST[$editor_id]);
+}
+
+add_action('admin_init', 'frontierline_register_sidebar_metabox');
+add_action('save_post', 'frontierline_save_sidebar_metabox');
+
 ?>
