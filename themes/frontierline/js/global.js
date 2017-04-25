@@ -256,7 +256,7 @@
                 hitType: 'event',
                 eventCategory: blogname + ' Interactions',
                 eventAction: 'Firefox Download',
-                evenLabel: 'nav-bar'
+                eventLabel: 'nav-bar'
             });
         });
 
@@ -266,7 +266,7 @@
                 hitType: 'event',
                 eventCategory: blogname + ' Interactions',
                 eventAction: 'Firefox Download',
-                evenLabel: 'content link'
+                eventLabel: 'content link'
             });
         });
     }
