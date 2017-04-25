@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-04-20 19:27-0700\n"
+"POT-Creation-Date: 2017-04-25 13:22-0700\n"
 "PO-Revision-Date: 2017-02-23 14:32-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -158,6 +158,19 @@ msgstr ""
 msgid "Try searching this blog."
 msgstr ""
 
+#: content-views/content-page-sidebar.php:20 content-views/content.php:50
+#: image.php:30
+msgid "Edit"
+msgstr ""
+
+#: content-views/content-page-sidebar.php:27 content-views/content.php:55
+msgid "Continue reading…"
+msgstr ""
+
+#: content-views/content-page-sidebar.php:28 content-views/content.php:56
+msgid "Pages:"
+msgstr ""
+
 #: content-views/content.php:18
 msgid "Categories:"
 msgstr ""
@@ -172,18 +185,6 @@ msgstr ""
 
 #: content-views/content.php:47
 msgid "% responses"
-msgstr ""
-
-#: content-views/content.php:50 image.php:30
-msgid "Edit"
-msgstr ""
-
-#: content-views/content.php:55
-msgid "Continue reading…"
-msgstr ""
-
-#: content-views/content.php:56
-msgid "Pages:"
 msgstr ""
 
 #: content-views/content.php:61
@@ -341,6 +342,10 @@ msgid ""
 "Remember to include a featured image! It should be at least 1400 by 770 "
 "pixels. Posts without a featured image will show a standard placeholder "
 "image."
+msgstr ""
+
+#: functions.php:634
+msgid "Custom Sidebar Content"
 msgstr ""
 
 #: image.php:18

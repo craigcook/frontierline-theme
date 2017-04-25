@@ -1,12 +1,11 @@
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: 2017-04-20 19:27-0700\n"
-"PO-Revision-Date: 2017-02-23 14:32-0800\n"
+"Project-Id-Version: Frontierline\n"
+"POT-Creation-Date: 2017-04-25 13:24-0700\n"
+"PO-Revision-Date: 2017-04-25 13:24-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: en_US\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -57,13 +56,15 @@ msgid ""
 "Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post"
 "\">trackbacks</a> are open."
 msgstr ""
-"Die Kommentare sind geschlossen, aber die <a href=\"%1$s\" title=\"Trackback-URL für diesen Beitrag"
-"\">Trackbacks</a> sind offen."
+"Die Kommentare sind geschlossen, aber die <a href=\"%1$s\" title=\"Trackback-"
+"URL für diesen Beitrag\">Trackbacks</a> sind offen."
 
 #: comments.php:72
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
-msgstr "Sie müssen <a href=\"%s\">angemeldet</a> sein, um einen Kommentar zu schreiben."
+msgstr ""
+"Sie müssen <a href=\"%s\">angemeldet</a> sein, um einen Kommentar zu "
+"schreiben."
 
 #: comments.php:76
 msgid "Post your comment"
@@ -107,8 +108,7 @@ msgstr "(erforderlich, wird nicht veröffentlicht)"
 msgid ""
 "Spamming robots, please fill in this field. Real humans should leave it "
 "blank."
-msgstr ""
-"Spambots füllen bitte dieses Feld aus. Echte Menschen lassen es frei"
+msgstr "Spambots füllen bitte dieses Feld aus. Echte Menschen lassen es frei"
 
 #: comments.php:96
 msgid "Your comment"
@@ -125,15 +125,16 @@ msgstr "Nichts gefunden"
 #: content-views/content-none.php:16
 #, php-format
 msgid "Sorry, we didn’t find anything for “%s”. Try another search?"
-msgstr "Leider konnten wir für „%s“ nichts finden. Bitte ändern Sie den Suchbegriff."
+msgstr ""
+"Leider konnten wir für „%s“ nichts finden. Bitte ändern Sie den Suchbegriff."
 
 #: content-views/content-none.php:20
 msgid ""
 "Sorry, we looked everywhere, but we couldn’t find the page or file you were "
 "looking for. A few possible explanations:"
 msgstr ""
-"Wir haben überall gesucht, aber leider konnten wir die gesuchte Seite oder Datei "
-"nicht finden. Dies kann folgende Gründe haben:"
+"Wir haben überall gesucht, aber leider konnten wir die gesuchte Seite oder "
+"Datei nicht finden. Dies kann folgende Gründe haben:"
 
 #: content-views/content-none.php:22
 msgid "You may have followed an out-dated link or bookmark."
@@ -141,11 +142,14 @@ msgstr "Sie sind einem veralteten Link oder Lesezeichen gefolgt."
 
 #: content-views/content-none.php:23
 msgid "If you entered the address by hand, you may have mistyped it."
-msgstr "Wenn Sie die Adresse per Hand eingegeben haben, enthält sie möglicherweise einen Tippfehler."
+msgstr ""
+"Wenn Sie die Adresse per Hand eingegeben haben, enthält sie möglicherweise "
+"einen Tippfehler."
 
 #: content-views/content-none.php:24
 msgid "You might have just discovered an error. Congratulations!"
-msgstr "Vielleicht haben Sie gerade einen Fehler entdeckt. Herzlichen Glückwunsch!"
+msgstr ""
+"Vielleicht haben Sie gerade einen Fehler entdeckt. Herzlichen Glückwunsch!"
 
 #: content-views/content-none.php:27
 msgid "So what do we do now?"
@@ -165,6 +169,19 @@ msgstr "Besuchen Sie <a href=\"%s\">mozilla.org</a>."
 msgid "Try searching this blog."
 msgstr "Suchen Sie in diesem Blog."
 
+#: content-views/content-page-sidebar.php:20 content-views/content.php:50
+#: image.php:30
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: content-views/content-page-sidebar.php:27 content-views/content.php:55
+msgid "Continue reading…"
+msgstr "Weiterlesen…"
+
+#: content-views/content-page-sidebar.php:28 content-views/content.php:56
+msgid "Pages:"
+msgstr "Seiten:"
+
 #: content-views/content.php:18
 msgid "Categories:"
 msgstr "Kategorien:"
@@ -181,18 +198,6 @@ msgstr "Eine Antwort"
 msgid "% responses"
 msgstr "%s Antworten"
 
-#: content-views/content.php:50 image.php:30
-msgid "Edit"
-msgstr "Bearbeiten"
-
-#: content-views/content.php:55
-msgid "Continue reading…"
-msgstr "Weiterlesen…"
-
-#: content-views/content.php:56
-msgid "Pages:"
-msgstr "Seiten:"
-
 #: content-views/content.php:61
 msgid "Tags:"
 msgstr "Schlagwörter:"
@@ -204,8 +209,9 @@ msgid ""
 "available under a <a href=\"%2s\" rel=\"external license\">Creative Commons "
 "license</a>"
 msgstr ""
-"Teile dieses Inhalts stehen unter einem ©1998–%1s von einzelnen Mitwirkenden. Der "
-"Inhalt steht unter einer <a href=\"%2s\" rel=\"external license\">Creative-Commons-Lizenz</a>."
+"Teile dieses Inhalts stehen unter einem ©1998–%1s von einzelnen "
+"Mitwirkenden. Der Inhalt steht unter einer <a href=\"%2s\" rel=\"external "
+"license\">Creative-Commons-Lizenz</a>."
 
 #: footer.php:29
 msgid "Contact Us"
@@ -253,7 +259,8 @@ msgstr "Teilen-Schaltflächen für Beiträge hinzufügen"
 
 #: functions.php:126
 msgid "Adds buttons for Twitter and Facebook to the top of blog articles."
-msgstr "Fügt oben an den Artikeln Schaltflächen für Twitter und Facebook hinzu."
+msgstr ""
+"Fügt oben an den Artikeln Schaltflächen für Twitter und Facebook hinzu."
 
 #: functions.php:140
 msgid "Add social sharing buttons to Pages"
@@ -269,9 +276,9 @@ msgid ""
 "\" at the end of the tweet, and Twitter may suggest related accounts to "
 "follow. Leave this blank for no attribution."
 msgstr ""
-"Das Twitter-Konto, auf das beim Teilen verwiesen wird. Erscheint als \"via @username"
-"\" am Ende des Tweets und Twitter kann ähnliche Konten zum Folgen empfehlen. "
-"Leerlassen, zm keinen Bezug herzustellen."
+"Das Twitter-Konto, auf das beim Teilen verwiesen wird. Erscheint als \"via "
+"@username\" am Ende des Tweets und Twitter kann ähnliche Konten zum Folgen "
+"empfehlen. Leerlassen, zm keinen Bezug herzustellen."
 
 #: functions.php:167
 msgid "Extra Large"
@@ -298,8 +305,8 @@ msgid ""
 "and leave the field blank."
 msgstr ""
 "Sie sind wohl leider ein Spambot, weil Sie das versteckte Feld als Spamfalle "
-"ausgefüllt haben. Um zu zeigen, dass Sie kein Spammer sind, schicken Sie Ihren "
-"Kommentar erneut ab und lassen Sie das Feld leer."
+"ausgefüllt haben. Um zu zeigen, dass Sie kein Spammer sind, schicken Sie "
+"Ihren Kommentar erneut ab und lassen Sie das Feld leer."
 
 #: functions.php:381
 msgid "Spam Prevention"
@@ -357,14 +364,20 @@ msgid ""
 "pixels. Posts without a featured image will show a standard placeholder "
 "image."
 msgstr ""
-"Fügen Sie unbedingt ein vorgestelltes Bild ein! Es sollte mindestens 1400 mal 770"
-"Pixel groß sein. Beiträge ohne vorgestelltes Bild zeigen ein Standard-Platzhalterbild"
+"Fügen Sie unbedingt ein vorgestelltes Bild ein! Es sollte mindestens 1400 "
+"mal 770Pixel groß sein. Beiträge ohne vorgestelltes Bild zeigen ein Standard-"
+"Platzhalterbild"
+
+#: functions.php:634
+msgid "Custom Sidebar Content"
+msgstr ""
 
 #: image.php:18
 #, php-format
 msgid ""
 "<time class=\"date published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time>"
-msgstr "<time class=\"date published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time>"
+msgstr ""
+"<time class=\"date published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time>"
 
 #: image.php:24
 #, php-format
@@ -513,7 +526,9 @@ msgstr "Lieben Sie das Internet?"
 
 #: includes/newsletter-form.php:15
 msgid "Get the Mozilla newsletter and help us keep it open and free."
-msgstr "Abonnieren Sie den Mozilla-Newsletter und helfen Sie, dass es offen und frei bleibt."
+msgstr ""
+"Abonnieren Sie den Mozilla-Newsletter und helfen Sie, dass es offen und frei "
+"bleibt."
 
 #. L10n: 'yourname' is used as the first part of an example e-mail address, as in 'yourname@example.com'
 #: includes/newsletter-form.php:24
@@ -538,8 +553,8 @@ msgid ""
 "I’m okay with Mozilla handling my info as explained in this <a href=\"%s"
 "\">Privacy Policy</a>."
 msgstr ""
-"Ich bin einverstanden, dass Mozilla meine Daten wie in <a href=\"%s"
-"\">diesem Datenschutzhinweis</a> angegeben verwendet."
+"Ich bin einverstanden, dass Mozilla meine Daten wie in <a href=\"%s\">diesem "
+"Datenschutzhinweis</a> angegeben verwendet."
 
 #: includes/newsletter-form.php:53
 msgid "Sign up now"
@@ -563,7 +578,9 @@ msgstr ""
 
 #: includes/newsletter-form.php:64
 msgid "Please check your inbox or your spam filter for an e-mail from us."
-msgstr "Sehen Sie bitte in Ihrem Posteingang oder Ihrem Spam-Filter nach einer E-Mail von uns."
+msgstr ""
+"Sehen Sie bitte in Ihrem Posteingang oder Ihrem Spam-Filter nach einer E-"
+"Mail von uns."
 
 #: includes/related-posts.php:21
 #, php-format
