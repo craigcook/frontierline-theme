@@ -8,7 +8,7 @@
   <div class="content">
     <div class="logo"><a href="https://www.mozilla.org" rel="external" title="<?php _e('Visit mozilla.org', 'frontierline'); ?>">Mozilla</a></div>
 
-    <p class="fx-cta"><a href="https://www.mozilla.org/firefox/new/" rel="external" class="button button-green"><?php _e('Download Firefox', 'frontierline'); ?></a></p>
+    <p class="fx-cta"><a href="https://www.mozilla.org/firefox/new/?scene=2" rel="external" class="button button-green"><?php _e('Download Firefox', 'frontierline'); ?></a></p>
 
     <div class="nav-mozilla">
       <span class="toggle" role="button" aria-controls="nav-mozilla-menu" aria-expanded="false" tabindex="0"><?php _e('Menu', 'frontierline'); ?></span>

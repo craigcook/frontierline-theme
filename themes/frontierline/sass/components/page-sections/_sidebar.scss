@@ -72,7 +72,8 @@
     .widget_categories,
     .widget_recent_entries,
     .widget_recent_comments,
-    .widget_pages {
+    .widget_pages,
+    .widget_icl_lang_sel_widget {
         ul {
             border-top: 1px solid rgba(0, 0, 0, .1);
         }
@@ -103,6 +104,19 @@
 
         a {
             vertical-align: middle;
+        }
+    }
+
+    .wpml-ls-legacy-list-vertical {
+        display: block;
+
+        a {
+            border: 0;
+            line-height: inherit;
+
+            span {
+                vertical-align: inherit;
+            }
         }
     }
 

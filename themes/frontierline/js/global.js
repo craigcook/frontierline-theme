@@ -202,6 +202,8 @@
         var recent = jQuery('.popular .recent-posts a');
         var catLinks = jQuery('#categories .entry-link');
         var sideLinks = jQuery('#sidebar a');
+        var navDownload = jQuery('#nav-global .fx-cta .button');
+        var contentDownload = jQuery('.fx-footer .button');
 
         // Global nav
         navMoz.find('a').on('click', function() {
@@ -246,6 +248,26 @@
         // Recent (only visible if popular is disabled)
         recent.on('click', function() {
             ga('send', 'event', blogname + ' Interactions', 'related click', 'Recent: ' + jQuery(this).text());
+        });
+
+        // Count download clicks in the navbar (Firefox blog)
+        navDownload.on('click', function() {
+            ga('send', {
+                hitType: 'event',
+                eventCategory: blogname + ' Interactions',
+                eventAction: 'Firefox Download',
+                eventLabel: 'nav-bar'
+            });
+        });
+
+        // Count download clicks in the post footer (Firefox blog)
+        contentDownload.on('click', function() {
+            ga('send', {
+                hitType: 'event',
+                eventCategory: blogname + ' Interactions',
+                eventAction: 'Firefox Download',
+                eventLabel: 'content link'
+            });
         });
     }
 

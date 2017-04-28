@@ -31,9 +31,6 @@
 
     <div class="entry-info">
     <?php if ($post->post_type === 'post') : ?>
-      <address class="vcard">
-      <?php if (function_exists('coauthors_posts_links')) : coauthors_posts_links(); else : the_author_posts_link(); endif; ?>
-      </address>
       <time class="date published" datetime="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php the_date(); ?></time>
     <?php endif; ?>
     <?php if (comments_open() || get_comments_number()) : ?>
@@ -55,5 +52,10 @@
       <p><b><?php _e('Tags:', 'frontierline'); ?></b> <?php $tags_list = the_tags('',', ',''); ?></p>
     </footer>
   <?php endif; ?>
+
+  <footer class="fx-footer">
+    <h4><?php _e('Browse fast. Browse free.', 'frontierline'); ?></h4>
+    <p><a href="https://www.mozilla.org/firefox/new/?scene=2" rel="external" class="button button-green"><?php _e('Download Firefox', 'frontierline'); ?></a></p>
+  </div>
 
 </article><!-- #post -->

@@ -174,7 +174,7 @@ add_filter('image_size_names_choose', 'frontierline_custom_sizes');
 * Use auto-excerpts for meta description if hand-crafted exerpt is missing
 */
 function frontierline_meta_desc() {
-  $post_desc_length = 40; // auto-excerpt length in number of words
+  $post_desc_length = 30; // auto-excerpt length in number of words
 
   global $cat, $cache_categories, $wp_query, $wp_version;
   if(is_single() || is_page()) {
@@ -258,11 +258,21 @@ add_action ('admin_footer', 'frontierline_page_comments_off');
 
 
 /**
+* Replace the default title separator.
+*/
+function frontierline_document_title_separator() {
+  $sep = '–'; // this is en dash, not a hyphen
+  return $sep;
+}
+add_filter('document_title_separator', 'frontierline_document_title_separator');
+
+
+/**
 * Returns the page number currently being browsed.
 */
 function frontierline_page_number() {
   global $paged; // Contains page number.
-  $sep = ' – '; // this is en dash, not a hyphen
+  $sep = ' ' . frontierline_document_title_separator() . ' ';
   if ($paged >= 2) {
     return $sep . sprintf(__('Page %s', 'frontierline'), $paged);
   }
@@ -274,8 +284,8 @@ function frontierline_page_number() {
 * Used in the meta tags where wp_title() doesn't cut it.
 */
 function frontierline_meta_page_title() {
-    $sep = ' – '; // this is en dash, not a hyphen
     $pagenum = frontierline_page_number();
+    $sep = ' ' . frontierline_document_title_separator() . ' ';
     $sitename = get_bloginfo('name');
 
     if (is_single()) {
@@ -337,7 +347,7 @@ function frontierline_load_scripts() {
   wp_enqueue_script('jquery');
 
   // Load the global script
-  wp_register_script('global', get_template_directory_uri() . '/js/global.js', 'jquery', '2.0', true);
+  wp_register_script('global', get_template_directory_uri() . '/js/global.js', 'jquery', '2.1', true);
   wp_enqueue_script('global');
 
   // Load the newsletter script
@@ -383,7 +393,7 @@ add_filter('preprocess_comment', 'frontierline_honeypot');
 * Ask robots not to index some pages.
 */
 function frontierline_norobots() {
-  if (is_paged() || is_date() || is_search()) :
+  if (is_paged() || is_date() || is_search() || is_author()) :
     wp_no_robots();
   endif;
 }
@@ -411,13 +421,13 @@ add_filter('tiny_mce_before_init', 'frontierline_post_formats');
 
 
 /**
- * Sets the post excerpt length to 40 words.
+ * Sets the post excerpt length to 30 words.
  *
  * To override this length in a child theme, remove the filter and add your own
  * function tied to the excerpt_length filter hook.
  */
 function frontierline_excerpt_length( $length ) {
-  return 40;
+  return 30;
 }
 add_filter('excerpt_length', 'frontierline_excerpt_length');
 
@@ -611,5 +621,37 @@ function frontierline_body_classes($classes) {
   return $classes;
 }
 add_filter('body_class', 'frontierline_body_classes');
+
+
+/**
+ * Metabox for Custom sidebar content (static pages)
+ */
+define('WYSIWYG_EDITOR_ID', 'myeditor');
+define('WYSIWYG_META_KEY', 'extra-content');
+
+// Register the metabox
+function frontierline_register_sidebar_metabox() {
+  add_meta_box(WYSIWYG_META_BOX_ID, __('Custom Sidebar Content'), 'frontierline_render_sidebar_metabox_cb', 'page');
+}
+
+// Callback. Renders the metabox
+function frontierline_render_sidebar_metabox_cb($post){
+  $editor_id = WYSIWYG_EDITOR_ID;
+
+  $content = get_post_meta($post->ID, WYSIWYG_META_KEY, true);
+  wp_editor($content, $editor_id);
+}
+
+// save contents of metabox
+function frontierline_save_sidebar_metabox(){
+  $editor_id = WYSIWYG_EDITOR_ID;
+  $meta_key = WYSIWYG_META_KEY;
+
+  if(isset($_REQUEST[$editor_id]))
+  update_post_meta($_REQUEST['post_ID'], WYSIWYG_META_KEY, $_REQUEST[$editor_id]);
+}
+
+add_action('admin_init', 'frontierline_register_sidebar_metabox');
+add_action('save_post', 'frontierline_save_sidebar_metabox');
 
 ?>
