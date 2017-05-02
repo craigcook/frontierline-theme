@@ -10,7 +10,7 @@
 
     a {
         text-decoration: none;
-        color: lighten($color-link, 40%);
+        color: #F89C24;
 
         &:hover,
         &:focus,
@@ -27,10 +27,10 @@
         a {
             @include image-replaced;
             background: transparent url('img/mozilla-wordmark-white.svg') no-repeat;
-            @include background-size(88px 28px);
+            @include background-size(136px 28px);
             display: inline-block;
             height: 28px;
-            width: 88px;
+            width: 136px;
         }
     }
 
