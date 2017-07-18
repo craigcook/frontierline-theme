@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Frontierline\n"
 "POT-Creation-Date: 2017-04-25 13:24-0700\n"
-"PO-Revision-Date: 2017-04-25 13:24-0700\n"
+"PO-Revision-Date: 2017-07-21 18:12-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -370,7 +370,7 @@ msgstr ""
 
 #: functions.php:634
 msgid "Custom Sidebar Content"
-msgstr ""
+msgstr "Menü der Seitenleiste"
 
 #: image.php:18
 #, php-format

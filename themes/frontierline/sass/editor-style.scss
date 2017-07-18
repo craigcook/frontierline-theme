@@ -1,22 +1,21 @@
 /* !important used for forceful overrides */
 /* stylelint-disable declaration-no-important  */
 
-@import 'includes/lib';
+@import 'pebbles/pebbles';
+
 
 // Styling for the editor
 
-@import 'includes/fonts/open-sans';
-
 html {
-    font-size: 100%;
+    font-size: 112.5%;
 }
 
 body.wp-autoresize.mceContentBody {
     @include border-box;
+    @include font-size(18px);
     background: #fff;
     color: $color-text-primary;
     font-family: $base-font-stack;
-    font-size: 100%;
     line-height: $base-line-height;
     margin: 0 auto;
     max-width: $width-desktop - 40px;
@@ -39,23 +38,24 @@ body.wp-autoresize.mceContentBody {
     }
 
     // Fancy first paragraph
-    > p:first-child {
-        @include font-size(20px);
+    & > p:first-child {
+        @include font-size-level4;
         min-height: 70px;
 
         &:first-line {
-            @include font-size(24px);
+            @include font-size-level3;
         }
 
         &::first-letter {
-            @include font-size(72px);
+            @include font-size-huge;
             background: #000;
             color: #fff;
             float: left;
             font-style: normal;
-            font-weight: normal;
+            font-weight: bold;
             letter-spacing: .075em;
             line-height: .8;
+            margin-top: .15em;
             margin-right: 4px;
             padding: .125em 0 .125em 5px;
             vertical-align: bottom;

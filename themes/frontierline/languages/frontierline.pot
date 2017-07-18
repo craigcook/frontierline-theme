@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-04-25 13:22-0700\n"
+"POT-Creation-Date: 2017-07-21 17:12-0700\n"
 "PO-Revision-Date: 2017-02-23 14:32-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -191,36 +191,48 @@ msgstr ""
 msgid "Tags:"
 msgstr ""
 
-#: footer.php:23
+#: footer.php:27
+msgid "Contact Us"
+msgstr ""
+
+#: footer.php:28
+msgid "Donate"
+msgstr ""
+
+#: footer.php:41
+msgid "Download Firefox Web Browser"
+msgstr ""
+
+#: footer.php:42
+msgid "Desktop Browser for Mac, Windows, Linux"
+msgstr ""
+
+#: footer.php:43
+msgid "Mobile Browser for Android"
+msgstr ""
+
+#: footer.php:44
+msgid "Mobile Browser for iOS"
+msgstr ""
+
+#: footer.php:59
+msgid "Privacy"
+msgstr ""
+
+#: footer.php:60
+msgid "Cookies"
+msgstr ""
+
+#: footer.php:61
+msgid "Legal"
+msgstr ""
+
+#: footer.php:64
 #, php-format
 msgid ""
 "Portions of this content are ©1998-%1s by individual contributors. Content "
 "available under a <a href=\"%2s\" rel=\"external license\">Creative Commons "
 "license</a>"
-msgstr ""
-
-#: footer.php:29
-msgid "Contact Us"
-msgstr ""
-
-#: footer.php:30 includes/nav-global.php:16
-msgid "Give"
-msgstr ""
-
-#: footer.php:34
-msgid "Privacy"
-msgstr ""
-
-#: footer.php:35
-msgid "Cookies"
-msgstr ""
-
-#: footer.php:36
-msgid "Legal"
-msgstr ""
-
-#: footer.php:37
-msgid "Report Trademark Abuse"
 msgstr ""
 
 #: functions.php:44
@@ -453,6 +465,10 @@ msgstr ""
 
 #: includes/nav-global.php:15
 msgid "Web Innovations"
+msgstr ""
+
+#: includes/nav-global.php:16
+msgid "Give"
 msgstr ""
 
 #: includes/nav-global.php:17

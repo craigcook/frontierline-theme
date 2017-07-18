@@ -104,8 +104,8 @@
 
 #site-title {
     @include font-size-level2;
-    font-weight: normal;
-    margin: 0 0 .25em;
+    font-weight: bold;
+    margin: 0 0 .35em;
 
     span {
         @include box-decoration-break(clone);
@@ -121,7 +121,6 @@
 
 #site-description {
     @include font-size-level4;
-    line-height: 1.1;
     margin: 0;
 
     span {

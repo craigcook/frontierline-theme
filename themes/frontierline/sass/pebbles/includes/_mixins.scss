@@ -1,45 +1,12 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 @import
     'mixins/at2x',
-    'mixins/base-button',
     'mixins/gradients',
     'mixins/grid',
     'mixins/typography';
-
-
-// Common style for category links
-@mixin category-link {
-    @include transition(color 75ms ease-out, background-color 75ms ease-out);
-    background: #eee;
-    border: 1px solid rgba(0, 0, 0, .05);
-    color: $color-text-secondary;
-    display: inline-block;
-    margin: 0 5px .25em 0;
-    padding: .15em 15px;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: darken($color-link, 10%);
-        background: #e3e3e3;
-    }
-}
-
-// Narrower width for singular pages
-@mixin single-size {
-    @include border-box;
-    margin: 0 auto;
-    max-width: $width-desktop - 40px;
-
-    @media #{$mq-phone-wide} {
-        padding: 0 20px;
-    }
-
-    @media #{$mq-tablet} {
-        padding: 0 60px;
-    }
-}
 
 
 // Clear floats
@@ -173,6 +140,13 @@
     display: none;
 }
 
+// Inline block hack for pages that still need to support old IE.
+@mixin inline-block {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
 
 // not the most up to date method, but works in IE7
 @mixin image-replaced {
@@ -192,19 +166,32 @@
 // Adds a right-pointing arrow after
 @mixin trailing-arrow {
     &:after {
-        content: '\00A0\25B8'; // space+triangle
+        content: "\00A0\25B8"; // space+triangle
         white-space: nowrap;
     }
 }
 
 // Adds a left-pointing arrow before
-// There isn't a unicode left triangle so we resort to some trickery to flip it around.
 @mixin leading-arrow {
     &:before {
-        @include flip-horizontally;
-        content: '\00A0\25B8'; // space+triangle
-        display: inline-block;
-        vertical-align: top;
+        content: "\25B8\00A0"; // triangle+space
+        white-space: nowrap;
+        @include transform(rotate(180deg));
+    }
+}
+
+// Adds a right-pointing double-caret after
+@mixin trailing-double-caret {
+    &:after {
+        content: "\00A0\00BB"; /* nbsp raquo */
+        white-space: nowrap;
+    }
+}
+
+// Adds a left-pointing double-caret before
+@mixin leading-double-caret {
+    &:before {
+        content: "\00AB\00A0"; /* laquo nbsp */
         white-space: nowrap;
     }
 }
@@ -214,15 +201,12 @@
 @mixin multi-column($width: auto, $count: auto, $gap: normal) {
     -webkit-column-width: $width;
        -moz-column-width: $width;
-         -o-column-width: $width;
             column-width: $width;
     -webkit-column-count: $count;
        -moz-column-count: $count;
-         -o-column-count: $count;
             column-count: $count;
       -webkit-column-gap: $gap;
          -moz-column-gap: $gap;
-           -o-column-gap: $gap;
               column-gap: $gap;
 }
 
@@ -234,6 +218,5 @@
     page-break-inside: avoid;
     -webkit-column-break-inside: avoid;
        -moz-column-break-inside: avoid;
-         -o-column-break-inside: avoid;
                    break-inside: avoid;
 }

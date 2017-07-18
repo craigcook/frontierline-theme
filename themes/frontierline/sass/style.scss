@@ -4,7 +4,7 @@ Theme URI: https://github.com/craigcook/frontierline-theme
 Author: Craig Cook, Michael Ham, and all your friends at Mozilla
 Author URI: https://www.mozilla.org
 Description: A theme for official Mozilla blogs.
-Version: 2.0
+Version: 2.1
 License: GPL GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: frontierline
@@ -21,14 +21,11 @@ Domain Path: /languages/
 **********/
 
 @import
-    // Fonts
-    'includes/fonts/open-sans',
+    // Pebbles
+    'pebbles/pebbles',
 
-    // Base elements - general HTML elements
-    'base/elements',
-
-    // Components - specific purpose blocks with sub-elements and modifiers
-    'components/page-sections',
-    'components/content-views',
+    // Page sections
     'components/common',
-    'components/navigation';
+    'components/page-sections',
+    'components/navigation',
+    'components/content-views';

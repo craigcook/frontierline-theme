@@ -1,10 +1,15 @@
-// Forms
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+
 
 button,
 input,
 select,
 textarea {
-    font-family: inherit; // must inherit or falls back to UA stylesheet/system font
+    @include open-sans;
 }
 
 textarea {
@@ -25,7 +30,7 @@ input[type=time] {
     @include border-box;
     @include transition(all 100ms linear);
     background: #fff;
-    border-radius: 0;
+    border-radius: .3em;
     border: 1px solid #b2b2b2;
     display: inline-block;
     line-height: 1.25;
@@ -58,8 +63,4 @@ input.invalid {
     @include transition(all 100ms linear);
     border-color: #a91300;
     box-shadow: 0 0 0 2px rgba(255, 80, 80, .4);
-}
-
-label {
-    display: block;
 }

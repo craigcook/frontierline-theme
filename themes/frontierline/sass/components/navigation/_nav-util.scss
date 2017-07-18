@@ -2,6 +2,8 @@
 // Features toggles for the sidebar and category drawer and a search form.
 
 #nav-util {
+    @include font-size-level6;
+    @include open-sans;
     background: #000;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
     color: #fff;
@@ -106,7 +108,7 @@
     }
 
     input {
-        @include font-size(12px);
+        @include font-size-small;
         background-color: #000;
         border-color: #fff;
         color: #fff;
@@ -118,7 +120,6 @@
         background-color: #000;
         border: 0;
         color: #fff;
-        height: 1.65em;
         padding: 0;
         position: relative;
         vertical-align: bottom;
@@ -132,7 +133,7 @@
             height: 20px;
             left: 0;
             position: absolute;
-            top: .15em;
+            top: .25em;
             width: 100%;
         }
     }

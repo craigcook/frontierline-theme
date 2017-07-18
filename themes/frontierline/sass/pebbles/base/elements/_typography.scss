@@ -1,4 +1,9 @@
-// Common type blocks: headings, paragraphs, lists.
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../includes/lib';
+
 
 h1, h2, h3, h4, h5, h6, legend {
     font-weight: bold;
@@ -23,17 +28,19 @@ h4 {
     @include font-size-level4;
 }
 
-h5, h6 {
-    @include font-size(16px);
+h5 {
+    @include font-size-level5;
+}
+
+h6 {
+    @include font-size-level6;
 }
 
 p,
 ul,
 ol,
 dl,
-pre,
-table,
-blockquote {
+table {
     margin-bottom: 1.25em;
 }
 

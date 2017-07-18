@@ -1,5 +1,7 @@
 // Elements that inherit a global color scheme from a body class.
 
+@import '../../pebbles/includes/lib';
+
 // No color scheme (default)
 .color-scheme-none {
     #masthead .site-id:after {
@@ -10,10 +12,10 @@
 // Cyan
 .color-scheme-cyan {
     #masthead {
-        background-color: transparentize(brand-color(cyan), .75);
+        background-color: transparentize($color-brand-cyan, .75);
 
         .site-id:after {
-            background-color: transparentize(brand-color(cyan), .5);
+            background-color: transparentize($color-brand-cyan, .5);
         }
     }
 
@@ -21,17 +23,17 @@
     .nav-local a:focus,
     #related-posts .module-title,
     #sidebar .widget-title {
-        border-color: brand-color(cyan);
+        border-color: $color-brand-cyan;
     }
 }
 
 // Coral
 .color-scheme-coral {
     #masthead {
-        background-color: transparentize(brand-color(coral), .75);
+        background-color: transparentize($color-brand-coral, .75);
 
         .site-id:after {
-            background-color: transparentize(brand-color(coral), .5);
+            background-color: transparentize($color-brand-coral, .5);
         }
     }
 
@@ -39,17 +41,17 @@
     .nav-local a:focus,
     #related-posts .module-title,
     #sidebar .widget-title {
-        border-color: brand-color(coral);
+        border-color: $color-brand-coral;
     }
 }
 
 // Yellow
 .color-scheme-yellow {
     #masthead {
-        background-color: transparentize(brand-color(yellow), .75);
+        background-color: transparentize($color-brand-yellow, .75);
 
         .site-id:after {
-            background-color: transparentize(brand-color(yellow), .5);
+            background-color: transparentize($color-brand-yellow, .5);
         }
     }
 
@@ -57,17 +59,17 @@
     .nav-local a:focus,
     #related-posts .module-title,
     #sidebar .widget-title {
-        border-color: brand-color(yellow);
+        border-color: $color-brand-yellow;
     }
 }
 
 // Lilac
 .color-scheme-lilac {
     #masthead {
-        background-color: transparentize(brand-color(lilac), .75);
+        background-color: transparentize($color-brand-lilac, .75);
 
         .site-id:after {
-            background-color: transparentize(brand-color(lilac), .5);
+            background-color: transparentize($color-brand-lilac, .5);
         }
     }
 
@@ -82,10 +84,10 @@
 // Orange
 .color-scheme-orange {
     #masthead {
-        background-color: transparentize(brand-color(orange), .75);
+        background-color: transparentize($color-brand-orange, .75);
 
         .site-id:after {
-            background-color: transparentize(brand-color(orange), .5);
+            background-color: transparentize($color-brand-orange, .5);
         }
     }
 
@@ -93,17 +95,17 @@
     .nav-local a:focus,
     #related-posts .module-title,
     #sidebar .widget-title {
-        border-color: brand-color(orange);
+        border-color: $color-brand-orange;
     }
 }
 
 // Lime
 .color-scheme-lime {
     #masthead {
-        background-color: transparentize(brand-color(lime), .75);
+        background-color: transparentize($color-brand-lime, .75);
 
         .site-id:after {
-            background-color: transparentize(brand-color(lime), .5);
+            background-color: transparentize($color-brand-lime, .5);
         }
     }
 
@@ -111,17 +113,17 @@
     .nav-local a:focus,
     #related-posts .module-title,
     #sidebar .widget-title {
-        border-color: brand-color(lime);
+        border-color: $color-brand-lime;
     }
 }
 
 // Neon blue
 .color-scheme-neonblue {
     #masthead {
-        background-color: transparentize(brand-color(neonblue), .75);
+        background-color: transparentize($color-brand-neonblue, .75);
 
         .site-id:after {
-            background-color: transparentize(brand-color(neonblue), .5);
+            background-color: transparentize($color-brand-neonblue, .5);
         }
     }
 
@@ -129,17 +131,17 @@
     .nav-local a:focus,
     #related-posts .module-title,
     #sidebar .widget-title {
-        border-color: brand-color(neonblue);
+        border-color: $color-brand-neonblue;
     }
 }
 
 // Neon pink
 .color-scheme-neonpink {
     #masthead {
-        background-color: transparentize(brand-color(neonpink), .75);
+        background-color: transparentize($color-brand-neonpink, .75);
 
         .site-id:after {
-            background-color: transparentize(brand-color(neonpink), .5);
+            background-color: transparentize($color-brand-neonpink, .5);
         }
     }
 
@@ -147,17 +149,17 @@
     .nav-local a:focus,
     #related-posts .module-title,
     #sidebar .widget-title {
-        border-color: brand-color(neonpink);
+        border-color: $color-brand-neonpink;
     }
 }
 
 // Neon green
 .color-scheme-neongreen {
     #masthead {
-        background-color: transparentize(brand-color(neongreen), .75);
+        background-color: transparentize($color-brand-neongreen, .75);
 
         .site-id:after {
-            background-color: transparentize(brand-color(neongreen), .5);
+            background-color: transparentize($color-brand-neongreen, .5);
         }
     }
 
@@ -165,7 +167,7 @@
     .nav-local a:focus,
     #related-posts .module-title,
     #sidebar .widget-title {
-        border-color: brand-color(neongreen);
+        border-color: $color-brand-neongreen;
     }
 }
 
@@ -173,41 +175,41 @@
 .post-mini,
 .post-summary {
     .image-fallback.color-1 {
-        background-color: brand-color(cyan);
+        background-color: $color-brand-cyan;
     }
 }
 
 .post-mini,
 .post-summary {
     .image-fallback.color-2 {
-        background-color: brand-color(coral);
+        background-color: $color-brand-coral;
     }
 }
 
 .post-mini,
 .post-summary {
     .image-fallback.color-3 {
-        background-color: brand-color(yellow);
+        background-color: $color-brand-yellow;
     }
 }
 
 .post-mini,
 .post-summary {
     .image-fallback.color-4 {
-        background-color: brand-color(lilac);
+        background-color: $color-brand-lilac;
     }
 }
 
 .post-mini,
 .post-summary {
     .image-fallback.color-5 {
-        background-color: brand-color(orange);
+        background-color: $color-brand-orange;
     }
 }
 
 .post-mini,
 .post-summary {
     .image-fallback.color-6 {
-        background-color: brand-color(lime);
+        background-color: $color-brand-lime;
     }
 }
