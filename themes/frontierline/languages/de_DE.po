@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Frontierline\n"
-"POT-Creation-Date: 2017-04-25 13:24-0700\n"
-"PO-Revision-Date: 2017-07-21 18:12-0700\n"
+"POT-Creation-Date: 2017-07-26 15:18-0700\n"
+"PO-Revision-Date: 2017-07-26 15:18-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -202,7 +202,47 @@ msgstr "%s Antworten"
 msgid "Tags:"
 msgstr "Schlagwörter:"
 
-#: footer.php:23
+#: footer.php:26
+msgid "About"
+msgstr "Über uns"
+
+#: footer.php:27
+msgid "Contact Us"
+msgstr "Kontakt"
+
+#: footer.php:28
+msgid "Donate"
+msgstr "Spenden"
+
+#: footer.php:41
+msgid "Download Firefox Web Browser"
+msgstr "Internet-Browser Firefox herunterladen"
+
+#: footer.php:42
+msgid "Desktop Browser for Mac, Windows, Linux"
+msgstr "Desktop-Browser für Mac, Windows, Linux"
+
+#: footer.php:43
+msgid "Mobile Browser for Android"
+msgstr "Mobiler Browser für Android"
+
+#: footer.php:44
+msgid "Mobile Browser for iOS"
+msgstr "Mobiler Browser für iOS"
+
+#: footer.php:59
+msgid "Privacy"
+msgstr "Datenschutz"
+
+#: footer.php:60
+msgid "Cookies"
+msgstr "Cookies"
+
+#: footer.php:61
+msgid "Legal"
+msgstr "Rechtliches"
+
+#: footer.php:64
 #, php-format
 msgid ""
 "Portions of this content are ©1998-%1s by individual contributors. Content "
@@ -212,30 +252,6 @@ msgstr ""
 "Teile dieses Inhalts stehen unter einem ©1998–%1s von einzelnen "
 "Mitwirkenden. Der Inhalt steht unter einer <a href=\"%2s\" rel=\"external "
 "license\">Creative-Commons-Lizenz</a>."
-
-#: footer.php:29
-msgid "Contact Us"
-msgstr "Kontakt"
-
-#: footer.php:30 includes/nav-global.php:16
-msgid "Give"
-msgstr "Spenden"
-
-#: footer.php:34
-msgid "Privacy"
-msgstr "Datenschutz"
-
-#: footer.php:35
-msgid "Cookies"
-msgstr "Cookies"
-
-#: footer.php:36
-msgid "Legal"
-msgstr "Rechtliches"
-
-#: footer.php:37
-msgid "Report Trademark Abuse"
-msgstr "Markenrechtsverletzung melden"
 
 #: functions.php:44
 msgid "Site Menu"
@@ -480,6 +496,10 @@ msgstr "Internetgesundheit"
 msgid "Web Innovations"
 msgstr "Web-Innovationen"
 
+#: includes/nav-global.php:16
+msgid "Give"
+msgstr "Spenden"
+
 #: includes/nav-global.php:17
 msgid "Discover Firefox"
 msgstr "Firefox entdecken"
@@ -610,3 +630,6 @@ msgstr "Diese Website durchsuchen"
 #: searchform.php:12
 msgid "Search"
 msgstr "Suchen"
+
+#~ msgid "Report Trademark Abuse"
+#~ msgstr "Markenrechtsverletzung melden"

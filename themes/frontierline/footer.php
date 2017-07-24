@@ -21,9 +21,9 @@
         <a href="https://www.mozilla.org" data-link-type="footer" data-link-name="Mozilla">Mozilla</a>
       </div>
       <section class="mozilla">
-        <h5>Mozilla</h5>
+        <h5><a href="https://www.mozilla.org" data-link-type="footer" data-link-name="Mozilla">Mozilla</a></h5>
         <ul class="mozilla-links">
-          <li><a href="https://www.mozilla.org/about/" data-link-type="footer" data-link-name="About">About</a></li>
+          <li><a href="https://www.mozilla.org/about/" data-link-type="footer" data-link-name="About"><?php _e('About', 'frontierline'); ?></a></li>
           <li><a href="https://www.mozilla.org/contact/" data-link-type="footer" data-link-name="Contact Us"><?php _e('Contact Us', 'frontierline'); ?></a></li>
           <li><a href="https://donate.mozilla.org/?presets=100,50,25,15&amp;amount=50&amp;currency=usd" class="donate" data-link-type="footer" data-link-name="Donate"><?php _e('Donate', 'frontierline'); ?></a></li>
           <li>
@@ -36,7 +36,7 @@
         </ul>
       </section>
       <section class="firefox">
-        <h5>Firefox</h5>
+        <h5><a href="https://www.mozilla.org/firefox/" data-link-type="footer" data-link-name="Mozilla">Firefox</a></h5>
         <ul class="firefox-links">
           <li><a href="https://www.mozilla.org/firefox/" data-link-type="footer" data-link-name="Download Firefox now"><?php _e('Download Firefox Web Browser', 'frontierline'); ?></a></li>
           <li><a href="https://www.mozilla.org/firefox/desktop/" data-link-type="footer" data-link-name="Desktop Browser for Mac, Windows, Linux"><?php _e('Desktop Browser for Mac, Windows, Linux', 'frontierline'); ?></a></li>
