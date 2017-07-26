@@ -18,22 +18,12 @@ if (post_password_required()) {
       <h3>
       <?php
         $comments_number = get_comments_number();
-        if ( 1 === $comments_number ) {
+        if ( $comments_number == 1 ) {
           /* L10n: %s: post title */
-          printf( _x('One comment on &ldquo;%s&rdquo;', 'comments title', 'frontierline'), get_the_title());
+          printf(__('One comment on “%s”', 'frontierline'), get_the_title());
         } else {
-          printf(
-            /* L10n: 1: number of comments, 2: post title */
-            _nx(
-              '%1$s comment on &ldquo;%2$s&rdquo;',
-              '%1$s comments on &ldquo;%2$s&rdquo;',
-              $comments_number,
-              'comments title',
-              'frontierline'
-            ),
-            number_format_i18n($comments_number),
-            get_the_title()
-          );
+          /* L10n: 1: number of comments, 2: post title */
+          printf(__('%1$s comments on “%2$s”', 'frontierline'), number_format_i18n($comments_number), get_the_title());
         }
       ?>
       </h3>
