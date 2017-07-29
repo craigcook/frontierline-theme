@@ -1,0 +1,21 @@
+/*
+Theme Name:     Frontierline - Brasil
+Description:    Mozilla Brasil site, a child theme of Frontierline.
+Author:         Mozilla Brasil
+Template:       frontierline
+Version:        1.0
+*/
+
+@import url('../frontierline/style.css');
+
+/* === Footer === */
+
+#site-info .logo a{
+ background-size: 136px 28px;
+ width:136px;
+ background: transparent url("img/mozilla-wordmark-brasil.svg") no-repeat;
+}
+
+#site-info a{
+ color: #F89C24;
+}
