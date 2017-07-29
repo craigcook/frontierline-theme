@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Frontierline\n"
-"POT-Creation-Date: 2017-04-25 13:24-0700\n"
-"PO-Revision-Date: 2017-04-25 13:24-0700\n"
+"POT-Creation-Date: 2017-07-26 15:52-0700\n"
+"PO-Revision-Date: 2017-07-26 15:52-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -37,20 +37,32 @@ msgstr "Artikel aus %s"
 msgid "Articles by %s"
 msgstr "Artikel von %s"
 
-#: comments.php:41
+#. L10n: %s: post title
+#: comments.php:23
+#, php-format
+msgid "One comment on “%s”"
+msgstr "Ein Kommentar bei „%s“"
+
+#. L10n: 1: number of comments, 2: post title
+#: comments.php:26
+#, php-format
+msgid "%1$s comments on “%2$s”"
+msgstr "%1$s Kommentar bei „%2$s“"
+
+#: comments.php:31
 msgid "No comments yet"
 msgstr "Noch keine Kommentare"
 
-#: comments.php:45
+#: comments.php:35
 msgid "Post a comment"
 msgstr "Einen Kommentar schreiben"
 
-#: comments.php:55
+#: comments.php:45
 msgid "More comments:"
 msgstr "Weitere Kommentare:"
 
 #. L10n: 'trackbacks' are when another website refers to this blog post with a link notification
-#: comments.php:64
+#: comments.php:54
 #, php-format
 msgid ""
 "Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post"
@@ -59,27 +71,27 @@ msgstr ""
 "Die Kommentare sind geschlossen, aber die <a href=\"%1$s\" title=\"Trackback-"
 "URL für diesen Beitrag\">Trackbacks</a> sind offen."
 
-#: comments.php:72
+#: comments.php:62
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 "Sie müssen <a href=\"%s\">angemeldet</a> sein, um einen Kommentar zu "
 "schreiben."
 
-#: comments.php:76
+#: comments.php:66
 msgid "Post your comment"
 msgstr "Schreiben Sie Ihren Kommentar"
 
-#: comments.php:76
+#: comments.php:66
 #, php-format
 msgid "Reply to %s"
 msgstr "Auf %s antworten"
 
-#: comments.php:77
+#: comments.php:67
 msgid "Cancel reply"
 msgstr "Antwort abbrechen"
 
-#: comments.php:80
+#: comments.php:70
 #, php-format
 msgid ""
 "You are logged in as <a href=\"%1$s\">%2$s</a>. <a class=\"logout\" href="
@@ -88,33 +100,33 @@ msgstr ""
 "Sie sind angemeldet als <a href=\"%1$s\">%2$s</a>. <a class=\"logout\" href="
 "\"%3$s\">Abmelden?</a>"
 
-#: comments.php:83
+#: comments.php:73
 msgid "Your name"
 msgstr "Ihr Name"
 
-#: comments.php:83
+#: comments.php:73
 msgid "(required)"
 msgstr "(erforderlich)"
 
-#: comments.php:87 includes/newsletter-form.php:22
+#: comments.php:77 includes/newsletter-form.php:22
 msgid "Your e-mail address"
 msgstr "Ihre E-Mail-Adresse"
 
-#: comments.php:87
+#: comments.php:77
 msgid "(required, will not be published)"
 msgstr "(erforderlich, wird nicht veröffentlicht)"
 
-#: comments.php:91
+#: comments.php:81
 msgid ""
 "Spamming robots, please fill in this field. Real humans should leave it "
 "blank."
 msgstr "Spambots füllen bitte dieses Feld aus. Echte Menschen lassen es frei"
 
-#: comments.php:96
+#: comments.php:86
 msgid "Your comment"
 msgstr "Ihr Kommentar"
 
-#: comments.php:100
+#: comments.php:90
 msgid "Submit"
 msgstr "Absenden"
 
@@ -202,7 +214,47 @@ msgstr "%s Antworten"
 msgid "Tags:"
 msgstr "Schlagwörter:"
 
-#: footer.php:23
+#: footer.php:26
+msgid "About"
+msgstr "Über uns"
+
+#: footer.php:27
+msgid "Contact Us"
+msgstr "Kontakt"
+
+#: footer.php:28
+msgid "Donate"
+msgstr "Spenden"
+
+#: footer.php:41
+msgid "Download Firefox Web Browser"
+msgstr "Internet-Browser Firefox herunterladen"
+
+#: footer.php:42
+msgid "Desktop Browser for Mac, Windows, Linux"
+msgstr "Desktop-Browser für Mac, Windows, Linux"
+
+#: footer.php:43
+msgid "Mobile Browser for Android"
+msgstr "Mobiler Browser für Android"
+
+#: footer.php:44
+msgid "Mobile Browser for iOS"
+msgstr "Mobiler Browser für iOS"
+
+#: footer.php:59
+msgid "Privacy"
+msgstr "Datenschutz"
+
+#: footer.php:60
+msgid "Cookies"
+msgstr "Cookies"
+
+#: footer.php:61
+msgid "Legal"
+msgstr "Rechtliches"
+
+#: footer.php:64
 #, php-format
 msgid ""
 "Portions of this content are ©1998-%1s by individual contributors. Content "
@@ -212,30 +264,6 @@ msgstr ""
 "Teile dieses Inhalts stehen unter einem ©1998–%1s von einzelnen "
 "Mitwirkenden. Der Inhalt steht unter einer <a href=\"%2s\" rel=\"external "
 "license\">Creative-Commons-Lizenz</a>."
-
-#: footer.php:29
-msgid "Contact Us"
-msgstr "Kontakt"
-
-#: footer.php:30 includes/nav-global.php:16
-msgid "Give"
-msgstr "Spenden"
-
-#: footer.php:34
-msgid "Privacy"
-msgstr "Datenschutz"
-
-#: footer.php:35
-msgid "Cookies"
-msgstr "Cookies"
-
-#: footer.php:36
-msgid "Legal"
-msgstr "Rechtliches"
-
-#: footer.php:37
-msgid "Report Trademark Abuse"
-msgstr "Markenrechtsverletzung melden"
 
 #: functions.php:44
 msgid "Site Menu"
@@ -370,7 +398,7 @@ msgstr ""
 
 #: functions.php:634
 msgid "Custom Sidebar Content"
-msgstr ""
+msgstr "Menü der Seitenleiste"
 
 #: image.php:18
 #, php-format
@@ -479,6 +507,10 @@ msgstr "Internetgesundheit"
 #: includes/nav-global.php:15
 msgid "Web Innovations"
 msgstr "Web-Innovationen"
+
+#: includes/nav-global.php:16
+msgid "Give"
+msgstr "Spenden"
 
 #: includes/nav-global.php:17
 msgid "Discover Firefox"
@@ -610,3 +642,6 @@ msgstr "Diese Website durchsuchen"
 #: searchform.php:12
 msgid "Search"
 msgstr "Suchen"
+
+#~ msgid "Report Trademark Abuse"
+#~ msgstr "Markenrechtsverletzung melden"

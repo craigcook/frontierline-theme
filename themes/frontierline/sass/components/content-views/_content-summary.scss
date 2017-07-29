@@ -32,11 +32,12 @@
     }
 
     .entry-title {
-        @include font-size(20px);
+        @include font-size-level4;
     }
 
     .entry-summary .go {
-        @include font-size(18px);
+        @include font-size-level6;
+        @include open-sans;
         @include trailing-arrow;
         display: block;
         font-weight: bold;

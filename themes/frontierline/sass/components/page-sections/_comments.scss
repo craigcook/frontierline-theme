@@ -12,7 +12,7 @@
     margin: 20px auto;
 
     .cmt-post {
-        @include font-size(14px);
+        @include font-size-small;
     }
 }
 
@@ -36,7 +36,7 @@
     }
 
     .entry-title {
-        @include font-size(16px);
+        @include font-size-level6;
         font-weight: normal;
         margin: 0 0 1em;
 
@@ -47,7 +47,8 @@
     }
 
     .comment-meta {
-        @include font-size(14px);
+        @include font-size-small;
+        @include open-sans;
 
         a {
             color: $color-text-secondary;
@@ -62,8 +63,13 @@
     }
 
     .comment-util {
-        @include font-size(14px);
+        @include font-size-small;
+        @include open-sans;
         margin: 0;
+
+        .edit {
+            margin-left: 10px;
+        }
     }
 
     .children {

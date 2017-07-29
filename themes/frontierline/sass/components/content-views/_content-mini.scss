@@ -6,8 +6,8 @@
     }
 
     .date {
-        @include font-size(14px);
-        color: $color-text-secondary;
+        @include font-size-small;
+        @include open-sans;
         padding: 0 10px;
     }
 }

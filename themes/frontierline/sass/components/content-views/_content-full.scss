@@ -146,7 +146,7 @@
         }
 
         code {
-          @include font-size(14px);
+          @include font-size(16px);
         }
 
         hr {
@@ -241,22 +241,23 @@
         .post,
         .page {
             .entry-content > p:first-child {
-                @include font-size(20px);
+                @include font-size-level4;
                 min-height: 70px;
 
                 &:first-line {
-                    @include font-size(24px);
+                    @include font-size-level3;
                 }
 
                 &::first-letter {
-                    @include font-size(72px);
+                    @include font-size-huge;
                     background: #000;
                     color: #fff;
                     float: left;
                     font-style: normal;
-                    font-weight: normal;
+                    font-weight: bold;
                     letter-spacing: .075em;
                     line-height: .8;
+                    margin-top: .15em;
                     margin-right: 4px;
                     padding: .125em 0 .125em 5px;
                     vertical-align: bottom;
@@ -266,6 +267,7 @@
     }
 
     .entry-tags {
+        @include open-sans;
         margin-top: 30px;
         padding-top: 30px;
         border-top: 1px solid #ccc;

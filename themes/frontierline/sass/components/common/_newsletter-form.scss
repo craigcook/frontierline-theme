@@ -1,12 +1,12 @@
-@import
-    '../../includes/animations',
-    '../../includes/lib';
-
-
 // The newsletter signup form.
 
+@import
+    '../../pebbles/includes/animations',
+    '../../pebbles/includes/lib';
+
+
 #newsletter-subscribe {
-    background-color: brand-color(cyan);
+    background-color: $color-brand-cyan;
     color: #000;
 
     // container for <h3> and <h4>
@@ -19,26 +19,22 @@
 
     // newsletter title and "Thanks!" after submission
     h3 {
-        @include font-size(32px);
+        @include font-size-level3;
         margin: 0 0 0.2em;
         text-align: center;
     }
 
     // newsletter subtitle
     h4 {
-        @include font-size(20px);
+        @include font-size-level4;
         font-weight: normal;
-
-        @media #{$mq-desktop} {
-            @include font-size(24px);
-            line-height: 1.1;
-        }
     }
 
     .field {
         margin-bottom: 10px;
 
         label {
+            @include open-sans;
             display: block;
             margin-bottom: 0.25em;
         }
@@ -52,7 +48,8 @@
 
     // privacy checkbox
     .field-privacy {
-        @include font-size(12px);
+        @include open-sans;
+        @include font-size-extra-small;
 
         input {
             float: left;
@@ -69,8 +66,9 @@
     }
 
     input[type='email'] {
+        @include open-sans;
         @include border-box;
-        @include font-size(16px);
+        @include font-size-level6;
         @include transition(all 100ms linear);
         background-color: #000;
         border: 0;
@@ -81,8 +79,8 @@
     }
 
     select {
-        @include font-size(14px);
-        font-family: inherit;
+        @include open-sans;
+        font-size: inherit;
         line-height: 1.5;
         max-width: 80%;
     }

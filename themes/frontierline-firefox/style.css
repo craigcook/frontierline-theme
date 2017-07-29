@@ -65,6 +65,16 @@ Version:        1.0
 }
 
 @media screen and (min-width: 760px) {
+    #newsletter-subscribe.newsletter-firefox .form-title {
+        padding: 10px 10px 20px 140px;
+    }
+
+    #newsletter-subscribe.newsletter-firefox .form-title h3 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 980px) {
     .nav-global .fx-cta {
         float: right;
         margin: .25em 0 0 10px;
@@ -88,16 +98,6 @@ Version:        1.0
         padding: .15em 20px;
     }
 
-    #newsletter-subscribe.newsletter-firefox .form-title {
-        padding: 10px 10px 20px 140px;
-    }
-
-    #newsletter-subscribe.newsletter-firefox .form-title h3 {
-        font-size: 28px;
-    }
-}
-
-@media screen and (min-width: 980px) {
     #newsletter-subscribe.newsletter-firefox .form-title {
         background-size: 160px 109px;
         padding: 10px 10px 20px 180px;

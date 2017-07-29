@@ -1,131 +1,205 @@
 // The global footer.
 
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import '../../pebbles/includes/lib';
+
 #site-info {
-    @include font-size(14px);
+    @include open-sans;
     background: #000;
     color: #fff;
-    line-height: 1.5;
+    line-height: 1.3;
+    margin: 0;
     padding: 40px 0;
     width: 100%;
 
-    a {
+    a:link,
+    a:visited {
+        color: #fff;
+        font-weight: normal;
         text-decoration: none;
-        color: #F89C24;
-
-        &:hover,
-        &:focus,
-        &:active {
-            text-decoration: underline;
-            color: #fff;
-        }
     }
 
-    .logo {
-        @include font-size(16px);
-        margin-bottom: .5em;
+    a:hover,
+    a:focus,
+    a:active {
+        color: #fff;
+        text-decoration: underline;
+    }
 
-        a {
-            @include image-replaced;
-            background: transparent url('img/mozilla-wordmark-white.svg') no-repeat;
-            @include background-size(136px 28px);
-            display: inline-block;
-            height: 28px;
-            width: 136px;
+    h5 {
+        color: #fff;
+        font-weight: bold;
+        margin-bottom: .9em;
+
+        @media #{$mq-desktop} {
+            @include font-size-level5;
         }
     }
 
     li {
-        margin: 0;
         list-style-type: none;
+        margin: 0 0 .8em;
     }
 
-    .row {
+    nav {
         @include border-box;
         @include clearfix;
         margin: 0 auto;
-        padding: 0 20px;
         min-width: $width-phone;
+    }
 
-        @media #{$mq-tablet} {
-            padding: 0 10px;
-            width: $width-tablet;
-        }
+    section {
+        margin-bottom: 40px;
+    }
 
-        @media #{$mq-desktop} {
-            width: $width-desktop;
-        }
+    .logo {
+        margin-bottom: 40px;
 
-        @media #{$mq-desktop-wide} {
-            width: $width-desktop-wide;
+        a {
+            background: url('img/mozilla-wordmark-white.svg') no-repeat;
+            @include background-size(100px, 32px);
+            @include image-replaced;
+            display: inline-block;
+            height: 32px;
+            width: 100px;
         }
     }
 
-    .col {
-        margin-bottom: 20px;
-    }
-
-    @media #{$mq-tablet} {
-        .col {
-            @include span(4);
-            margin-bottom: 0;
-        }
-    }
-
-    .col-2 ul {
-        overflow: hidden;
-
-        &.fx-footer-links {
-            li {
-                float: none;
-            }
-        }
+    .social-links {
+        margin: 2em 0 0;
 
         li {
-            float: left;
+            display: inline-block;
+            margin-right: 20px;
 
-            &.wrap:before {
-                content: '\00A0\00B7\00A0'; // &nbsp;&middot;&nbsp;
-            }
+            a {
+                display: block;
+                @include image-replaced;
+                background-image: url('img/social-icon-sprite.svg');
 
-            &.clear {
-                clear: both;
+                &.twitter {
+                    background-position: 0 0;
+                    width: 18px;
+                    height: 15px;
+                }
+
+                &.instagram {
+                    background-position: 0 -25px;
+                    width: 19px;
+                    height: 19px;
+                }
+
+                &.youtube {
+                    background-position: 0 -54px;
+                    width: 19px;
+                    height: 13px;
+                }
+
+                &.facebook {
+                    background-position: 0 -77px;
+                    width: 10px;
+                    height: 19px;
+                }
             }
         }
     }
 
-    .links-social li {
-        ul {
-            display: inline;
-            margin: 0;
-        }
+    .primary {
+        @include font-size(16px);
+    }
 
+    .secondary {
+        @include font-size-extra-small;
+    }
+
+    .small-links {
         li {
             display: inline;
+            padding-right: 20px;
 
-            &:before {
-                content: '\00B7\00A0'; // &middot;&nbsp;
+            &:last-child {
+                padding-right: 0;
             }
+        }
+    }
 
-            &:first-child:before {
-                content: '';
-            }
+    .license {
+        margin-bottom: 40px;
 
-            span {
-                @include visually-hidden;
-            }
+        a:link,
+        a:visited {
+            color: #9b9b9b;
         }
     }
 
     .lang-switcher {
-        margin-top: 20px;
-    }
-}
+        font-weight: bold;
 
-@media #{$mq-tablet} {
-    [dir='rtl'] #site-info {
-        .col,
-        .col-2 ul li {
-            float: right;
+        label {
+            display: inline-block;
+            margin: 0 20px 5px 0;
+        }
+
+        select {
+            border: none;
+            background: #ededed;
+        }
+    }
+
+    @media #{$mq-tablet} {
+        .primary {
+            .logo,
+            section {
+                @include span(4);
+                padding: 0 20px 0 0;
+            }
+        }
+
+        .secondary {
+            padding-top: 20px;
+        }
+
+        .license {
+            margin-bottom: 0;
+        }
+
+        .small-links {
+            @include span(8);
+            padding: 0 20px 0 0;
+        }
+
+        .lang-switcher {
+            @include span(4);
+            margin-top: 2.25em;
+            padding: 0 20px 0 0;
         }
     }
 }
+
+[dir='rtl'] #colophon {
+    @media #{$mq-tablet} {
+        .logo,
+        section,
+        .small-links,
+        .lang-switcher {
+            float: right;
+            padding: 0 0 0 20px;
+        }
+    }
+
+    .lang-switcher label {
+        margin: 0 0 5px 20px;
+    }
+
+    .social-links li {
+        margin: 0 0 0 20px;
+    }
+
+    .small-links li {
+        padding: 0 0 0 20px;
+    }
+}
+

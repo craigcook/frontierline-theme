@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-04-25 13:22-0700\n"
+"POT-Creation-Date: 2017-07-26 15:44-0700\n"
 "PO-Revision-Date: 2017-02-23 14:32-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -38,78 +38,90 @@ msgstr ""
 msgid "Articles by %s"
 msgstr ""
 
-#: comments.php:41
+#. L10n: %s: post title
+#: comments.php:23
+#, php-format
+msgid "One comment on &ldquo;%s&rdquo;"
+msgstr ""
+
+#. L10n: 1: number of comments, 2: post title
+#: comments.php:26
+#, php-format
+msgid "%1$s comments on &ldquo;%2$s&rdquo;"
+msgstr ""
+
+#: comments.php:31
 msgid "No comments yet"
 msgstr ""
 
-#: comments.php:45
+#: comments.php:35
 msgid "Post a comment"
 msgstr ""
 
-#: comments.php:55
+#: comments.php:45
 msgid "More comments:"
 msgstr ""
 
 #. L10n: 'trackbacks' are when another website refers to this blog post with a link notification
-#: comments.php:64
+#: comments.php:54
 #, php-format
 msgid ""
 "Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post"
 "\">trackbacks</a> are open."
 msgstr ""
 
-#: comments.php:72
+#: comments.php:62
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr ""
 
-#: comments.php:76
+#: comments.php:66
 msgid "Post your comment"
 msgstr ""
 
-#: comments.php:76
+#: comments.php:66
 #, php-format
 msgid "Reply to %s"
 msgstr ""
 
-#: comments.php:77
+#: comments.php:67
 msgid "Cancel reply"
 msgstr ""
 
-#: comments.php:80
+#: comments.php:70
 #, php-format
 msgid ""
 "You are logged in as <a href=\"%1$s\">%2$s</a>. <a class=\"logout\" href="
 "\"%3$s\">Log out?</a>"
 msgstr ""
 
-#: comments.php:83
+#: comments.php:73
 msgid "Your name"
 msgstr ""
 
-#: comments.php:83
+#: comments.php:73
 msgid "(required)"
 msgstr ""
 
-#: comments.php:87 includes/newsletter-form.php:22
+#: comments.php:77 includes/newsletter-form.php:22
 msgid "Your e-mail address"
 msgstr ""
 
-#: comments.php:87
+#: comments.php:77
 msgid "(required, will not be published)"
 msgstr ""
 
-#: comments.php:91
+#: comments.php:81
 msgid ""
 "Spamming robots, please fill in this field. Real humans should leave it "
 "blank."
 msgstr ""
 
-#: comments.php:96
+#: comments.php:86
 msgid "Your comment"
 msgstr ""
 
-#: comments.php:100
+#: comments.php:90
 msgid "Submit"
 msgstr ""
 
@@ -191,36 +203,52 @@ msgstr ""
 msgid "Tags:"
 msgstr ""
 
-#: footer.php:23
+#: footer.php:26
+msgid "About"
+msgstr ""
+
+#: footer.php:27
+msgid "Contact Us"
+msgstr ""
+
+#: footer.php:28
+msgid "Donate"
+msgstr ""
+
+#: footer.php:41
+msgid "Download Firefox Web Browser"
+msgstr ""
+
+#: footer.php:42
+msgid "Desktop Browser for Mac, Windows, Linux"
+msgstr ""
+
+#: footer.php:43
+msgid "Mobile Browser for Android"
+msgstr ""
+
+#: footer.php:44
+msgid "Mobile Browser for iOS"
+msgstr ""
+
+#: footer.php:59
+msgid "Privacy"
+msgstr ""
+
+#: footer.php:60
+msgid "Cookies"
+msgstr ""
+
+#: footer.php:61
+msgid "Legal"
+msgstr ""
+
+#: footer.php:64
 #, php-format
 msgid ""
 "Portions of this content are ©1998-%1s by individual contributors. Content "
 "available under a <a href=\"%2s\" rel=\"external license\">Creative Commons "
 "license</a>"
-msgstr ""
-
-#: footer.php:29
-msgid "Contact Us"
-msgstr ""
-
-#: footer.php:30 includes/nav-global.php:16
-msgid "Give"
-msgstr ""
-
-#: footer.php:34
-msgid "Privacy"
-msgstr ""
-
-#: footer.php:35
-msgid "Cookies"
-msgstr ""
-
-#: footer.php:36
-msgid "Legal"
-msgstr ""
-
-#: footer.php:37
-msgid "Report Trademark Abuse"
 msgstr ""
 
 #: functions.php:44
@@ -453,6 +481,10 @@ msgstr ""
 
 #: includes/nav-global.php:15
 msgid "Web Innovations"
+msgstr ""
+
+#: includes/nav-global.php:16
+msgid "Give"
 msgstr ""
 
 #: includes/nav-global.php:17
