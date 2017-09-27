@@ -55,7 +55,7 @@
 
   <footer class="fx-footer">
     <h4><?php _e('Browse fast. Browse free.', 'frontierline'); ?></h4>
-    <p><a href="https://www.mozilla.org/firefox/new/?scene=2" rel="external" class="button button-green"><?php _e('Download Firefox', 'frontierline'); ?></a></p>
-  </div>
+    <p><a href="https://www.mozilla.org/firefox/new/?utm_source=blog.mozilla.org&utm_campaign=firefox_frontier&utm_medium=referral" rel="external" class="button button-green"><?php _e('Download Firefox', 'frontierline'); ?></a></p>
+  </footer>
 
 </article><!-- #post -->
