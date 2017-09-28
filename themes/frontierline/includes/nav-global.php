@@ -14,7 +14,7 @@
         <li class="nav-global-health"><a href="https://www.mozilla.org/internet-health/" rel="external"><?php _e('Internet Health', 'frontierline'); ?></a></li>
         <li class="nav-global-tech"><a href="https://www.mozilla.org/technology/" rel="external"><?php _e('Web Innovations', 'frontierline'); ?></a></li>
         <li class="nav-global-donate"><a href="https://donate.mozilla.org/" rel="external"><?php _e('Give', 'frontierline'); ?></a></li>
-        <li class="nav-global-firefox"><a href="https://www.mozilla.org/firefox/products/" rel="external"><?php _e('Discover Firefox', 'frontierline'); ?></a></li>
+        <li class="nav-global-firefox"><a href="https://www.mozilla.org/firefox/" rel="external"><?php _e('Discover Firefox', 'frontierline'); ?></a></li>
       </ul>
     </div>
 
