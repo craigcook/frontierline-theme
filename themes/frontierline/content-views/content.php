@@ -5,9 +5,17 @@
 ?>
 
 <?php if (has_post_thumbnail()) : ?>
-  <div class="post-image post-image-full">
-    <?php the_post_thumbnail('post-full-size'); ?>
-  </div>
+  <?php if (class_exists('acf')) $heroType = get_field('hero_image'); ?>
+
+    <?php if ($heroType == 'featured') { ?>
+      <div class="post-image post-image-featured">
+        <?php the_post_thumbnail('post-full-size'); ?>
+      </div>
+    <?php } else { ?>
+      <div class="post-image post-image-full">
+        <?php the_post_thumbnail('post-full-size'); ?>
+      </div>
+    <?php } ?>
 <?php endif; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
