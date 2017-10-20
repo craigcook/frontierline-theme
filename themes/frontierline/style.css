@@ -608,14 +608,15 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
   .nav-paging-next { float: right; }
   [dir='rtl'] .nav-paging-prev { float: right; }
   [dir='rtl'] .nav-paging-next { float: left; } }
-.post-image-full { background-image: -webkit-linear-gradient(left, #fff, #eee 50%, #fff); background-image: linear-gradient(to right, #fff, #eee 50%, #fff); background-repeat: no-repeat; margin: -20px auto 20px; padding: 0; text-align: center; overflow: hidden; max-height: 200px; }
-.post-image-full img { display: block; margin: 0 auto; }
-.post-image-full img.size-post-full-size { -webkit-transform: translateY(-15%); transform: translateY(-15%); position: relative; top: 50%; }
-@media screen and (min-width: 480px) { .post-image-full img.size-post-full-size { -webkit-transform: translateY(-25%); transform: translateY(-25%); } }
-@media screen and (min-width: 760px) { .post-image-full { margin: 0 auto 40px; max-height: none; height: 200px; }
-  .post-image-full img.size-post-full-size { -webkit-transform: translateY(-50%); transform: translateY(-50%); } }
-@media screen and (min-width: 1000px) and (min-height: 600px) { .post-image-full { height: 400px; } }
+.post-image-clip { overflow: hidden; max-height: 200px; }
+.post-image-clip img.size-post-full-size { -webkit-transform: translateY(-15%); transform: translateY(-15%); position: relative; top: 50%; }
+@media screen and (min-width: 480px) { .post-image-clip img.size-post-full-size { -webkit-transform: translateY(-25%); transform: translateY(-25%); } }
+@media screen and (min-width: 760px) { .post-image-clip { margin: 0 auto 40px; max-height: none; height: 200px; }
+  .post-image-clip img.size-post-full-size { -webkit-transform: translateY(-50%); transform: translateY(-50%); } }
+@media screen and (min-width: 1000px) and (min-height: 600px) { .post-image-clip { height: 400px; } }
 
+.single .post-image, .page .post-image { background-image: -webkit-linear-gradient(left, #fff, #eee 50%, #fff); background-image: linear-gradient(to right, #fff, #eee 50%, #fff); background-repeat: no-repeat; margin: -20px auto 20px; padding: 0; text-align: center; }
+.single .post-image img, .page .post-image img { display: block; margin: 0 auto; }
 .single .entry-header .entry-title, .page .entry-header .entry-title { font-size: 36px; font-size: 2rem; margin-top: .5em; }
 @media screen and (min-width: 760px) { .single .entry-header .entry-title, .page .entry-header .entry-title { font-size: 48px; font-size: 2.66667rem; } }
 @media screen and (min-width: 1000px) { .single .entry-header .entry-title, .page .entry-header .entry-title { font-size: 60px; font-size: 3.33333rem; } }
