@@ -5,9 +5,13 @@
 ?>
 
 <?php if (has_post_thumbnail()) : ?>
-  <div class="post-image post-image-full">
-    <?php the_post_thumbnail('post-full-size'); ?>
-  </div>
+  <?php if (get_post_meta(get_the_ID(), '_frontierline_uncropped_hero', true) == 1) : ?>
+    <div class="post-image post-image-full">
+  <?php else : ?>
+    <div class="post-image post-image-clip">
+  <?php endif; ?>
+      <?php the_post_thumbnail('post-full-size'); ?>
+    </div>
 <?php endif; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>

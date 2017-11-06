@@ -654,4 +654,35 @@ function frontierline_save_sidebar_metabox(){
 add_action('admin_init', 'frontierline_register_sidebar_metabox');
 add_action('save_post', 'frontierline_save_sidebar_metabox');
 
+
+/**
+ * Enable uncropped hero images
+ */
+function frontierline_uncropped_hero($post){
+  $uncropped = get_post_meta($post->ID, '_frontierline_uncropped_hero', true);
+  ?>
+  <p><?php _e('Featured images appear cropped on single post pages. If your image features important content, especially text, you can choose to display it at full size.', 'frontierline'); ?></p>
+  <label class="selectit" for="frontierline_uncropped_hero">
+    <input type="checkbox" name="_frontierline_uncropped_hero" id="frontierline_uncropped_hero" value="1" <?php if ($uncropped) { ?>checked<?php } ?> />
+    <?php _e('Display full image (no cropping)', 'frontierline'); ?>
+  </label>
+<?php
+}
+
+function register_frontierline_uncropped_hero(){
+  add_meta_box('meta-uncropped-hero', __('Featured Image Cropping', 'frontierline'), 'frontierline_uncropped_hero', 'post', 'side', 'low');
+}
+add_action('admin_init', 'register_frontierline_uncropped_hero', 1);
+
+function save_frontierline_uncropped_hero() {
+  global $post;
+  if (isset($_POST['_frontierline_uncropped_hero'])) {
+    update_post_meta($post->ID, '_frontierline_uncropped_hero', true);
+  } else {
+    update_post_meta($post->ID, '_frontierline_uncropped_hero', false);
+  }
+}
+add_action('save_post', 'save_frontierline_uncropped_hero');
+
+
 ?>

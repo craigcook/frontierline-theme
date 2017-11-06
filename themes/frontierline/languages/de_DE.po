@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Frontierline\n"
-"POT-Creation-Date: 2017-07-26 15:52-0700\n"
-"PO-Revision-Date: 2017-07-26 15:52-0700\n"
+"POT-Creation-Date: 2017-10-20 15:16-0700\n"
+"PO-Revision-Date: 2017-10-20 15:16-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -181,36 +181,36 @@ msgstr "Besuchen Sie <a href=\"%s\">mozilla.org</a>."
 msgid "Try searching this blog."
 msgstr "Suchen Sie in diesem Blog."
 
-#: content-views/content-page-sidebar.php:20 content-views/content.php:50
+#: content-views/content-page-sidebar.php:20 content-views/content.php:54
 #: image.php:30
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: content-views/content-page-sidebar.php:27 content-views/content.php:55
+#: content-views/content-page-sidebar.php:27 content-views/content.php:59
 msgid "Continue reading…"
 msgstr "Weiterlesen…"
 
-#: content-views/content-page-sidebar.php:28 content-views/content.php:56
+#: content-views/content-page-sidebar.php:28 content-views/content.php:60
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: content-views/content.php:18
+#: content-views/content.php:22
 msgid "Categories:"
 msgstr "Kategorien:"
 
-#: content-views/content.php:47
+#: content-views/content.php:51
 msgid "No responses yet"
 msgstr "Noch keine Antworten"
 
-#: content-views/content.php:47
+#: content-views/content.php:51
 msgid "1 response"
 msgstr "Eine Antwort"
 
-#: content-views/content.php:47
+#: content-views/content.php:51
 msgid "% responses"
 msgstr "%s Antworten"
 
-#: content-views/content.php:61
+#: content-views/content.php:65
 msgid "Tags:"
 msgstr "Schlagwörter:"
 
@@ -399,6 +399,21 @@ msgstr ""
 #: functions.php:634
 msgid "Custom Sidebar Content"
 msgstr "Menü der Seitenleiste"
+
+#: functions.php:664
+msgid ""
+"Featured images appear cropped on single post pages. If your image features "
+"important content, especially text, you can choose to display it at full "
+"size."
+msgstr ""
+
+#: functions.php:667
+msgid "Display full image (no cropping)"
+msgstr ""
+
+#: functions.php:673
+msgid "Featured Image Cropping"
+msgstr ""
 
 #: image.php:18
 #, php-format

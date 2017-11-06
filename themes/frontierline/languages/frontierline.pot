@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-07-26 15:44-0700\n"
+"POT-Creation-Date: 2017-10-20 15:16-0700\n"
 "PO-Revision-Date: 2017-02-23 14:32-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -41,13 +41,13 @@ msgstr ""
 #. L10n: %s: post title
 #: comments.php:23
 #, php-format
-msgid "One comment on &ldquo;%s&rdquo;"
+msgid "One comment on “%s”"
 msgstr ""
 
 #. L10n: 1: number of comments, 2: post title
 #: comments.php:26
 #, php-format
-msgid "%1$s comments on &ldquo;%2$s&rdquo;"
+msgid "%1$s comments on “%2$s”"
 msgstr ""
 
 #: comments.php:31
@@ -170,36 +170,36 @@ msgstr ""
 msgid "Try searching this blog."
 msgstr ""
 
-#: content-views/content-page-sidebar.php:20 content-views/content.php:50
+#: content-views/content-page-sidebar.php:20 content-views/content.php:54
 #: image.php:30
 msgid "Edit"
 msgstr ""
 
-#: content-views/content-page-sidebar.php:27 content-views/content.php:55
+#: content-views/content-page-sidebar.php:27 content-views/content.php:59
 msgid "Continue reading…"
 msgstr ""
 
-#: content-views/content-page-sidebar.php:28 content-views/content.php:56
+#: content-views/content-page-sidebar.php:28 content-views/content.php:60
 msgid "Pages:"
 msgstr ""
 
-#: content-views/content.php:18
+#: content-views/content.php:22
 msgid "Categories:"
 msgstr ""
 
-#: content-views/content.php:47
+#: content-views/content.php:51
 msgid "No responses yet"
 msgstr ""
 
-#: content-views/content.php:47
+#: content-views/content.php:51
 msgid "1 response"
 msgstr ""
 
-#: content-views/content.php:47
+#: content-views/content.php:51
 msgid "% responses"
 msgstr ""
 
-#: content-views/content.php:61
+#: content-views/content.php:65
 msgid "Tags:"
 msgstr ""
 
@@ -374,6 +374,21 @@ msgstr ""
 
 #: functions.php:634
 msgid "Custom Sidebar Content"
+msgstr ""
+
+#: functions.php:664
+msgid ""
+"Featured images appear cropped on single post pages. If your image features "
+"important content, especially text, you can choose to display it at full "
+"size."
+msgstr ""
+
+#: functions.php:667
+msgid "Display full image (no cropping)"
+msgstr ""
+
+#: functions.php:673
+msgid "Featured Image Cropping"
 msgstr ""
 
 #: image.php:18
