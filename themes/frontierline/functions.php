@@ -654,4 +654,35 @@ function frontierline_save_sidebar_metabox(){
 add_action('admin_init', 'frontierline_register_sidebar_metabox');
 add_action('save_post', 'frontierline_save_sidebar_metabox');
 
+/**
+ * Display hero images
+ */
+function frontierline_display_hero($post){
+  $uncropped = get_post_meta($post->ID, '_frontierline_display_hero', true);
+  ?>
+  <p><?php _e('If your image features important content, especially text, you can choose to display the full, uncropped image before the blog post. If this option is unchecked, then no image will be shown.', 'frontierline'); ?></p>
+  <label class="selectit" for="frontierline_display_hero">
+    <input type="checkbox" name="_frontierline_display_hero" id="frontierline_display_hero" value="1" <?php if ($uncropped) { ?>checked<?php } ?> />
+    <?php _e('Display featured image', 'frontierline'); ?>
+  </label>
+<?php
+}
+
+function register_frontierline_display_hero(){
+  add_meta_box('meta-display-hero', __('Display Featured Image', 'frontierline'), 'frontierline_display_hero', 'post', 'side', 'low');
+}
+
+add_action('admin_init', 'register_frontierline_display_hero', 1);
+
+function save_frontierline_display_hero() {
+  global $post;
+  if (isset($_POST['_frontierline_display_hero'])) {
+    update_post_meta($post->ID, '_frontierline_display_hero', true);
+  } else {
+    update_post_meta($post->ID, '_frontierline_display_hero', false);
+  }
+}
+
+add_action('save_post', 'save_frontierline_display_hero');
+
 ?>
