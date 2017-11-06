@@ -319,6 +319,11 @@
           </select>
         </div>
 
+        <div class="field field-format">
+          <label for="format-h"><input checked="checked" id="format-h" name="fmt" value="H" type="radio"> <?php _e('HTML', 'frontierline'); ?></label>
+          <label for="format-t"><input id="format-t" name="fmt" value="T" type="radio"> <?php _e('Text', 'frontierline'); ?></label>
+        </div>
+
         <div class="field field-privacy">
           <label for="privacy">
             <input type="checkbox" id="privacy" name="privacy" required>
