@@ -5,9 +5,11 @@
 ?>
 
 <?php if (has_post_thumbnail()) : ?>
-  <div class="post-image post-image-full">
-    <?php the_post_thumbnail('post-full-size'); ?>
-  </div>
+  <?php if (get_post_meta(get_the_ID(), '_frontierline_display_hero', true) == 1) : ?>
+    <div class="post-image post-image-featured">
+      <?php the_post_thumbnail('post-full-size'); ?>
+    </div>
+   <?php endif; ?>
 <?php endif; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
