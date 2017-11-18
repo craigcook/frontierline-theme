@@ -421,6 +421,36 @@ add_filter('tiny_mce_before_init', 'frontierline_post_formats');
 
 
 /**
+ * Activate custom formats.
+ */
+function frontierline_custom_formats($buttons) {
+    array_unshift($buttons, 'styleselect');
+    return $buttons;
+}
+add_filter('mce_buttons_2', 'frontierline_custom_formats');
+
+
+/**
+ * Insert custom formats into the visual editor.
+ */
+function frontierline_insert_formats($init_array) {
+    $style_formats = array(
+        array(
+            'title' => 'Disclaimer',
+            'block' => 'p',
+            'classes' => 'disclaimer',
+            'wrapper' => false,
+        ),
+    );
+    // Insert the array, JSON ENCODED, into 'style_formats'
+    $init_array['style_formats'] = json_encode($style_formats);
+    return $init_array;
+}
+// Attach callback to 'tiny_mce_before_init'
+add_filter('tiny_mce_before_init', 'frontierline_insert_formats');
+
+
+/**
  * Sets the post excerpt length to 30 words.
  *
  * To override this length in a child theme, remove the filter and add your own

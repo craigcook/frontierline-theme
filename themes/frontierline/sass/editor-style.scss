@@ -38,7 +38,8 @@ body.wp-autoresize.mceContentBody {
     }
 
     // Fancy first paragraph
-    & > p:first-child {
+    & > p:first-child:not(.disclaimer),
+    & > .disclaimer:first-child + p {
         @include font-size-level4;
         min-height: 70px;
 
@@ -113,6 +114,12 @@ body.wp-autoresize.mceContentBody {
     table,
     blockquote {
         margin-bottom: 1.25em;
+    }
+
+    .disclaimer {
+        border-bottom: 1px solid #eee;
+        font-style: italic;
+        padding: 0 0 20px;
     }
 
     ul {

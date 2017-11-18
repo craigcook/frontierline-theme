@@ -131,6 +131,12 @@
             padding-left: 30px;
         }
 
+        .disclaimer {
+            border-bottom: 1px solid #eee;
+            font-style: italic;
+            padding: 0 0 20px;
+        }
+
         blockquote {
             border-left: 2px solid #000;
             color: $color-text-secondary;
@@ -240,7 +246,8 @@
     @media #{$mq-tablet} {
         .post,
         .page {
-            .entry-content > p:first-child {
+            .entry-content > p:first-child:not(.disclaimer),
+            .entry-content > .disclaimer:first-child + p {
                 @include font-size-level4;
                 min-height: 70px;
 

@@ -156,15 +156,15 @@ body.wp-autoresize.mceContentBody { -webkit-box-sizing: border-box; -moz-box-siz
 @media screen and (min-width: 480px) { body.wp-autoresize.mceContentBody { padding: 30px 20px !important; } }
 @media screen and (min-width: 760px) { body.wp-autoresize.mceContentBody { padding: 30px 60px !important; } }
 body.wp-autoresize.mceContentBody h1, body.wp-autoresize.mceContentBody h2, body.wp-autoresize.mceContentBody h3, body.wp-autoresize.mceContentBody h4, body.wp-autoresize.mceContentBody h5, body.wp-autoresize.mceContentBody h6, body.wp-autoresize.mceContentBody hr, body.wp-autoresize.mceContentBody p, body.wp-autoresize.mceContentBody pre, body.wp-autoresize.mceContentBody blockquote, body.wp-autoresize.mceContentBody figure, body.wp-autoresize.mceContentBody figcaption, body.wp-autoresize.mceContentBody table, body.wp-autoresize.mceContentBody ul, body.wp-autoresize.mceContentBody ol, body.wp-autoresize.mceContentBody li, body.wp-autoresize.mceContentBody dl, body.wp-autoresize.mceContentBody dt, body.wp-autoresize.mceContentBody dd { margin: 0; padding: 0; }
-body.wp-autoresize.mceContentBody > p:first-child { font-size: 16px; font-size: 0.88889rem; min-height: 70px; }
-@media screen and (min-width: 760px) { body.wp-autoresize.mceContentBody > p:first-child { font-size: 18px; font-size: 1rem; } }
-@media screen and (min-width: 1000px) { body.wp-autoresize.mceContentBody > p:first-child { font-size: 24px; font-size: 1.33333rem; } }
-body.wp-autoresize.mceContentBody > p:first-child:first-line { font-size: 18px; font-size: 1rem; }
-@media screen and (min-width: 760px) { body.wp-autoresize.mceContentBody > p:first-child:first-line { font-size: 24px; font-size: 1.33333rem; } }
-@media screen and (min-width: 1000px) { body.wp-autoresize.mceContentBody > p:first-child:first-line { font-size: 36px; font-size: 2rem; } }
-body.wp-autoresize.mceContentBody > p:first-child::first-letter { font-size: 48px; font-size: 2.66667rem; background: #000; color: #fff; float: left; font-style: normal; font-weight: bold; letter-spacing: .075em; line-height: .8; margin-top: .15em; margin-right: 4px; padding: .125em 0 .125em 5px; vertical-align: bottom; }
-@media screen and (min-width: 760px) { body.wp-autoresize.mceContentBody > p:first-child::first-letter { font-size: 60px; font-size: 3.33333rem; } }
-@media screen and (min-width: 1000px) { body.wp-autoresize.mceContentBody > p:first-child::first-letter { font-size: 72px; font-size: 4rem; } }
+body.wp-autoresize.mceContentBody > p:first-child:not(.disclaimer), body.wp-autoresize.mceContentBody > .disclaimer:first-child + p { font-size: 16px; font-size: 0.88889rem; min-height: 70px; }
+@media screen and (min-width: 760px) { body.wp-autoresize.mceContentBody > p:first-child:not(.disclaimer), body.wp-autoresize.mceContentBody > .disclaimer:first-child + p { font-size: 18px; font-size: 1rem; } }
+@media screen and (min-width: 1000px) { body.wp-autoresize.mceContentBody > p:first-child:not(.disclaimer), body.wp-autoresize.mceContentBody > .disclaimer:first-child + p { font-size: 24px; font-size: 1.33333rem; } }
+body.wp-autoresize.mceContentBody > p:first-child:not(.disclaimer):first-line, body.wp-autoresize.mceContentBody > .disclaimer:first-child + p:first-line { font-size: 18px; font-size: 1rem; }
+@media screen and (min-width: 760px) { body.wp-autoresize.mceContentBody > p:first-child:not(.disclaimer):first-line, body.wp-autoresize.mceContentBody > .disclaimer:first-child + p:first-line { font-size: 24px; font-size: 1.33333rem; } }
+@media screen and (min-width: 1000px) { body.wp-autoresize.mceContentBody > p:first-child:not(.disclaimer):first-line, body.wp-autoresize.mceContentBody > .disclaimer:first-child + p:first-line { font-size: 36px; font-size: 2rem; } }
+body.wp-autoresize.mceContentBody > p:first-child:not(.disclaimer)::first-letter, body.wp-autoresize.mceContentBody > .disclaimer:first-child + p::first-letter { font-size: 48px; font-size: 2.66667rem; background: #000; color: #fff; float: left; font-style: normal; font-weight: bold; letter-spacing: .075em; line-height: .8; margin-top: .15em; margin-right: 4px; padding: .125em 0 .125em 5px; vertical-align: bottom; }
+@media screen and (min-width: 760px) { body.wp-autoresize.mceContentBody > p:first-child:not(.disclaimer)::first-letter, body.wp-autoresize.mceContentBody > .disclaimer:first-child + p::first-letter { font-size: 60px; font-size: 3.33333rem; } }
+@media screen and (min-width: 1000px) { body.wp-autoresize.mceContentBody > p:first-child:not(.disclaimer)::first-letter, body.wp-autoresize.mceContentBody > .disclaimer:first-child + p::first-letter { font-size: 72px; font-size: 4rem; } }
 body.wp-autoresize.mceContentBody a { -webkit-transition: color 80ms ease-out; transition: color 80ms ease-out; color: #00a7e0; text-decoration: underline; }
 body.wp-autoresize.mceContentBody a:hover, body.wp-autoresize.mceContentBody a:focus, body.wp-autoresize.mceContentBody a:active, body.wp-autoresize.mceContentBody a:visited:hover, body.wp-autoresize.mceContentBody a:visited:focus, body.wp-autoresize.mceContentBody a:visited:active { color: #0081ad; text-decoration: underline; }
 body.wp-autoresize.mceContentBody a:visited { color: #37b2dc; }
@@ -180,6 +180,7 @@ body.wp-autoresize.mceContentBody h3 { font-size: 16px; font-size: 0.88889rem; }
 @media screen and (min-width: 1000px) { body.wp-autoresize.mceContentBody h3 { font-size: 24px; font-size: 1.33333rem; } }
 body.wp-autoresize.mceContentBody h4, body.wp-autoresize.mceContentBody h5, body.wp-autoresize.mceContentBody h6 { font-size: 16px; font-size: 0.88889rem; }
 body.wp-autoresize.mceContentBody p, body.wp-autoresize.mceContentBody ul, body.wp-autoresize.mceContentBody ol, body.wp-autoresize.mceContentBody dl, body.wp-autoresize.mceContentBody pre, body.wp-autoresize.mceContentBody table, body.wp-autoresize.mceContentBody blockquote { margin-bottom: 1.25em; }
+body.wp-autoresize.mceContentBody .disclaimer { border-bottom: 1px solid #eee; font-style: italic; padding: 0 0 20px; }
 body.wp-autoresize.mceContentBody ul { list-style: disc; margin-left: 30px; padding: 0; }
 body.wp-autoresize.mceContentBody ul ul { list-style: circle; margin-left: 20px; margin-bottom: 0; }
 body.wp-autoresize.mceContentBody ul ol { list-style: decimal; margin-left: 20px; margin-bottom: 0; }
