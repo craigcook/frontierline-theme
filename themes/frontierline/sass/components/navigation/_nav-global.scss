@@ -170,6 +170,22 @@
             background-position: 0 -160px;
         }
     }
+
+    .nav-global-fxdownload {
+        padding: 15px 10px;
+    }
+
+    .nav-global-fxdownload .button {
+        @include font-size-level5;
+        margin: 0 auto;
+        padding: .35em 20px;
+
+        &:hover,
+        &:focus {
+            border: 2px solid $color-button-green;
+        }
+    }
+
 }
 
 .nav-mozilla:hover .nav-mozilla-menu,
@@ -256,7 +272,15 @@
 
 @media #{$mq-desktop} {
     .nav-mozilla-menu li {
+        padding: 0 20px;
+
+        &.nav-global-fxdownload {
             padding: 0 20px;
+
+            .button {
+                margin-top: -.5em;
+            }
+        }
     }
 }
 

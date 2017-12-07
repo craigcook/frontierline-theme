@@ -2,7 +2,7 @@
 
   <?php get_sidebar(); ?>
 
-  <?php if ('enabled' === get_theme_mod('frontierline_category_drawer', 'enabled')) : ?>
+  <?php if (get_theme_mod('frontierline_category_drawer') === '1') : ?>
     <?php get_template_part('includes/categories'); ?>
   <?php endif; ?>
 

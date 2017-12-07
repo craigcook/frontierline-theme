@@ -63,43 +63,52 @@ function frontierline_customize_register($wp_customize) {
   // Register category drawer option and control
   $wp_customize->add_setting('frontierline_category_drawer', array(
     'capability'        => 'edit_theme_options',
-    'default'           => 'enabled',
-    'sanitize_callback' => 'frontierline_sanitize_excerpt_select',
+    'default'           => false,
+    'sanitize_callback' => 'frontierline_sanitize_checkbox',
     'type'              => 'theme_mod',
   ));
 
   $wp_customize->add_control('frontierline_category_drawer', array(
-    'description' => esc_html__('Enable a drop down category menu on the fixed navigation bar.', 'frontierline'),
     'label'       => esc_html__('Header Category Menu', 'frontierline'),
+    'description' => esc_html__('Enable a drop down category menu on the fixed navigation bar.', 'frontierline'),
     'priority' => 7,
     'section'     => 'frontierline_theme_options',
     'settings'    => 'frontierline_category_drawer',
-    'type'        => 'radio',
-    'choices'     => array(
-      'enabled'   => esc_html__('Enabled', 'frontierline'),
-      'disabled'  => esc_html__('Disabled', 'frontierline'),
-    ),
+    'type'        => 'checkbox',
   ));
 
-  // Register site intro enable option and control
-  $wp_customize->add_setting('frontierline_site_intro_enable', array(
+  // Register Firefox download button option and control
+  $wp_customize->add_setting('frontierline_firefox_button', array(
     'capability'        => 'edit_theme_options',
-    'default'           => 'disabled',
-    'sanitize_callback' => 'frontierline_sanitize_text',
+    'default'           => '',
+    'sanitize_callback' => 'frontierline_sanitize_checkbox',
     'type'              => 'theme_mod',
   ));
 
-  $wp_customize->add_control('frontierline_site_intro_enable', array(
-    'label'       => esc_html__('Display Site Introduction', 'frontierline'),
-    'description' => esc_html__('Enable a brief introduction to appear at the top of the home page.', 'frontierline'),
-    'priority'    => 7,
+  $wp_customize->add_control('frontierline_firefox_button', array(
+    'label'       => esc_html__('Firefox download button', 'frontierline'),
+    'description' => esc_html__('Display a "Download Firefox" button in the main navigation in place of the "Discover Firefox" link.', 'frontierline'),
+    'priority' => 7,
     'section'     => 'frontierline_theme_options',
-    'settings'    => 'frontierline_site_intro_enable',
-    'type'        => 'radio',
-    'choices'     => array(
-      'enabled'   => esc_html__('Enabled', 'frontierline'),
-      'disabled'  => esc_html__('Disabled', 'frontierline'),
-    ),
+    'settings'    => 'frontierline_firefox_button',
+    'type'        => 'checkbox',
+  ));
+
+  // Register site intro enable option and control
+  $wp_customize->add_setting('frontierline_site_intro', array(
+    'capability'        => 'edit_theme_options',
+    'default'           => '',
+    'sanitize_callback' => 'frontierline_sanitize_checkbox',
+    'type'              => 'theme_mod',
+  ));
+
+  $wp_customize->add_control('frontierline_site_intro', array(
+    'label'       => esc_html__('Site introduction', 'frontierline'),
+    'description' => esc_html__('Display a brief introduction to appear at the top of the home page.', 'frontierline'),
+    'priority'    => 20,
+    'section'     => 'static_front_page',
+    'settings'    => 'frontierline_site_intro',
+    'type'        => 'checkbox',
   ));
 
   // Register site intro text option and control
@@ -109,10 +118,10 @@ function frontierline_customize_register($wp_customize) {
   ));
 
   $wp_customize->add_control('frontierline_site_intro_text', array(
-    'label'       => esc_html__('Site Introduction', 'frontierline'),
+    'label'       => esc_html__('Site introduction text', 'frontierline'),
     'description' => esc_html__('Some HTML is allowed.', 'frontierline'),
-    'priority'    => 8,
-    'section'     => 'frontierline_theme_options',
+    'priority'    => 20,
+    'section'     => 'static_front_page',
     'settings'    => 'frontierline_site_intro_text',
     'type'        => 'textarea',
   ));
@@ -152,6 +161,16 @@ function frontierline_sanitize_head_pattern($input) {
     return $input;
   }
   return 'none'; // Default
+}
+
+/**
+ * Sanitize checkbox values.
+ */
+function frontierline_sanitize_checkbox($input) {
+  if ($input === true || $input === '1') {
+    return '1';
+  }
+  return '';
 }
 
 
