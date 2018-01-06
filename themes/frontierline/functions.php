@@ -348,9 +348,12 @@ function frontierline_current_url() {
 
 
 /**
-* Load various JavaScripts
+* Load various scripts and styles
 */
-function frontierline_load_scripts() {
+function frontierline_enqueue_bits() {
+  // Load the theme style sheet
+  wp_enqueue_style('frontierline', get_stylesheet_uri(), false, filemtime(get_stylesheet_directory() . '/style.css'));
+
   // Load the default jQuery
   wp_enqueue_script('jquery');
 
@@ -362,12 +365,12 @@ function frontierline_load_scripts() {
   wp_register_script('basket-client', get_template_directory_uri() . '/js/basket-client.js', '', '1.1', true);
   wp_enqueue_script('basket-client');
 
-  // Load the threaded comment reply script
+  // Load the threaded comment reply script on pages where threaded comments are enabled
   if (get_option('thread_comments') && is_singular() && comments_open()) {
     wp_enqueue_script('comment-reply', true);
   }
 }
-add_action( 'wp_enqueue_scripts', 'frontierline_load_scripts' );
+add_action( 'wp_enqueue_scripts', 'frontierline_enqueue_bits' );
 
 
 /**
@@ -440,7 +443,7 @@ add_action('widgets_init', 'frontierline_remove_recent_comments_style');
 
 /**
  * Set available formats for the visual editor.
- * This removes Heading 1, which is reserved for the post tile.
+ * This removes Heading 1, which is reserved for the post title.
  */
 function frontierline_post_formats($formats) {
   $formats['block_formats'] = "Paragraph=p; Heading 2=h2; Heading 3=h3; Heading 4=h4; Heading 5=h5; Heading 6=h6; Preformatted=pre; Code=code;";
@@ -461,6 +464,8 @@ add_filter('mce_buttons_2', 'frontierline_custom_formats');
 
 /**
  * Insert custom formats into the visual editor.
+ * Disclaimer - a note/disclaimer callout, typically at the top or bottom of a post.
+ *    Such disclaimers should be part of the post and not a custom field, this format just makes it easier for authors vs needing to edit HTML to add the class.
  */
 function frontierline_insert_formats($init_array) {
     $style_formats = array(
