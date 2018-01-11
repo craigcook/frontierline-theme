@@ -369,6 +369,19 @@ remove_action('wp_head', 'wp_generator');
 
 
 /**
+* Adjust the comment form fields and order.
+*/
+function frontierline_comment_form_fields( array $fields ) {
+  unset( $fields['url'] );
+  $comment_field = $fields['comment'];
+  unset( $fields['comment'] );
+  $fields['comment'] = $comment_field;
+  return $fields;
+}
+add_filter( 'comment_form_fields', 'frontierline_comment_form_fields' );
+
+
+/**
 * Catch spambots with a honeypot field in the comment form.
 * It's hidden from view with CSS so most humans will leave it blank, but robots will kindly fill it in to alert us to their presence.
 * The field has an innucuous name -- 'age' in this case -- likely to be autofilled by a robot.
