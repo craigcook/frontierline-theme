@@ -637,6 +637,16 @@ add_action('admin_notices', 'frontierline_image_reminder');
 
 
 /**
+ * Get a pseudo-random number for the given post.
+ */
+function frontierline_fallback_image_num( $post_id ) {
+  $post_name = get_post($post_id)->post_name;
+  $hash_number = hexdec(substr(md5($post_name), 0, 8));
+  return ($hash_number%6)+1;
+}
+
+
+/**
  * Adds custom classes to the array of body classes.
  */
 function frontierline_body_classes($classes) {
