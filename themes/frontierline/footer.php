@@ -18,14 +18,14 @@
   <div class="content">
     <nav class="primary">
       <div class="logo">
-        <a href="https://www.mozilla.org/?utm_source=blog.mozilla.org&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Mozilla">Mozilla</a>
+        <a href="https://www.mozilla.org/?utm_source=<?php echo frontierline_blog_domain(); ?>&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Mozilla">Mozilla</a>
       </div>
       <section class="mozilla">
-        <h5><a href="https://www.mozilla.org/?utm_source=blog.mozilla.org&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Mozilla">Mozilla</a></h5>
+        <h5><a href="https://www.mozilla.org/?utm_source=<?php echo frontierline_blog_domain(); ?>&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Mozilla">Mozilla</a></h5>
         <ul class="mozilla-links">
-          <li><a href="https://www.mozilla.org/about/?utm_source=blog.mozilla.org&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="About"><?php _e('About', 'frontierline'); ?></a></li>
-          <li><a href="https://www.mozilla.org/contact/?utm_source=blog.mozilla.org&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Contact Us"><?php _e('Contact Us', 'frontierline'); ?></a></li>
-          <li><a href="https://donate.mozilla.org/?presets=50,30,20,10&amp;amount=30&amp;currency=usd&amp;utm_source=blog.mozilla.org&amp;utm_campaign=footer&amp;utm_medium=referral" class="donate" data-link-type="footer" data-link-name="Donate"><?php _e('Donate', 'frontierline'); ?></a></li>
+          <li><a href="https://www.mozilla.org/about/?utm_source=<?php echo frontierline_blog_domain(); ?>&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="About"><?php _e('About', 'frontierline'); ?></a></li>
+          <li><a href="https://www.mozilla.org/contact/?utm_source=<?php echo frontierline_blog_domain(); ?>&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Contact Us"><?php _e('Contact Us', 'frontierline'); ?></a></li>
+          <li><a href="https://donate.mozilla.org/?presets=50,30,20,10&amp;amount=30&amp;currency=usd&amp;utm_source=<?php echo frontierline_blog_domain(); ?>&amp;utm_campaign=footer&amp;utm_medium=referral" class="donate" data-link-type="footer" data-link-name="Donate"><?php _e('Donate', 'frontierline'); ?></a></li>
           <li>
             <ul class="social-links">
               <li><a class="twitter" href="https://twitter.com/mozilla" data-link-type="footer" data-link-name="Twitter (@mozilla)">Twitter<span> (@mozilla)</span></a></li>
@@ -36,13 +36,13 @@
         </ul>
       </section>
       <section class="firefox">
-        <h5><a href="https://www.mozilla.org/firefox/?utm_source=blog.mozilla.org&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Mozilla">Firefox</a></h5>
+        <h5><a href="https://www.mozilla.org/firefox/?utm_source=<?php echo frontierline_blog_domain(); ?>&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Mozilla">Firefox</a></h5>
         <ul class="firefox-links">
-          <li><a href="https://www.mozilla.org/firefox/new/?utm_source=blog.mozilla.org&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Download Firefox"><?php _e('Download Firefox', 'frontierline'); ?></a></li>
-          <li><a href="https://www.mozilla.org/firefox/?utm_source=blog.mozilla.org&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Desktop"><?php _e('Desktop', 'frontierline'); ?></a></li>
-          <li><a href="https://www.mozilla.org/firefox/mobile/?utm_source=blog.mozilla.org&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Mobile"><?php _e('Mobile', 'frontierline'); ?></a></li>
-          <li><a href="https://www.mozilla.org/firefox/features/?utm_source=blog.mozilla.org&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Features"><?php _e('Features', 'frontierline'); ?></a></li>
-          <li><a href="https://www.mozilla.org/firefox/channel/desktop/?utm_source=blog.mozilla.org&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Beta, Nightly, Developer Edition"><?php _e('Beta, Nightly, Developer Edition', 'frontierline'); ?></a></li>
+          <li><a href="https://www.mozilla.org/firefox/new/?utm_source=<?php echo frontierline_blog_domain(); ?>&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Download Firefox"><?php _e('Download Firefox', 'frontierline'); ?></a></li>
+          <li><a href="https://www.mozilla.org/firefox/?utm_source=<?php echo frontierline_blog_domain(); ?>&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Desktop"><?php _e('Desktop', 'frontierline'); ?></a></li>
+          <li><a href="https://www.mozilla.org/firefox/mobile/?utm_source=<?php echo frontierline_blog_domain(); ?>&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Mobile"><?php _e('Mobile', 'frontierline'); ?></a></li>
+          <li><a href="https://www.mozilla.org/firefox/features/?utm_source=<?php echo frontierline_blog_domain(); ?>&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Features"><?php _e('Features', 'frontierline'); ?></a></li>
+          <li><a href="https://www.mozilla.org/firefox/channel/desktop/?utm_source=<?php echo frontierline_blog_domain(); ?>&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Beta, Nightly, Developer Edition"><?php _e('Beta, Nightly, Developer Edition', 'frontierline'); ?></a></li>
           <li>
             <ul class="social-links">
               <li><a class="twitter" href="https://twitter.com/firefox" data-link-type="footer" data-link-name="Twitter (@firefox)">Twitter<span> (@firefox)</span></a></li>
