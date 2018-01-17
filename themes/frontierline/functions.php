@@ -518,6 +518,33 @@ function frontierline_widgets_init() {
     'before_title' => '<h3 class="widget-title">',
     'after_title' => '</h3>',
   ) );
+  register_sidebar( array(
+    'name' => __('Footer - left', 'frontierline'),
+    'id' => 'footer-left',
+    'description'   => esc_html__('Widgets added here will appear in the left column of the footer.', 'frontierline'),
+    'before_widget' => '<aside id="%1$s" class="footer-widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h5>',
+    'after_title' => '</h5>',
+  ) );
+  register_sidebar( array(
+    'name' => __('Footer - middle', 'frontierline'),
+    'id' => 'footer-middle',
+    'description'   => esc_html__('Widgets added here will appear in the middle column of the footer.', 'frontierline'),
+    'before_widget' => '<aside id="%1$s" class="footer-widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h5>',
+    'after_title' => '</h5>',
+  ) );
+  register_sidebar( array(
+    'name' => __('Footer - right', 'frontierline'),
+    'id' => 'footer-right',
+    'description'   => esc_html__('Widgets added here will appear in the right column of the footer.', 'frontierline'),
+    'before_widget' => '<aside id="%1$s" class="footer-widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h5>',
+    'after_title' => '</h5>',
+  ) );
 }
 add_action('widgets_init', 'frontierline_widgets_init');
 
