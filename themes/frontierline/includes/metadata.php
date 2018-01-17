@@ -22,23 +22,37 @@
   <meta name="description" content="<?php frontierline_meta_desc(); ?>">
 <?php endif; ?>
 
+<?php
+  $post_image_urls = new ArrayObject();
+  if (is_singular() && has_post_thumbnail()) {
+      $post_image_urls->append(wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-full-size', true)['0']);
+  } elseif (is_singular()) {
+    if ($post_images = get_attached_media('image')) {
+      foreach ($post_images as $post_image) {
+        $post_image_urls->append(wp_get_attachment_image_src($post_image->ID, 'post-full-size', true)['0']);
+      }
+    }
+  }
+  $post_image_urls = $post_image_urls->getArrayCopy();
+?>
+
   <?php /* Metadata for Facebook */ ?>
   <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
   <meta property="og:url" content="<?php frontierline_current_url(); ?>">
   <meta property="og:title" content="<?php if (is_home()) : bloginfo('name'); elseif (is_singular() && $yoast_title) : echo $yoast_title; else : frontierline_meta_page_title(); endif; ?>">
   <meta property="og:description" content="<?php if (is_singular() && $yoast_metadesc) : echo $yoast_metadesc; elseif (is_home() && $yoast_home_metadesc) : echo $yoast_home_metadesc; else : frontierline_meta_desc(); endif; ?>">
-<?php if (is_singular() && has_post_thumbnail()) : ?>
-  <?php $post_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-full-size', true); ?>
-  <meta property="og:image" content="<?php echo $post_image_url['0']; ?>">
-<?php endif; ?>
+  <?php foreach ($post_image_urls as $post_image_url) : ?>
+  <meta property="og:image" content="<?php echo $post_image_url; ?>">
+  <?php endforeach; ?>
 
   <?php /* Metadata for Twitter */ ?>
   <meta property="twitter:title" content="<?php if (is_home()) : bloginfo('name'); elseif (is_singular() && $yoast_title) : echo $yoast_title; else : frontierline_meta_page_title(); endif; ?>">
   <meta property="twitter:description" content="<?php if (is_singular() && $yoast_metadesc) : echo $yoast_metadesc; elseif (is_home() && $yoast_home_metadesc) : echo $yoast_home_metadesc; else : frontierline_meta_desc(); endif; ?>">
-<?php if (is_singular() && has_post_thumbnail()) : ?>
+<?php if (!empty($post_image_urls)) : ?>
   <meta name="twitter:card" content="summary_large_image">
-  <?php $post_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'post-full-size', true); ?>
-  <meta property="twitter:image" content="<?php echo $post_image_url['0']; ?>">
+  <?php foreach ($post_image_urls as $post_image_url) : ?>
+  <meta property="twitter:image" content="<?php echo $post_image_url; ?>">
+  <?php endforeach; ?>
 <?php else : ?>
   <meta name="twitter:card" content="summary">
   <?php if (get_header_image()) : ?>
