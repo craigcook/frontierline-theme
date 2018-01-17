@@ -6,7 +6,7 @@
 
   <link rel="copyright" href="#license">
   <link rel="profile" href="http://gmpg.org/xfn/11">
-  <link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="<?php site_icon_url(128, get_template_directory_uri().'/img/favicon.png'); ?>">
   <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url'); echo '?v=' . filemtime(get_stylesheet_directory() . '/style.css'); ?>">
 
   <!--[if IE]>
