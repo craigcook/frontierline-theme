@@ -72,7 +72,8 @@
     }
 
     .nav-util-sidebar a:before {
-        background-position: 0 0;
+        background-position: 0 -40px;
+        transform: rotate(-90deg);
     }
 
     .nav-util-sidebar a.close:before {
