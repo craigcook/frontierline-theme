@@ -27,7 +27,7 @@
       <div class="form-details">
         <div class="field field-country">
           <label for="country"><?php _e('Country', 'frontierline'); ?></label>
-          <select aria-required="true" id="country" name="country" required="required">
+          <select id="country" name="country" required="required">
             <option value="" selected="selected"><?php _e('- select -', 'frontierline'); ?></option>
             <option value="af">Afghanistan</option>
             <option value="qz">Akrotiri</option>
@@ -306,7 +306,7 @@
 
         <div class="field field-language">
           <label for="lang"><?php _e('Language', 'frontierline'); ?></label>
-          <select aria-required="true" id="lang" name="lang" required="required">
+          <select id="lang" name="lang" required="required">
             <option value="id">Bahasa Indonesia</option>
             <option value="de">Deutsch</option>
             <option value="en" selected="selected">English</option>

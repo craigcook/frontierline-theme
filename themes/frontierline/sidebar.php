@@ -4,7 +4,7 @@
  */
 ?>
 
-<aside id="sidebar" class="section widgets can-stick" role="complementary">
+<aside id="sidebar" class="section widgets can-stick">
   <div class="content">
   <?php dynamic_sidebar('sidebar'); ?>
   </div>

@@ -4,7 +4,7 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="copyright" href="#license">
+  <link rel="license" href="#license">
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="shortcut icon" type="image/png" href="<?php site_icon_url(128, get_template_directory_uri().'/img/favicon.png'); ?>">
 
@@ -49,4 +49,4 @@
 
     <?php get_template_part('includes/site-intro'); ?>
 
-    <main id="content" role="main">
+    <main id="content">

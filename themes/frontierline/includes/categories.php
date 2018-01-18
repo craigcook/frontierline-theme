@@ -8,7 +8,7 @@
   $categories = get_categories('number=8&orderby=count&order=desc&hierarchical=0&depth=1');
 ?>
 
-<aside id="categories" role="complementary" class="can-stick">
+<aside id="categories" class="can-stick">
   <div class="content">
     <h3 class="module-title"><?php _e('More articles', 'frontierline'); ?></h3>
 
