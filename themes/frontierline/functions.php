@@ -386,6 +386,14 @@ add_filter( 'comment_form_fields', 'frontierline_comment_form_fields' );
 * It's hidden from view with CSS so most humans will leave it blank, but robots will kindly fill it in to alert us to their presence.
 * The field has an innucuous name -- 'age' in this case -- likely to be autofilled by a robot.
 */
+function frontierline_honeypot_field( array $fields ) {
+  $fields['cmt-ackbar'] =
+    '<p id="cmt-ackbar"><label for="age">' . __('Spamming robots, please fill in this field. Real humans should leave it blank.', 'frontierline') . '</label>' .
+    '<input type="text" name="age" id="age" size="4" tabindex="-1"></p>';
+  return $fields;
+}
+add_filter('comment_form_default_fields', 'frontierline_honeypot_field');
+
 function frontierline_honeypot( array $data ){
   if( !isset($_POST['comment']) && !isset($_POST['content'])) { die("No Direct Access"); }  // Make sure the form has actually been submitted
 
