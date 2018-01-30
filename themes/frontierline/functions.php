@@ -329,6 +329,14 @@ function frontierline_meta_page_title() {
 
 
 /*
+* Return the current blog domain.
+*/
+function frontierline_blog_domain() {
+    return parse_url(get_site_url())['host'];
+}
+
+
+/*
 * Print the current page URL.
 */
 function frontierline_current_url() {
