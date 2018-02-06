@@ -550,7 +550,7 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 @supports (display: flex) { @media screen and (min-width: 1000px) { .nav-mozilla-menu, .js .nav-mozilla-menu { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: flex-end; justify-content: flex-end; } } }
 #nav-util { font-size: 14px; font-size: 0.7777777778rem; font-family: "Open Sans", X-LocaleSpecific, sans-serif; background: #000; box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); color: #fff; position: relative; z-index: 10; line-height: 1; }
 @media screen and (min-width: 760px) { #nav-util { font-size: 16px; font-size: 0.8888888889rem; } }
-#nav-util .content { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; padding: .5em 20px; }
+#nav-util .content { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; padding: .5em 20px; align-items: center; }
 #nav-util li { display: inline-block; width: 50%; padding: .25em 0; }
 #nav-util li.nav-util-sidebar { text-align: left; }
 #nav-util li.nav-util-categories { display: none; text-align: center; }
@@ -567,7 +567,7 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 #nav-util.is-sticky { position: fixed; width: 100%; top: 2.2em; left: 0; }
 
 .nav-util-search .fm-search { float: right; text-align: right; }
-.nav-util-search .fm-search p { margin: 0; }
+.nav-util-search .fm-search p { margin: 0; display: flex; align-items: center; }
 .nav-util-search .fm-search label { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; /* !important required to ensure element is hidden when mixin is applied */ position: absolute !important; /* stylelint-disable-line declaration-no-important */ width: 1px; }
 .nav-util-search .fm-search input { font-size: 12px; font-size: 0.6666666667rem; background-color: #000; border-color: #fff; color: #fff; max-width: 75%; -webkit-appearance: none; }
 @media screen and (min-width: 760px) { .nav-util-search .fm-search input { font-size: 14px; font-size: 0.7777777778rem; } }
