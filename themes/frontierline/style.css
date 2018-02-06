@@ -590,7 +590,7 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 .pagination a, .pagination .current { -webkit-transition: background-color 75ms ease-out; transition: background-color 75ms ease-out; background: #fff; border: 2px solid #000; margin: 0 2px; padding: 5px 15px; text-decoration: none; }
 .pagination a:hover, .pagination a:focus, .pagination .current:hover, .pagination .current:focus { background: #e3e3e3; }
 .pagination .current { font-weight: bold; }
-.pagination .prev:before { content: "\25B8\00A0"; white-space: nowrap; -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.pagination .prev:before { content: "\25C2\00A0"; white-space: nowrap; }
 .pagination .next:after { content: "\00A0\25B8"; white-space: nowrap; }
 
 .nav-paging { zoom: 1; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; text-align: center; margin: 40px 0 30px; background: #eee; }

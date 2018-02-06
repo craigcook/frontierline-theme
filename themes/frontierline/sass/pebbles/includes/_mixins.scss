@@ -174,9 +174,8 @@
 // Adds a left-pointing arrow before
 @mixin leading-arrow {
     &:before {
-        content: "\25B8\00A0"; // triangle+space
+        content: "\25C2\00A0"; // triangle+space
         white-space: nowrap;
-        @include transform(rotate(180deg));
     }
 }
 
