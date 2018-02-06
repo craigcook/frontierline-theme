@@ -569,7 +569,7 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 .nav-util-search .fm-search { float: right; text-align: right; }
 .nav-util-search .fm-search p { margin: 0; }
 .nav-util-search .fm-search label { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; /* !important required to ensure element is hidden when mixin is applied */ position: absolute !important; /* stylelint-disable-line declaration-no-important */ width: 1px; }
-.nav-util-search .fm-search input { font-size: 12px; font-size: 0.6666666667rem; background-color: #000; border-color: #fff; color: #fff; max-width: 75%; }
+.nav-util-search .fm-search input { font-size: 12px; font-size: 0.6666666667rem; background-color: #000; border-color: #fff; color: #fff; max-width: 75%; -webkit-appearance: none; }
 @media screen and (min-width: 760px) { .nav-util-search .fm-search input { font-size: 14px; font-size: 0.7777777778rem; } }
 .nav-util-search .fm-search .button { overflow: hidden; text-indent: 120%; white-space: nowrap; background-color: #000; border: 0; color: #fff; padding: 0; position: relative; vertical-align: bottom; width: 30px; }
 .nav-util-search .fm-search .button:before { background: transparent url("img/icon-sprite.svg") center -80px no-repeat; -webkit-background-size: 25px 200px; background-size: 25px 200px; content: ''; display: block; height: 20px; left: 0; position: absolute; top: .25em; width: 100%; }
