@@ -51,19 +51,6 @@
     }
 }
 
-// Big header in big windows, but only on the front page
-@media #{$mq-desktop} and #{$mq-tall} {
-    .home #masthead {
-        padding-top: 8.5em;
-
-        .site-id {
-            margin-top: -7.5em;
-            padding: 9.5em 20px 5em;
-        }
-    }
-}
-
-
 // Header pattens
 .pattern-tradewinds {
     #masthead .site-id {
