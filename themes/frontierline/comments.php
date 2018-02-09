@@ -56,46 +56,14 @@ if (post_password_required()) {
 <?php endif; ?>
 
 <?php if (comments_open()) : ?>
-
-  <div id="respond">
-  <?php if (get_option('comment_registration')) : // If registration is required and you're not logged in, show a message ?>
-    <p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'frontierline'), esc_attr(wp_login_url(get_permalink()))); ?></p>
-  <?php else : // else show the form ?>
-    <form id="comment-form" action="<?php echo esc_attr(get_option('siteurl')); ?>/wp-comments-post.php" method="post">
-      <fieldset>
-        <legend><span><?php comment_form_title(__('Post your comment', 'frontierline'), __('Reply to %s', 'frontierline')); ?></span></legend>
-        <p id="cancel-comment-reply"><?php cancel_comment_reply_link(__('Cancel reply', 'frontierline')); ?></p>
-        <ol>
-        <?php if ($user_ID) : ?>
-          <li class="self"><?php printf( __( 'You are logged in as <a href="%1$s">%2$s</a>. <a class="logout" href="%3$s">Log out?</a>', 'frontierline'), admin_url( 'profile.php' ), esc_html($user_identity), wp_logout_url( apply_filters( 'the_permalink', get_permalink() ) ) ); ?></li>
-        <?php else : ?>
-          <li id="cmt-name">
-            <label for="author"><?php _e('Your name', 'frontierline'); ?> <?php if ($req) : ?><span class="note"><?php _e('(required)', 'frontierline'); ?></span><?php endif; ?></label>
-            <input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="25" <?php if ($req) echo 'required aria-required="true"'; ?>>
-          </li>
-          <li id="cmt-email">
-            <label for="email"><?php _e('Your e-mail address', 'frontierline'); ?> <?php if ($req) : ?><span class="note"><?php _e('(required, will not be published)', 'frontierline'); ?></span><?php endif; ?></label>
-            <input type="email" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="25" <?php if ($req) echo 'required aria-required="true"'; ?>>
-          </li>
-          <li id="cmt-ackbar">
-            <label for="age"><?php _e('Spamming robots, please fill in this field. Real humans should leave it blank.', 'frontierline'); ?></label>
-            <input type="text" name="age" id="age" size="4" tabindex="-1">
-          </li>
-        <?php endif; ?>
-          <li id="cmt-cmt">
-            <label for="comment"><?php _e('Your comment', 'frontierline'); ?></label>
-            <textarea name="comment" id="comment" cols="50" rows="10"></textarea>
-          </li>
-          <li id="comment-submit">
-            <button name="submit" type="submit" class="button"><?php _e('Submit', 'frontierline'); ?></button>
-            <?php comment_id_fields(); ?>
-            <?php do_action('comment_form', $post->ID); ?>
-          </li>
-        </ol>
-      </fieldset>
-    </form>
-  <?php endif; // end if reg required and not logged in ?>
-  </div><?php // end #respond ?>
+<?php
+  comment_form( array(
+    'id_form' => 'comment-form',
+    'cancel_reply_before' => '<p id="cancel-comment-reply">',
+    'cancel_reply_after' => '</p>',
+    'class_submit' => 'button',
+  ) );
+?>
 <?php endif; // end if comments open ?>
   </div>
 </section><?php // end #comments ?>
