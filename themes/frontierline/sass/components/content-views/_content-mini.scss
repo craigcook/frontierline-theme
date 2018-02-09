@@ -5,6 +5,13 @@
         padding: 0 10px;
     }
 
+    &.post-thumb-disabled .entry-title:before {
+        border-top: 2px solid #000;
+        content: '';
+        display: block;
+        margin-bottom: 20px;
+    }
+
     .date {
         @include font-size-small;
         @include open-sans;
