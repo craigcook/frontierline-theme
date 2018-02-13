@@ -12,7 +12,7 @@
       <?php if (has_post_thumbnail()) :
         the_post_thumbnail('post-large');
       else : ?>
-        <img class="wp-post-image image-fallback color-<?php echo rand(1, 6); ?>" width="600" height="330" src="<?php echo get_template_directory_uri(); ?>/img/fallbacks/pattern-<?php echo rand(1, 6); ?>.png">
+        <img class="wp-post-image image-fallback color-<?php echo frontierline_fallback_image_num(get_the_ID()); ?>" width="600" height="330" src="<?php echo get_template_directory_uri(); ?>/img/fallbacks/pattern-<?php echo frontierline_fallback_image_num(get_the_ID()); ?>.png">
       <?php endif; ?>
       </div>
 
