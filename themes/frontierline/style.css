@@ -559,7 +559,7 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 #nav-util a { color: #fff; font-weight: bold; text-decoration: none; padding-left: 25px; position: relative; }
 #nav-util a:hover, #nav-util a:focus { text-decoration: underline; }
 #nav-util a:before { -webkit-background-size: 25px 200px; background-size: 25px 200px; background-image: url("img/icon-sprite.svg"); background-repeat: no-repeat; bottom: 0; content: ''; display: inline-block; height: 18px; left: 0; position: absolute; width: 20px; }
-#nav-util .nav-util-sidebar a:before { background-position: 0 0; }
+#nav-util .nav-util-sidebar a:before { background-position: 0 -40px; transform: rotate(-90deg); }
 #nav-util .nav-util-sidebar a.close:before { background-position: 0 -20px; }
 #nav-util .nav-util-categories a:before { background-position: 0 -40px; }
 #nav-util .nav-util-categories a.close:before { background-position: 0 -60px; }
