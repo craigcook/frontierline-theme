@@ -67,6 +67,7 @@ do_action( 'rss_tag_pre', 'rdf' );
 	<title><?php the_title_rss() ?></title>
 	<link><?php the_permalink_rss() ?></link>
 	<dc:date><?php echo mysql2date('Y-m-d\TH:i:s\Z', $post->post_date_gmt, false); ?></dc:date>
+	<?php if (get_theme_mod('frontierline_no_byline') !== '1') : ?><dc:creator><![CDATA[<?php the_author() ?>]]></dc:creator><?php endif; ?>
 	<?php the_category_rss('rdf') ?>
 <?php if (get_option('rss_use_excerpt')) : ?>
 	<description><![CDATA[<?php the_excerpt_rss() ?>]]></description>
