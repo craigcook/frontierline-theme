@@ -41,9 +41,11 @@
 
     <div class="entry-info">
     <?php if ($post->post_type === 'post') : ?>
-      <address class="vcard">
-      <?php if (function_exists('coauthors_posts_links')) : coauthors_posts_links(); else : the_author_posts_link(); endif; ?>
-      </address>
+      <?php if (get_theme_mod('frontierline_no_byline') !== '1') : ?>
+        <address class="vcard">
+        <?php if (function_exists('coauthors_posts_links')) : coauthors_posts_links(); else : the_author_posts_link(); endif; ?>
+        </address>
+      <?php endif; ?>
       <time class="date published" datetime="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php the_date(); ?></time>
     <?php endif; ?>
     <?php if (comments_open() || get_comments_number()) : ?>
