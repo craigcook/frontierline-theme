@@ -96,11 +96,11 @@ function frontierline_customize_register($wp_customize) {
 
   // Register featured image aka post thumbnail option and control
   $wp_customize->add_setting('frontierline_no_post_thumbnail', array(
-    'capability'        => 'edit_theme_options',
-    'default'           => '',
-    'sanitize_callback' => 'frontierline_sanitize_checkbox',
-    'type'              => 'theme_mod',
-  ));
+      'capability'        => 'edit_theme_options',
+      'default'           => '',
+      'sanitize_callback' => 'frontierline_sanitize_checkbox',
+      'type'              => 'theme_mod',
+    ));
 
   $wp_customize->add_control('frontierline_no_post_thumbnail', array(
     'label'       => esc_html__('Disable featured images', 'frontierline'),
@@ -111,6 +111,22 @@ function frontierline_customize_register($wp_customize) {
     'type'        => 'checkbox',
   ));
 
+  // Register byline option and control
+  $wp_customize->add_setting('frontierline_no_byline', array(
+    'capability'        => 'edit_theme_options',
+    'default'           => '',
+    'sanitize_callback' => 'frontierline_sanitize_checkbox',
+    'type'              => 'theme_mod',
+  ));
+
+  $wp_customize->add_control('frontierline_no_byline', array(
+    'label'       => esc_html__('Hide Byline', 'frontierline'),
+    'description' => esc_html__('Do not display the author\'s name with articles.', 'frontierline'),
+    'priority' => 10,
+    'section'     => 'frontierline_theme_options',
+    'settings'    => 'frontierline_no_byline',
+    'type'        => 'checkbox',
+  ));
 
   // Register site intro enable option and control
   $wp_customize->add_setting('frontierline_site_intro', array(

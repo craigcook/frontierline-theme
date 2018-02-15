@@ -50,6 +50,22 @@ do_action( 'rss_tag_pre', 'atom' );
 	while ( have_posts() ) : the_post();
 	?>
 	<entry>
+		<?php if (get_theme_mod('frontierline_no_byline') !== '1') : ?>
+        <author>
+			<name><?php the_author() ?></name>
+			<?php $author_url = get_the_author_meta('url'); if ( !empty($author_url) ) : ?>
+			<uri><?php the_author_meta('url')?></uri>
+			<?php endif;
+
+			/**
+			 * Fires at the end of each Atom feed author entry.
+			 *
+			 * @since 3.2.0
+			 */
+			do_action( 'atom_author' );
+		?>
+		</author>
+		<?php endif; ?>
 		<title type="<?php html_type_rss(); ?>"><![CDATA[<?php the_title_rss() ?>]]></title>
 		<link rel="alternate" type="<?php bloginfo_rss('html_type'); ?>" href="<?php the_permalink_rss() ?>" />
 		<id><?php the_guid() ; ?></id>

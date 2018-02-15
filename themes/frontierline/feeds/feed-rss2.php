@@ -90,6 +90,7 @@ do_action( 'rss_tag_pre', 'rss2' );
 		<comments><?php comments_link_feed(); ?></comments>
 <?php endif; ?>
 		<pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_post_time('Y-m-d H:i:s', true), false); ?></pubDate>
+		<?php if (get_theme_mod('frontierline_no_byline') !== '1') : ?><dc:creator><![CDATA[<?php the_author() ?>]]></dc:creator><?php endif; ?>
 		<?php the_category_rss('rss2') ?>
 
 		<guid isPermaLink="false"><?php the_guid(); ?></guid>
