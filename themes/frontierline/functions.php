@@ -377,10 +377,31 @@ remove_action('wp_head', 'wp_generator');
 
 
 /**
+* Adjust the comment form fields and order.
+*/
+function frontierline_comment_form_fields( array $fields ) {
+  unset( $fields['url'] );
+  $comment_field = $fields['comment'];
+  unset( $fields['comment'] );
+  $fields['comment'] = $comment_field;
+  return $fields;
+}
+add_filter( 'comment_form_fields', 'frontierline_comment_form_fields' );
+
+
+/**
 * Catch spambots with a honeypot field in the comment form.
 * It's hidden from view with CSS so most humans will leave it blank, but robots will kindly fill it in to alert us to their presence.
 * The field has an innucuous name -- 'age' in this case -- likely to be autofilled by a robot.
 */
+function frontierline_honeypot_field( array $fields ) {
+  $fields['cmt-ackbar'] =
+    '<p id="cmt-ackbar"><label for="age">' . __('Spamming robots, please fill in this field. Real humans should leave it blank.', 'frontierline') . '</label>' .
+    '<input type="text" name="age" id="age" size="4" tabindex="-1"></p>';
+  return $fields;
+}
+add_filter('comment_form_default_fields', 'frontierline_honeypot_field');
+
 function frontierline_honeypot( array $data ){
   if( !isset($_POST['comment']) && !isset($_POST['content'])) { die("No Direct Access"); }  // Make sure the form has actually been submitted
 
@@ -642,6 +663,16 @@ function frontierline_image_reminder() {
   }
 }
 add_action('admin_notices', 'frontierline_image_reminder');
+
+
+/**
+ * Get a pseudo-random number for the given post.
+ */
+function frontierline_fallback_image_num( $post_id ) {
+  $post_name = get_post($post_id)->post_name;
+  $hash_number = hexdec(substr(md5($post_name), 0, 8));
+  return ($hash_number%6)+1;
+}
 
 
 /**

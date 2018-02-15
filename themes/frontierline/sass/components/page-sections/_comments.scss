@@ -97,10 +97,10 @@
         text-align: center;
     }
 
-    #comment-form {
+    #respond {
         border-top: 0;
         padding-top: 20px;
-        margin-top: 20px;
+        margin-top: 0;
         margin-left: 20px;
     }
 }
@@ -108,27 +108,24 @@
 
 // Comment form
 #comment-form {
+    p {
+        margin: 0 0 1em;
+    }
+
+    input:not([type=submit]),
+    textarea {
+        @include border-box;
+        width: 100%;
+    }
+}
+
+#respond {
     border-top: 1px solid #ccc;
     margin-top: 30px;
     padding-top: 30px;
 
-    legend span {
+    h3 {
         @include font-size-level4;
-    }
-
-    li {
-        margin: 0 0 1em;
-    }
-
-    label {
-        display: block;
-        margin: 0 0 .25em;
-    }
-
-    input,
-    textarea {
-        @include border-box;
-        width: 100%;
     }
 }
 
