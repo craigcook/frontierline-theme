@@ -524,7 +524,8 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 .nav-mozilla-menu .nav-global-fxdownload .button { font-size: 14px; font-size: 0.7777777778rem; margin: 0 auto; padding: .35em 20px; }
 @media screen and (min-width: 760px) { .nav-mozilla-menu .nav-global-fxdownload .button { font-size: 16px; font-size: 0.8888888889rem; } }
 @media screen and (min-width: 1000px) { .nav-mozilla-menu .nav-global-fxdownload .button { font-size: 18px; font-size: 1rem; } }
-.nav-mozilla-menu .nav-global-fxdownload .button:hover, .nav-mozilla-menu .nav-global-fxdownload .button:focus { border: 2px solid #16da00; }
+.nav-mozilla-menu .nav-global-fxdownload .button.button-green { background-color: #fff; border-color: #16da00; color: #16da00; }
+.nav-mozilla-menu .nav-global-fxdownload .button.button-green:hover, .nav-mozilla-menu .nav-global-fxdownload .button.button-green:focus { background-color: #16da00; border: 2px solid #16da00; color: #fff; }
 
 .nav-mozilla:hover .nav-mozilla-menu, .nav-mozilla-menu:target { left: auto; }
 
