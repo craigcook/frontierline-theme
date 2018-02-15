@@ -35,6 +35,13 @@
         @include font-size-level4;
     }
 
+    &.post-thumb-disabled .entry-title:before {
+        border-top: 2px solid #000;
+        content: '';
+        display: block;
+        margin-bottom: 20px;
+    }
+
     .entry-summary .go {
         @include font-size-level6;
         @include open-sans;

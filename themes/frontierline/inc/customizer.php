@@ -94,6 +94,24 @@ function frontierline_customize_register($wp_customize) {
     'type'        => 'checkbox',
   ));
 
+  // Register featured image aka post thumbnail option and control
+  $wp_customize->add_setting('frontierline_no_post_thumbnail', array(
+    'capability'        => 'edit_theme_options',
+    'default'           => '',
+    'sanitize_callback' => 'frontierline_sanitize_checkbox',
+    'type'              => 'theme_mod',
+  ));
+
+  $wp_customize->add_control('frontierline_no_post_thumbnail', array(
+    'label'       => esc_html__('Disable featured images', 'frontierline'),
+    'description' => esc_html__('Do not display featured images on posts.', 'frontierline'),
+    'priority' => 9,
+    'section'     => 'frontierline_theme_options',
+    'settings'    => 'frontierline_no_post_thumbnail',
+    'type'        => 'checkbox',
+  ));
+
+
   // Register site intro enable option and control
   $wp_customize->add_setting('frontierline_site_intro', array(
     'capability'        => 'edit_theme_options',
@@ -202,4 +220,3 @@ function frontierline_customize_preview_js() {
   wp_enqueue_script('frontierline-customize-preview', get_theme_file_uri('/js/customize-preview.js'), array('customize-preview'), '1.0', true);
 }
 add_action('customize_preview_init', 'frontierline_customize_preview_js');
-

@@ -653,12 +653,12 @@ add_action('init', 'frontierline_disable_emojis');
 
 
 /**
- * Remind authors to set a featured image.
+ * Remind authors to set a featured image if they're enabled.
  */
 function frontierline_image_reminder() {
   global $pagenow;
   $message = __('Remember to include a featured image! It should be at least 1400 by 770 pixels. Posts without a featured image will show a standard placeholder image.', 'frontierline');
-  if ($pagenow === 'post-new.php') {
+  if ($pagenow === 'post-new.php' && (get_theme_mod('frontierline_no_post_thumbnail') !== '1')) {
     echo '<div class="updated"><p>' . $message . '</p></div>';
   }
 }
@@ -729,16 +729,20 @@ add_action('save_post', 'frontierline_save_sidebar_metabox');
 function frontierline_display_hero($post){
   $uncropped = get_post_meta($post->ID, '_frontierline_display_hero', true);
   ?>
-  <p><?php _e('If your featured image is important content, you can display it above the post. If this option is unchecked, the image will only be used as a thumbnail and won‘t appear on the post page.', 'frontierline'); ?></p>
-  <label class="selectit" for="frontierline_display_hero">
-    <input type="checkbox" name="_frontierline_display_hero" id="frontierline_display_hero" value="1" <?php if ($uncropped) { ?>checked<?php } ?>>
-    <?php _e('Display featured image', 'frontierline'); ?>
-  </label>
+  <?php if (get_theme_mod('frontierline_no_post_thumbnail') !== '1') : ?>
+    <p><?php _e('If your featured image is important content, you can display it above the post. If this option is unchecked, the image will only be used as a thumbnail and won‘t appear on the post page.', 'frontierline'); ?></p>
+    <label class="selectit" for="frontierline_display_hero">
+      <input type="checkbox" name="_frontierline_display_hero" id="frontierline_display_hero" value="1" <?php if ($uncropped) { ?>checked<?php } ?>>
+      <?php _e('Display featured image', 'frontierline'); ?>
+    </label>
+  <?php endif ?>
 <?php
 }
 
 function register_frontierline_display_hero(){
-  add_meta_box('meta-display-hero', __('Display Featured Image', 'frontierline'), 'frontierline_display_hero', 'post', 'side', 'low');
+  if (get_theme_mod('frontierline_no_post_thumbnail') !== '1') {
+    add_meta_box('meta-display-hero', __('Display Featured Image', 'frontierline'), 'frontierline_display_hero', 'post', 'side', 'low');
+  }
 }
 
 add_action('admin_init', 'register_frontierline_display_hero', 1);

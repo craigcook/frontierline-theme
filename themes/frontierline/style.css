@@ -697,6 +697,7 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 .post-summary .entry-title { font-size: 16px; font-size: 0.8888888889rem; }
 @media screen and (min-width: 760px) { .post-summary .entry-title { font-size: 18px; font-size: 1rem; } }
 @media screen and (min-width: 1000px) { .post-summary .entry-title { font-size: 24px; font-size: 1.3333333333rem; } }
+.post-summary.post-thumb-disabled .entry-title:before { border-top: 2px solid #000; content: ''; display: block; margin-bottom: 20px; }
 .post-summary .entry-summary .go { font-size: 14px; font-size: 0.7777777778rem; font-family: "Open Sans", X-LocaleSpecific, sans-serif; display: block; font-weight: bold; margin-top: 10px; }
 @media screen and (min-width: 760px) { .post-summary .entry-summary .go { font-size: 16px; font-size: 0.8888888889rem; } }
 .post-summary .entry-summary .go:after { content: "\00A0\25B8"; white-space: nowrap; }
@@ -704,6 +705,7 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 .post-summary .entry-summary .go:hover:after, .post-summary .entry-summary .go:focus:after { right: -4px; }
 
 .post-mini .entry-title { padding: 0 10px; }
+.post-mini.post-thumb-disabled .entry-title:before { border-top: 2px solid #000; content: ''; display: block; margin-bottom: 20px; }
 .post-mini .date { font-size: 12px; font-size: 0.6666666667rem; font-family: "Open Sans", X-LocaleSpecific, sans-serif; padding: 0 10px; }
 @media screen and (min-width: 760px) { .post-mini .date { font-size: 14px; font-size: 0.7777777778rem; } }
 
