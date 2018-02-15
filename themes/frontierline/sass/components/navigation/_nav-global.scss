@@ -179,10 +179,18 @@
         @include font-size-level5;
         margin: 0 auto;
         padding: .35em 20px;
+    }
+
+    .nav-global-fxdownload .button.button-green {
+        background-color: $color-button-light;
+        border-color: $color-button-green;
+        color: $color-button-green;
 
         &:hover,
         &:focus {
+            background-color: $color-button-green;
             border: 2px solid $color-button-green;
+            color: $color-button-light;
         }
     }
 
