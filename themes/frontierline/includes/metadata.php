@@ -1,12 +1,17 @@
 <?php
+  $yoast_title_options = null;
+  $yoast_home_metadesc = null;
+  $yoast_title = null;
+  $yoast_metadesc = null;
+
   // If Yoast SEO is active, fetch its metadata
   if (class_exists('WPSEO_Frontend') && class_exists('WPSEO_Replace_Vars')) {
     $yoast_title_options = get_option('wpseo_titles');
-    $yoast_home_metadesc = sanitize_text_field(wpseo_replace_vars($yoast_title_options['metadesc-home-wpseo']));
+    $yoast_home_metadesc = sanitize_text_field(wpseo_replace_vars($yoast_title_options['metadesc-home-wpseo'], ''));
 
     if (is_singular()) {
-      $yoast_title = sanitize_text_field(wpseo_replace_vars(get_post_meta($post->ID, '_yoast_wpseo_title', true)));
-      $yoast_metadesc = sanitize_text_field(wpseo_replace_vars(get_post_meta($post->ID, '_yoast_wpseo_metadesc', true)));
+      $yoast_title = sanitize_text_field(wpseo_replace_vars(get_post_meta($post->ID, '_yoast_wpseo_title', true), ''));
+      $yoast_metadesc = sanitize_text_field(wpseo_replace_vars(get_post_meta($post->ID, '_yoast_wpseo_metadesc', true), ''));
     }
   }
 ?>
