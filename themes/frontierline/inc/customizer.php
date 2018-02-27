@@ -87,27 +87,44 @@ function frontierline_customize_register($wp_customize) {
 
   $wp_customize->add_control('frontierline_firefox_button', array(
     'label'       => esc_html__('Firefox download button', 'frontierline'),
-    'description' => esc_html__('Display a "Download Firefox" button in the main navigation in place of the "Discover Firefox" link.', 'frontierline'),
+    'description' => esc_html__('Display a “Download Firefox” button in the main navigation in place of the “Discover Firefox” link.', 'frontierline'),
     'priority' => 7,
     'section'     => 'frontierline_theme_options',
     'settings'    => 'frontierline_firefox_button',
     'type'        => 'checkbox',
   ));
 
-  // Register featured image aka post thumbnail option and control
-  $wp_customize->add_setting('frontierline_no_post_thumbnail', array(
-      'capability'        => 'edit_theme_options',
-      'default'           => '',
-      'sanitize_callback' => 'frontierline_sanitize_checkbox',
-      'type'              => 'theme_mod',
-    ));
+  // Register hero image option and control
+  $wp_customize->add_setting('frontierline_no_post_image', array(
+    'capability'        => 'edit_theme_options',
+    'default'           => '',
+    'sanitize_callback' => 'frontierline_sanitize_checkbox',
+    'type'              => 'theme_mod',
+  ));
 
-  $wp_customize->add_control('frontierline_no_post_thumbnail', array(
-    'label'       => esc_html__('Disable featured images', 'frontierline'),
-    'description' => esc_html__('Do not display featured images on posts.', 'frontierline'),
+  $wp_customize->add_control('frontierline_no_post_image', array(
+    'label'       => esc_html__('Disable featured images on post pages', 'frontierline'),
+    'description' => esc_html__('Don’t show the full sized featured image on single posts and static pages.', 'frontierline'),
     'priority' => 9,
     'section'     => 'frontierline_theme_options',
-    'settings'    => 'frontierline_no_post_thumbnail',
+    'settings'    => 'frontierline_no_post_image',
+    'type'        => 'checkbox',
+  ));
+
+  // Register featured image aka post thumbnail option and control
+  $wp_customize->add_setting('frontierline_no_summary_image', array(
+    'capability'        => 'edit_theme_options',
+    'default'           => '',
+    'sanitize_callback' => 'frontierline_sanitize_checkbox',
+    'type'              => 'theme_mod',
+  ));
+
+  $wp_customize->add_control('frontierline_no_summary_image', array(
+    'label'       => esc_html__('Disable featured images in summaries', 'frontierline'),
+    'description' => esc_html__('Don’t show featured images on summary views (the front page, archives, search results, etc.)', 'frontierline'),
+    'priority' => 9,
+    'section'     => 'frontierline_theme_options',
+    'settings'    => 'frontierline_no_summary_image',
     'type'        => 'checkbox',
   ));
 
@@ -120,8 +137,8 @@ function frontierline_customize_register($wp_customize) {
   ));
 
   $wp_customize->add_control('frontierline_no_byline', array(
-    'label'       => esc_html__('Hide Byline', 'frontierline'),
-    'description' => esc_html__('Do not display the author\'s name with articles.', 'frontierline'),
+    'label'       => esc_html__('Disable bylines', 'frontierline'),
+    'description' => esc_html__('Don’t display the author’s name with articles.', 'frontierline'),
     'priority' => 10,
     'section'     => 'frontierline_theme_options',
     'settings'    => 'frontierline_no_byline',

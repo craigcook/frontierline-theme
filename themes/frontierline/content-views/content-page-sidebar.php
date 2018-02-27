@@ -4,13 +4,13 @@
  */
 ?>
 
-<?php if (get_theme_mod('frontierline_no_post_thumbnail') !== '1') : ?>
+<?php if (get_theme_mod('frontierline_no_post_image') !== '1') : ?>
   <?php if (has_post_thumbnail()) : ?>
-    <?php if (get_post_meta(get_the_ID(), '_frontierline_display_hero', true) == 1) : ?>
+    <?php if (get_post_meta(get_the_ID(), '_frontierline_hide_hero', true) == '1') : ?>
       <div class="post-image post-image-featured">
         <?php the_post_thumbnail('post-full-size'); ?>
       </div>
-     <?php endif; ?>
+    <?php endif; ?>
   <?php endif; ?>
 <?php endif; ?>
 

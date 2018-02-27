@@ -4,7 +4,7 @@ Theme URI: https://github.com/craigcook/frontierline-theme
 Author: Craig Cook, Michael Ham, and all your friends at Mozilla
 Author URI: https://www.mozilla.org
 Description: A theme for official Mozilla blogs.
-Version: 2.1
+Version: 2.3
 License: GPL GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: frontierline
@@ -337,7 +337,7 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 
 #comment-form #cmt-ackbar { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; /* !important required to ensure element is hidden when mixin is applied */ position: absolute !important; /* stylelint-disable-line declaration-no-important */ width: 1px; }
 
-#masthead { -webkit-background-size: cover; background-size: cover; background-color: #fff; overflow: hidden; position: relative; padding-top: 2.5em; overflow: hidden; }
+#masthead { -webkit-background-size: cover; background-size: cover; background-color: #fff; background-position: center center; overflow: hidden; position: relative; padding-top: 2.5em; overflow: hidden; }
 #masthead .site-id { -webkit-background-size: 100% auto; background-size: 100% auto; background-position: center center; background-repeat: no-repeat; margin-top: -2.5em; overflow: hidden; padding: 2.5em 20px 0; position: relative; }
 #masthead .site-id:after { -webkit-transform: rotate(30deg); transform: rotate(30deg); content: ''; display: block; height: 250%; left: 70%; position: absolute; top: -25%; width: 50%; }
 #masthead .site-title-wrap { color: #000; position: relative; z-index: 10; }
