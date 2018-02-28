@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Frontierline\n"
-"POT-Creation-Date: 2017-07-26 15:52-0700\n"
-"PO-Revision-Date: 2017-07-26 15:52-0700\n"
+"POT-Creation-Date: 2018-02-28 11:13-0800\n"
+"PO-Revision-Date: 2018-02-28 11:13-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -16,23 +16,23 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: archive.php:18 functions.php:305
+#: archive.php:18 functions.php:306
 #, php-format
 msgid "Articles in “%s”"
 msgstr "Artikel in „%s“"
 
-#: archive.php:20 functions.php:307
+#: archive.php:20 functions.php:308
 #, php-format
 msgid "Articles tagged with “%s”"
 msgstr "Artikel mit dem Schlagwort „%s“"
 
-#: archive.php:22 archive.php:24 archive.php:26 functions.php:311
-#: functions.php:313 functions.php:315
+#: archive.php:22 archive.php:24 archive.php:26 functions.php:312
+#: functions.php:314 functions.php:316
 #, php-format
 msgid "Articles from %s"
 msgstr "Artikel aus %s"
 
-#: archive.php:28 functions.php:309
+#: archive.php:28 functions.php:310
 #, php-format
 msgid "Articles by %s"
 msgstr "Artikel von %s"
@@ -70,65 +70,6 @@ msgid ""
 msgstr ""
 "Die Kommentare sind geschlossen, aber die <a href=\"%1$s\" title=\"Trackback-"
 "URL für diesen Beitrag\">Trackbacks</a> sind offen."
-
-#: comments.php:62
-#, php-format
-msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
-msgstr ""
-"Sie müssen <a href=\"%s\">angemeldet</a> sein, um einen Kommentar zu "
-"schreiben."
-
-#: comments.php:66
-msgid "Post your comment"
-msgstr "Schreiben Sie Ihren Kommentar"
-
-#: comments.php:66
-#, php-format
-msgid "Reply to %s"
-msgstr "Auf %s antworten"
-
-#: comments.php:67
-msgid "Cancel reply"
-msgstr "Antwort abbrechen"
-
-#: comments.php:70
-#, php-format
-msgid ""
-"You are logged in as <a href=\"%1$s\">%2$s</a>. <a class=\"logout\" href="
-"\"%3$s\">Log out?</a>"
-msgstr ""
-"Sie sind angemeldet als <a href=\"%1$s\">%2$s</a>. <a class=\"logout\" href="
-"\"%3$s\">Abmelden?</a>"
-
-#: comments.php:73
-msgid "Your name"
-msgstr "Ihr Name"
-
-#: comments.php:73
-msgid "(required)"
-msgstr "(erforderlich)"
-
-#: comments.php:77 includes/newsletter-form.php:22
-msgid "Your e-mail address"
-msgstr "Ihre E-Mail-Adresse"
-
-#: comments.php:77
-msgid "(required, will not be published)"
-msgstr "(erforderlich, wird nicht veröffentlicht)"
-
-#: comments.php:81
-msgid ""
-"Spamming robots, please fill in this field. Real humans should leave it "
-"blank."
-msgstr "Spambots füllen bitte dieses Feld aus. Echte Menschen lassen es frei"
-
-#: comments.php:86
-msgid "Your comment"
-msgstr "Ihr Kommentar"
-
-#: comments.php:90
-msgid "Submit"
-msgstr "Absenden"
 
 #: content-views/content-none.php:10
 msgid "Nothing Found"
@@ -181,36 +122,36 @@ msgstr "Besuchen Sie <a href=\"%s\">mozilla.org</a>."
 msgid "Try searching this blog."
 msgstr "Suchen Sie in diesem Blog."
 
-#: content-views/content-page-sidebar.php:20 content-views/content.php:50
+#: content-views/content-page-sidebar.php:24 content-views/content.php:56
 #: image.php:30
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: content-views/content-page-sidebar.php:27 content-views/content.php:55
+#: content-views/content-page-sidebar.php:31 content-views/content.php:61
 msgid "Continue reading…"
 msgstr "Weiterlesen…"
 
-#: content-views/content-page-sidebar.php:28 content-views/content.php:56
+#: content-views/content-page-sidebar.php:32 content-views/content.php:62
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: content-views/content.php:18
+#: content-views/content.php:22
 msgid "Categories:"
 msgstr "Kategorien:"
 
-#: content-views/content.php:47
+#: content-views/content.php:53
 msgid "No responses yet"
 msgstr "Noch keine Antworten"
 
-#: content-views/content.php:47
+#: content-views/content.php:53
 msgid "1 response"
 msgstr "Eine Antwort"
 
-#: content-views/content.php:47
+#: content-views/content.php:53
 msgid "% responses"
 msgstr "%s Antworten"
 
-#: content-views/content.php:61
+#: content-views/content.php:67
 msgid "Tags:"
 msgstr "Schlagwörter:"
 
@@ -226,40 +167,45 @@ msgstr "Kontakt"
 msgid "Donate"
 msgstr "Spenden"
 
-#: footer.php:41
-msgid "Download Firefox Web Browser"
-msgstr "Internet-Browser Firefox herunterladen"
+#: footer.php:41 includes/nav-global.php:18
+#, fuzzy
+msgid "Download Firefox"
+msgstr "Firefox herunterladen"
 
 #: footer.php:42
-msgid "Desktop Browser for Mac, Windows, Linux"
-msgstr "Desktop-Browser für Mac, Windows, Linux"
+msgid "Desktop"
+msgstr ""
 
 #: footer.php:43
-msgid "Mobile Browser for Android"
-msgstr "Mobiler Browser für Android"
+msgid "Mobile"
+msgstr ""
 
 #: footer.php:44
-msgid "Mobile Browser for iOS"
-msgstr "Mobiler Browser für iOS"
+msgid "Features"
+msgstr ""
 
-#: footer.php:59
-msgid "Privacy"
-msgstr "Datenschutz"
+#: footer.php:45
+msgid "Beta, Nightly, Developer Edition"
+msgstr ""
 
 #: footer.php:60
+msgid "Website Privacy Notice"
+msgstr ""
+
+#: footer.php:61
 msgid "Cookies"
 msgstr "Cookies"
 
-#: footer.php:61
+#: footer.php:62
 msgid "Legal"
 msgstr "Rechtliches"
 
-#: footer.php:64
-#, php-format
+#: footer.php:65
+#, fuzzy, php-format
 msgid ""
 "Portions of this content are ©1998-%1s by individual contributors. Content "
 "available under a <a href=\"%2s\" rel=\"external license\">Creative Commons "
-"license</a>"
+"license</a>."
 msgstr ""
 "Teile dieses Inhalts stehen unter einem ©1998–%1s von einzelnen "
 "Mitwirkenden. Der Inhalt steht unter einer <a href=\"%2s\" rel=\"external "
@@ -281,24 +227,24 @@ msgstr "Teilen von Pages"
 msgid "Twitter username"
 msgstr "Twitter-Benutzername"
 
-#: functions.php:124
+#: functions.php:125
 msgid "Add social sharing buttons to posts"
 msgstr "Teilen-Schaltflächen für Beiträge hinzufügen"
 
-#: functions.php:126
+#: functions.php:127
 msgid "Adds buttons for Twitter and Facebook to the top of blog articles."
 msgstr ""
 "Fügt oben an den Artikeln Schaltflächen für Twitter und Facebook hinzu."
 
-#: functions.php:140
+#: functions.php:141
 msgid "Add social sharing buttons to Pages"
 msgstr "Teilen-Schaltflächen für Pages hinzufügen"
 
-#: functions.php:142
+#: functions.php:143
 msgid "Adds buttons for Twitter and Facebook to the top of static Pages."
 msgstr "Fügt statischen Pages Schaltflächen für Twitter und Facebook hinzu."
 
-#: functions.php:155
+#: functions.php:156
 msgid ""
 "The Twitter account for attribution when sharing. Appears as \"via @username"
 "\" at the end of the tweet, and Twitter may suggest related accounts to "
@@ -308,25 +254,31 @@ msgstr ""
 "@username\" am Ende des Tweets und Twitter kann ähnliche Konten zum Folgen "
 "empfehlen. Leerlassen, zm keinen Bezug herzustellen."
 
-#: functions.php:167
+#: functions.php:168
 msgid "Extra Large"
 msgstr "Extragroß"
 
-#: functions.php:277
+#: functions.php:278
 #, php-format
 msgid "Page %s"
 msgstr "Seite %s"
 
-#: functions.php:320
+#: functions.php:321
 #, php-format
 msgid "Search results for “%s”"
 msgstr "Suchergebnisse für „%s“"
 
-#: functions.php:322
+#: functions.php:323
 msgid "Not Found"
 msgstr "Nicht gefunden"
 
-#: functions.php:380
+#: functions.php:403
+msgid ""
+"Spamming robots, please fill in this field. Real humans should leave it "
+"blank."
+msgstr "Spambots füllen bitte dieses Feld aus. Echte Menschen lassen es frei"
+
+#: functions.php:413
 msgid ""
 "Sorry, you appear to be a spamming robot because you filled in the hidden "
 "spam trap field. To show you are not a spammer, submit your comment again "
@@ -336,69 +288,91 @@ msgstr ""
 "ausgefüllt haben. Um zu zeigen, dass Sie kein Spammer sind, schicken Sie "
 "Ihren Kommentar erneut ab und lassen Sie das Feld leer."
 
-#: functions.php:381
+#: functions.php:414
 msgid "Spam Prevention"
 msgstr "Spamschutz"
 
-#: functions.php:439
+#: functions.php:504
 msgid "Read more"
 msgstr "Mehr lesen"
 
-#: functions.php:475
+#: functions.php:540
 msgid "Sidebar Menu"
 msgstr "Menü der Seitenleiste"
 
-#: functions.php:500
+#: functions.php:565
 msgid "Trackback from "
 msgstr "Trackback von "
 
 #. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
 #. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
-#: functions.php:503 functions.php:516
+#: functions.php:568 functions.php:581
 msgid "on"
 msgstr "am"
 
-#: functions.php:504 functions.php:517 functions.php:531
+#: functions.php:569 functions.php:582 functions.php:596
 msgid "Permanent link to this comment by "
 msgstr "Permanenter Link zu diesem Kommentar von "
 
 #. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
 #. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
 #. L10n: Comment headings read "<Name> wrote on <Date> at <Time>:"
-#: functions.php:507 functions.php:520 functions.php:534
+#: functions.php:572 functions.php:585 functions.php:599
 #, php-format
 msgid "%1$s at %2$s:"
 msgstr "%1$s um %2$s:"
 
-#: functions.php:513
+#: functions.php:578
 msgid "Ping from "
 msgstr "Ping von "
 
-#: functions.php:530
+#: functions.php:595
 msgid "wrote on"
 msgstr "schrieb am "
 
-#: functions.php:543
+#: functions.php:608
 msgid "Your comment is awaiting moderation."
 msgstr "Ihr Kommentar wartet auf Freigabe."
 
-#: functions.php:555
+#: functions.php:620
 msgid "Edit comment"
 msgstr "Kommentar bearbeiten"
 
-#: functions.php:601
+#: functions.php:667
+#, fuzzy
 msgid ""
 "Remember to include a featured image! It should be at least 1400 by 770 "
-"pixels. Posts without a featured image will show a standard placeholder "
-"image."
+"pixels."
 msgstr ""
 "Fügen Sie unbedingt ein vorgestelltes Bild ein! Es sollte mindestens 1400 "
 "mal 770Pixel groß sein. Beiträge ohne vorgestelltes Bild zeigen ein Standard-"
 "Platzhalterbild"
 
-#: functions.php:634
+#: functions.php:670
+#, fuzzy
+msgid " Posts without a featured image will show a standard placeholder image."
+msgstr ""
+"Fügen Sie unbedingt ein vorgestelltes Bild ein! Es sollte mindestens 1400 "
+"mal 770Pixel groß sein. Beiträge ohne vorgestelltes Bild zeigen ein Standard-"
+"Platzhalterbild"
+
+#: functions.php:715
 msgid "Custom Sidebar Content"
 msgstr "Menü der Seitenleiste"
+
+#: functions.php:746
+msgid ""
+"The image will be used as a thumbnail for this post and for social media, "
+"but won‘t appear on the post page."
+msgstr ""
+
+#: functions.php:749
+msgid "Hide featured image"
+msgstr ""
+
+#: functions.php:756
+msgid "Hide Featured Image"
+msgstr ""
 
 #: image.php:18
 #, php-format
@@ -505,22 +479,22 @@ msgid "Internet Health"
 msgstr "Internetgesundheit"
 
 #: includes/nav-global.php:15
-msgid "Web Innovations"
-msgstr "Web-Innovationen"
+msgid "Technology"
+msgstr ""
 
 #: includes/nav-global.php:16
 msgid "Give"
 msgstr "Spenden"
 
-#: includes/nav-global.php:17
+#: includes/nav-global.php:20
 msgid "Discover Firefox"
 msgstr "Firefox entdecken"
 
-#: includes/nav-global.php:21
+#: includes/nav-global.php:25
 msgid "Go to the top of the page"
 msgstr "Zum Seitenanfang springen"
 
-#: includes/nav-global.php:21
+#: includes/nav-global.php:25
 msgid "Top"
 msgstr "Nach oben"
 
@@ -561,6 +535,10 @@ msgid "Get the Mozilla newsletter and help us keep it open and free."
 msgstr ""
 "Abonnieren Sie den Mozilla-Newsletter und helfen Sie, dass es offen und frei "
 "bleibt."
+
+#: includes/newsletter-form.php:22
+msgid "Your e-mail address"
+msgstr "Ihre E-Mail-Adresse"
 
 #. L10n: 'yourname' is used as the first part of an example e-mail address, as in 'yourname@example.com'
 #: includes/newsletter-form.php:24
@@ -642,6 +620,57 @@ msgstr "Diese Website durchsuchen"
 #: searchform.php:12
 msgid "Search"
 msgstr "Suchen"
+
+#~ msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+#~ msgstr ""
+#~ "Sie müssen <a href=\"%s\">angemeldet</a> sein, um einen Kommentar zu "
+#~ "schreiben."
+
+#~ msgid "Post your comment"
+#~ msgstr "Schreiben Sie Ihren Kommentar"
+
+#~ msgid "Reply to %s"
+#~ msgstr "Auf %s antworten"
+
+#~ msgid "Cancel reply"
+#~ msgstr "Antwort abbrechen"
+
+#~ msgid ""
+#~ "You are logged in as <a href=\"%1$s\">%2$s</a>. <a class=\"logout\" href="
+#~ "\"%3$s\">Log out?</a>"
+#~ msgstr ""
+#~ "Sie sind angemeldet als <a href=\"%1$s\">%2$s</a>. <a class=\"logout\" "
+#~ "href=\"%3$s\">Abmelden?</a>"
+
+#~ msgid "Your name"
+#~ msgstr "Ihr Name"
+
+#~ msgid "(required)"
+#~ msgstr "(erforderlich)"
+
+#~ msgid "(required, will not be published)"
+#~ msgstr "(erforderlich, wird nicht veröffentlicht)"
+
+#~ msgid "Your comment"
+#~ msgstr "Ihr Kommentar"
+
+#~ msgid "Submit"
+#~ msgstr "Absenden"
+
+#~ msgid "Desktop Browser for Mac, Windows, Linux"
+#~ msgstr "Desktop-Browser für Mac, Windows, Linux"
+
+#~ msgid "Mobile Browser for Android"
+#~ msgstr "Mobiler Browser für Android"
+
+#~ msgid "Mobile Browser for iOS"
+#~ msgstr "Mobiler Browser für iOS"
+
+#~ msgid "Privacy"
+#~ msgstr "Datenschutz"
+
+#~ msgid "Web Innovations"
+#~ msgstr "Web-Innovationen"
 
 #~ msgid "Report Trademark Abuse"
 #~ msgstr "Markenrechtsverletzung melden"

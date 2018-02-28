@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Frontierline - Firefox\n"
-"POT-Creation-Date: 2017-07-26 15:37-0700\n"
-"PO-Revision-Date: 2017-07-26 15:38-0700\n"
+"POT-Creation-Date: 2018-02-28 11:14-0800\n"
+"PO-Revision-Date: 2018-02-28 11:14-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -16,73 +16,45 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: content-views/content.php:12
+#: content-views/content.php:22
 msgid "Categories:"
 msgstr "Kategorien:"
 
-#: content-views/content.php:38
+#: content-views/content.php:53
 msgid "No responses yet"
 msgstr "Noch keine Antworten"
 
-#: content-views/content.php:38
+#: content-views/content.php:53
 msgid "1 response"
 msgstr "Eine Antwort"
 
-#: content-views/content.php:38
+#: content-views/content.php:53
 msgid "% responses"
 msgstr "%s Antworten"
 
-#: content-views/content.php:41
+#: content-views/content.php:56
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: content-views/content.php:46
+#: content-views/content.php:61
 msgid "Continue reading…"
 msgstr "Weiterlesen…"
 
-#: content-views/content.php:47
+#: content-views/content.php:62
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: content-views/content.php:52
+#: content-views/content.php:67
 msgid "Tags:"
 msgstr "Schlagwörter:"
 
-#: content-views/content.php:57
+#: content-views/content.php:72
 msgid "Browse fast. Browse free."
 msgstr "Schnell surfen. Surfe in Freiheit."
 
-#: content-views/content.php:58 includes/nav-global.php:11
+#: content-views/content.php:73
 msgid "Download Firefox"
 msgstr "Firefox herunterladen"
-
-#: includes/nav-global.php:9
-msgid "Visit mozilla.org"
-msgstr "mozilla.org besuchen"
-
-#: includes/nav-global.php:14
-msgid "Menu"
-msgstr "Menü"
-
-#: includes/nav-global.php:16
-msgid "Internet Health"
-msgstr "Internetgesundheit"
-
-#: includes/nav-global.php:17
-msgid "Web Innovations"
-msgstr "Web-Innovationen"
-
-#: includes/nav-global.php:18
-msgid "Give"
-msgstr "Spenden"
-
-#: includes/nav-global.php:22
-msgid "Go to the top of the page"
-msgstr "Zum Seitenanfang springen"
-
-#: includes/nav-global.php:22
-msgid "Top"
-msgstr "Nach oben"
 
 #. L10n: line break for visual formatting
 #: includes/newsletter-form.php:15
@@ -153,3 +125,24 @@ msgid "Please check your inbox or your spam filter for an e-mail from us."
 msgstr ""
 "Sehen Sie bitte in Ihrem Posteingang oder Ihrem Spam-Filter nach einer E-"
 "Mail von uns."
+
+#~ msgid "Visit mozilla.org"
+#~ msgstr "mozilla.org besuchen"
+
+#~ msgid "Menu"
+#~ msgstr "Menü"
+
+#~ msgid "Internet Health"
+#~ msgstr "Internetgesundheit"
+
+#~ msgid "Web Innovations"
+#~ msgstr "Web-Innovationen"
+
+#~ msgid "Give"
+#~ msgstr "Spenden"
+
+#~ msgid "Go to the top of the page"
+#~ msgstr "Zum Seitenanfang springen"
+
+#~ msgid "Top"
+#~ msgstr "Nach oben"

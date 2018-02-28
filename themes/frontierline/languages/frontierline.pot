@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-07-26 15:44-0700\n"
+"POT-Creation-Date: 2018-02-28 11:02-0800\n"
 "PO-Revision-Date: 2017-02-23 14:32-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,23 +17,23 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: archive.php:18 functions.php:305
+#: archive.php:18 functions.php:306
 #, php-format
 msgid "Articles in “%s”"
 msgstr ""
 
-#: archive.php:20 functions.php:307
+#: archive.php:20 functions.php:308
 #, php-format
 msgid "Articles tagged with “%s”"
 msgstr ""
 
-#: archive.php:22 archive.php:24 archive.php:26 functions.php:311
-#: functions.php:313 functions.php:315
+#: archive.php:22 archive.php:24 archive.php:26 functions.php:312
+#: functions.php:314 functions.php:316
 #, php-format
 msgid "Articles from %s"
 msgstr ""
 
-#: archive.php:28 functions.php:309
+#: archive.php:28 functions.php:310
 #, php-format
 msgid "Articles by %s"
 msgstr ""
@@ -41,13 +41,13 @@ msgstr ""
 #. L10n: %s: post title
 #: comments.php:23
 #, php-format
-msgid "One comment on &ldquo;%s&rdquo;"
+msgid "One comment on “%s”"
 msgstr ""
 
 #. L10n: 1: number of comments, 2: post title
 #: comments.php:26
 #, php-format
-msgid "%1$s comments on &ldquo;%2$s&rdquo;"
+msgid "%1$s comments on “%2$s”"
 msgstr ""
 
 #: comments.php:31
@@ -68,61 +68,6 @@ msgstr ""
 msgid ""
 "Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post"
 "\">trackbacks</a> are open."
-msgstr ""
-
-#: comments.php:62
-#, php-format
-msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
-msgstr ""
-
-#: comments.php:66
-msgid "Post your comment"
-msgstr ""
-
-#: comments.php:66
-#, php-format
-msgid "Reply to %s"
-msgstr ""
-
-#: comments.php:67
-msgid "Cancel reply"
-msgstr ""
-
-#: comments.php:70
-#, php-format
-msgid ""
-"You are logged in as <a href=\"%1$s\">%2$s</a>. <a class=\"logout\" href="
-"\"%3$s\">Log out?</a>"
-msgstr ""
-
-#: comments.php:73
-msgid "Your name"
-msgstr ""
-
-#: comments.php:73
-msgid "(required)"
-msgstr ""
-
-#: comments.php:77 includes/newsletter-form.php:22
-msgid "Your e-mail address"
-msgstr ""
-
-#: comments.php:77
-msgid "(required, will not be published)"
-msgstr ""
-
-#: comments.php:81
-msgid ""
-"Spamming robots, please fill in this field. Real humans should leave it "
-"blank."
-msgstr ""
-
-#: comments.php:86
-msgid "Your comment"
-msgstr ""
-
-#: comments.php:90
-msgid "Submit"
 msgstr ""
 
 #: content-views/content-none.php:10
@@ -170,36 +115,36 @@ msgstr ""
 msgid "Try searching this blog."
 msgstr ""
 
-#: content-views/content-page-sidebar.php:20 content-views/content.php:50
+#: content-views/content-page-sidebar.php:24 content-views/content.php:56
 #: image.php:30
 msgid "Edit"
 msgstr ""
 
-#: content-views/content-page-sidebar.php:27 content-views/content.php:55
+#: content-views/content-page-sidebar.php:31 content-views/content.php:61
 msgid "Continue reading…"
 msgstr ""
 
-#: content-views/content-page-sidebar.php:28 content-views/content.php:56
+#: content-views/content-page-sidebar.php:32 content-views/content.php:62
 msgid "Pages:"
 msgstr ""
 
-#: content-views/content.php:18
+#: content-views/content.php:22
 msgid "Categories:"
 msgstr ""
 
-#: content-views/content.php:47
+#: content-views/content.php:53
 msgid "No responses yet"
 msgstr ""
 
-#: content-views/content.php:47
+#: content-views/content.php:53
 msgid "1 response"
 msgstr ""
 
-#: content-views/content.php:47
+#: content-views/content.php:53
 msgid "% responses"
 msgstr ""
 
-#: content-views/content.php:61
+#: content-views/content.php:67
 msgid "Tags:"
 msgstr ""
 
@@ -215,40 +160,44 @@ msgstr ""
 msgid "Donate"
 msgstr ""
 
-#: footer.php:41
-msgid "Download Firefox Web Browser"
+#: footer.php:41 includes/nav-global.php:18
+msgid "Download Firefox"
 msgstr ""
 
 #: footer.php:42
-msgid "Desktop Browser for Mac, Windows, Linux"
+msgid "Desktop"
 msgstr ""
 
 #: footer.php:43
-msgid "Mobile Browser for Android"
+msgid "Mobile"
 msgstr ""
 
 #: footer.php:44
-msgid "Mobile Browser for iOS"
+msgid "Features"
 msgstr ""
 
-#: footer.php:59
-msgid "Privacy"
+#: footer.php:45
+msgid "Beta, Nightly, Developer Edition"
 msgstr ""
 
 #: footer.php:60
-msgid "Cookies"
+msgid "Website Privacy Notice"
 msgstr ""
 
 #: footer.php:61
+msgid "Cookies"
+msgstr ""
+
+#: footer.php:62
 msgid "Legal"
 msgstr ""
 
-#: footer.php:64
+#: footer.php:65
 #, php-format
 msgid ""
 "Portions of this content are ©1998-%1s by individual contributors. Content "
 "available under a <a href=\"%2s\" rel=\"external license\">Creative Commons "
-"license</a>"
+"license</a>."
 msgstr ""
 
 #: functions.php:44
@@ -267,113 +216,136 @@ msgstr ""
 msgid "Twitter username"
 msgstr ""
 
-#: functions.php:124
+#: functions.php:125
 msgid "Add social sharing buttons to posts"
 msgstr ""
 
-#: functions.php:126
+#: functions.php:127
 msgid "Adds buttons for Twitter and Facebook to the top of blog articles."
 msgstr ""
 
-#: functions.php:140
+#: functions.php:141
 msgid "Add social sharing buttons to Pages"
 msgstr ""
 
-#: functions.php:142
+#: functions.php:143
 msgid "Adds buttons for Twitter and Facebook to the top of static Pages."
 msgstr ""
 
-#: functions.php:155
+#: functions.php:156
 msgid ""
 "The Twitter account for attribution when sharing. Appears as \"via @username"
 "\" at the end of the tweet, and Twitter may suggest related accounts to "
 "follow. Leave this blank for no attribution."
 msgstr ""
 
-#: functions.php:167
+#: functions.php:168
 msgid "Extra Large"
 msgstr ""
 
-#: functions.php:277
+#: functions.php:278
 #, php-format
 msgid "Page %s"
 msgstr ""
 
-#: functions.php:320
+#: functions.php:321
 #, php-format
 msgid "Search results for “%s”"
 msgstr ""
 
-#: functions.php:322
+#: functions.php:323
 msgid "Not Found"
 msgstr ""
 
-#: functions.php:380
+#: functions.php:403
+msgid ""
+"Spamming robots, please fill in this field. Real humans should leave it "
+"blank."
+msgstr ""
+
+#: functions.php:413
 msgid ""
 "Sorry, you appear to be a spamming robot because you filled in the hidden "
 "spam trap field. To show you are not a spammer, submit your comment again "
 "and leave the field blank."
 msgstr ""
 
-#: functions.php:381
+#: functions.php:414
 msgid "Spam Prevention"
 msgstr ""
 
-#: functions.php:439
+#: functions.php:504
 msgid "Read more"
 msgstr ""
 
-#: functions.php:475
+#: functions.php:540
 msgid "Sidebar Menu"
 msgstr ""
 
-#: functions.php:500
+#: functions.php:565
 msgid "Trackback from "
 msgstr ""
 
 #. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
 #. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
-#: functions.php:503 functions.php:516
+#: functions.php:568 functions.php:581
 msgid "on"
 msgstr ""
 
-#: functions.php:504 functions.php:517 functions.php:531
+#: functions.php:569 functions.php:582 functions.php:596
 msgid "Permanent link to this comment by "
 msgstr ""
 
 #. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
 #. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
 #. L10n: Comment headings read "<Name> wrote on <Date> at <Time>:"
-#: functions.php:507 functions.php:520 functions.php:534
+#: functions.php:572 functions.php:585 functions.php:599
 #, php-format
 msgid "%1$s at %2$s:"
 msgstr ""
 
-#: functions.php:513
+#: functions.php:578
 msgid "Ping from "
 msgstr ""
 
-#: functions.php:530
+#: functions.php:595
 msgid "wrote on"
 msgstr ""
 
-#: functions.php:543
+#: functions.php:608
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:555
+#: functions.php:620
 msgid "Edit comment"
 msgstr ""
 
-#: functions.php:601
+#: functions.php:667
 msgid ""
 "Remember to include a featured image! It should be at least 1400 by 770 "
-"pixels. Posts without a featured image will show a standard placeholder "
-"image."
+"pixels."
 msgstr ""
 
-#: functions.php:634
+#: functions.php:670
+msgid " Posts without a featured image will show a standard placeholder image."
+msgstr ""
+
+#: functions.php:715
 msgid "Custom Sidebar Content"
+msgstr ""
+
+#: functions.php:746
+msgid ""
+"The image will be used as a thumbnail for this post and for social media, "
+"but won‘t appear on the post page."
+msgstr ""
+
+#: functions.php:749
+msgid "Hide featured image"
+msgstr ""
+
+#: functions.php:756
+msgid "Hide Featured Image"
 msgstr ""
 
 #: image.php:18
@@ -480,22 +452,22 @@ msgid "Internet Health"
 msgstr ""
 
 #: includes/nav-global.php:15
-msgid "Web Innovations"
+msgid "Technology"
 msgstr ""
 
 #: includes/nav-global.php:16
 msgid "Give"
 msgstr ""
 
-#: includes/nav-global.php:17
+#: includes/nav-global.php:20
 msgid "Discover Firefox"
 msgstr ""
 
-#: includes/nav-global.php:21
+#: includes/nav-global.php:25
 msgid "Go to the top of the page"
 msgstr ""
 
-#: includes/nav-global.php:21
+#: includes/nav-global.php:25
 msgid "Top"
 msgstr ""
 
@@ -533,6 +505,10 @@ msgstr ""
 
 #: includes/newsletter-form.php:15
 msgid "Get the Mozilla newsletter and help us keep it open and free."
+msgstr ""
+
+#: includes/newsletter-form.php:22
+msgid "Your e-mail address"
 msgstr ""
 
 #. L10n: 'yourname' is used as the first part of an example e-mail address, as in 'yourname@example.com'

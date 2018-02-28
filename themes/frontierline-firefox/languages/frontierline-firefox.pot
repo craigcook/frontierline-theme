@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Frontierline - Firefox\n"
-"POT-Creation-Date: 2017-07-21 17:12-0700\n"
+"POT-Creation-Date: 2018-02-28 11:14-0800\n"
 "PO-Revision-Date: 2017-04-20 19:27-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -17,72 +17,44 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: content-views/content.php:12
+#: content-views/content.php:22
 msgid "Categories:"
 msgstr ""
 
-#: content-views/content.php:38
+#: content-views/content.php:53
 msgid "No responses yet"
 msgstr ""
 
-#: content-views/content.php:38
+#: content-views/content.php:53
 msgid "1 response"
 msgstr ""
 
-#: content-views/content.php:38
+#: content-views/content.php:53
 msgid "% responses"
 msgstr ""
 
-#: content-views/content.php:41
+#: content-views/content.php:56
 msgid "Edit"
 msgstr ""
 
-#: content-views/content.php:46
+#: content-views/content.php:61
 msgid "Continue reading…"
 msgstr ""
 
-#: content-views/content.php:47
+#: content-views/content.php:62
 msgid "Pages:"
 msgstr ""
 
-#: content-views/content.php:52
+#: content-views/content.php:67
 msgid "Tags:"
 msgstr ""
 
-#: content-views/content.php:57
+#: content-views/content.php:72
 msgid "Browse fast. Browse free."
 msgstr ""
 
-#: content-views/content.php:58 includes/nav-global.php:11
+#: content-views/content.php:73
 msgid "Download Firefox"
-msgstr ""
-
-#: includes/nav-global.php:9
-msgid "Visit mozilla.org"
-msgstr ""
-
-#: includes/nav-global.php:14
-msgid "Menu"
-msgstr ""
-
-#: includes/nav-global.php:16
-msgid "Internet Health"
-msgstr ""
-
-#: includes/nav-global.php:17
-msgid "Web Innovations"
-msgstr ""
-
-#: includes/nav-global.php:18
-msgid "Give"
-msgstr ""
-
-#: includes/nav-global.php:22
-msgid "Go to the top of the page"
-msgstr ""
-
-#: includes/nav-global.php:22
-msgid "Top"
 msgstr ""
 
 #. L10n: line break for visual formatting
