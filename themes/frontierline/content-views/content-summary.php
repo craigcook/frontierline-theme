@@ -7,7 +7,7 @@ $post_classes = array(
   'post-summary',
 );
 
-if (get_theme_mod('frontierline_no_post_thumbnail') === '1') {
+if (get_theme_mod('frontierline_no_summary_image') === '1') {
   array_push($post_classes, 'post-thumb-disabled');
 }
 
@@ -17,7 +17,7 @@ if (get_theme_mod('frontierline_no_post_thumbnail') === '1') {
 
   <header class="entry-header">
     <a href="<?php the_permalink(); ?>" class="entry-link" title="<?php printf(esc_attr__('Permanent link to “%s”', 'frontierline'), the_title_attribute('echo=0')); ?>" rel="bookmark">
-      <?php if (get_theme_mod('frontierline_no_post_thumbnail') !== '1') : ?>
+      <?php if (get_theme_mod('frontierline_no_summary_image') !== '1') : ?>
         <div class="post-image post-image-large">
         <?php if (has_post_thumbnail()) :
           the_post_thumbnail('post-large');

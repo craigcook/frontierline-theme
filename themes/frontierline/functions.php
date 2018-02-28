@@ -113,6 +113,7 @@ function frontierline_admin_init(){
 }
 add_action('admin_init', 'frontierline_admin_init');
 
+
 /**
  * Renders the Add Sharing setting field for posts.
  */
@@ -662,8 +663,14 @@ add_action('init', 'frontierline_disable_emojis');
  */
 function frontierline_image_reminder() {
   global $pagenow;
-  $message = __('Remember to include a featured image! It should be at least 1400 by 770 pixels. Posts without a featured image will show a standard placeholder image.', 'frontierline');
-  if ($pagenow === 'post-new.php' && (get_theme_mod('frontierline_no_post_thumbnail') !== '1')) {
+  if (get_theme_mod('frontierline_no_post_image') !== '1' || get_theme_mod('frontierline_no_summary_image') !== '1') {
+    $message = __('Remember to include a featured image! It should be at least 1400 by 770 pixels.', 'frontierline');
+
+    if (get_theme_mod('frontierline_no_summary_image') !== '1') {
+      $message .= __(' Posts without a featured image will show a standard placeholder image.', 'frontierline');
+    }
+  }
+  if ($pagenow === 'post-new.php') {
     echo '<div class="updated"><p>' . $message . '</p></div>';
   }
 }
@@ -728,40 +735,44 @@ function frontierline_save_sidebar_metabox(){
 add_action('admin_init', 'frontierline_register_sidebar_metabox');
 add_action('save_post', 'frontierline_save_sidebar_metabox');
 
+
 /**
- * Display hero images
+ * Hide hero image on single posts
  */
-function frontierline_display_hero($post){
-  $uncropped = get_post_meta($post->ID, '_frontierline_display_hero', true);
+function frontierline_hide_hero($post) {
+    wp_nonce_field(basename( __FILE__ ), '_frontierline_hide_hero_nonce');
+    $hidden = get_post_meta($post->ID, '_frontierline_hide_hero', true);
   ?>
-  <?php if (get_theme_mod('frontierline_no_post_thumbnail') !== '1') : ?>
-    <p><?php _e('If your featured image is important content, you can display it above the post. If this option is unchecked, the image will only be used as a thumbnail and won‘t appear on the post page.', 'frontierline'); ?></p>
-    <label class="selectit" for="frontierline_display_hero">
-      <input type="checkbox" name="_frontierline_display_hero" id="frontierline_display_hero" value="1" <?php if ($uncropped) { ?>checked<?php } ?>>
-      <?php _e('Display featured image', 'frontierline'); ?>
+    <p><?php _e('The image will be used as a thumbnail for this post and for social media, but won‘t appear on the post page.', 'frontierline'); ?></p>
+    <label class="selectit" for="frontierline_hide_hero">
+      <input type="checkbox" name="_frontierline_hide_hero" id="frontierline_hide_hero" value="1" <?php if ($hidden) { ?>checked<?php } ?>>
+      <?php _e('Hide featured image', 'frontierline'); ?>
     </label>
-  <?php endif ?>
 <?php
 }
 
-function register_frontierline_display_hero(){
-  if (get_theme_mod('frontierline_no_post_thumbnail') !== '1') {
-    add_meta_box('meta-display-hero', __('Display Featured Image', 'frontierline'), 'frontierline_display_hero', 'post', 'side', 'low');
+function register_frontierline_hide_hero() {
+  if (get_theme_mod('frontierline_no_post_image') !== '1') {
+    add_meta_box('postimage-hide', __('Hide Featured Image', 'frontierline'), 'frontierline_hide_hero', array('post','page'), 'side', 'low');
   }
 }
+add_action('admin_init', 'register_frontierline_hide_hero', 1);
 
-add_action('admin_init', 'register_frontierline_display_hero', 1);
+function save_frontierline_hide_hero($post_id, $post) {
+  if (!isset($_POST['_frontierline_hide_hero_nonce']) || !wp_verify_nonce($_POST['_frontierline_hide_hero_nonce'], basename( __FILE__ ))) {
+    return $post_id;
+  }
+  if(!current_user_can('edit_post', $post_id)) {
+    return $post_id;
+  }
 
-function save_frontierline_display_hero() {
-  global $post;
-  if (isset($_POST['_frontierline_display_hero'])) {
-    update_post_meta($post->ID, '_frontierline_display_hero', true);
+  if (isset($_POST['_frontierline_hide_hero'])) {
+    update_post_meta($post_id, '_frontierline_hide_hero', true);
   } else {
-    update_post_meta($post->ID, '_frontierline_display_hero', false);
+    update_post_meta($post_id, '_frontierline_hide_hero', false);
   }
 }
-
-add_action('save_post', 'save_frontierline_display_hero');
+add_action('save_post', 'save_frontierline_hide_hero', 10, 3);
 
 
 /**

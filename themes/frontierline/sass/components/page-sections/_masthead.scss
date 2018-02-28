@@ -3,6 +3,7 @@
 #masthead {
     @include background-size(cover);
     background-color: #fff;
+    background-position: center center;
     overflow: hidden;
     position: relative;
     padding-top: 2.5em;

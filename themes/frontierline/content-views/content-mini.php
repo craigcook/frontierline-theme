@@ -5,14 +5,14 @@
 
 // does not use post_class() because we don't want to inherit other post classses
 $post_classes = 'post-mini';
-if (get_theme_mod('frontierline_no_post_thumbnail') === '1') {
+if (get_theme_mod('frontierline_no_summary_image') === '1') {
   $post_classes .= ' post-thumb-disabled';
 }
 ?>
 
 <div class="<?php echo $post_classes ?>">
   <a class="entry-link" href="<?php the_permalink(); ?>">
-    <?php if (get_theme_mod('frontierline_no_post_thumbnail') !== '1') : ?>
+    <?php if (get_theme_mod('frontierline_no_summary_image') !== '1') : ?>
       <?php if (has_post_thumbnail()) :
         $thumb_id = get_post_thumbnail_id();
         $thumb_url = wp_get_attachment_image_src($thumb_id, 'post-thumbnail', true);
