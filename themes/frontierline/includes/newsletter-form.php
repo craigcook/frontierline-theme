@@ -5,7 +5,7 @@
 
 ?>
 
-<?php if ((is_single() && get_option('frontierline_newsform_posts') == 1) || (is_page() && get_option('frontierline_newsform_pages') == 1)) : ?>
+<?php if ((is_single() && get_option('frontierline_newsform_posts', 1) == 1) || (is_page() && get_option('frontierline_newsform_pages', 1) == 1) || (!is_singular() && get_option('frontierline_newsform_other', 1) == 1)) : ?>
 <aside id="newsletter-subscribe" class="section">
   <form id="newsletter_form" class="content newsletter_form" name="newsletter_form" action="https://www.mozilla.org/en-US/newsletter/" method="post" data-blog="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
     <input type="hidden" id="newsletters" name="newsletters" value="mozilla-foundation">
