@@ -1,0 +1,94 @@
+# Copyright (C) 2017 Craig Cook, Kohei Yoshino
+# This file is distributed under the same license as the Frontierline - Nightly package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Frontierline - Nightly 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/frontierline-"
+"nightly\n"
+"POT-Creation-Date: 2017-07-11 09:07:45+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: content-views/content.php:12
+msgid "Categories:"
+msgstr ""
+
+#: content-views/content.php:24
+msgid "Permanent link to “%s”"
+msgstr ""
+
+#: content-views/content.php:41
+msgid "No responses yet"
+msgstr ""
+
+#: content-views/content.php:41
+msgid "1 response"
+msgstr ""
+
+#: content-views/content.php:41
+msgid "% responses"
+msgstr ""
+
+#: content-views/content.php:44
+msgid "Edit"
+msgstr ""
+
+#: content-views/content.php:49
+msgid "Continue reading…"
+msgstr ""
+
+#: content-views/content.php:50
+msgid "Pages:"
+msgstr ""
+
+#: content-views/content.php:55
+msgid "Tags:"
+msgstr ""
+
+#: content-views/content.php:60
+msgid "Bleeding edge browsing"
+msgstr ""
+
+#: content-views/content.php:61 includes/nav-global.php:11
+msgid "Download Firefox Nightly"
+msgstr ""
+
+#: includes/nav-global.php:9
+msgid "Visit mozilla.org"
+msgstr ""
+
+#: includes/nav-global.php:14
+msgid "Menu"
+msgstr ""
+
+#: includes/nav-global.php:16
+msgid "Twitter"
+msgstr ""
+
+#: includes/nav-global.php:17
+msgid "Get Involved"
+msgstr ""
+
+#: includes/nav-global.php:21
+msgid "Go to the top of the page"
+msgstr ""
+
+#: includes/nav-global.php:21
+msgid "Top"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Frontierline - Nightly"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "The Firefox Nightly blog, a child theme of Frontierline."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Craig Cook, Kohei Yoshino"
+msgstr ""
