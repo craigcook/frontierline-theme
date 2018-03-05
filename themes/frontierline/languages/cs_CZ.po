@@ -1,0 +1,664 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Frontierline\n"
+"POT-Creation-Date: 2018-02-28 11:02-0800\n"
+"PO-Revision-Date: 2018-03-04 12:12+0100\n"
+"Last-Translator: Michal Stanke\n"
+"Language-Team: Mozilla.cz <info@mozilla.cz>\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: archive.php:18 functions.php:306
+#, php-format
+msgid "Articles in “%s”"
+msgstr "Články v „%s“"
+
+#: archive.php:20 functions.php:308
+#, php-format
+msgid "Articles tagged with “%s”"
+msgstr "Články se štítkem „%s“"
+
+#: archive.php:22 archive.php:24 archive.php:26 functions.php:312
+#: functions.php:314 functions.php:316
+#, php-format
+msgid "Articles from %s"
+msgstr "Články z %s"
+
+#: archive.php:28 functions.php:310
+#, php-format
+msgid "Articles by %s"
+msgstr "Články od %s"
+
+#. L10n: %s: post title
+#: comments.php:23
+#, php-format
+msgid "One comment on “%s”"
+msgstr "Jeden komentář k článku “%s”"
+
+#. L10n: 1: number of comments, 2: post title
+#: comments.php:26
+#, php-format
+msgid "%1$s comments on “%2$s”"
+msgstr "%1$s komentářů k článku “%2$s”"
+
+#: comments.php:31
+msgid "No comments yet"
+msgstr "Zatím žádné komentáře"
+
+#: comments.php:35
+msgid "Post a comment"
+msgstr "Přidat komentář"
+
+#: comments.php:45
+msgid "More comments:"
+msgstr "Více komentářů:"
+
+#. L10n: 'trackbacks' are when another website refers to this blog post with a link notification
+#: comments.php:54
+#, php-format
+msgid ""
+"Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post"
+"\">trackbacks</a> are open."
+msgstr ""
+"Komentáře jsou uzavřené, ale <a href=\"%1$s\" title=\"Trackback URL pro "
+"tento příspěvek\">trackbacky</a> jsou povolené."
+
+#: content-views/content-none.php:10
+msgid "Nothing Found"
+msgstr "Nic nebylo nalezeno"
+
+#: content-views/content-none.php:16
+#, php-format
+msgid "Sorry, we didn’t find anything for “%s”. Try another search?"
+msgstr "Je nám líto, ale pro „%s“ jsme nic nenašli. Chcete hledat něco jiného?"
+
+#: content-views/content-none.php:20
+msgid ""
+"Sorry, we looked everywhere, but we couldn’t find the page or file you were "
+"looking for. A few possible explanations:"
+msgstr ""
+"Hledali jsme všude, ale hledanou stránku nebo soubor jsme nenašli. Několik "
+"možných důvodů:"
+
+#: content-views/content-none.php:22
+msgid "You may have followed an out-dated link or bookmark."
+msgstr "Možná jste klikli na starý odkaz nebo záložku."
+
+#: content-views/content-none.php:23
+msgid "If you entered the address by hand, you may have mistyped it."
+msgstr "Pokud jste adresu zadali ručně, důkladně ji prosím zkontrolujte."
+
+#: content-views/content-none.php:24
+msgid "You might have just discovered an error. Congratulations!"
+msgstr "Možná jste právě objevili chybu. Gratulujeme!"
+
+#: content-views/content-none.php:27
+msgid "So what do we do now?"
+msgstr "Co teď?"
+
+#: content-views/content-none.php:29
+#, php-format
+msgid "Go to the <a href=\"%s\">front page</a>."
+msgstr "Přejděte na <a href=\"%s\">hlavní stránku</a>."
+
+#: content-views/content-none.php:30
+#, php-format
+msgid "Visit <a href=\"%s\">mozilla.org</a>."
+msgstr "Navštivte <a href=\"%s\">mozilla.org</a>."
+
+#: content-views/content-none.php:31
+msgid "Try searching this blog."
+msgstr "Zkuste vyhledávání na tomto blogu."
+
+#: content-views/content-page-sidebar.php:24 content-views/content.php:56
+#: image.php:30
+msgid "Edit"
+msgstr "Upravit"
+
+#: content-views/content-page-sidebar.php:31 content-views/content.php:61
+msgid "Continue reading…"
+msgstr "Číst dále…"
+
+#: content-views/content-page-sidebar.php:32 content-views/content.php:62
+msgid "Pages:"
+msgstr "Stránky:"
+
+#: content-views/content.php:22
+msgid "Categories:"
+msgstr "Rubriky:"
+
+#: content-views/content.php:53
+msgid "No responses yet"
+msgstr "Zatím žádné odpovědi"
+
+#: content-views/content.php:53
+msgid "1 response"
+msgstr "Jedna odpověď"
+
+#: content-views/content.php:53
+msgid "% responses"
+msgstr "% odpovědi"
+
+#: content-views/content.php:67
+msgid "Tags:"
+msgstr "Štítky:"
+
+#: footer.php:26
+msgid "About"
+msgstr "O nás"
+
+#: footer.php:27
+msgid "Contact Us"
+msgstr "Kontaktujte nás"
+
+#: footer.php:28
+msgid "Donate"
+msgstr "Přispějte"
+
+#: footer.php:41 includes/nav-global.php:18
+msgid "Download Firefox"
+msgstr "Stáhnout Firefox"
+
+#: footer.php:42
+msgid "Desktop"
+msgstr "Počítač"
+
+#: footer.php:43
+msgid "Mobile"
+msgstr "Mobil"
+
+#: footer.php:44
+msgid "Features"
+msgstr "Funkce"
+
+#: footer.php:45
+msgid "Beta, Nightly, Developer Edition"
+msgstr "Beta, Nightly, Developer Edition"
+
+#: footer.php:60
+msgid "Website Privacy Notice"
+msgstr "Zásady ochrany soukromí"
+
+#: footer.php:61
+msgid "Cookies"
+msgstr "Cookies"
+
+#: footer.php:62
+msgid "Legal"
+msgstr "Právní informace"
+
+#: footer.php:65
+#, php-format
+msgid ""
+"Portions of this content are ©1998-%1s by individual contributors. Content "
+"available under a <a href=\"%2s\" rel=\"external license\">Creative Commons "
+"license</a>."
+msgstr ""
+"Části tohoto obsahu jsou &copy; 1998-%1s jednotlivými přispěvateli. Obsah je "
+"dostupný po <a href=\"%2s\" rel=\"external license\">licencí Creative "
+"Commons</a>."
+
+#: functions.php:44
+msgid "Site Menu"
+msgstr "Menu stránky"
+
+#: functions.php:84
+msgid "Social sharing for posts"
+msgstr "Sdílení příspěvků"
+
+#: functions.php:96
+msgid "Social sharing for Pages"
+msgstr "Sdílení stránek"
+
+#: functions.php:108
+msgid "Twitter username"
+msgstr "Uživatelské jméno na Twitteru"
+
+#: functions.php:125
+msgid "Add social sharing buttons to posts"
+msgstr "Přidat k příspěvkům tlačítka pro sdílení na sociálních sítích"
+
+#: functions.php:127
+msgid "Adds buttons for Twitter and Facebook to the top of blog articles."
+msgstr "Přidá nad příspěvky tlačítka pro Twitter a Facebook."
+
+#: functions.php:141
+msgid "Add social sharing buttons to Pages"
+msgstr "Přidat ke stránkám tlačítka pro sdílení na sociálních sítích"
+
+#: functions.php:143
+msgid "Adds buttons for Twitter and Facebook to the top of static Pages."
+msgstr "Přidá nad stránky tlačítka pro Twitter a Facebook."
+
+#: functions.php:156
+msgid ""
+"The Twitter account for attribution when sharing. Appears as \"via @username"
+"\" at the end of the tweet, and Twitter may suggest related accounts to "
+"follow. Leave this blank for no attribution."
+msgstr ""
+"Účet na Twitteru, který bude při sdílení zmíněn. Zobrazí se ve formátu "
+"„prostřednictvím @username“ na konci tweetu a Twitter na základě toho může "
+"nabízet relevantní účtu pro sledování. Pokud ponecháte prázdné, nebude "
+"zmíněn žádný účet."
+
+#: functions.php:168
+msgid "Extra Large"
+msgstr "Extra velký obrázek"
+
+#: functions.php:278
+#, php-format
+msgid "Page %s"
+msgstr "Stránka %s"
+
+#: functions.php:321
+#, php-format
+msgid "Search results for “%s”"
+msgstr "Výsledky vyhledávání „%s“"
+
+#: functions.php:323
+msgid "Not Found"
+msgstr "Nenalezeno"
+
+#: functions.php:403
+msgid ""
+"Spamming robots, please fill in this field. Real humans should leave it "
+"blank."
+msgstr ""
+"Spamovací roboti, vyplňte prosím toto pole. Lide by jej měli nechat prázdné."
+
+#: functions.php:413
+msgid ""
+"Sorry, you appear to be a spamming robot because you filled in the hidden "
+"spam trap field. To show you are not a spammer, submit your comment again "
+"and leave the field blank."
+msgstr ""
+"Je nám líto, ale protože jste vyplnili skryté pole, které je pastí pro "
+"spamovací roboty, zřejmě jste robotem. Pokud jste skutečně člověk, vložte "
+"prosím svůj příspěvek znovu a zmiňované pole ponechte prázdné."
+
+#: functions.php:414
+msgid "Spam Prevention"
+msgstr "Ochrana proti spamu"
+
+#: functions.php:504
+msgid "Read more"
+msgstr "Číst dále"
+
+#: functions.php:540
+msgid "Sidebar Menu"
+msgstr "Postranní menu"
+
+#: functions.php:565
+msgid "Trackback from "
+msgstr "Trackback z "
+
+#. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
+#. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
+#: functions.php:568 functions.php:581
+msgid "on"
+msgstr "dne"
+
+#: functions.php:569 functions.php:582 functions.php:596
+msgid "Permanent link to this comment by "
+msgstr "Trvalý odkaz na tento komentáře od "
+
+#. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
+#. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
+#. L10n: Comment headings read "<Name> wrote on <Date> at <Time>:"
+#: functions.php:572 functions.php:585 functions.php:599
+#, php-format
+msgid "%1$s at %2$s:"
+msgstr "%1$s v %2$s:"
+
+#: functions.php:578
+msgid "Ping from "
+msgstr "Ping z "
+
+#: functions.php:595
+msgid "wrote on"
+msgstr "napsal(a)"
+
+#: functions.php:608
+msgid "Your comment is awaiting moderation."
+msgstr "Váš komentář čeká na schválení."
+
+#: functions.php:620
+msgid "Edit comment"
+msgstr "Upravit komentář"
+
+#: functions.php:667
+msgid ""
+"Remember to include a featured image! It should be at least 1400 by 770 "
+"pixels."
+msgstr ""
+"Nezapomeňte nastavit náhledový obrázek! Měl by mít rozlišení alespoň "
+"1400x700 pixelů."
+
+#: functions.php:670
+msgid " Posts without a featured image will show a standard placeholder image."
+msgstr ""
+" Pro příspěvky bez náhledového obrázku se náhodně zobrazí jeden z výchozích."
+
+#: functions.php:715
+msgid "Custom Sidebar Content"
+msgstr "Obsah vlastního postranního panelu"
+
+#: functions.php:746
+msgid ""
+"The image will be used as a thumbnail for this post and for social media, "
+"but won‘t appear on the post page."
+msgstr ""
+"Tento obrázek bude použit jako náhled pro tento příspěvek a pro sociální "
+"sítě, ale neukáže se na stránce příspěvku."
+
+#: functions.php:749
+msgid "Hide featured image"
+msgstr "Skrýt náhledový obrázek"
+
+#: functions.php:756
+msgid "Hide Featured Image"
+msgstr "Skrýt náhledový obrázek"
+
+#: image.php:18
+#, php-format
+msgid ""
+"<time class=\"date published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time>"
+msgstr ""
+"<time class=\"date published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time>"
+
+#: image.php:24
+#, php-format
+msgid "Original size: <a href=\"%1$s\">%2$s &times; %3$s</a>"
+msgstr "Původní velikost: <a href=\"%1$s\">%2$s &times; %3$s</a>"
+
+#: inc/customizer.php:22
+msgid "Accent Color"
+msgstr "Barva"
+
+#: inc/customizer.php:27 inc/customizer.php:53
+msgid "None (Default)"
+msgstr "Žádná (výchozí)"
+
+#: inc/customizer.php:28
+msgid "Cyan"
+msgstr "Tyrkysová"
+
+#: inc/customizer.php:29
+msgid "Coral"
+msgstr "Korálová"
+
+#: inc/customizer.php:30
+msgid "Yellow"
+msgstr "Žlutá"
+
+#: inc/customizer.php:31
+msgid "Lilac"
+msgstr "Šeříková"
+
+#: inc/customizer.php:32
+msgid "Orange"
+msgstr "Oranžová"
+
+#: inc/customizer.php:33
+msgid "Lime"
+msgstr "Limetková"
+
+#: inc/customizer.php:34
+msgid "Neon Blue"
+msgstr "Neonově modrá"
+
+#: inc/customizer.php:35
+msgid "Neon Pink"
+msgstr "Neonově růžová"
+
+#: inc/customizer.php:36
+msgid "Neon Green"
+msgstr "Neonově zelená"
+
+#: inc/customizer.php:48
+msgid "Header Pattern"
+msgstr "Vzor záhlaví"
+
+#: inc/customizer.php:54
+msgid "Arrows"
+msgstr "Šipky"
+
+#: inc/customizer.php:55
+msgid "Basket Weave"
+msgstr "Vlna"
+
+#: inc/customizer.php:56
+msgid "Confetti"
+msgstr "Konfety"
+
+#: inc/customizer.php:57
+msgid "Emoticons"
+msgstr "Smajlíci"
+
+#: inc/customizer.php:58
+msgid "Slashes and Brackets"
+msgstr "Lomítka a závorky"
+
+#: inc/customizer.php:59
+msgid "Trade Winds"
+msgstr "Směr větru"
+
+#: includes/categories.php:13
+msgid "More articles"
+msgstr "Další články"
+
+#: includes/masthead.php:16
+msgid "Go to the front page"
+msgstr "Přejít na hlavní stránku"
+
+#: includes/nav-global.php:9
+msgid "Visit mozilla.org"
+msgstr "Navštívit mozilla.org"
+
+#: includes/nav-global.php:12
+msgid "Menu"
+msgstr "Menu"
+
+#: includes/nav-global.php:14
+msgid "Internet Health"
+msgstr "Zdravý internet"
+
+#: includes/nav-global.php:15
+msgid "Technology"
+msgstr "Technologie"
+
+#: includes/nav-global.php:16
+msgid "Give"
+msgstr "Přispějte"
+
+#: includes/nav-global.php:20
+msgid "Discover Firefox"
+msgstr "Objevte Firefox"
+
+#: includes/nav-global.php:25
+msgid "Go to the top of the page"
+msgstr "Přejít na začátek stránky"
+
+#: includes/nav-global.php:25
+msgid "Top"
+msgstr "Nahoru"
+
+#: includes/nav-pagination.php:5
+msgid "Page"
+msgstr "Stránka"
+
+#: includes/nav-pagination.php:13
+msgid "Previous"
+msgstr "Předchozí"
+
+#: includes/nav-pagination.php:14
+msgid "Next"
+msgstr "Další"
+
+#: includes/nav-paging.php:14
+msgid "Previous article"
+msgstr "Předchozí článek"
+
+#: includes/nav-paging.php:26
+msgid "Next article"
+msgstr "Další článek"
+
+#: includes/nav-util.php:9
+msgid "Explore"
+msgstr "Další"
+
+#: includes/nav-util.php:11
+msgid "Categories"
+msgstr "Rubriky"
+
+#: includes/newsletter-form.php:14
+msgid "Love the Web?"
+msgstr "Milujete web?"
+
+#: includes/newsletter-form.php:15
+msgid "Get the Mozilla newsletter and help us keep it open and free."
+msgstr ""
+"Nechte si posílat zpravodaj Mozilly a pomozte nám udržet web otevřený a "
+"svobodný."
+
+#: includes/newsletter-form.php:22
+msgid "Your e-mail address"
+msgstr "E-mail"
+
+#. L10n: 'yourname' is used as the first part of an example e-mail address, as in 'yourname@example.com'
+#: includes/newsletter-form.php:24
+msgid "yourname"
+msgstr "vašejméno"
+
+#: includes/newsletter-form.php:29
+msgid "Language"
+msgstr "Jazyk"
+
+#: includes/newsletter-form.php:40
+msgid "HTML"
+msgstr "HTML"
+
+#: includes/newsletter-form.php:41
+msgid "Text"
+msgstr "Text"
+
+#: includes/newsletter-form.php:47
+#, php-format
+msgid ""
+"I’m okay with Mozilla handling my info as explained in this <a href=\"%s"
+"\">Privacy Policy</a>."
+msgstr ""
+"Souhlasím s tím, aby Mozilla zpracovávala mé informace tak, jak je popsáno v "
+"<a href=\"%s\">těchto Zásadách ochrany soukromí</a>."
+
+#: includes/newsletter-form.php:53
+msgid "Sign up now"
+msgstr "Přihlásit se"
+
+#: includes/newsletter-form.php:55
+msgid "We will only send you Mozilla-related information."
+msgstr "Budeme vám posílat pouze informace související s Mozillou."
+
+#: includes/newsletter-form.php:61
+msgid "Thanks!"
+msgstr "Děkujeme!"
+
+#: includes/newsletter-form.php:63
+msgid ""
+"If you haven’t previously confirmed a subscription to a Mozilla-related "
+"newsletter you may have to do so."
+msgstr ""
+"Pokud jste dříve nepotvrdili odběr zpravodaje Mozilly, budete tak muset "
+"učinit nyní."
+
+#: includes/newsletter-form.php:64
+msgid "Please check your inbox or your spam filter for an e-mail from us."
+msgstr ""
+"Podívejte se prosím do vaší e-mailové schránky a případně i nevyžádané "
+"pošty, jestli tam není e-mail od nás."
+
+#: includes/related-posts.php:21
+#, php-format
+msgid "More articles in “%s”"
+msgstr "Více článků v „%s“"
+
+#: includes/related-posts.php:35
+msgid "There are no other articles in this category."
+msgstr "V této rubrice nejsou žádné další články."
+
+#: includes/related-posts.php:43
+msgid "Popular articles"
+msgstr "Oblíbené články"
+
+#: includes/related-posts.php:57
+msgid "Recent articles"
+msgstr "Nedávné články"
+
+#: includes/social-share.php:15
+msgid "Share:"
+msgstr "Sdílet:"
+
+#: searchform.php:10
+msgid "Search this site"
+msgstr "Hledat na této stránce"
+
+#: searchform.php:12
+msgid "Search"
+msgstr "Hledat"
+
+#~ msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+#~ msgstr "Pro přidání komentáře se musíte <a href=\"%s\">přihlásit</a>."
+
+#~ msgid "Post your comment"
+#~ msgstr "Přidejte svůj komentář"
+
+#~ msgid "Reply to %s"
+#~ msgstr "Odpověď na %s"
+
+#~ msgid "Cancel reply"
+#~ msgstr "Zrušit odpověď"
+
+#~ msgid ""
+#~ "You are logged in as <a href=\"%1$s\">%2$s</a>. <a class=\"logout\" href="
+#~ "\"%3$s\">Log out?</a>"
+#~ msgstr ""
+#~ "Jste přihlášeni jako uživatel <a href=\"%1$s\">%2$s</a>. <a class=\"logout"
+#~ "\" href=\"%3$s\">Odhlásit?</a>"
+
+#~ msgid "Your name"
+#~ msgstr "Jméno"
+
+#~ msgid "(required)"
+#~ msgstr "(vyžadováno)"
+
+#~ msgid "(required, will not be published)"
+#~ msgstr "(vyžadováno, ale nebude zveřejněno)"
+
+#~ msgid "Your comment"
+#~ msgstr "Váš komentář"
+
+#~ msgid "Submit"
+#~ msgstr "Přidat komentář"
+
+#~ msgid "Desktop Browser for Mac, Windows, Linux"
+#~ msgstr "Prohlížeč pro Mac nebo počítač s Windows či Linux"
+
+#~ msgid "Mobile Browser for Android"
+#~ msgstr "Mobilní prohlížeč pro Android"
+
+#~ msgid "Mobile Browser for iOS"
+#~ msgstr "Mobilní prohlížeč pro iOS"
+
+#~ msgid "Privacy"
+#~ msgstr "Soukromí"
+
+#~ msgid "Web Innovations"
+#~ msgstr "Webové inovace"
