@@ -776,21 +776,28 @@ add_action('save_post', 'save_frontierline_hide_hero', 10, 3);
 
 
 /**
- * Use custom feed templates
+ * Use custom feed templates.
+ * Omits author when 'frontierline_no_byline' is true.
  */
+// RSS2 (standard)
 function frontierline_feed_rss2() {
-    load_template( STYLESHEETPATH . '/feeds/feed-rss2.php');
+  get_template_part('feeds/feed', 'rss2');
 }
-add_feed('rss2', 'frontierline_feed_rss2');
+remove_all_actions('do_feed_rss2');
+add_action('do_feed_rss2', 'frontierline_feed_rss2', 10, 1);
 
+// RDF
 function frontierline_feed_rdf() {
-    load_template( STYLESHEETPATH . '/feeds/feed-rdf.php');
+  get_template_part('feeds/feed', 'rdf');
 }
-add_feed('rdf', 'frontierline_feed_rdf');
+remove_all_actions('do_feed_rdf');
+add_action('do_feed_rdf', 'frontierline_feed_rdf', 10, 1);
 
+// Atom
 function frontierline_feed_atom() {
-    load_template( STYLESHEETPATH . '/feeds/feed-atom.php');
+  get_template_part('feeds/feed', 'atom');
 }
-add_feed('atom', 'frontierline_feed_atom');
+remove_all_actions('do_feed_atom');
+add_action('do_feed_atom', 'frontierline_feed_atom', 10, 1);
 
 ?>
