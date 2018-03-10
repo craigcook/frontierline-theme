@@ -1,11 +1,13 @@
 (function(ga) {
     'use strict';
 
-    // !! this file assumes only one signup form per page !!
+    // !! this script assumes only one signup form per page !!
 
     var newsletterForm = document.getElementById('newsletter_form');
     var newsletterWrapper = document.getElementById('form-contents');
-    var blogName = newsletterForm.getAttribute('data-blog');
+    if (newsletterForm) {
+        var blogName = newsletterForm.getAttribute('data-blog');
+    }
 
     // handle errors
     var errorArray = [];
@@ -121,5 +123,7 @@
         return false;
     }
 
-    newsletterForm.addEventListener('submit', newsletterSubscribe, false);
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', newsletterSubscribe, false);
+    }
 })();
