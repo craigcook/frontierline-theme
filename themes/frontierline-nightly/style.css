@@ -6,8 +6,6 @@ Template:       frontierline
 Version:        1.0
 */
 
-@import url('../frontierline/style.css');
-
 .nav-global-twitter a,
 .nav-global-join a {
     padding-left: 30px;
