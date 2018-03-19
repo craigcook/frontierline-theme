@@ -1,8 +1,18 @@
 <?php
 /**
- * Display a full post, no featured image.
+ * Display a full post with optional full sized image.
  */
 ?>
+
+<?php if (get_theme_mod('frontierline_no_post_image') !== '1') : ?>
+  <?php if (has_post_thumbnail()) : ?>
+    <?php if (get_post_meta(get_the_ID(), '_frontierline_hide_hero', true) !== '1') : ?>
+      <div class="post-image post-image-featured">
+        <?php the_post_thumbnail('post-full-size'); ?>
+      </div>
+    <?php endif; ?>
+  <?php endif; ?>
+<?php endif; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
   <header class="entry-header">
@@ -31,9 +41,11 @@
 
     <div class="entry-info">
     <?php if ($post->post_type === 'post') : ?>
-      <address class="vcard">
-      <?php if (function_exists('coauthors_posts_links')) : coauthors_posts_links(); else : the_author_posts_link(); endif; ?>
-      </address>
+      <?php if (get_theme_mod('frontierline_no_byline') !== '1') : ?>
+        <address class="vcard">
+        <?php if (function_exists('coauthors_posts_links')) : coauthors_posts_links(); else : the_author_posts_link(); endif; ?>
+        </address>
+      <?php endif; ?>
       <time class="date published" datetime="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php the_date(); ?></time>
     <?php endif; ?>
     <?php if (comments_open() || get_comments_number()) : ?>
