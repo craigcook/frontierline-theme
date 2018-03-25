@@ -588,6 +588,7 @@ class Social_Links_Widget extends WP_Widget {
 
   public function update($new_instance, $old_instance) {
     return array(
+      'title' => sanitize_text_field($new_instance['title']),
       'twitter_username' => wp_strip_all_tags($new_instance['twitter_username']),
       'facebook_username' => wp_strip_all_tags($new_instance['facebook_username']),
       'instagram_username' => wp_strip_all_tags($new_instance['instagram_username']),
@@ -619,10 +620,16 @@ class Social_Links_Widget extends WP_Widget {
         'username' => !empty($instance['telegram_username']) ? $instance['telegram_username'] : '',
       ),
     );
+    ?>
+    <p>
+      <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
+      <input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo esc_attr($instance['title']); ?>">
+    </p>
+    <?php
     foreach ($services as $service => $service_info) : ?>
       <p>
         <label for="<?php echo $this->get_field_id($service); ?>"><?php echo $service_info['name']; ?>:</label>
-        <input type="text" id="<?php echo $this->get_field_id($service); ?>" name="<?php echo $this->get_field_name($service.'_username'); ?>" value="<?php echo esc_attr($service_info['username']); ?>">
+        <input type="text" class="widefat" id="<?php echo $this->get_field_id($service); ?>" name="<?php echo $this->get_field_name($service.'_username'); ?>" value="<?php echo esc_attr($service_info['username']); ?>">
       </p>
     <?php endforeach;
   }
