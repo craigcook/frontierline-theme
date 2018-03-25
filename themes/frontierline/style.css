@@ -462,6 +462,7 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 #site-info .social-links li a.instagram { background-position: 0 -25px; width: 19px; height: 19px; }
 #site-info .social-links li a.youtube { background-position: 0 -54px; width: 19px; height: 13px; }
 #site-info .social-links li a.facebook { background-position: 0 -77px; width: 10px; height: 19px; }
+#site-info .social-links li a.telegram { background-position: 0 -106px; width: 19px; height: 16px; }
 #site-info .primary { font-size: 16px; font-size: 0.8888888889rem; }
 #site-info .secondary { font-size: 12px; font-size: 0.6666666667rem; }
 #site-info .small-links li { display: inline; padding-right: 20px; }

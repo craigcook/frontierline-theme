@@ -578,6 +578,9 @@ class Social_Links_Widget extends WP_Widget {
         <?php if (!empty($instance['youtube_username'])) : ?>
           <li><a class="youtube" href="https://www.youtube.com/<?php echo $instance['youtube_username']; ?>"><?php _e('YouTube', 'frontierline'); ?><span> (<?php echo $instance['youtube_username']; ?>)</span></a></li>
         <?php endif; ?>
+        <?php if (!empty($instance['telegram_username'])) : ?>
+          <li><a class="telegram" href="https://t.me/<?php echo $instance['telegram_username']; ?>"><?php _e('Telegram', 'frontierline'); ?><span> (<?php echo $instance['telegram_username']; ?>)</span></a></li>
+        <?php endif; ?>
       </ul>
     <?php
     echo $args['after_widget'];
@@ -589,6 +592,7 @@ class Social_Links_Widget extends WP_Widget {
       'facebook_username' => wp_strip_all_tags($new_instance['facebook_username']),
       'instagram_username' => wp_strip_all_tags($new_instance['instagram_username']),
       'youtube_username' => wp_strip_all_tags($new_instance['youtube_username']),
+      'telegram_username' => wp_strip_all_tags($new_instance['telegram_username']),
     );
   }
 
@@ -609,6 +613,10 @@ class Social_Links_Widget extends WP_Widget {
       'youtube' => array(
         'name' => __('YouTube', 'frontierline'),
         'username' => !empty($instance['youtube_username']) ? $instance['youtube_username'] : '',
+      ),
+      'telegram' => array(
+        'name' => __('Telegram', 'frontierline'),
+        'username' => !empty($instance['telegram_username']) ? $instance['telegram_username'] : '',
       ),
     );
     foreach ($services as $service => $service_info) : ?>
