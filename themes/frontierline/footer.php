@@ -17,9 +17,21 @@
 <footer id="site-info" class="section">
   <div class="content">
     <nav class="primary">
-      <div class="logo">
+      <?php if (is_active_sidebar('footer-left')) : ?>
+      <section>
+        <?php dynamic_sidebar('footer-left'); ?>
+      </section>
+      <?php else : ?>
+      <section class="logo">
         <a href="https://www.mozilla.org/?utm_source=<?php echo frontierline_blog_domain(); ?>&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Mozilla">Mozilla</a>
-      </div>
+      </section>
+      <?php endif; ?>
+
+      <?php if (is_active_sidebar('footer-middle')) : ?>
+      <section>
+        <?php dynamic_sidebar('footer-middle'); ?>
+      </section>
+      <?php else : ?>
       <section class="mozilla">
         <h5><a href="https://www.mozilla.org/?utm_source=<?php echo frontierline_blog_domain(); ?>&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Mozilla">Mozilla</a></h5>
         <ul class="mozilla-links">
@@ -35,6 +47,13 @@
           </li>
         </ul>
       </section>
+      <?php endif; ?>
+
+      <?php if (is_active_sidebar('footer-right')) : ?>
+      <section>
+        <?php dynamic_sidebar('footer-right'); ?>
+      </section>
+      <?php else : ?>
       <section class="firefox">
         <h5><a href="https://www.mozilla.org/firefox/?utm_source=<?php echo frontierline_blog_domain(); ?>&amp;utm_campaign=footer&amp;utm_medium=referral" data-link-type="footer" data-link-name="Mozilla">Firefox</a></h5>
         <ul class="firefox-links">
@@ -52,6 +71,7 @@
           </li>
         </ul>
       </section>
+      <?php endif; ?>
     </nav>
 
     <nav class="secondary">

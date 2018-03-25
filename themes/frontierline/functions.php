@@ -545,8 +545,110 @@ function frontierline_widgets_init() {
     'before_title' => '<h3 class="widget-title">',
     'after_title' => '</h3>',
   ) );
+  register_sidebar( array(
+    'name' => __('Footer - left', 'frontierline'),
+    'id' => 'footer-left',
+    'description'   => esc_html__('Widgets added here will appear in the left column of the footer.', 'frontierline'),
+    'before_widget' => '<aside id="%1$s" class="footer-widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h5>',
+    'after_title' => '</h5>',
+  ) );
+  register_sidebar( array(
+    'name' => __('Footer - middle', 'frontierline'),
+    'id' => 'footer-middle',
+    'description'   => esc_html__('Widgets added here will appear in the middle column of the footer.', 'frontierline'),
+    'before_widget' => '<aside id="%1$s" class="footer-widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h5>',
+    'after_title' => '</h5>',
+  ) );
+  register_sidebar( array(
+    'name' => __('Footer - right', 'frontierline'),
+    'id' => 'footer-right',
+    'description'   => esc_html__('Widgets added here will appear in the right column of the footer.', 'frontierline'),
+    'before_widget' => '<aside id="%1$s" class="footer-widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h5>',
+    'after_title' => '</h5>',
+  ) );
 }
 add_action('widgets_init', 'frontierline_widgets_init');
+
+/**
+ * Widget with social icons and links
+ */
+class Social_Links_Widget extends WP_Widget {
+
+  public function __construct() {
+    $widget_ops = array(
+      'classname'   => 'social_links_widget',
+      'description' => 'Widget with icons and links to social profiles.',
+    );
+    parent::__construct('social_links_widget', __('Social Links','frontierline'), $widget_ops);
+  }
+
+  public function widget($args, $instance) {
+    echo $args['before_widget'];
+    echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
+    ?>
+      <ul class="social-links">
+        <?php if (!empty($instance['twitter_username'])) : ?>
+          <li><a class="twitter" href="https://twitter.com/<?php echo $instance['twitter_username']; ?>"><?php _e('Twitter', 'frontierline'); ?><span> (<?php echo $instance['twitter_username']; ?>)</span></a></li>
+        <?php endif; ?>
+        <?php if (!empty($instance['facebook_username'])) : ?>
+          <li><a class="facebook" href="https://www.facebook.com/<?php echo $instance['facebook_username']; ?>"><?php _e('Facebook', 'frontierline'); ?><span> (<?php echo $instance['facebook_username']; ?>)</span></a></li>
+        <?php endif; ?>
+        <?php if (!empty($instance['instagram_username'])) : ?>
+          <li><a class="instagram" href="https://www.instagram.com/<?php echo $instance['instagram_username']; ?>/"><?php _e('Instagram', 'frontierline'); ?><span> (<?php echo $instance['instagram_username']; ?>)</span></a></li>
+        <?php endif; ?>
+        <?php if (!empty($instance['youtube_username'])) : ?>
+          <li><a class="youtube" href="https://www.youtube.com/<?php echo $instance['youtube_username']; ?>"><?php _e('YouTube', 'frontierline'); ?><span> (<?php echo $instance['youtube_username']; ?>)</span></a></li>
+        <?php endif; ?>
+      </ul>
+    <?php
+    echo $args['after_widget'];
+  }
+
+  public function update($new_instance, $old_instance) {
+    return array(
+      'twitter_username' => wp_strip_all_tags($new_instance['twitter_username']),
+      'facebook_username' => wp_strip_all_tags($new_instance['facebook_username']),
+      'instagram_username' => wp_strip_all_tags($new_instance['instagram_username']),
+      'youtube_username' => wp_strip_all_tags($new_instance['youtube_username']),
+    );
+  }
+
+  public function form($instance) {
+    $services = array(
+      'twitter' => array(
+        'name' => __('Twitter', 'frontierline'),
+        'username' => $instance['twitter_username'],
+      ),
+      'facebook' => array(
+        'name' => __('Facebook', 'frontierline'),
+        'username' => $instance['facebook_username'],
+      ),
+      'instagram' => array(
+        'name' => __('Instagram', 'frontierline'),
+        'username' => !empty($instance['instagram_username']) ? $instance['instagram_username'] : '',
+      ),
+      'youtube' => array(
+        'name' => __('YouTube', 'frontierline'),
+        'username' => !empty($instance['youtube_username']) ? $instance['youtube_username'] : '',
+      ),
+    );
+    foreach ($services as $service => $service_info) : ?>
+      <p>
+        <label for="<?php echo $this->get_field_id($service); ?>"><?php echo $service_info['name']; ?>:</label>
+        <input type="text" id="<?php echo $this->get_field_id($service); ?>" name="<?php echo $this->get_field_name($service.'_username'); ?>" value="<?php echo esc_attr($service_info['username']); ?>">
+      </p>
+    <?php endforeach;
+  }
+}
+add_action('widgets_init', function() {
+  register_widget('Social_Links_Widget');
+});
 
 
 /**
