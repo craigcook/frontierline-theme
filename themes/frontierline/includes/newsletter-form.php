@@ -27,7 +27,7 @@
       <div class="form-details">
         <div class="field field-language">
           <label for="lang"><?php _e('Language', 'frontierline'); ?></label>
-          <select aria-required="true" id="lang" name="lang" required="required">
+          <select id="lang" name="lang" required="required">
             <option value="de">Deutsch</option>
             <option value="en" selected="selected">English</option>
             <option value="es">Español</option>
