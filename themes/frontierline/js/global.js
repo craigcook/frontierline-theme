@@ -202,7 +202,7 @@
         var recent = jQuery('.popular .recent-posts a');
         var catLinks = jQuery('#categories .entry-link');
         var sideLinks = jQuery('#sidebar a');
-        var navDownload = jQuery('#nav-global .fx-cta .button');
+        var navDownload = jQuery('.nav-global-fxdownload .button');
         var contentDownload = jQuery('.fx-footer .button');
 
         // Global nav
@@ -256,7 +256,9 @@
                 hitType: 'event',
                 eventCategory: blogname + ' Interactions',
                 eventAction: 'Firefox Download',
-                eventLabel: 'nav-bar'
+                eventLabel: 'Firefox for Desktop',
+                dimension15: 'nav cta',
+                dimension1: blogname
             });
         });
 
@@ -266,7 +268,9 @@
                 hitType: 'event',
                 eventCategory: blogname + ' Interactions',
                 eventAction: 'Firefox Download',
-                eventLabel: 'content link'
+                eventLabel: 'Firefox for Desktop',
+                dimension15: 'in-content cta',
+                dimension1: blogname
             });
         });
     }

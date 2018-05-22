@@ -7,7 +7,7 @@
 // The basis for all buttons on mozilla.org
 %base-button {
     @include open-sans;
-    @include font-size(18px);
+    @include font-size-level5;
     @include transition(background-color 100ms ease-in-out);
     background: none;
     border-radius: 100px;
@@ -20,10 +20,6 @@
     text-align: center;
     text-shadow: none;
     text-decoration: none;
-
-    @media #{$mq-tablet} {
-        @include font-size(20px);
-    }
 
     &:active {
         position: relative;
@@ -92,6 +88,11 @@ a.button:visited {
         &:focus {
             background-color: saturate(lighten($color-button-orange, 5%), 10%);
         }
+    }
+
+    &.button-minor {
+        @include font-size-small;
+        padding: .25em 20px;
     }
 }
 

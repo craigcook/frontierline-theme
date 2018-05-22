@@ -15,16 +15,23 @@
     }
 
     a {
-        @include base-button;
-        @include font-size(16px);
+        @include font-size-level5;
+        @include open-sans;
+        @include transition(background-color 100ms ease-in-out);
+        border-radius: 0;
+        border-style: solid;
+        border-width: 2px;
         color: #fff;
+        display: inline-block;
         padding: 2px 10px 2px 35px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
 
         &:hover,
         &:focus,
         &:active {
             color: #fff;
-            text-decoration: none;
         }
 
         &.twitter {

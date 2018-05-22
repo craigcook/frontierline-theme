@@ -40,8 +40,11 @@
             display: block;
             flex-wrap: nowrap;
             min-width: 0;
-            padding: 40px;
             width: auto;
+
+            @media #{$mq-tablet} {
+                padding: 40px;
+            }
         }
 
         .widget {
@@ -104,6 +107,17 @@
 
         a {
             vertical-align: middle;
+        }
+    }
+
+    .widget_search {
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type='search'] {
+            max-width: 70%;
         }
     }
 

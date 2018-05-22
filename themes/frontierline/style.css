@@ -109,8 +109,9 @@ a { color: #00a7e0; text-decoration: underline; }
 a:hover, a:focus, a:active, a:visited:hover, a:visited:focus, a:visited:active { color: #0081ad; text-decoration: underline; }
 a:visited { color: #75bad1; }
 
-.button, button.button, a.button:link, a.button:visited, .button.button-hollow, button.button.button-hollow, a.button.button-hollow:link, a.button.button-hollow:visited, button.form-button, input[type="submit"].form-button, input[type='button'].form-button { font-family: "Open Sans", X-LocaleSpecific, sans-serif; font-size: 18px; font-size: 1rem; -webkit-transition: background-color 100ms ease-in-out; transition: background-color 100ms ease-in-out; background: none; border-radius: 100px; border-style: solid; border-width: 2px; cursor: pointer; display: inline-block; padding: .5em 36px; position: relative; text-align: center; text-shadow: none; text-decoration: none; }
-@media screen and (min-width: 760px) { .button, button.button, a.button:link, a.button:visited, .button.button-hollow, button.button.button-hollow, a.button.button-hollow:link, a.button.button-hollow:visited, button.form-button, input[type="submit"].form-button, input[type='button'].form-button { font-size: 20px; font-size: 1.1111111111rem; } }
+.button, button.button, a.button:link, a.button:visited, .button.button-hollow, button.button.button-hollow, a.button.button-hollow:link, a.button.button-hollow:visited, button.form-button, input[type="submit"].form-button, input[type='button'].form-button { font-family: "Open Sans", X-LocaleSpecific, sans-serif; font-size: 14px; font-size: 0.7777777778rem; -webkit-transition: background-color 100ms ease-in-out; transition: background-color 100ms ease-in-out; background: none; border-radius: 100px; border-style: solid; border-width: 2px; cursor: pointer; display: inline-block; padding: .5em 36px; position: relative; text-align: center; text-shadow: none; text-decoration: none; }
+@media screen and (min-width: 760px) { .button, button.button, a.button:link, a.button:visited, .button.button-hollow, button.button.button-hollow, a.button.button-hollow:link, a.button.button-hollow:visited, button.form-button, input[type="submit"].form-button, input[type='button'].form-button { font-size: 16px; font-size: 0.8888888889rem; } }
+@media screen and (min-width: 1000px) { .button, button.button, a.button:link, a.button:visited, .button.button-hollow, button.button.button-hollow, a.button.button-hollow:link, a.button.button-hollow:visited, button.form-button, input[type="submit"].form-button, input[type='button'].form-button { font-size: 18px; font-size: 1rem; } }
 .button:active, a.button:active:link, a.button:active:visited, button.button.button-hollow:active, button.form-button:active, input[type="submit"].form-button:active, input[type='button'].form-button:active { position: relative; top: 1px; }
 .button:hover, a.button:hover:link, a.button:hover:visited, button.button.button-hollow:hover, button.form-button:hover, input[type="submit"].form-button:hover, input[type='button'].form-button:hover, .button:focus, a.button:focus:link, a.button:focus:visited, button.button.button-hollow:focus, button.form-button:focus, input[type="submit"].form-button:focus, input[type='button'].form-button:focus { text-decoration: none; }
 
@@ -124,6 +125,8 @@ a:visited { color: #75bad1; }
 .button.button-red:hover, button.button.button-red:hover, a.button:link.button-red:hover, a.button:visited.button-red:hover { background-color: #d93a33; }
 .button.button-orange, button.button.button-orange, a.button:link.button-orange, a.button:visited.button-orange { background-color: #f26c23; border-color: #f16215; color: #fff; }
 .button.button-orange:hover, .button.button-orange:focus, button.button.button-orange:hover, button.button.button-orange:focus, a.button:link.button-orange:hover, a.button:link.button-orange:focus, a.button:visited.button-orange:hover, a.button:visited.button-orange:focus { background-color: #fe7931; }
+.button.button-minor, button.button.button-minor, a.button:link.button-minor, a.button:visited.button-minor { font-size: 12px; font-size: 0.6666666667rem; padding: .25em 20px; }
+@media screen and (min-width: 760px) { .button.button-minor, button.button.button-minor, a.button:link.button-minor, a.button:visited.button-minor { font-size: 14px; font-size: 0.7777777778rem; } }
 
 .button.button-hollow, button.button.button-hollow, a.button.button-hollow:link, a.button.button-hollow:visited, button.form-button, input[type="submit"].form-button, input[type='button'].form-button { background-color: transparent; border-color: #0c99d5; color: #0c99d5; }
 .button.button-hollow:hover, .button.button-hollow:focus, button.button.button-hollow:hover, button.button.button-hollow:focus, a.button.button-hollow:link:hover, a.button.button-hollow:link:focus, a.button.button-hollow:visited:hover, a.button.button-hollow:visited:focus, button.form-button:hover, button.form-button:focus, input[type="submit"].form-button:hover, input[type="submit"].form-button:focus, input[type='button'].form-button:hover, input[type='button'].form-button:focus { background-color: rgba(12, 153, 213, 0.05); border-color: #01affa; color: #01affa; }
@@ -279,14 +282,10 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 
 .social-share li { display: inline-block; margin: 0 5px .25em; }
 .social-share b { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; /* !important required to ensure element is hidden when mixin is applied */ position: absolute !important; /* stylelint-disable-line declaration-no-important */ width: 1px; }
-.social-share a { font-size: 14px; font-size: 0.7777777778rem; font-family: "Open Sans", X-LocaleSpecific, sans-serif; -webkit-transition: background-color 100ms ease-in-out; transition: background-color 100ms ease-in-out; background: none; border-radius: 0; border-style: solid; border-width: 2px; cursor: pointer; display: inline-block; padding: .5em 36px; position: relative; text-align: center; text-shadow: none; text-decoration: none; font-size: 16px; font-size: 0.8888888889rem; color: #fff; padding: 2px 10px 2px 35px; }
+.social-share a { font-size: 14px; font-size: 0.7777777778rem; font-family: "Open Sans", X-LocaleSpecific, sans-serif; -webkit-transition: background-color 100ms ease-in-out; transition: background-color 100ms ease-in-out; border-radius: 0; border-style: solid; border-width: 2px; color: #fff; display: inline-block; padding: 2px 10px 2px 35px; position: relative; text-align: center; text-decoration: none; }
 @media screen and (min-width: 760px) { .social-share a { font-size: 16px; font-size: 0.8888888889rem; } }
 @media screen and (min-width: 1000px) { .social-share a { font-size: 18px; font-size: 1rem; } }
-.social-share a:active { position: relative; top: 1px; }
-.social-share a:hover, .social-share a:focus { text-decoration: none; }
-.social-share a.button-minor { font-size: 12px; font-size: 0.6666666667rem; padding: .25em 10px; }
-@media screen and (min-width: 760px) { .social-share a.button-minor { font-size: 14px; font-size: 0.7777777778rem; } }
-.social-share a:hover, .social-share a:focus, .social-share a:active { color: #fff; text-decoration: none; }
+.social-share a:hover, .social-share a:focus, .social-share a:active { color: #fff; }
 .social-share a.twitter { background: #1da1f2 url("img/twitter.svg") 6px center no-repeat; -webkit-background-size: 18px 18px; background-size: 18px 18px; border-color: #0d95e8; }
 .social-share a.twitter:hover, .social-share a.twitter:focus { background-color: #0d95e8; }
 .social-share a.facebook { background: #3b5998 url("img/facebook.svg") 6px center no-repeat; -webkit-background-size: 18px 18px; background-size: 18px 18px; border-color: #344e86; }
@@ -421,7 +420,8 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 #sidebar.is-active { -webkit-transition: transform 600ms cubic-bezier(0.3, -0.5, 0.6, 1.1); transition: transform 600ms cubic-bezier(0.3, -0.5, 0.6, 1.1); background: #fff; box-shadow: 3px 0 1px rgba(0, 0, 0, 0.2); left: 0; max-width: 600px; height: 100%; min-width: 260px; position: absolute; top: 40px; transform: translateX(-101%); width: 33%; z-index: 9; padding: 0; }
 #sidebar.is-active.is-open { display: block; transform: none; }
 #sidebar.is-active.is-sticky { position: fixed; top: 70px; overflow-y: auto; }
-#sidebar.is-active .content { display: block; flex-wrap: nowrap; min-width: 0; padding: 40px; width: auto; }
+#sidebar.is-active .content { display: block; flex-wrap: nowrap; min-width: 0; width: auto; }
+@media screen and (min-width: 760px) { #sidebar.is-active .content { padding: 40px; } }
 #sidebar.is-active .widget { margin-bottom: 40px; padding: 0; width: auto; float: none; }
 #sidebar .content { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; flex-wrap: wrap; }
 #sidebar .widget { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; float: left; width: 33.332%; padding-left: 10px; padding-right: 10px; }
@@ -434,6 +434,8 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 #sidebar .widget_nav_menu a:hover, #sidebar .widget_nav_menu a:focus, #sidebar .widget_nav_menu a:active, #sidebar .widget_categories a:hover, #sidebar .widget_categories a:focus, #sidebar .widget_categories a:active, #sidebar .widget_recent_entries a:hover, #sidebar .widget_recent_entries a:focus, #sidebar .widget_recent_entries a:active, #sidebar .widget_recent_comments a:hover, #sidebar .widget_recent_comments a:focus, #sidebar .widget_recent_comments a:active, #sidebar .widget_pages a:hover, #sidebar .widget_pages a:focus, #sidebar .widget_pages a:active, #sidebar .widget_icl_lang_sel_widget a:hover, #sidebar .widget_icl_lang_sel_widget a:focus, #sidebar .widget_icl_lang_sel_widget a:active { background-color: rgba(0, 0, 0, 0.02); text-decoration: underline; }
 #sidebar .widget_tag_cloud .tagcloud { line-height: 1.2; text-align: center; }
 #sidebar .widget_tag_cloud .tagcloud a { vertical-align: middle; }
+#sidebar .widget_search label { display: block; font-weight: bold; }
+#sidebar .widget_search input[type='search'] { max-width: 70%; }
 #sidebar .wpml-ls-legacy-list-vertical { display: block; }
 #sidebar .wpml-ls-legacy-list-vertical a { border: 0; line-height: inherit; }
 #sidebar .wpml-ls-legacy-list-vertical a span { vertical-align: inherit; }
@@ -499,31 +501,30 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 @media screen and (min-width: 760px) { .nav-global .logo { font-size: 14px; font-size: 0.7777777778rem; } }
 .nav-global .logo a { -webkit-background-size: cover; background-size: cover; overflow: hidden; text-indent: 120%; white-space: nowrap; -webkit-transition: background-size 250ms ease-in-out, -webkit-background-size 250ms ease-in-out; transition: background-size 250ms ease-in-out, -webkit-background-size 250ms ease-in-out; background-image: url("img/mozilla-wordmark-black.svg"); background-repeat: no-repeat; display: block; height: 100%; width: 100%; }
 @media screen and (min-width: 1000px) { .nav-global .logo { float: left; } }
-.nav-global .page-top { -webkit-transition: margin-top 250ms ease-in-out; transition: margin-top 250ms ease-in-out; color: #000; float: right; margin-right: 30px; margin-top: -4em; text-decoration: none; text-transform: lowercase; }
-@media screen and (min-width: 1000px) { .nav-global .page-top { margin-right: 0; } }
-.nav-global .page-top:before { -webkit-background-size: 25px 200px; background-size: 25px 200px; background-image: url("img/icon-sprite.svg"); background-position: center -180px; background-repeat: no-repeat; content: ''; display: inline-block; height: 20px; margin: 0 5px -.35em -30px; width: 25px; }
-.nav-global.is-minified .page-top { -webkit-transition-delay: 150ms; transition-delay: 150ms; margin-top: -.25em; }
+.nav-global .nav-global-fxdownload { left: 50px; margin: 0; position: absolute; top: .25em; width: 190px; }
+.nav-global .nav-global-fxdownload .button { font-size: 12px; font-size: 0.6666666667rem; -webkit-transition: font-size 250ms ease-in-out, padding 250ms ease-in-out; transition: font-size 250ms ease-in-out, padding 250ms ease-in-out; margin: 0 auto; padding: 0 15px; }
+@media screen and (min-width: 760px) { .nav-global .nav-global-fxdownload .button { font-size: 14px; font-size: 0.7777777778rem; } }
+.nav-global .nav-global-fxdownload .button.button-green { background-color: #fff; border-color: #16da00; color: #16da00; }
+.nav-global .nav-global-fxdownload .button.button-green:hover, .nav-global .nav-global-fxdownload .button.button-green:focus { background-color: #16da00; border: 2px solid #16da00; color: #fff; }
+@media screen and (min-width: 1000px) { .nav-global .nav-global-fxdownload { position: static; width: auto; display: inline-block; }
+  .nav-global .nav-global-fxdownload .button { font-size: 14px; font-size: 0.7777777778rem; padding: .25em 20px; } }
+@media screen and (min-width: 1000px) and (min-width: 760px) { .nav-global .nav-global-fxdownload .button { font-size: 16px; font-size: 0.8888888889rem; } }
+@media screen and (min-width: 1000px) and (min-width: 1000px) { .nav-global .nav-global-fxdownload .button { font-size: 18px; font-size: 1rem; } }
 
 .nav-mozilla { left: 0; position: absolute; top: -.5em; z-index: 98; }
 .nav-mozilla .toggle { overflow: hidden; text-indent: 120%; white-space: nowrap; background: #000 url("img/icon-menu-white.svg") center center no-repeat; -webkit-background-size: 22px auto; background-size: 22px auto; cursor: pointer; display: block; height: 2.2em; overflow: hidden; position: relative; width: 2.2em; }
 
-.nav-mozilla-menu { background-color: #fff; box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2); left: -300px; line-height: 1.1; margin: 0; overflow: visible; position: absolute; text-transform: lowercase; top: 2.2em; width: 200px; z-index: 99; }
+.nav-mozilla-menu { -webkit-transition: font-size 250ms ease-in-out, padding 250ms ease-in-out; transition: font-size 250ms ease-in-out, padding 250ms ease-in-out; background-color: #fff; box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2); left: -300px; line-height: 1.1; margin: 0; overflow: visible; position: absolute; top: 2.2em; width: 200px; z-index: 99; }
 .nav-mozilla-menu li { border-bottom: 1px solid #ccc; }
 .nav-mozilla-menu li:last-child { border: 0; }
 .nav-mozilla-menu a { -webkit-transition: background-color 150ms ease, border-width 150ms ease, padding 150ms ease; transition: background-color 150ms ease, border-width 150ms ease, padding 150ms ease; background: #fff; color: #000; display: block; padding: 10px 20px; text-decoration: none; }
 .nav-mozilla-menu a:hover, .nav-mozilla-menu a:focus { background-color: #f5f5f5; border-right: 6px solid #000; text-decoration: underline; }
 .nav-mozilla-menu .nav-global-donate a, .nav-mozilla-menu .nav-global-firefox a { padding-left: 30px; }
-.nav-mozilla-menu .nav-global-donate a:before, .nav-mozilla-menu .nav-global-firefox a:before { -webkit-background-size: 25px 200px; background-size: 25px 200px; background-image: url("img/icon-sprite.svg"); background-repeat: no-repeat; content: ''; display: inline-block; height: 20px; margin: 0 5px -.35em -30px; width: 25px; }
+.nav-mozilla-menu .nav-global-donate a:before, .nav-mozilla-menu .nav-global-firefox a:before { -webkit-background-size: 25px 200px; background-size: 25px 200px; background-image: url("img/icon-sprite.svg"); background-repeat: no-repeat; content: ''; display: inline-block; height: 20px; margin: 0 5px -.25em -30px; width: 25px; }
 .nav-mozilla-menu .nav-global-donate a:before { background-position: 0 -100px; }
 .nav-mozilla-menu .nav-global-donate a:hover:before, .nav-mozilla-menu .nav-global-donate a:focus:before { background-position: 0 -120px; }
 .nav-mozilla-menu .nav-global-firefox a:before { background-position: 0 -140px; }
 .nav-mozilla-menu .nav-global-firefox a:hover:before, .nav-mozilla-menu .nav-global-firefox a:focus:before { background-position: 0 -160px; }
-.nav-mozilla-menu .nav-global-fxdownload { padding: 15px 10px; }
-.nav-mozilla-menu .nav-global-fxdownload .button { font-size: 14px; font-size: 0.7777777778rem; margin: 0 auto; padding: .35em 20px; }
-@media screen and (min-width: 760px) { .nav-mozilla-menu .nav-global-fxdownload .button { font-size: 16px; font-size: 0.8888888889rem; } }
-@media screen and (min-width: 1000px) { .nav-mozilla-menu .nav-global-fxdownload .button { font-size: 18px; font-size: 1rem; } }
-.nav-mozilla-menu .nav-global-fxdownload .button.button-green { background-color: #fff; border-color: #16da00; color: #16da00; }
-.nav-mozilla-menu .nav-global-fxdownload .button.button-green:hover, .nav-mozilla-menu .nav-global-fxdownload .button.button-green:focus { background-color: #16da00; border: 2px solid #16da00; color: #fff; }
 
 .nav-mozilla:hover .nav-mozilla-menu, .nav-mozilla-menu:target { left: auto; }
 
@@ -533,19 +534,22 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
   .nav-global .logo { height: 40px; width: 126px; }
   .nav-global.is-minified { height: 1.2em; padding: .5em 0; }
   .nav-global.is-minified .logo { height: 20px; width: 63px; }
-  .nav-global.is-minified .nav-mozilla { margin-top: -4em; }
-  .nav-global.is-minified .nav-mozilla a:focus { margin-top: 3em; }
-  .nav-mozilla { -webkit-transition: margin-top 250ms ease-in; transition: margin-top 250ms ease-in; float: right; max-width: 75%; position: relative; }
+  .nav-global.is-minified .nav-mozilla-menu { font-size: 12px; font-size: 0.6666666667rem; padding: .25em 0; } }
+@media screen and (min-width: 1000px) and (min-width: 760px) { .nav-global.is-minified .nav-mozilla-menu { font-size: 14px; font-size: 0.7777777778rem; } }
+@media screen and (min-width: 1000px) { .nav-global.is-minified .nav-mozilla-menu .button { font-size: 12px; font-size: 0.6666666667rem; margin-top: -.35em; } }
+@media screen and (min-width: 1000px) and (min-width: 760px) { .nav-global.is-minified .nav-mozilla-menu .button { font-size: 14px; font-size: 0.7777777778rem; } }
+@media screen and (min-width: 1000px) { .nav-global.is-minified .nav-global-donate a:before, .nav-global.is-minified .nav-global-firefox a:before { margin-top: -.15em; }
+  .nav-global.is-minified .nav-global-fxdownload .button { font-size: 12px; font-size: 0.6666666667rem; padding: .15em 20px; } }
+@media screen and (min-width: 1000px) and (min-width: 760px) { .nav-global.is-minified .nav-global-fxdownload .button { font-size: 14px; font-size: 0.7777777778rem; } }
+
+@media screen and (min-width: 1000px) { .nav-mozilla { -webkit-transition: margin-top 250ms ease-in; transition: margin-top 250ms ease-in; float: right; max-width: 75%; position: relative; }
   .nav-mozilla .toggle { display: none; }
-  .nav-mozilla-menu { background: transparent; box-shadow: none; margin-top: .25em; padding: 1em 0; position: static; width: auto; }
+  .nav-mozilla-menu { display: inline-block; background: transparent; box-shadow: none; margin-top: .25em; padding: 1em 0; position: static; width: auto; }
   .nav-mozilla-menu li { display: inline; border: 0; padding: 0 10px; }
   .nav-mozilla-menu a { background: transparent; display: inline-block; padding: 0; }
   .nav-mozilla-menu a:hover, .nav-mozilla-menu a:focus { background: transparent; border: 0; }
-  .js .nav-mozilla-menu { display: block; } }
-@media screen and (min-width: 1000px) { .nav-mozilla-menu li { padding: 0 20px; }
-  .nav-mozilla-menu li.nav-global-fxdownload { padding: 0 20px; }
-  .nav-mozilla-menu li.nav-global-fxdownload .button { margin-top: -.5em; } }
-@supports (display: flex) { @media screen and (min-width: 1000px) { .nav-mozilla-menu, .js .nav-mozilla-menu { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: flex-end; justify-content: flex-end; } } }
+  .js .nav-mozilla-menu { display: inline-block; } }
+@media screen and (min-width: 1000px) { .nav-mozilla-menu li { padding: 0 20px; } }
 #nav-util { font-size: 14px; font-size: 0.7777777778rem; font-family: "Open Sans", X-LocaleSpecific, sans-serif; background: #000; box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); color: #fff; position: relative; z-index: 10; line-height: 1; }
 @media screen and (min-width: 760px) { #nav-util { font-size: 16px; font-size: 0.8888888889rem; } }
 #nav-util .content { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; padding: .5em 20px; align-items: center; }
@@ -565,12 +569,12 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 #nav-util.is-sticky { position: fixed; width: 100%; top: 2.2em; left: 0; }
 
 .nav-util-search .fm-search { float: right; text-align: right; }
-.nav-util-search .fm-search p { margin: 0; display: flex; align-items: center; }
+.nav-util-search .fm-search p { margin: 0; }
 .nav-util-search .fm-search label { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; /* !important required to ensure element is hidden when mixin is applied */ position: absolute !important; /* stylelint-disable-line declaration-no-important */ width: 1px; }
 .nav-util-search .fm-search input { font-size: 12px; font-size: 0.6666666667rem; background-color: #000; border-color: #fff; color: #fff; max-width: 75%; -webkit-appearance: none; }
 @media screen and (min-width: 760px) { .nav-util-search .fm-search input { font-size: 14px; font-size: 0.7777777778rem; } }
-.nav-util-search .fm-search .button { overflow: hidden; text-indent: 120%; white-space: nowrap; background-color: #000; border: 0; color: #fff; padding: 0; position: relative; vertical-align: bottom; width: 30px; }
-.nav-util-search .fm-search .button:before { background: transparent url("img/icon-sprite.svg") center -80px no-repeat; -webkit-background-size: 25px 200px; background-size: 25px 200px; content: ''; display: block; height: 20px; left: 0; position: absolute; top: .25em; width: 100%; }
+.nav-util-search .fm-search .button { overflow: hidden; text-indent: 120%; white-space: nowrap; background-color: #000; border-radius: 0; border: 0; color: #fff; height: 30px; padding: 0; position: relative; vertical-align: bottom; width: 30px; }
+.nav-util-search .fm-search .button:before { background: transparent url("img/icon-sprite.svg") center -80px no-repeat; -webkit-background-size: 25px 200px; background-size: 25px 200px; content: ''; display: block; height: 25px; left: 0; position: absolute; top: .5em; width: 100%; }
 
 .nav-local { font-size: 14px; font-size: 0.7777777778rem; font-family: "Open Sans", X-LocaleSpecific, sans-serif; background: #fff; border-bottom: 1px solid rgba(0, 0, 0, 0.15); box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); color: #000; text-align: center; }
 @media screen and (min-width: 760px) { .nav-local { font-size: 16px; font-size: 0.8888888889rem; } }
