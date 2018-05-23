@@ -103,8 +103,6 @@
 
     p {
         margin: 0;
-        display: flex;
-        align-items: center;
     }
 
     label {
@@ -123,8 +121,10 @@
     .button {
         @include image-replaced;
         background-color: #000;
+        border-radius: 0;
         border: 0;
         color: #fff;
+        height: 30px;
         padding: 0;
         position: relative;
         vertical-align: bottom;
@@ -135,10 +135,10 @@
             @include background-size(25px 200px);
             content: '';
             display: block;
-            height: 20px;
+            height: 25px;
             left: 0;
             position: absolute;
-            top: .25em;
+            top: .5em;
             width: 100%;
         }
     }

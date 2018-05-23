@@ -45,35 +45,43 @@
         }
     }
 
-    .page-top {
-        @include transition(margin-top 250ms ease-in-out);
-        color: $color-text-primary;
-        float: right;
-        margin-right: 30px;
-        margin-top: -4em;
-        text-decoration: none;
-        text-transform: lowercase;
+    .nav-global-fxdownload {
+        left: 50px;
+        margin: 0;
+        position: absolute;
+        top: .25em;
+        width: 190px;
+
+        .button {
+            @include font-size-small;
+            @include transition(font-size 250ms ease-in-out, padding 250ms ease-in-out);
+            margin: 0 auto;
+            padding: 0 15px;
+
+            &.button-green {
+                background-color: $color-button-light;
+                border-color: $color-button-green;
+                color: $color-button-green;
+
+                &:hover,
+                &:focus {
+                    background-color: $color-button-green;
+                    border: 2px solid $color-button-green;
+                    color: $color-button-light;
+                }
+            }
+        }
 
         @media #{$mq-desktop} {
-            margin-right: 0;
-        }
-
-        &:before {
-            @include background-size(25px 200px);
-            background-image: url('img/icon-sprite.svg');
-            background-position: center -180px;
-            background-repeat: no-repeat;
-            content: '';
+            position: static;
+            width: auto;
             display: inline-block;
-            height: 20px;
-            margin: 0 5px -.35em -30px;
-            width: 25px;
-        }
-    }
 
-    &.is-minified .page-top {
-        @include transition-delay(150ms);
-        margin-top: -.25em;
+            .button {
+                @include font-size-level5;
+                padding: .25em 20px;
+            }
+        }
     }
 }
 
@@ -97,6 +105,7 @@
 }
 
 .nav-mozilla-menu {
+    @include transition(font-size 250ms ease-in-out, padding 250ms ease-in-out);
     background-color: #fff;
     box-shadow: 2px 2px 0 rgba(0, 0, 0, .2);
     left: -300px;
@@ -104,7 +113,6 @@
     margin: 0;
     overflow: visible;
     position: absolute;
-    text-transform: lowercase;
     top: 2.2em;
     width: 200px;
     z-index: 99;
@@ -144,7 +152,7 @@
             content: '';
             display: inline-block;
             height: 20px;
-            margin: 0 5px -.35em -30px;
+            margin: 0 5px -.25em -30px;
             width: 25px;
         }
     }
@@ -170,30 +178,6 @@
             background-position: 0 -160px;
         }
     }
-
-    .nav-global-fxdownload {
-        padding: 15px 10px;
-    }
-
-    .nav-global-fxdownload .button {
-        @include font-size-level5;
-        margin: 0 auto;
-        padding: .35em 20px;
-    }
-
-    .nav-global-fxdownload .button.button-green {
-        background-color: $color-button-light;
-        border-color: $color-button-green;
-        color: $color-button-green;
-
-        &:hover,
-        &:focus {
-            background-color: $color-button-green;
-            border: 2px solid $color-button-green;
-            color: $color-button-light;
-        }
-    }
-
 }
 
 .nav-mozilla:hover .nav-mozilla-menu,
@@ -225,12 +209,24 @@
                 width: 63px;
             }
 
-            .nav-mozilla {
-                margin-top: -4em;
+            .nav-mozilla-menu {
+                @include font-size-small;
+                padding: .25em 0;
 
-                a:focus {
-                    margin-top: 3em;
+                .button {
+                    @include font-size-small;
+                    margin-top: -.35em;
                 }
+            }
+
+            .nav-global-donate a:before,
+            .nav-global-firefox a:before {
+                margin-top: -.15em;
+            }
+
+            .nav-global-fxdownload .button {
+                @include font-size-small;
+                padding: .15em 20px;
             }
         }
     }
@@ -247,6 +243,7 @@
     }
 
     .nav-mozilla-menu {
+        display: inline-block;
         background: transparent;
         box-shadow: none;
         margin-top: .25em;
@@ -274,31 +271,23 @@
     }
 
     .js .nav-mozilla-menu {
-        display: block;
+        display: inline-block;
     }
 }
 
 @media #{$mq-desktop} {
     .nav-mozilla-menu li {
         padding: 0 20px;
-
-        &.nav-global-fxdownload {
-            padding: 0 20px;
-
-            .button {
-                margin-top: -.5em;
-            }
-        }
     }
 }
 
 // flexbox layout for savvy browsers to push nav items to the right
-@supports (display: flex) {
-    @media #{$mq-desktop} {
-        .nav-mozilla-menu,
-        .js .nav-mozilla-menu {
-            @include flexbox;
-            @include justify-content(flex-end);
-        }
-    }
-}
+// @supports (display: flex) {
+//     @media #{$mq-desktop} {
+//         .nav-mozilla-menu,
+//         .js .nav-mozilla-menu {
+//             @include flexbox;
+//             @include justify-content(flex-end);
+//         }
+//     }
+// }
