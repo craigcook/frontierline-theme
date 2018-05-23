@@ -2,6 +2,15 @@
 /**
  * Display a full post with optional full sized image.
  */
+
+$yoast_title_options = null;
+$yoast_disable_author = null;
+
+// If Yoast SEO is active, get the status of author archives
+if (class_exists('WPSEO_Frontend') && class_exists('WPSEO_Replace_Vars')) {
+  $yoast_title_options = get_option('wpseo_titles');
+  $yoast_disable_author = $yoast_title_options['disable-author'];
+}
 ?>
 
 <?php if (get_theme_mod('frontierline_no_post_image') !== '1') : ?>
@@ -42,9 +51,21 @@
     <div class="entry-info">
     <?php if ($post->post_type === 'post') : ?>
       <?php if (get_theme_mod('frontierline_no_byline') !== '1') : ?>
-        <address class="vcard">
-        <?php if (function_exists('coauthors_posts_links')) : coauthors_posts_links(); else : the_author_posts_link(); endif; ?>
-        </address>
+      <address class="vcard">
+        <?php if ($yoast_disable_author === true) :
+          if (function_exists('coauthors_posts_links')) :
+            coauthors();
+          else :
+            the_author();
+          endif;
+        else :
+          if (function_exists('coauthors_posts_links')) :
+            coauthors_posts_links();
+          else :
+            the_author_posts_link();
+          endif;
+        endif; ?>
+      </address>
       <?php endif; ?>
       <time class="date published" datetime="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php the_date(); ?></time>
     <?php endif; ?>
