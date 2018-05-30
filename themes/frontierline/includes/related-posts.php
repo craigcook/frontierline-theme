@@ -58,7 +58,7 @@
       <?php $recentposts = get_posts('showposts=5&post_status=publish&exclude='.$post->ID);
         if ($recentposts) : ?>
       <ul class="recent-posts">
-      <?php foreach($catposts as $post) : ?>
+      <?php foreach($recentposts as $post) : ?>
         <li>
           <h5 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
           <time class="date" datetime="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php echo get_the_date(); ?></time>
