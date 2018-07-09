@@ -160,3 +160,33 @@ Version:        1.0
         width: 980px;
     }
 }
+
+/* "These weeks in Firefox" posts special rules */
+@media screen and (min-width: 760px) {
+    .single .category-news .entry-header .entry-title,
+    .page .category-news .entry-header .entry-title {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .single .category-news .entry-header .entry-title,
+    .page .category-news .entry-header .entry-title {
+        font-size: 3rem;
+    }
+}
+
+.single .category-news .entry-content h3,
+.page .category-news .entry-content h3,
+.single .category-news .entry-content h4,
+.page .category-news .entry-content h4 {
+    color: white;
+    background-color: black;
+    padding: 0.3rem;
+}
+
+.single .category-news .entry-content h4,
+.page .category-news .entry-content h4 {
+    font-weight: normal;
+}
+/* end of "These weeks in Firefox" posts special rules */
