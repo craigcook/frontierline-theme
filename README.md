@@ -5,7 +5,8 @@ A WordPress theme for Mozilla blogs, inspired by Array Themes' Baseline.
 
 Uses Sass as a CSS preprocessor. Source files are in the `/sass` folder and
 should be compiled to `style.css` in the theme's root folder. To make style
-edits, modify the source files and recompile.
+edits, modify the source files and recompile `sass --style compact
+--sourcemap=auto ./sass/style.scss style.css`.
 **Don't edit `style.css` directly!**
 
 * WP Version: 4.0+
