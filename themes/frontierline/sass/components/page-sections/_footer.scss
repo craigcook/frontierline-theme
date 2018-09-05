@@ -107,6 +107,12 @@
                     width: 10px;
                     height: 19px;
                 }
+
+                &.telegram {
+                    background-position: 0 -106px;
+                    width: 19px;
+                    height: 16px;
+                }
             }
         }
     }
@@ -206,4 +212,3 @@
         padding: 0 0 0 20px;
     }
 }
-
