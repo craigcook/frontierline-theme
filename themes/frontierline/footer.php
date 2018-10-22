@@ -59,6 +59,11 @@
             <li><a rel="nofollow" href="https://www.mozilla.org/privacy/websites/#cookies" data-link-type="footer" data-link-name="Cookies"><?php _e('Cookies', 'frontierline'); ?></a></li>
             <li><a rel="nofollow" href="https://www.mozilla.org/about/legal/" data-link-type="footer" data-link-name="Legal"><?php _e('Legal', 'frontierline'); ?></a></li>
           </ul>
+
+          <p class="license">
+          <?php printf(__('Visit Mozilla Corporation’s not-for-profit parent, the <a href="%1s" data-link-type="%2s" data-link-name="%3s">Mozilla Foundation</a>.', 'frontierline'), esc_attr('https://foundation.mozilla.org'), esc_attr('footer'), esc_attr('Mozilla Foundation')); ?>
+          </p>
+
           <p class="license">
           <?php printf(__('Portions of this content are ©1998-%1s by individual contributors. Content available under a <a href="%2s" rel="external license">Creative Commons license</a>.', 'frontierline'), date('Y'), esc_attr('https://www.mozilla.org/foundation/licensing/website-content/')); ?>
           </p>
