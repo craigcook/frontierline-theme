@@ -5,14 +5,15 @@
 
 ?>
 
-<aside id="newsletter-subscribe" class="section newsletter-firefox">
+<aside id="newsletter-subscribe" class="section newsletter-technology">
   <form id="newsletter_form" class="content newsletter_form" name="newsletter_form" action="https://www.mozilla.org/en-US/newsletter/" method="post" data-blog="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
     <input type="hidden" id="newsletters" name="newsletters" value="mozilla-technology">
+    <input type="hidden" id="lang" name="lang" value="en">
     <input type="hidden" id="source_url" name="source_url" value="<?php frontierline_current_url(); ?>">
 
     <div class="form-title">
       <?php // L10n: line break for visual formatting ?>
-      <h3><?php _e('What\'s Next?' , 'frontierline'); ?></h3>
+      <h3><?php _e('What’s Next?' , 'frontierline'); ?></h3>
       <p>Get the Mozilla Labs newsletter for updates on our latest tech and product innovations.</p>
     </div>
 
@@ -305,20 +306,7 @@
           </select>
         </div>
 
-        <div class="field field-language">
-          <label for="lang"><?php _e('Language', 'frontierline'); ?></label>
-          <select id="lang" name="lang" required="required">
-            <option value="id">Bahasa Indonesia</option>
-            <option value="de">Deutsch</option>
-            <option value="en" selected="selected">English</option>
-            <option value="es">Español</option>
-            <option value="fr">Français</option>
-            <option value="pl">Polski</option>
-            <option value="pt">Português</option>
-            <option value="ru">Русский</option>
-            <option value="zh-TW">正體中文</option>
-          </select>
-        </div>
+       
 
         <div class="field field-format">
           <label for="format-h"><input checked="checked" id="format-h" name="fmt" value="H" type="radio"> <?php _e('HTML', 'frontierline'); ?></label>
