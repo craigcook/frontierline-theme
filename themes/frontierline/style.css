@@ -554,12 +554,14 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 #nav-util { font-size: 14px; font-size: 0.7777777778rem; font-family: "Open Sans", X-LocaleSpecific, sans-serif; background: #000; box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1); color: #fff; position: relative; z-index: 10; line-height: 1; }
 @media screen and (min-width: 760px) { #nav-util { font-size: 16px; font-size: 0.8888888889rem; } }
 #nav-util .content { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; padding: .5em 20px; align-items: center; }
-#nav-util li { display: inline-block; width: 50%; padding: .25em 0; }
-#nav-util li.nav-util-sidebar { text-align: left; }
-#nav-util li.nav-util-categories { display: none; text-align: center; }
+#nav-util li { display: inline-block; width: 100%; padding: .25em 0; }
+#nav-util li.nav-util-sidebar, #nav-util li.nav-util-categories { text-align: left; }
+#nav-util li.nav-util-categories { display: none; }
 #nav-util li.nav-util-search { padding: 0; }
-@media screen and (min-width: 760px) { #nav-util.has-categories li { width: 33%; }
-  #nav-util.has-categories li.nav-util-categories { display: inline-block; } }
+@media screen and (min-width: 760px) { #nav-util.has-categories li, #nav-util.has-sidebar li { width: 50%; }
+  #nav-util.has-categories li.nav-util-categories, #nav-util.has-categories li.nav-util-sidebar, #nav-util.has-sidebar li.nav-util-categories, #nav-util.has-sidebar li.nav-util-sidebar { display: inline-block; }
+  #nav-util.has-categories.has-sidebar li { width: 33%; }
+  #nav-util.has-categories.has-sidebar li.nav-util-categories { text-align: center; } }
 #nav-util a { color: #fff; font-weight: bold; text-decoration: none; padding-left: 25px; position: relative; }
 #nav-util a:hover, #nav-util a:focus { text-decoration: underline; }
 #nav-util a:before { -webkit-background-size: 25px 200px; background-size: 25px 200px; background-image: url("img/icon-sprite.svg"); background-repeat: no-repeat; bottom: 0; content: ''; display: inline-block; height: 18px; left: 0; position: absolute; width: 20px; }

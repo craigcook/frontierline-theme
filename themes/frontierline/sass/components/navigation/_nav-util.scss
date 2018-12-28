@@ -19,16 +19,16 @@
 
     li {
         display: inline-block;
-        width: 50%;
+        width: 100%;
         padding: .25em 0;
 
-        &.nav-util-sidebar {
+        &.nav-util-sidebar,
+        &.nav-util-categories {
             text-align: left;
         }
 
         &.nav-util-categories {
             display: none; // hidden on mobile
-            text-align: center;
         }
 
         &.nav-util-search {
@@ -37,11 +37,21 @@
     }
 
     @media #{$mq-tablet} {
-        &.has-categories li {
+        &.has-categories li,
+        &.has-sidebar li {
+            width: 50%;
+
+            &.nav-util-categories,
+            &.nav-util-sidebar {
+                display: inline-block;
+            }
+        }
+
+        &.has-categories.has-sidebar li {
             width: 33%;
 
             &.nav-util-categories {
-                display: inline-block;
+                text-align: center;
             }
         }
     }
