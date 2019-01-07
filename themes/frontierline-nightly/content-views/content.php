@@ -70,7 +70,7 @@
 
   <footer class="fx-footer">
     <h4><?php _e('Bleeding edge browsing', 'frontierline'); ?></h4>
-    <p><a href="https://www.mozilla.org/firefox/channel/desktop/#nightly" rel="external" class="button button-green"><?php _e('Download Firefox Nightly', 'frontierline'); ?></a></p>
+    <p><a href="https://www.mozilla.org/firefox/channel/desktop/#nightly" rel="external" class="button button-product"><?php _e('Download Firefox Nightly', 'frontierline'); ?></a></p>
   </footer>
 
 </article><!-- #post -->

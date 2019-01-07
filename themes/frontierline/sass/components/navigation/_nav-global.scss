@@ -54,19 +54,19 @@
 
         .button {
             @include font-size-small;
-            @include transition(font-size 250ms ease-in-out, padding 250ms ease-in-out);
+            @include transition(font-size 250ms ease-in-out, padding 250ms ease-in-out, background-color 100ms, border-color 100ms, color 100ms);
             margin: 0 auto;
             padding: 0 15px;
 
-            &.button-green {
-                background-color: $color-button-light;
-                border-color: $color-button-green;
-                color: $color-button-green;
+            &.button-product {
+                background-color: transparent;
+                border-color: #0060df;
+                color: #0060df;
 
                 &:hover,
                 &:focus {
-                    background-color: $color-button-green;
-                    border: 2px solid $color-button-green;
+                    background-color: #003eaa;
+                    border-color: #003eaa;
                     color: $color-button-light;
                 }
             }

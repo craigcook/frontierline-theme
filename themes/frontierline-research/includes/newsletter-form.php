@@ -306,7 +306,7 @@
           </select>
         </div>
 
-       
+
 
         <div class="field field-format">
           <label for="format-h"><input checked="checked" id="format-h" name="fmt" value="H" type="radio"> <?php _e('HTML', 'frontierline'); ?></label>
@@ -322,7 +322,7 @@
       </div>
 
       <div class="form-submit">
-        <button id="newsletter_submit" type="submit" class="form-button button-light"><?php _e('Sign up now', 'frontierline'); ?></button>
+        <button id="newsletter_submit" type="submit" class="form-button button-dark"><?php _e('Sign up now', 'frontierline'); ?></button>
       </div>
     </div>
 

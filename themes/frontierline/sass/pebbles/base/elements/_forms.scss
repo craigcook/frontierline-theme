@@ -30,7 +30,7 @@ input[type=time] {
     @include border-box;
     @include transition(all 100ms linear);
     background: #fff;
-    border-radius: .3em;
+    border-radius: 2px;
     border: 1px solid #b2b2b2;
     display: inline-block;
     line-height: 1.25;

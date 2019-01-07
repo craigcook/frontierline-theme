@@ -712,7 +712,7 @@ define('WYSIWYG_META_KEY', 'extra-content');
 
 // Register the metabox
 function frontierline_register_sidebar_metabox() {
-  add_meta_box(WYSIWYG_META_BOX_ID, __('Custom Sidebar Content'), 'frontierline_render_sidebar_metabox_cb', 'page');
+  add_meta_box(WYSIWYG_EDITOR_ID, __('Custom Sidebar Content'), 'frontierline_render_sidebar_metabox_cb', 'page');
 }
 
 // Callback. Renders the metabox

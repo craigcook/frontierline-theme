@@ -6,11 +6,12 @@
 
 // The basis for all buttons on mozilla.org
 %base-button {
+    @include border-box;
     @include open-sans;
     @include font-size-level5;
-    @include transition(background-color 100ms ease-in-out);
+    @include transition(background-color 100ms, border-color 100ms, color 100ms);
     background: none;
-    border-radius: 100px;
+    border-radius: 2px;
     border-style: solid;
     border-width: 2px;
     cursor: pointer;
@@ -49,12 +50,12 @@ a.button:visited {
 
     &.button-dark {
         background-color: $color-button-dark;
-        border-color: darken($color-button-dark, 3%);
+        border-color: $color-button-dark;
         color: $color-button-light;
 
         &:hover,
         &:focus {
-            background-color: saturate(lighten($color-button-dark, 5%), 10%);
+            background-color: lighten($color-button-dark, 5%);
         }
     }
 
@@ -87,6 +88,18 @@ a.button:visited {
         &:hover,
         &:focus {
             background-color: saturate(lighten($color-button-orange, 5%), 10%);
+        }
+    }
+
+    &.button-product {
+        background-color: #0060df;
+        border-color: #0060df;
+        color: $color-button-light;
+
+        &:hover,
+        &:focus {
+            background-color: #003eaa;
+            border-color: #003eaa;
         }
     }
 
@@ -135,8 +148,8 @@ input[type='button'].form-button {
         &:hover,
         &:focus {
             background-color: transparentize($color-button-dark, .95);
-            border-color: saturate(lighten($color-button-dark, 5%), 10%);
-            color: saturate(lighten($color-button-dark, 5%), 10%);
+            border-color: lighten($color-button-dark, 5%);
+            color: lighten($color-button-dark, 5%);
         }
     }
 

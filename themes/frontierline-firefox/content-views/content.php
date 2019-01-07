@@ -91,7 +91,7 @@ if (class_exists('WPSEO_Frontend') && class_exists('WPSEO_Replace_Vars')) {
 
   <footer class="fx-footer">
     <h4><?php _e('Browse fast. Browse free.', 'frontierline'); ?></h4>
-    <p><a href="https://www.mozilla.org/firefox/new/?utm_source=<?php echo frontierline_blog_domain(); ?>&utm_campaign=firefox_frontier&utm_medium=referral" rel="external" class="button button-green"><?php _e('Download Firefox', 'frontierline'); ?></a></p>
+    <p><a href="https://www.mozilla.org/firefox/new/?utm_source=<?php echo frontierline_blog_domain(); ?>&utm_campaign=firefox_frontier&utm_medium=referral" rel="external" class="button button-product"><?php _e('Download Firefox', 'frontierline'); ?></a></p>
   </footer>
 
 </article><!-- #post -->
