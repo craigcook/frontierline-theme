@@ -53,7 +53,7 @@
         width: 190px;
 
         .button {
-            @include font-size-small;
+            @include font-size-level6;
             @include transition(font-size 250ms ease-in-out, padding 250ms ease-in-out, background-color 100ms, border-color 100ms, color 100ms);
             margin: 0 auto;
             padding: 0 15px;
@@ -78,7 +78,6 @@
             display: inline-block;
 
             .button {
-                @include font-size-level5;
                 padding: .25em 20px;
             }
         }

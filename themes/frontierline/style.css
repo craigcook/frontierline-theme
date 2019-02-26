@@ -505,14 +505,12 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 .nav-global .logo a { -webkit-background-size: cover; background-size: cover; overflow: hidden; text-indent: 120%; white-space: nowrap; -webkit-transition: background-size 250ms ease-in-out, -webkit-background-size 250ms ease-in-out; transition: background-size 250ms ease-in-out, -webkit-background-size 250ms ease-in-out; background-image: url("img/mozilla-wordmark-black.svg"); background-repeat: no-repeat; display: block; height: 100%; width: 100%; }
 @media screen and (min-width: 1000px) { .nav-global .logo { float: left; } }
 .nav-global .nav-global-fxdownload { left: 50px; margin: 0; position: absolute; top: .25em; width: 190px; }
-.nav-global .nav-global-fxdownload .button { font-size: 12px; font-size: 0.6666666667rem; -webkit-transition: font-size 250ms ease-in-out, padding 250ms ease-in-out, background-color 100ms, border-color 100ms, color 100ms; transition: font-size 250ms ease-in-out, padding 250ms ease-in-out, background-color 100ms, border-color 100ms, color 100ms; margin: 0 auto; padding: 0 15px; }
-@media screen and (min-width: 760px) { .nav-global .nav-global-fxdownload .button { font-size: 14px; font-size: 0.7777777778rem; } }
+.nav-global .nav-global-fxdownload .button { font-size: 14px; font-size: 0.7777777778rem; -webkit-transition: font-size 250ms ease-in-out, padding 250ms ease-in-out, background-color 100ms, border-color 100ms, color 100ms; transition: font-size 250ms ease-in-out, padding 250ms ease-in-out, background-color 100ms, border-color 100ms, color 100ms; margin: 0 auto; padding: 0 15px; }
+@media screen and (min-width: 760px) { .nav-global .nav-global-fxdownload .button { font-size: 16px; font-size: 0.8888888889rem; } }
 .nav-global .nav-global-fxdownload .button.button-product { background-color: transparent; border-color: #0060df; color: #0060df; }
 .nav-global .nav-global-fxdownload .button.button-product:hover, .nav-global .nav-global-fxdownload .button.button-product:focus { background-color: #003eaa; border-color: #003eaa; color: #fff; }
 @media screen and (min-width: 1000px) { .nav-global .nav-global-fxdownload { position: static; width: auto; display: inline-block; }
-  .nav-global .nav-global-fxdownload .button { font-size: 14px; font-size: 0.7777777778rem; padding: .25em 20px; } }
-@media screen and (min-width: 1000px) and (min-width: 760px) { .nav-global .nav-global-fxdownload .button { font-size: 16px; font-size: 0.8888888889rem; } }
-@media screen and (min-width: 1000px) and (min-width: 1000px) { .nav-global .nav-global-fxdownload .button { font-size: 18px; font-size: 1rem; } }
+  .nav-global .nav-global-fxdownload .button { padding: .25em 20px; } }
 
 .nav-mozilla { left: 0; position: absolute; top: -.5em; z-index: 98; }
 .nav-mozilla .toggle { overflow: hidden; text-indent: 120%; white-space: nowrap; background: #000 url("img/icon-menu-white.svg") center center no-repeat; -webkit-background-size: 22px auto; background-size: 22px auto; cursor: pointer; display: block; height: 2.2em; overflow: hidden; position: relative; width: 2.2em; }
