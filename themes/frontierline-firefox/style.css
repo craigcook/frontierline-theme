@@ -60,3 +60,15 @@ Version:        1.1
         padding: 10px 10px 20px 180px;
     }
 }
+
+.nav-global .nav-global-fxdownload .button.button-product {
+    background-color: #0060df;
+    border-color: #0060df;
+    color: #fff;
+}
+
+.nav-global .nav-global-fxdownload .button.button-product:hover,
+.nav-global .nav-global-fxdownload .button.button-product:focus {
+    background-color: #003eaa;
+    border-color: #003eaa;
+}
