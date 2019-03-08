@@ -188,7 +188,7 @@
             .entry-content > p:first-child:not(.disclaimer),
             .entry-content > .disclaimer:first-child + p {
                 @include font-size-level4;
-                min-height: 70px;
+
                 &:first-line {
                     @include font-size-level3;
                 }
