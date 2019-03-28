@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Frontierline\n"
-"POT-Creation-Date: 2018-02-28 11:13-0800\n"
-"PO-Revision-Date: 2018-02-28 11:13-0800\n"
+"POT-Creation-Date: 2019-03-27 16:56-0700\n"
+"PO-Revision-Date: 2019-03-27 16:57-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e\n"
@@ -122,36 +122,36 @@ msgstr "Besuchen Sie <a href=\"%s\">mozilla.org</a>."
 msgid "Try searching this blog."
 msgstr "Suchen Sie in diesem Blog."
 
-#: content-views/content-page-sidebar.php:24 content-views/content.php:56
+#: content-views/content-page-sidebar.php:24 content-views/content.php:77
 #: image.php:30
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: content-views/content-page-sidebar.php:31 content-views/content.php:61
+#: content-views/content-page-sidebar.php:31 content-views/content.php:82
 msgid "Continue reading…"
 msgstr "Weiterlesen…"
 
-#: content-views/content-page-sidebar.php:32 content-views/content.php:62
+#: content-views/content-page-sidebar.php:32 content-views/content.php:83
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: content-views/content.php:22
+#: content-views/content.php:31
 msgid "Categories:"
 msgstr "Kategorien:"
 
-#: content-views/content.php:53
+#: content-views/content.php:74
 msgid "No responses yet"
 msgstr "Noch keine Antworten"
 
-#: content-views/content.php:53
+#: content-views/content.php:74
 msgid "1 response"
 msgstr "Eine Antwort"
 
-#: content-views/content.php:53
+#: content-views/content.php:74
 msgid "% responses"
 msgstr "%s Antworten"
 
-#: content-views/content.php:67
+#: content-views/content.php:88
 msgid "Tags:"
 msgstr "Schlagwörter:"
 
@@ -167,40 +167,47 @@ msgstr "Kontakt"
 msgid "Donate"
 msgstr "Spenden"
 
-#: footer.php:41 includes/nav-global.php:18
+#: footer.php:40 includes/nav-global.php:23
 #, fuzzy
 msgid "Download Firefox"
 msgstr "Firefox herunterladen"
 
-#: footer.php:42
+#: footer.php:41
 msgid "Desktop"
 msgstr ""
 
-#: footer.php:43
+#: footer.php:42
 msgid "Mobile"
 msgstr ""
 
-#: footer.php:44
+#: footer.php:43
 msgid "Features"
 msgstr ""
 
-#: footer.php:45
+#: footer.php:44
 msgid "Beta, Nightly, Developer Edition"
 msgstr ""
 
-#: footer.php:60
+#: footer.php:58
 msgid "Website Privacy Notice"
 msgstr ""
 
-#: footer.php:61
+#: footer.php:59
 msgid "Cookies"
 msgstr "Cookies"
 
-#: footer.php:62
+#: footer.php:60
 msgid "Legal"
 msgstr "Rechtliches"
 
-#: footer.php:65
+#: footer.php:64
+#, php-format
+msgid ""
+"Visit Mozilla Corporation’s not-for-profit parent, the <a href=\"%1s\" data-"
+"link-type=\"%2s\" data-link-name=\"%3s\">Mozilla Foundation</a>."
+msgstr ""
+
+#: footer.php:68
 #, fuzzy, php-format
 msgid ""
 "Portions of this content are ©1998-%1s by individual contributors. Content "
@@ -276,7 +283,7 @@ msgstr "Nicht gefunden"
 msgid ""
 "Spamming robots, please fill in this field. Real humans should leave it "
 "blank."
-msgstr "Spambots füllen bitte dieses Feld aus. Echte Menschen lassen es frei"
+msgstr "Spambots füllen bitte dieses Feld aus. Echte Menschen lassen es frei."
 
 #: functions.php:413
 msgid ""
@@ -328,7 +335,7 @@ msgstr "Ping von "
 
 #: functions.php:595
 msgid "wrote on"
-msgstr "schrieb am "
+msgstr "schrieb am"
 
 #: functions.php:608
 msgid "Your comment is awaiting moderation."
@@ -339,22 +346,20 @@ msgid "Edit comment"
 msgstr "Kommentar bearbeiten"
 
 #: functions.php:667
-#, fuzzy
 msgid ""
 "Remember to include a featured image! It should be at least 1400 by 770 "
 "pixels."
 msgstr ""
 "Fügen Sie unbedingt ein vorgestelltes Bild ein! Es sollte mindestens 1400 "
 "mal 770Pixel groß sein. Beiträge ohne vorgestelltes Bild zeigen ein Standard-"
-"Platzhalterbild"
+"Platzhalterbild."
 
 #: functions.php:670
-#, fuzzy
 msgid " Posts without a featured image will show a standard placeholder image."
 msgstr ""
 "Fügen Sie unbedingt ein vorgestelltes Bild ein! Es sollte mindestens 1400 "
 "mal 770Pixel groß sein. Beiträge ohne vorgestelltes Bild zeigen ein Standard-"
-"Platzhalterbild"
+"Platzhalterbild."
 
 #: functions.php:715
 msgid "Custom Sidebar Content"
@@ -486,17 +491,9 @@ msgstr ""
 msgid "Give"
 msgstr "Spenden"
 
-#: includes/nav-global.php:20
+#: includes/nav-global.php:18
 msgid "Discover Firefox"
 msgstr "Firefox entdecken"
-
-#: includes/nav-global.php:25
-msgid "Go to the top of the page"
-msgstr "Zum Seitenanfang springen"
-
-#: includes/nav-global.php:25
-msgid "Top"
-msgstr "Nach oben"
 
 #: includes/nav-pagination.php:5
 msgid "Page"
@@ -518,11 +515,11 @@ msgstr "Vorheriger Artikel"
 msgid "Next article"
 msgstr "Nächster Artikel"
 
-#: includes/nav-util.php:9
+#: includes/nav-util.php:10
 msgid "Explore"
 msgstr "Entdecken"
 
-#: includes/nav-util.php:11
+#: includes/nav-util.php:13
 msgid "Categories"
 msgstr "Kategorien"
 
@@ -620,6 +617,12 @@ msgstr "Diese Website durchsuchen"
 #: searchform.php:12
 msgid "Search"
 msgstr "Suchen"
+
+#~ msgid "Go to the top of the page"
+#~ msgstr "Zum Seitenanfang springen"
+
+#~ msgid "Top"
+#~ msgstr "Nach oben"
 
 #~ msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 #~ msgstr ""

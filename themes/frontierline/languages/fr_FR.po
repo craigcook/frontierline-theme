@@ -1,31 +1,27 @@
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: Frontierline\n"
 "POT-Creation-Date: 2019-03-27 16:55-0700\n"
-"PO-Revision-Date: 2017-02-23 14:32-0800\n"
+"PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: en_US\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2\n"
-"X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: _;_e\n"
 
 #: archive.php:18 functions.php:306
 #, php-format
 msgid "Articles in “%s”"
-msgstr ""
+msgstr "Plus d’articles dans “%s”"
 
 #: archive.php:20 functions.php:308
-#, php-format
+#, fuzzy, php-format
 msgid "Articles tagged with “%s”"
-msgstr ""
+msgstr "Les articles étiquetés avec “%s”"
 
 #: archive.php:22 archive.php:24 archive.php:26 functions.php:312
 #: functions.php:314 functions.php:316
@@ -36,7 +32,7 @@ msgstr ""
 #: archive.php:28 functions.php:310
 #, php-format
 msgid "Articles by %s"
-msgstr ""
+msgstr "Les articles écrits par %s"
 
 #. L10n: %s: post title
 #: comments.php:23
@@ -51,146 +47,152 @@ msgid "%1$s comments on “%2$s”"
 msgstr ""
 
 #: comments.php:31
+#, fuzzy
 msgid "No comments yet"
-msgstr ""
+msgstr "Aucun commentaire pour l’instant"
 
 #: comments.php:35
+#, fuzzy
 msgid "Post a comment"
-msgstr ""
+msgstr "Envoyer un commentaire"
 
 #: comments.php:45
+#, fuzzy
 msgid "More comments:"
-msgstr ""
+msgstr "Plus de commentaires&nbsp;:"
 
 #. L10n: 'trackbacks' are when another website refers to this blog post with a link notification
 #: comments.php:54
-#, php-format
+#, fuzzy, php-format
 msgid ""
 "Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post"
 "\">trackbacks</a> are open."
-msgstr ""
+msgstr "Les commentaires sont fermés, mais les trackbacks sont ouverts."
 
 #: content-views/content-none.php:10
 msgid "Nothing Found"
-msgstr ""
+msgstr "Oups !"
 
 #: content-views/content-none.php:16
-#, php-format
+#, fuzzy, php-format
 msgid "Sorry, we didn’t find anything for “%s”. Try another search?"
-msgstr ""
+msgstr "Désolé, aucun résultat pour «% s». Réessayer?"
 
 #: content-views/content-none.php:20
 msgid ""
 "Sorry, we looked everywhere, but we couldn’t find the page or file you were "
 "looking for. A few possible explanations:"
 msgstr ""
+"Toujours perdu ? Ne vous inquiétez pas, voici quelques pistes à suivre pour "
+"retrouver votre chemin :"
 
 #: content-views/content-none.php:22
 msgid "You may have followed an out-dated link or bookmark."
-msgstr ""
+msgstr "Si vous avez cliqué sur un lien, il était probablement cassé."
 
 #: content-views/content-none.php:23
 msgid "If you entered the address by hand, you may have mistyped it."
 msgstr ""
+"Si vous avez entré l’adresse manuellement, vous avez peut-être mal saisi."
 
 #: content-views/content-none.php:24
 msgid "You might have just discovered an error. Congratulations!"
-msgstr ""
+msgstr "Vous avez peut-être découvert une erreur. Félicitations!"
 
 #: content-views/content-none.php:27
 msgid "So what do we do now?"
-msgstr ""
+msgstr "Et maintenant?"
 
 #: content-views/content-none.php:29
-#, php-format
+#, fuzzy, php-format
 msgid "Go to the <a href=\"%s\">front page</a>."
-msgstr ""
+msgstr "Aller à la <a href=“%”>page d’accueil</a>."
 
 #: content-views/content-none.php:30
 #, php-format
 msgid "Visit <a href=\"%s\">mozilla.org</a>."
-msgstr ""
+msgstr "Visitez <a href=“%s”>mozilla.org</a>."
 
 #: content-views/content-none.php:31
 msgid "Try searching this blog."
-msgstr ""
+msgstr "Rechercher ce blog."
 
 #: content-views/content-page-sidebar.php:24 content-views/content.php:77
 #: image.php:30
 msgid "Edit"
-msgstr ""
+msgstr "Modifier"
 
 #: content-views/content-page-sidebar.php:31 content-views/content.php:82
 msgid "Continue reading…"
-msgstr ""
+msgstr "Continuer la lecture…"
 
 #: content-views/content-page-sidebar.php:32 content-views/content.php:83
 msgid "Pages:"
-msgstr ""
+msgstr "Pages:"
 
 #: content-views/content.php:31
 msgid "Categories:"
-msgstr ""
+msgstr "Les catégories :"
 
 #: content-views/content.php:74
 msgid "No responses yet"
-msgstr ""
+msgstr "Sans commentaires"
 
 #: content-views/content.php:74
 msgid "1 response"
-msgstr ""
+msgstr "1 commentaire"
 
 #: content-views/content.php:74
 msgid "% responses"
-msgstr ""
+msgstr "% commentaires"
 
 #: content-views/content.php:88
 msgid "Tags:"
-msgstr ""
+msgstr "Étiquettes:"
 
 #: footer.php:26
 msgid "About"
-msgstr ""
+msgstr "À propos"
 
 #: footer.php:27
 msgid "Contact Us"
-msgstr ""
+msgstr "Nous contacter"
 
 #: footer.php:28
 msgid "Donate"
-msgstr ""
+msgstr "Faire un don"
 
 #: footer.php:40 includes/nav-global.php:23
 msgid "Download Firefox"
-msgstr ""
+msgstr "Télécharger Firefox"
 
 #: footer.php:41
 msgid "Desktop"
-msgstr ""
+msgstr "Ordinateur"
 
 #: footer.php:42
 msgid "Mobile"
-msgstr ""
+msgstr "Mobile"
 
 #: footer.php:43
 msgid "Features"
-msgstr ""
+msgstr "Fonctionnalités"
 
 #: footer.php:44
 msgid "Beta, Nightly, Developer Edition"
-msgstr ""
+msgstr "Beta, Nightly, Developer Edition"
 
 #: footer.php:58
 msgid "Website Privacy Notice"
-msgstr ""
+msgstr "Vie privée"
 
 #: footer.php:59
 msgid "Cookies"
-msgstr ""
+msgstr "Cookies"
 
 #: footer.php:60
 msgid "Legal"
-msgstr ""
+msgstr "Mentions légales"
 
 #: footer.php:64
 #, php-format
@@ -198,6 +200,9 @@ msgid ""
 "Visit Mozilla Corporation’s not-for-profit parent, the <a href=\"%1s\" data-"
 "link-type=\"%2s\" data-link-name=\"%3s\">Mozilla Foundation</a>."
 msgstr ""
+"Visitez <a href=“%1s” data-link-type=“%2s” data-link-name=“%3s”>Mozilla "
+"Foundation</a>, l’organisation à but non lucratif à l’origine de Firefox et "
+"de tous les logiciels Mozilla."
 
 #: footer.php:68
 #, php-format
@@ -206,6 +211,9 @@ msgid ""
 "available under a <a href=\"%2s\" rel=\"external license\">Creative Commons "
 "license</a>."
 msgstr ""
+"Certaines parties de ce contenu sont ©1998-%1s par les contributeurs "
+"individuels de mozilla.org. Le contenu est disponible sous licence <a "
+"href=“%2s” rel=“external license”>Creative Commons</a>."
 
 #: functions.php:44
 msgid "Site Menu"
@@ -224,8 +232,9 @@ msgid "Twitter username"
 msgstr ""
 
 #: functions.php:125
+#, fuzzy
 msgid "Add social sharing buttons to posts"
-msgstr ""
+msgstr "Ajouter des boutons de partages sur les articles et pages du site"
 
 #: functions.php:127
 msgid "Adds buttons for Twitter and Facebook to the top of blog articles."
@@ -253,16 +262,16 @@ msgstr ""
 #: functions.php:278
 #, php-format
 msgid "Page %s"
-msgstr ""
+msgstr "Page %s"
 
 #: functions.php:321
 #, php-format
 msgid "Search results for “%s”"
-msgstr ""
+msgstr "Résultats de recherche pour “%s”"
 
 #: functions.php:323
 msgid "Not Found"
-msgstr ""
+msgstr "Pas trouvé"
 
 #: functions.php:403
 msgid ""
@@ -276,14 +285,17 @@ msgid ""
 "spam trap field. To show you are not a spammer, submit your comment again "
 "and leave the field blank."
 msgstr ""
+"Désolé, vous semblez être un robot spammeur parce que vous avez renseigné le "
+"champ du spam caché. Pour montrer que vous n’êtes pas un spammeur, soumettez "
+"à nouveau votre commentaire et laissez le champ vide."
 
 #: functions.php:414
 msgid "Spam Prevention"
-msgstr ""
+msgstr "Détection de spam"
 
 #: functions.php:504
 msgid "Read more"
-msgstr ""
+msgstr "Lire la suite"
 
 #: functions.php:540
 msgid "Sidebar Menu"
@@ -291,7 +303,7 @@ msgstr ""
 
 #: functions.php:565
 msgid "Trackback from "
-msgstr ""
+msgstr "Lien référent depuis "
 
 #. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
 #. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
@@ -301,7 +313,7 @@ msgstr ""
 
 #: functions.php:569 functions.php:582 functions.php:596
 msgid "Permanent link to this comment by "
-msgstr ""
+msgstr "Lien permanent vers ce commentaire par "
 
 #. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
 #. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
@@ -309,7 +321,7 @@ msgstr ""
 #: functions.php:572 functions.php:585 functions.php:599
 #, php-format
 msgid "%1$s at %2$s:"
-msgstr ""
+msgstr "%1$s à %2$s:"
 
 #: functions.php:578
 msgid "Ping from "
@@ -317,15 +329,15 @@ msgstr ""
 
 #: functions.php:595
 msgid "wrote on"
-msgstr ""
+msgstr "a écrit"
 
 #: functions.php:608
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Votre commentaire est en attente de modération."
 
 #: functions.php:620
 msgid "Edit comment"
-msgstr ""
+msgstr "Modifier le commentaire"
 
 #: functions.php:667
 msgid ""
@@ -440,63 +452,63 @@ msgstr ""
 
 #: includes/categories.php:13
 msgid "More articles"
-msgstr ""
+msgstr "Plus d’articles"
 
 #: includes/masthead.php:16
 msgid "Go to the front page"
-msgstr ""
+msgstr "Aller à la page d’accueil"
 
 #: includes/nav-global.php:9
 msgid "Visit mozilla.org"
-msgstr ""
+msgstr "Visiter mozilla.org"
 
 #: includes/nav-global.php:12
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: includes/nav-global.php:14
 msgid "Internet Health"
-msgstr ""
+msgstr "La santé d’Internet"
 
 #: includes/nav-global.php:15
 msgid "Technology"
-msgstr ""
+msgstr "Technologie"
 
 #: includes/nav-global.php:16
 msgid "Give"
-msgstr ""
+msgstr "Faire un don"
 
 #: includes/nav-global.php:18
 msgid "Discover Firefox"
-msgstr ""
+msgstr "Découvrez Firefox"
 
 #: includes/nav-pagination.php:5
 msgid "Page"
-msgstr ""
+msgstr "Page"
 
 #: includes/nav-pagination.php:13
 msgid "Previous"
-msgstr ""
+msgstr "Précédente"
 
 #: includes/nav-pagination.php:14
 msgid "Next"
-msgstr ""
+msgstr "Suivant"
 
 #: includes/nav-paging.php:14
 msgid "Previous article"
-msgstr ""
+msgstr "Article précédent"
 
 #: includes/nav-paging.php:26
 msgid "Next article"
-msgstr ""
+msgstr "Article suivant"
 
 #: includes/nav-util.php:10
 msgid "Explore"
-msgstr ""
+msgstr "Explorer"
 
 #: includes/nav-util.php:13
 msgid "Categories"
-msgstr ""
+msgstr "Les catégories"
 
 #: includes/newsletter-form.php:14
 msgid "Love the Web?"
@@ -508,24 +520,24 @@ msgstr ""
 
 #: includes/newsletter-form.php:22
 msgid "Your e-mail address"
-msgstr ""
+msgstr "Adresse électronique"
 
 #. L10n: 'yourname' is used as the first part of an example e-mail address, as in 'yourname@example.com'
 #: includes/newsletter-form.php:24
 msgid "yourname"
-msgstr ""
+msgstr "votreNom"
 
 #: includes/newsletter-form.php:29
 msgid "Language"
-msgstr ""
+msgstr "Langue"
 
 #: includes/newsletter-form.php:40
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: includes/newsletter-form.php:41
 msgid "Text"
-msgstr ""
+msgstr "Texte"
 
 #: includes/newsletter-form.php:47
 #, php-format
@@ -533,10 +545,12 @@ msgid ""
 "I’m okay with Mozilla handling my info as explained in this <a href=\"%s"
 "\">Privacy Policy</a>."
 msgstr ""
+"J’accepte que Mozilla utilise mes informations conformément à cette <a "
+"href=“%s”>politique de confidentialité</a>."
 
 #: includes/newsletter-form.php:53
 msgid "Sign up now"
-msgstr ""
+msgstr "Je m’inscris"
 
 #: includes/newsletter-form.php:55
 msgid "We will only send you Mozilla-related information."
@@ -544,43 +558,118 @@ msgstr ""
 
 #: includes/newsletter-form.php:61
 msgid "Thanks!"
-msgstr ""
+msgstr "Merci!"
 
 #: includes/newsletter-form.php:63
 msgid ""
 "If you haven’t previously confirmed a subscription to a Mozilla-related "
 "newsletter you may have to do so."
 msgstr ""
+"Si vous n’avez jamais confirmé d’abonnement à une lettre d’information liée "
+"à Mozilla, vous devrez peut-être le faire. Veuillez vérifier votre boîte de "
+"réception ou vos courriers indésirables et recherchez un message de notre "
+"part."
 
 #: includes/newsletter-form.php:64
 msgid "Please check your inbox or your spam filter for an e-mail from us."
 msgstr ""
 
 #: includes/related-posts.php:21
-#, php-format
+#, fuzzy, php-format
 msgid "More articles in “%s”"
-msgstr ""
+msgstr "Plus d’articles dans “%s”"
 
 #: includes/related-posts.php:35
+#, fuzzy
 msgid "There are no other articles in this category."
-msgstr ""
+msgstr "Pas plus d’articles dans cette catégorie."
 
 #: includes/related-posts.php:43
+#, fuzzy
 msgid "Popular articles"
-msgstr ""
+msgstr "Plus d’articles"
 
 #: includes/related-posts.php:57
 msgid "Recent articles"
-msgstr ""
+msgstr "Articles récents"
 
 #: includes/social-share.php:15
 msgid "Share:"
-msgstr ""
+msgstr "Partagez cet article :"
 
 #: searchform.php:10
 msgid "Search this site"
-msgstr ""
+msgstr "Rechercher ce site"
 
 #: searchform.php:12
 msgid "Search"
-msgstr ""
+msgstr "Rechercher"
+
+#~ msgid "Go to the top of the page"
+#~ msgstr "Allez en haut de la page"
+
+#~ msgid "Top"
+#~ msgstr "Haut"
+
+#~ msgid "Firefox download button"
+#~ msgstr "Bouton de télécharger Firefox"
+
+#~ msgid "Mobile Browser for iOS"
+#~ msgstr "Navigateur mobile pour iOS"
+
+#~ msgid "Mobile Browser for Android"
+#~ msgstr "Navigateur mobile pour Android"
+
+#~ msgid "Desktop Browser for Mac, Windows, Linux"
+#~ msgstr "Navigateur d’ordinateur pour Mac, Windows, Linux"
+
+#~ msgid "Download Firefox Web Browser"
+#~ msgstr "Télécharger Firefox"
+
+#~ msgid "We found one result for “%2$s”"
+#~ msgstr "Un résultat pour “%2$s”"
+
+#~ msgid ""
+#~ "You are logged in as <a href=\"%1$s\">%2$s</a>. <a class=\"logout\" href="
+#~ "\"%3$s\">Log out?</a>"
+#~ msgstr ""
+#~ "Vous êtes connecté en tant que <a href=“%1$s”>% 2 $ s </a>. <a "
+#~ "class=“logout” href=“%3$s”> Déconnexion? </a>"
+
+#, fuzzy
+#~ msgid "We found %1$s results for “%2$s”"
+#~ msgstr "Un résultat pour “%2$s”"
+
+#~ msgid "Submit"
+#~ msgstr "Envoyer"
+
+#~ msgid "(required, will not be published)"
+#~ msgstr "(champ obligatoire, ne sera pas publié)"
+
+#~ msgid "(required)"
+#~ msgstr "(champs requis)"
+
+#~ msgid "Your name"
+#~ msgstr "Votre nom"
+
+#~ msgid "Cancel reply"
+#~ msgstr "Annuler la réponse"
+
+#~ msgid "Reply to %s"
+#~ msgstr "Répondre à %s"
+
+#, fuzzy
+#~ msgid "Post your comment"
+#~ msgstr "Ajoutez votre commentaire"
+
+#~ msgid "Privacy"
+#~ msgstr "Vie privée"
+
+#~ msgid ""
+#~ "Portions of this content are ©1998-%1s by individual contributors. "
+#~ "Content available under a <a href=\"%2s\" rel=\"external license"
+#~ "\">Creative Commons license</a>"
+#~ msgstr ""
+#~ "Certaines parties de ce contenu sont ©1998-%1s par les contributeurs "
+#~ "individuels de mozilla.org. Le contenu est disponible sous licence <a "
+#~ "href=“%2s” rel=“external license”>Creative Commons</a>."
