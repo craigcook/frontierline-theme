@@ -11,7 +11,6 @@
 
     .label {
         @include font-size-small;
-        @include open-sans;
         text-transform: lowercase;
     }
 
@@ -24,7 +23,6 @@
 
     .date {
         @include font-size-small;
-        @include open-sans;
     }
 
     a {

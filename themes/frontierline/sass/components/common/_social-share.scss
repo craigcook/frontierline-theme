@@ -16,7 +16,6 @@
 
     a {
         @include font-size-level5;
-        @include open-sans;
         @include transition(background-color 100ms ease-in-out);
         border-radius: 0;
         border-style: solid;

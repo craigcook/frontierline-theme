@@ -3,9 +3,100 @@ Theme Name:     Frontierline - Firefox
 Description:    The Firefox blog, a child theme of Frontierline.
 Author:         Craig Cook
 Template:       frontierline
-Version:        1.1
+Version:        2.0
 */
 
+@font-face {
+    font-display: swap;
+    font-family: Metropolis;
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/Metropolis-Medium.woff2') format('woff2'),
+         url('fonts/Metropolis-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Metropolis;
+    font-style: normal;
+    font-weight: bold;
+    src: url('fonts/Metropolis-Bold.woff2') format('woff2'),
+         url('fonts/Metropolis-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Metropolis;
+    font-style: italic;
+    font-weight: normal;
+    src: url('fonts/Metropolis-MediumItalic.woff2') format('woff2'),
+         url('fonts/Metropolis-MediumItalic.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Metropolis;
+    font-style: italic;
+    font-weight: bold;
+    src: url('fonts/Metropolis-BoldItalic.woff2') format('woff2'),
+         url('fonts/Metropolis-BoldItalic.woff') format('woff');
+}
+
+body,
+.entry-info {
+    color: #42425a; /* gray 80 */
+}
+
+h1, h2, h3, h4, h5, h6, legend {
+    color: #20123a; /* ink */
+    font-family: Metropolis, Inter, X-LocaleSpecific, sans-serif;
+}
+
+.entry-link:link,
+.entry-link:visited {
+    color: #20123a; /* ink */
+}
+
+.entry-link:hover .entry-title,
+.entry-link:focus .entry-title {
+    color: #0060df;
+}
+
+#masthead {
+    background-color: #321c64; /* violet 90 */
+}
+
+#site-title span,
+#site-description span {
+    background-color: transparent;
+}
+
+#nav-util,
+.nav-util-search .fm-search input,
+.nav-util-search .fm-search .button {
+    background-color: #20123a; /* ink */
+}
+
+.pagination a,
+.pagination .current {
+    color: #20123a; /* ink */
+    border-color: #20123a; /* ink */
+}
+
+.nav-global .nav-global-fxdownload .button.button-product {
+    background-color: #0060df;
+    border-color: #0060df;
+    color: #fff;
+}
+
+.nav-global .nav-global-fxdownload .button.button-product:hover,
+.nav-global .nav-global-fxdownload .button.button-product:focus {
+    background-color: #003eaa;
+    border-color: #003eaa;
+}
+
+
+/* Download CTA at the bottom of posts */
 .fx-footer {
     border-top: 1px solid #ccc;
     padding: 30px 0 0;
@@ -17,19 +108,33 @@ Version:        1.1
     margin-bottom: 1em;
 }
 
+/* Newsletter */
 #newsletter-subscribe.newsletter-firefox {
-    background-color: #2d253a;
+    background-color: #321c64; /* violet 90 */
     color: #fff;
 }
 
 #newsletter-subscribe.newsletter-firefox a:link,
-#newsletter-subscribe.newsletter-firefox a:visited {
+#newsletter-subscribe.newsletter-firefox a:visited,
+#newsletter-subscribe.newsletter-firefox h3,
+#newsletter-subscribe.newsletter-firefox h4 {
     color: #fff;
 }
 
 #newsletter-subscribe.newsletter-firefox input[type="email"] {
     background-color: #fff;
-    color: #000;
+    color: #20123a;
+}
+
+#newsletter-subscribe.newsletter-firefox .form-button {
+    background-color: #0060df;
+    border-color: #0060df;
+}
+
+#newsletter-subscribe.newsletter-firefox .form-button:hover,
+#newsletter-subscribe.newsletter-firefox .form-button:focus {
+    background-color: #003eaa;
+    border-color: #003eaa;
 }
 
 #newsletter-subscribe.newsletter-firefox .form-title {
@@ -59,4 +164,35 @@ Version:        1.1
         background-size: 160px 109px;
         padding: 10px 10px 20px 180px;
     }
+}
+
+/* Randomized backgrounds for fallback thumbnails. */
+.post-mini .image-fallback.color-1,
+.post-summary .image-fallback.color-1 {
+    background-color: #ff298a; /* pink 50 */
+}
+
+.post-mini .image-fallback.color-2,
+.post-summary .image-fallback.color-2 {
+    background-color: #ff4f5e; /* red 50 */
+}
+
+.post-mini .image-fallback.color-3,
+.post-summary .image-fallback.color-3 {
+    background-color: #ff7139; /* orange 50 */
+}
+
+.post-mini .image-fallback.color-4,
+.post-summary .image-fallback.color-4 {
+    background-color: #3fe1b0; /* green 50 */
+}
+
+.post-mini .image-fallback.color-5,
+.post-summary .image-fallback.color-5 {
+    background-color: #0060df; /* blue 50 */
+}
+
+.post-mini .image-fallback.color-6,
+.post-summary .image-fallback.color-6 {
+    background-color: #b833e1; /* purple 50 */
 }

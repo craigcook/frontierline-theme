@@ -7,7 +7,6 @@
 // The basis for all buttons on mozilla.org
 %base-button {
     @include border-box;
-    @include open-sans;
     @include font-size-level5;
     @include transition(background-color 100ms, border-color 100ms, color 100ms);
     background: none;
@@ -39,13 +38,15 @@ button.button,
 a.button:link,
 a.button:visited {
     @extend %base-button;
-    background-color: $color-mozblue;
-    border-color: darken($color-mozblue, 3%);
+    background-color: $color-button-blue;
+    border-color: transparent;
     color: $color-button-light;
 
-    &:hover,
-    &:focus {
-        background-color: saturate(lighten($color-mozblue, 5%), 10%);
+    &:focus,
+    &:hover {
+        @include transform(none);
+        background-color: $color-button-blue-hover;
+        color: $color-button-light;
     }
 
     &.button-dark {

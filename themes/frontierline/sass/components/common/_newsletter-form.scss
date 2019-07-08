@@ -8,6 +8,7 @@
 #newsletter-subscribe {
     background-color: $color-brand-cyan;
     color: #000;
+    padding: 20px 0;
 
     // container for <h3> and <h4>
     .form-title {
@@ -34,7 +35,6 @@
         margin-bottom: 10px;
 
         label {
-            @include open-sans;
             display: block;
             margin-bottom: 0.25em;
         }
@@ -48,7 +48,6 @@
 
     // privacy checkbox
     .field-privacy {
-        @include open-sans;
         @include font-size-extra-small;
 
         input {
@@ -66,7 +65,6 @@
     }
 
     input[type='email'] {
-        @include open-sans;
         @include border-box;
         @include font-size-level6;
         @include transition(all 100ms linear);
@@ -79,7 +77,6 @@
     }
 
     select {
-        @include open-sans;
         font-size: inherit;
         line-height: 1.5;
         max-width: 80%;
