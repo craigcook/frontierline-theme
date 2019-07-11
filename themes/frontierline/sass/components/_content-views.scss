@@ -23,7 +23,6 @@
 
 .entry-info {
     @include font-size-small;
-    @include open-sans;
     color: $color-text-primary;
     margin-bottom: 20px;
 

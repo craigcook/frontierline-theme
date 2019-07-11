@@ -3,8 +3,86 @@ Theme Name:     Frontierline - Nightly
 Description:    The Firefox Nightly blog, a child theme of Frontierline.
 Author:         Craig Cook, Kohei Yoshino
 Template:       frontierline
-Version:        1.0
+Version:        2.0
 */
+
+@font-face {
+    font-display: swap;
+    font-family: Metropolis;
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/Metropolis-Medium.woff2') format('woff2'),
+         url('fonts/Metropolis-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Metropolis;
+    font-style: normal;
+    font-weight: bold;
+    src: url('fonts/Metropolis-Bold.woff2') format('woff2'),
+         url('fonts/Metropolis-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Metropolis;
+    font-style: italic;
+    font-weight: normal;
+    src: url('fonts/Metropolis-MediumItalic.woff2') format('woff2'),
+         url('fonts/Metropolis-MediumItalic.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Metropolis;
+    font-style: italic;
+    font-weight: bold;
+    src: url('fonts/Metropolis-BoldItalic.woff2') format('woff2'),
+         url('fonts/Metropolis-BoldItalic.woff') format('woff');
+}
+
+
+body,
+.entry-info {
+    color: #42425a; /* gray 80 */
+}
+
+h1, h2, h3, h4, h5, h6, legend {
+    color: #20123a; /* ink */
+    font-family: Metropolis, Inter, X-LocaleSpecific, sans-serif;
+}
+
+.entry-link:link,
+.entry-link:visited {
+    color: #20123a; /* ink */
+}
+
+.entry-link:hover .entry-title,
+.entry-link:focus .entry-title {
+    color: #0060df;
+}
+
+#masthead {
+    background-color: #073072; /* blue 80 */
+}
+
+#site-title span,
+#site-description span {
+    background-color: transparent;
+}
+
+#nav-util,
+.nav-util-search .fm-search input,
+.nav-util-search .fm-search .button {
+    background-color: #09204d; /* blue 90 */
+}
+
+.pagination a,
+.pagination .current {
+    color: #20123a; /* ink */
+    border-color: #20123a; /* ink */
+}
 
 .nav-global-twitter a,
 .nav-global-join a {
@@ -190,3 +268,68 @@ Version:        1.0
     font-weight: normal;
 }
 /* end of "These weeks in Firefox" posts special rules */
+
+/* Newsletter */
+#newsletter-subscribe {
+    background-color: #073072; /* blue 80 */
+    color: #fff;
+}
+
+#newsletter-subscribe a:link,
+#newsletter-subscribe a:visited,
+#newsletter-subscribe h3,
+#newsletter-subscribe h4 {
+    color: #fff;
+}
+
+#newsletter-subscribe .form-title h4 {
+    font-family: Inter, X-LocaleSpecific, sans-serif;
+}
+
+#newsletter-subscribe input[type="email"] {
+    background-color: #fff;
+    color: #20123a; /* ink */
+}
+
+#newsletter-subscribe .form-button {
+    background-color: #0060df;
+    border-color: #0060df;
+    color: #fff;
+}
+
+#newsletter-subscribe .form-button:hover,
+#newsletter-subscribe .form-button:focus {
+    background-color: #0250bb;
+    border-color: #0250bb;
+}
+
+/* Randomized backgrounds for fallback thumbnails. */
+.post-mini .image-fallback.color-1,
+.post-summary .image-fallback.color-1 {
+    background-color: #ff298a; /* pink 50 */
+}
+
+.post-mini .image-fallback.color-2,
+.post-summary .image-fallback.color-2 {
+    background-color: #ff4f5e; /* red 50 */
+}
+
+.post-mini .image-fallback.color-3,
+.post-summary .image-fallback.color-3 {
+    background-color: #ff7139; /* orange 50 */
+}
+
+.post-mini .image-fallback.color-4,
+.post-summary .image-fallback.color-4 {
+    background-color: #3fe1b0; /* green 50 */
+}
+
+.post-mini .image-fallback.color-5,
+.post-summary .image-fallback.color-5 {
+    background-color: #0060df; /* blue 50 */
+}
+
+.post-mini .image-fallback.color-6,
+.post-summary .image-fallback.color-6 {
+    background-color: #b833e1; /* purple 50 */
+}

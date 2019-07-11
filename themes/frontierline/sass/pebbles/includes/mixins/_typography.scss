@@ -4,19 +4,16 @@
 
 
 // Font families
-@mixin open-sans {
-    font-family: $font-open-sans;
+@mixin font-base {
+    font-family: $font-base;
 }
 
-@mixin zilla-slab {
-    font-family: $font-zilla-slab;
+@mixin font-mozilla {
+    font-family: $font-mozilla;
 }
 
-// Use this highlight variant with caution and plan for a fallback
-// in a standard, non-highlight font. Your color choices should be
-// equally readable with a non-highlight variant.
-@mixin zilla-slab-highlight {
-    font-family: $font-zilla-slab-highlight;
+@mixin font-firefox {
+    font-family: $font-firefox;
 }
 
 

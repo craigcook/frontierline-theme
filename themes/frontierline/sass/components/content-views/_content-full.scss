@@ -21,6 +21,7 @@
             @include font-size-level1;
             margin-top: .5em;
         }
+
         .entry-tools {
             @include clearfix;
             margin: 0 0 40px;
@@ -31,6 +32,7 @@
                 margin-bottom: 20px;
             }
         }
+
         .categories {
             margin-bottom: 20px;
             a {
@@ -45,8 +47,11 @@
                 width: 60%;
             }
         }
+
         .entry-info {
-            margin-bottom: 20px;
+            font-weight: bold;
+            margin-bottom: 32px;
+
             .vcard {
                 border-right: 1px solid #ccc;
                 display: inline;
@@ -54,10 +59,12 @@
                 margin-right: 10px;
                 padding-right: 10px;
             }
+
             .date {
                 display: inline;
             }
         }
+
         .entry-comments,
         .meta,
         .edit {
@@ -67,26 +74,33 @@
             padding-left: 10px;
         }
     }
+
     .post {
         @include single-size;
     }
+
     .entry-content {
         @include clearfix;
         margin-bottom: 40px;
+
         h2 {
             @include font-size-level3;
         }
+
         h3 {
             @include font-size-level4;
         }
+
         h4,
         h5,
         h6 {
             @include font-size(16px);
         }
+
         dt {
             font-style: italic;
         }
+
         dd {
             padding-left: 30px;
         }
@@ -101,16 +115,20 @@
             border-left: 2px solid #000;
             color: $color-text-secondary;
             padding: .25em 30px;
+
             > :last-child {
                 margin-bottom: 0;
             }
         }
+
         pre {
             overflow: auto;
         }
+
         code {
             @include font-size(16px);
         }
+
         hr {
             background: transparent;
             border-top: 1px solid #ccc;
@@ -118,12 +136,15 @@
             color: transparent;
             margin: 30px auto;
         }
+
         iframe {
             max-width: 100%;
         }
+
         .alignleft {
             float: left;
             margin: 0 30px .5em 0;
+
             &.size-large,
             &.size-medium,
             &.size-extra-large {
@@ -132,6 +153,7 @@
                 margin: 0 0 1.5em;
             }
         }
+
         .alignright {
             float: right;
             margin: 0 0 .5em 30px;
@@ -142,11 +164,13 @@
                 margin: 0 0 1.5em;
             }
         }
+
         .wpml-ls {
             border-top: 2px solid #000;
             margin-top: 2em;
             padding-top: 1em;
         }
+
         @media #{$mq-phone-wide} {
             .alignleft.size-medium {
                 float: left;
@@ -157,6 +181,7 @@
                 margin: 0 -20px .5em 30px;
             }
         }
+
         @media #{$mq-tablet} {
             .alignleft {
                 margin-left: -60px;
@@ -171,6 +196,7 @@
                 }
             }
         }
+
         @media #{$mq-desktop} {
             .alignleft.size-large {
                 float: left;
@@ -181,7 +207,9 @@
                 margin: 0 -60px .5em 30px;
             }
         }
-    } // First paragraph gets special treatment
+    }
+
+    // First paragraph gets special treatment
     @media #{$mq-tablet} {
         .post,
         .page {
@@ -195,8 +223,8 @@
             }
         }
     }
+
     .entry-tags {
-        @include open-sans;
         margin-top: 30px;
         padding-top: 30px;
         border-top: 1px solid #ccc;

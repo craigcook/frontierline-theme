@@ -31,7 +31,8 @@
         padding: 0 20px;
     }
 
-    .entry-title {
+    &.post .entry-title,
+    &.page .entry-title {
         @include font-size-level4;
     }
 
@@ -42,9 +43,12 @@
         margin-bottom: 20px;
     }
 
+    .entry-info {
+        font-weight: bold;
+    }
+
     .entry-summary .go {
         @include font-size-level6;
-        @include open-sans;
         @include trailing-arrow;
         display: block;
         font-weight: bold;

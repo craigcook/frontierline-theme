@@ -3,8 +3,7 @@
 
 .nav-global {
     @include clearfix;
-    @include font-size-level6;
-    @include open-sans;
+    @include font-size-level5;
     @include transition(height 250ms ease-in-out, padding 250ms ease-in-out);
     background: #fff;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);

@@ -48,7 +48,6 @@
 
     .comment-meta {
         @include font-size-small;
-        @include open-sans;
 
         a {
             color: $color-text-secondary;
@@ -64,7 +63,6 @@
 
     .comment-util {
         @include font-size-small;
-        @include open-sans;
         margin: 0;
 
         .edit {

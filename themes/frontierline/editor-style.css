@@ -4,8 +4,10 @@
 @font-face { font-family: 'Zilla Slab'; font-weight: bold; font-style: normal; src: url("fonts/ZillaSlab-Bold.woff2") format("woff2"), url("fonts/ZillaSlab-Bold.woff") format("woff"); }
 @font-face { font-family: 'Zilla Slab'; font-weight: normal; font-style: italic; src: url("fonts/ZillaSlab-RegularItalic.woff2") format("woff2"), url("fonts/ZillaSlab-RegularItalic.woff") format("woff"); }
 @font-face { font-family: 'Zilla Slab'; font-weight: bold; font-style: italic; src: url("fonts/ZillaSlab-BoldItalic.woff2") format("woff2"), url("fonts/ZillaSlab-BoldItalic.woff") format("woff"); }
-@font-face { font-family: 'Open Sans'; font-weight: normal; font-style: normal; src: url("fonts/opensans-regular.woff2") format("woff2"), url("fonts/opensans-regular.woff") format("woff"); }
-@font-face { font-family: 'Open Sans'; font-weight: bold; font-style: normal; src: url("fonts/opensans-bold.woff2") format("woff2"), url("fonts/opensans-bold.woff") format("woff"); }
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: normal; src: url("fonts/Inter-Regular.woff2") format("woff2"), url("fonts/Inter-Regular.woff") format("woff"); }
+@font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: bold; src: url("fonts/Inter-Bold.woff2") format("woff2"), url("fonts/Inter-Bold.woff") format("woff"); }
+@font-face { font-display: swap; font-family: Inter; font-style: italic; font-weight: normal; src: url("fonts/Inter-Italic.woff2") format("woff2"), url("fonts/Inter-Italic.woff") format("woff"); }
+@font-face { font-display: swap; font-family: Inter; font-style: italic; font-weight: bold; src: url("fonts/Inter-BoldItalic.woff2") format("woff2"), url("fonts/Inter-BoldItalic.woff") format("woff"); }
 @-webkit-keyframes pebbles-bounce-down { 0%, 60%, 75%, 90%, 100% { -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
   0% { opacity: 0; -webkit-transform: translate3d(0, -500px, 0); transform: translate3d(0, -500px, 0); }
   60% { opacity: 1; -webkit-transform: translate3d(0, 25px, 0); transform: translate3d(0, 25px, 0); }
@@ -44,9 +46,9 @@ input, select, textarea { font-family: inherit; font-size: 100%; }
 
 img, video, object, embed { -ms-interpolation-mode: bicubic; height: auto; max-width: 100%; }
 
-html { font-size: 112.5%; background: #fff; }
+html { font-size: 100%; background: #fff; }
 
-body { font-size: 18px; font-size: 1rem; background: #fff; color: #000; font-family: "Zilla Slab", "Open Sans", X-LocaleSpecific, sans-serif; line-height: 1.5; }
+body { font-size: 18px; font-size: 1rem; background: #fff; color: #000; font-family: Inter, X-LocaleSpecific, sans-serif; line-height: 1.5; }
 
 #strings { display: none; }
 
@@ -60,7 +62,7 @@ body { font-size: 18px; font-size: 1rem; background: #fff; color: #000; font-fam
 @media screen and (min-width: 1000px) { .content { width: 980px; } }
 @media screen and (min-width: 1400px) { .content { width: 1380px; } }
 
-h1, h2, h3, h4, h5, h6, legend { font-weight: bold; line-height: 1.1; margin: 0 0 .25em; }
+h1, h2, h3, h4, h5, h6, legend { font-family: "Zilla Slab", Inter, X-LocaleSpecific, sans-serif; font-weight: bold; line-height: 1.1; margin: 0 0 .25em; }
 
 h1 { font-size: 36px; font-size: 2rem; }
 @media screen and (min-width: 760px) { h1 { font-size: 48px; font-size: 2.6666666667rem; } }
@@ -85,20 +87,23 @@ h5 { font-size: 14px; font-size: 0.7777777778rem; }
 h6 { font-size: 14px; font-size: 0.7777777778rem; }
 @media screen and (min-width: 760px) { h6 { font-size: 16px; font-size: 0.8888888889rem; } }
 
-p, ul, ol, dl, table { margin-bottom: 1.25em; }
+p, ul, ol, dl, table, blockquote, pre { margin-bottom: 1.25em; }
 
-a { color: #00a7e0; text-decoration: underline; }
-a:hover, a:focus, a:active, a:visited:hover, a:visited:focus, a:visited:active { color: #0081ad; text-decoration: underline; }
-a:visited { color: #75bad1; }
+:link { color: #0060df; text-decoration: underline; }
+:link:hover { text-decoration: none; }
+:link:active { background-color: rgba(0, 0, 0, 0.05); }
 
-.button, button.button, a.button:link, a.button:visited, .button.button-hollow, button.button.button-hollow, a.button.button-hollow:link, a.button.button-hollow:visited, button.form-button, input[type="submit"].form-button, input[type='button'].form-button { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: "Open Sans", X-LocaleSpecific, sans-serif; font-size: 14px; font-size: 0.7777777778rem; -webkit-transition: background-color 100ms, border-color 100ms, color 100ms; transition: background-color 100ms, border-color 100ms, color 100ms; background: none; border-radius: 2px; border-style: solid; border-width: 2px; cursor: pointer; display: inline-block; padding: .5em 36px; position: relative; text-align: center; text-shadow: none; text-decoration: none; }
+:visited { color: #b833e1; }
+:visited:hover { color: #952bb9; }
+
+.button, button.button, a.button:link, a.button:visited, .button.button-hollow, button.button.button-hollow, a.button.button-hollow:link, a.button.button-hollow:visited, button.form-button, input[type="submit"].form-button, input[type='button'].form-button { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-size: 14px; font-size: 0.7777777778rem; -webkit-transition: background-color 100ms, border-color 100ms, color 100ms; transition: background-color 100ms, border-color 100ms, color 100ms; background: none; border-radius: 2px; border-style: solid; border-width: 2px; cursor: pointer; display: inline-block; padding: .5em 36px; position: relative; text-align: center; text-shadow: none; text-decoration: none; }
 @media screen and (min-width: 760px) { .button, button.button, a.button:link, a.button:visited, .button.button-hollow, button.button.button-hollow, a.button.button-hollow:link, a.button.button-hollow:visited, button.form-button, input[type="submit"].form-button, input[type='button'].form-button { font-size: 16px; font-size: 0.8888888889rem; } }
 @media screen and (min-width: 1000px) { .button, button.button, a.button:link, a.button:visited, .button.button-hollow, button.button.button-hollow, a.button.button-hollow:link, a.button.button-hollow:visited, button.form-button, input[type="submit"].form-button, input[type='button'].form-button { font-size: 18px; font-size: 1rem; } }
 .button:active, a.button:active:link, a.button:active:visited, button.button.button-hollow:active, button.form-button:active, input[type="submit"].form-button:active, input[type='button'].form-button:active { position: relative; top: 1px; }
 .button:hover, a.button:hover:link, a.button:hover:visited, button.button.button-hollow:hover, button.form-button:hover, input[type="submit"].form-button:hover, input[type='button'].form-button:hover, .button:focus, a.button:focus:link, a.button:focus:visited, button.button.button-hollow:focus, button.form-button:focus, input[type="submit"].form-button:focus, input[type='button'].form-button:focus { text-decoration: none; }
 
-.button, button.button, a.button:link, a.button:visited { background-color: #0c99d5; border-color: #0b8fc7; color: #fff; }
-.button:hover, .button:focus, button.button:hover, button.button:focus, a.button:link:hover, a.button:link:focus, a.button:visited:hover, a.button:visited:focus { background-color: #01affa; }
+.button, button.button, a.button:link, a.button:visited { background-color: #0060df; border-color: transparent; color: #fff; }
+.button:focus, .button:hover, button.button:focus, button.button:hover, a.button:link:focus, a.button:link:hover, a.button:visited:focus, a.button:visited:hover { -webkit-transform: none; transform: none; background-color: #0250bb; color: #fff; }
 .button.button-dark, button.button.button-dark, a.button:link.button-dark, a.button:visited.button-dark { background-color: #000; border-color: #000; color: #fff; }
 .button.button-dark:hover, .button.button-dark:focus, button.button.button-dark:hover, button.button.button-dark:focus, a.button:link.button-dark:hover, a.button:link.button-dark:focus, a.button:visited.button-dark:hover, a.button:visited.button-dark:focus { background-color: #0d0d0d; }
 .button.button-green, button.button.button-green, a.button:link.button-green, a.button:visited.button-green { background-color: #16da00; border-color: #14cb00; color: #fff; }
@@ -143,7 +148,7 @@ ol.prose ul { list-style: disc; margin-left: 20px; margin-bottom: 0; }
 
 [dir='rtl'] .data-table caption, [dir='rtl'] .data-table th, [dir='rtl'] .data-table td { text-align: right; }
 
-button, input, select, textarea { font-family: "Open Sans", X-LocaleSpecific, sans-serif; }
+button, input, select, textarea { font-family: Inter, X-LocaleSpecific, sans-serif; }
 
 textarea { height: auto; max-width: 100%; }
 
@@ -157,7 +162,7 @@ textarea:-moz-ui-invalid:not(output), input[type=email]:-moz-ui-invalid:not(outp
 
 html { font-size: 112.5%; }
 
-body.wp-autoresize.mceContentBody { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-size: 18px; font-size: 1rem; background: #fff; color: #000; font-family: "Zilla Slab", "Open Sans", X-LocaleSpecific, sans-serif; line-height: 1.5; margin: 0 auto; max-width: 940px; padding: 20px !important; }
+body.wp-autoresize.mceContentBody { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-size: 18px; font-size: 1rem; background: #fff; color: #000; font-family: Inter, X-LocaleSpecific, sans-serif; line-height: 1.5; margin: 0 auto; max-width: 940px; padding: 20px !important; }
 @media screen and (min-width: 480px) { body.wp-autoresize.mceContentBody { padding: 30px 20px !important; } }
 @media screen and (min-width: 760px) { body.wp-autoresize.mceContentBody { padding: 30px 60px !important; } }
 body.wp-autoresize.mceContentBody h1, body.wp-autoresize.mceContentBody h2, body.wp-autoresize.mceContentBody h3, body.wp-autoresize.mceContentBody h4, body.wp-autoresize.mceContentBody h5, body.wp-autoresize.mceContentBody h6, body.wp-autoresize.mceContentBody hr, body.wp-autoresize.mceContentBody p, body.wp-autoresize.mceContentBody pre, body.wp-autoresize.mceContentBody blockquote, body.wp-autoresize.mceContentBody figure, body.wp-autoresize.mceContentBody figcaption, body.wp-autoresize.mceContentBody table, body.wp-autoresize.mceContentBody ul, body.wp-autoresize.mceContentBody ol, body.wp-autoresize.mceContentBody li, body.wp-autoresize.mceContentBody dl, body.wp-autoresize.mceContentBody dt, body.wp-autoresize.mceContentBody dd { margin: 0; padding: 0; }
@@ -167,9 +172,9 @@ body.wp-autoresize.mceContentBody > p:first-child:not(.disclaimer), body.wp-auto
 body.wp-autoresize.mceContentBody > p:first-child:not(.disclaimer):first-line, body.wp-autoresize.mceContentBody > .disclaimer:first-child + p:first-line { font-size: 18px; font-size: 1rem; }
 @media screen and (min-width: 760px) { body.wp-autoresize.mceContentBody > p:first-child:not(.disclaimer):first-line, body.wp-autoresize.mceContentBody > .disclaimer:first-child + p:first-line { font-size: 24px; font-size: 1.3333333333rem; } }
 @media screen and (min-width: 1000px) { body.wp-autoresize.mceContentBody > p:first-child:not(.disclaimer):first-line, body.wp-autoresize.mceContentBody > .disclaimer:first-child + p:first-line { font-size: 36px; font-size: 2rem; } }
-body.wp-autoresize.mceContentBody a { -webkit-transition: color 80ms ease-out; transition: color 80ms ease-out; color: #00a7e0; text-decoration: underline; }
-body.wp-autoresize.mceContentBody a:hover, body.wp-autoresize.mceContentBody a:focus, body.wp-autoresize.mceContentBody a:active, body.wp-autoresize.mceContentBody a:visited:hover, body.wp-autoresize.mceContentBody a:visited:focus, body.wp-autoresize.mceContentBody a:visited:active { color: #0081ad; text-decoration: underline; }
-body.wp-autoresize.mceContentBody a:visited { color: #37b2dc; }
+body.wp-autoresize.mceContentBody a { -webkit-transition: color 80ms ease-out; transition: color 80ms ease-out; color: #0060df; text-decoration: underline; }
+body.wp-autoresize.mceContentBody a:hover, body.wp-autoresize.mceContentBody a:focus, body.wp-autoresize.mceContentBody a:active, body.wp-autoresize.mceContentBody a:visited:hover, body.wp-autoresize.mceContentBody a:visited:focus, body.wp-autoresize.mceContentBody a:visited:active { color: #004aac; text-decoration: underline; }
+body.wp-autoresize.mceContentBody a:visited { color: #367edc; }
 body.wp-autoresize.mceContentBody h1, body.wp-autoresize.mceContentBody h2, body.wp-autoresize.mceContentBody h3, body.wp-autoresize.mceContentBody h4, body.wp-autoresize.mceContentBody h5, body.wp-autoresize.mceContentBody h6, body.wp-autoresize.mceContentBody legend { font-weight: bold; line-height: 1.1; margin: 0 0 .25em; }
 body.wp-autoresize.mceContentBody h1 { font-size: 36px; font-size: 2rem; }
 @media screen and (min-width: 760px) { body.wp-autoresize.mceContentBody h1 { font-size: 48px; font-size: 2.6666666667rem; } }

@@ -6,15 +6,11 @@
 // The custom X-LocaleSpecific font family is defined with a @font-face rule in
 // locale-specific stylesheets which can be found at /media/css/l10n/. See
 // /docs/l10n.rst for details.
-$font-open-sans: 'Open Sans', X-LocaleSpecific, sans-serif;
-$font-zilla-slab: 'Zilla Slab', 'Open Sans', X-LocaleSpecific, sans-serif;
+$font-base: Inter, X-LocaleSpecific, sans-serif;
+$font-firefox: Metropolis, Inter, X-LocaleSpecific, sans-serif;
+$font-mozilla: 'Zilla Slab', Inter, X-LocaleSpecific, sans-serif;
 
-// Use this highlight variant with caution and plan for a fallback
-// in a standard, non-highlight font. Your color choices should be
-// equally readable with a non-highlight variant.
-$font-zilla-slab-highlight: 'Zilla Slab Highlight', 'Zilla Slab', 'Open Sans', X-LocaleSpecific, sans-serif;
-
-$base-font-stack: $font-zilla-slab;
+$base-font-stack: $font-base;
 $base-font-size: 100%;
 $base-line-height: 1.5;
 
@@ -41,15 +37,18 @@ $color-mozblue: #0c99d5;
 $color-mozgray: #56565a;
 
 // Link colors
-$color-link-blue:       #00a7e0;
-$color-link:            $color-link-blue; // standard links (blue)
-$color-link-yellow:     #ffbb38;
+$color-link:                #0060df;
+$color-link-hover:          #0250bb;
+$color-link-visited:        #b833e1;
+$color-link-visited-hover:  #952bb9;
 
 // Button colors
-$color-button-light:    #fff;
-$color-button-dark:     #000;
-$color-button-green:    #16da00;
-$color-button-orange:   #f26c23;
+$color-button-blue:         #0060df;
+$color-button-blue-hover:   #0250bb;
+$color-button-light:        #fff;
+$color-button-dark:         #000;
+$color-button-green:        #16da00;
+$color-button-orange:       #f26c23;
 
 // Product brand colors
 $color-firefox-light-orange: #ff9500;
