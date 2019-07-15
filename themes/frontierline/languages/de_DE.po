@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Frontierline\n"
 "POT-Creation-Date: 2019-03-27 16:56-0700\n"
-"PO-Revision-Date: 2019-03-27 16:57-0700\n"
+"PO-Revision-Date: 2019-07-15 08:28-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -168,7 +168,6 @@ msgid "Donate"
 msgstr "Spenden"
 
 #: footer.php:40 includes/nav-global.php:23
-#, fuzzy
 msgid "Download Firefox"
 msgstr "Firefox herunterladen"
 
@@ -208,7 +207,7 @@ msgid ""
 msgstr ""
 
 #: footer.php:68
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "Portions of this content are ©1998-%1s by individual contributors. Content "
 "available under a <a href=\"%2s\" rel=\"external license\">Creative Commons "

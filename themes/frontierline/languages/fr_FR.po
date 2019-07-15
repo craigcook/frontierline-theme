@@ -16,12 +16,12 @@ msgstr ""
 #: archive.php:18 functions.php:306
 #, php-format
 msgid "Articles in “%s”"
-msgstr "Plus d’articles dans “%s”"
+msgstr "D’articles dans «%s»"
 
 #: archive.php:20 functions.php:308
-#, fuzzy, php-format
+#, php-format
 msgid "Articles tagged with “%s”"
-msgstr "Les articles étiquetés avec “%s”"
+msgstr "Les articles étiquetés avec «%s»"
 
 #: archive.php:22 archive.php:24 archive.php:26 functions.php:312
 #: functions.php:314 functions.php:316
@@ -47,34 +47,33 @@ msgid "%1$s comments on “%2$s”"
 msgstr ""
 
 #: comments.php:31
-#, fuzzy
 msgid "No comments yet"
 msgstr "Aucun commentaire pour l’instant"
 
 #: comments.php:35
-#, fuzzy
 msgid "Post a comment"
 msgstr "Envoyer un commentaire"
 
 #: comments.php:45
-#, fuzzy
 msgid "More comments:"
-msgstr "Plus de commentaires&nbsp;:"
+msgstr "Plus de commentaires :"
 
 #. L10n: 'trackbacks' are when another website refers to this blog post with a link notification
 #: comments.php:54
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post"
 "\">trackbacks</a> are open."
-msgstr "Les commentaires sont fermés, mais les trackbacks sont ouverts."
+msgstr ""
+"Les commentaires sont fermés, mais les <a href=\"%1$s\">trackbacks</a> sont "
+"ouverts."
 
 #: content-views/content-none.php:10
 msgid "Nothing Found"
 msgstr "Oups !"
 
 #: content-views/content-none.php:16
-#, fuzzy, php-format
+#, php-format
 msgid "Sorry, we didn’t find anything for “%s”. Try another search?"
 msgstr "Désolé, aucun résultat pour «% s». Réessayer?"
 
@@ -104,14 +103,14 @@ msgid "So what do we do now?"
 msgstr "Et maintenant?"
 
 #: content-views/content-none.php:29
-#, fuzzy, php-format
+#, php-format
 msgid "Go to the <a href=\"%s\">front page</a>."
-msgstr "Aller à la <a href=“%”>page d’accueil</a>."
+msgstr "Aller à la <a href=\"%s\">page d’accueil</a>."
 
 #: content-views/content-none.php:30
 #, php-format
 msgid "Visit <a href=\"%s\">mozilla.org</a>."
-msgstr "Visitez <a href=“%s”>mozilla.org</a>."
+msgstr "Visitez <a href=\"%s\">mozilla.org</a>."
 
 #: content-views/content-none.php:31
 msgid "Try searching this blog."
@@ -128,7 +127,7 @@ msgstr "Continuer la lecture…"
 
 #: content-views/content-page-sidebar.php:32 content-views/content.php:83
 msgid "Pages:"
-msgstr "Pages:"
+msgstr "Pages :"
 
 #: content-views/content.php:31
 msgid "Categories:"
@@ -200,9 +199,9 @@ msgid ""
 "Visit Mozilla Corporation’s not-for-profit parent, the <a href=\"%1s\" data-"
 "link-type=\"%2s\" data-link-name=\"%3s\">Mozilla Foundation</a>."
 msgstr ""
-"Visitez <a href=“%1s” data-link-type=“%2s” data-link-name=“%3s”>Mozilla "
-"Foundation</a>, l’organisation à but non lucratif à l’origine de Firefox et "
-"de tous les logiciels Mozilla."
+"Visitez <a href=\"%1s\" data-link-type=\"%2s\" data-link-name=\"%3s"
+"\">Mozilla Foundation</a>, l’organisation à but non lucratif à l’origine de "
+"Firefox et de tous les logiciels Mozilla."
 
 #: footer.php:68
 #, php-format
@@ -212,8 +211,8 @@ msgid ""
 "license</a>."
 msgstr ""
 "Certaines parties de ce contenu sont ©1998-%1s par les contributeurs "
-"individuels de mozilla.org. Le contenu est disponible sous licence <a "
-"href=“%2s” rel=“external license”>Creative Commons</a>."
+"individuels de mozilla.org. Le contenu est disponible sous licence <a href="
+"\"%2s\" rel=\"external license\">Creative Commons</a>."
 
 #: functions.php:44
 msgid "Site Menu"
@@ -232,7 +231,6 @@ msgid "Twitter username"
 msgstr ""
 
 #: functions.php:125
-#, fuzzy
 msgid "Add social sharing buttons to posts"
 msgstr "Ajouter des boutons de partages sur les articles et pages du site"
 
@@ -267,7 +265,7 @@ msgstr "Page %s"
 #: functions.php:321
 #, php-format
 msgid "Search results for “%s”"
-msgstr "Résultats de recherche pour “%s”"
+msgstr "Résultats de recherche pour «%s»"
 
 #: functions.php:323
 msgid "Not Found"
@@ -575,17 +573,15 @@ msgid "Please check your inbox or your spam filter for an e-mail from us."
 msgstr ""
 
 #: includes/related-posts.php:21
-#, fuzzy, php-format
+#, php-format
 msgid "More articles in “%s”"
-msgstr "Plus d’articles dans “%s”"
+msgstr "Plus d’articles dans «%s»"
 
 #: includes/related-posts.php:35
-#, fuzzy
 msgid "There are no other articles in this category."
 msgstr "Pas plus d’articles dans cette catégorie."
 
 #: includes/related-posts.php:43
-#, fuzzy
 msgid "Popular articles"
 msgstr "Plus d’articles"
 
