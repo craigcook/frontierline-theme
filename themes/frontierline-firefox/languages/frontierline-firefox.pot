@@ -17,6 +17,14 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: site title
+msgid "The Firefox Frontier"
+msgstr ""
+
+#: site tagline
+msgid "Everything you need to know to browse fast and free"
+msgstr ""
+
 #: content-views/content.php:22
 msgid "Categories:"
 msgstr ""
