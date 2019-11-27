@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2019-03-27 16:55-0700\n"
-"PO-Revision-Date: 2019-11-20 16:04-0800\n"
+"PO-Revision-Date: 2019-11-27 13:33-0800\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Last-Translator: \n"
@@ -19,288 +19,269 @@ msgstr ""
 #: archive.php:18 functions.php:306
 #, php-format
 msgid "Articles in “%s”"
-msgstr ""
+msgstr "Artículos en “%s”"
 
 #: archive.php:20 functions.php:308
 #, php-format
 msgid "Articles tagged with “%s”"
-msgstr ""
+msgstr "Artículos etiquetados con “%s”"
 
-#: archive.php:22 archive.php:24 archive.php:26 functions.php:312
-#: functions.php:314 functions.php:316
+#: archive.php:22 archive.php:24 archive.php:26 functions.php:312 functions.php:314 functions.php:316
 #, php-format
 msgid "Articles from %s"
-msgstr ""
+msgstr "Artículos de %s"
 
 #: archive.php:28 functions.php:310
 #, php-format
 msgid "Articles by %s"
-msgstr ""
+msgstr "Artículos de %s"
 
 #. L10n: %s: post title
 #: comments.php:23
 #, php-format
 msgid "One comment on “%s”"
-msgstr ""
+msgstr "Un comentario sobre “%s”"
 
 #. L10n: 1: number of comments, 2: post title
 #: comments.php:26
 #, php-format
 msgid "%1$s comments on “%2$s”"
-msgstr ""
+msgstr "%1$s comenta sobre “%2$s”"
 
 #: comments.php:31
 msgid "No comments yet"
-msgstr ""
+msgstr "Aún no hay comentarios"
 
 #: comments.php:35
 msgid "Post a comment"
-msgstr ""
+msgstr "Publicar un comentario"
 
 #: comments.php:45
 msgid "More comments:"
-msgstr ""
+msgstr "Más comentarios:"
 
 #. L10n: 'trackbacks' are when another website refers to this blog post with a link notification
 #: comments.php:54
 #, php-format
-msgid ""
-"Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post"
-"\">trackbacks</a> are open."
-msgstr ""
+msgid "Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post\">trackbacks</a> are open."
+msgstr "Los comentarios están cerrados, pero los <a href=\"%1$s\" title=\"Trackback URL for this post\">vínculos de referencia</a> están abiertos."
 
 #: content-views/content-none.php:10
 msgid "Nothing Found"
-msgstr ""
+msgstr "No se encontró nada"
 
 #: content-views/content-none.php:16
 #, php-format
 msgid "Sorry, we didn’t find anything for “%s”. Try another search?"
-msgstr ""
+msgstr "No encontramos nada para “%s”. ¿Quieres hacer otra búsqueda?"
 
 #: content-views/content-none.php:20
-msgid ""
-"Sorry, we looked everywhere, but we couldn’t find the page or file you were "
-"looking for. A few possible explanations:"
-msgstr ""
+msgid "Sorry, we looked everywhere, but we couldn’t find the page or file you were looking for. A few possible explanations:"
+msgstr "Ya vimos en todas partes, pero no encontramos la página o el archivo que buscas. Algunas causas pudieran ser:"
 
 #: content-views/content-none.php:22
 msgid "You may have followed an out-dated link or bookmark."
-msgstr ""
+msgstr "Seguiste un vínculo o marcador obsoleto."
 
 #: content-views/content-none.php:23
 msgid "If you entered the address by hand, you may have mistyped it."
-msgstr ""
+msgstr "Ingresaste la dirección manualmente y quizás la escribiste mal."
 
 #: content-views/content-none.php:24
 msgid "You might have just discovered an error. Congratulations!"
-msgstr ""
+msgstr "Descubriste un posible error. ¡Qué maravilla!"
 
 #: content-views/content-none.php:27
 msgid "So what do we do now?"
-msgstr ""
+msgstr "Y entonces, ¿qué hacemos?"
 
 #: content-views/content-none.php:29
 #, php-format
 msgid "Go to the <a href=\"%s\">front page</a>."
-msgstr ""
+msgstr "Ve a la <a href=\"%s\">página de información</a>."
 
 #: content-views/content-none.php:30
 #, php-format
 msgid "Visit <a href=\"%s\">mozilla.org</a>."
-msgstr ""
+msgstr "Visita <a href=\"%s\">mozilla.org</a>."
 
 #: content-views/content-none.php:31
 msgid "Try searching this blog."
-msgstr ""
+msgstr "Intenta hacer una búsqueda en este blog."
 
-#: content-views/content-page-sidebar.php:24 content-views/content.php:77
-#: image.php:30
+#: content-views/content-page-sidebar.php:24 content-views/content.php:77 image.php:30
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: content-views/content-page-sidebar.php:31 content-views/content.php:82
 msgid "Continue reading…"
-msgstr ""
+msgstr "Seguir leyendo…"
 
 #: content-views/content-page-sidebar.php:32 content-views/content.php:83
 msgid "Pages:"
-msgstr ""
+msgstr "Páginas:"
 
 #: content-views/content.php:31
 msgid "Categories:"
-msgstr ""
+msgstr "Categorías:"
 
 #: content-views/content.php:74
 msgid "No responses yet"
-msgstr ""
+msgstr "Aún no hay respuestas"
 
 #: content-views/content.php:74
 msgid "1 response"
-msgstr ""
+msgstr "1 respuesta"
 
 #: content-views/content.php:74
 msgid "% responses"
-msgstr ""
+msgstr "% respuestas"
 
 #: content-views/content.php:88
 msgid "Tags:"
-msgstr ""
+msgstr "Etiquetas:"
 
 #: footer.php:26
 msgid "About"
-msgstr ""
+msgstr "Conócenos"
 
 #: footer.php:27
 msgid "Contact Us"
-msgstr ""
+msgstr "Contacta con nosotros"
 
 #: footer.php:28
 msgid "Donate"
-msgstr ""
+msgstr "Donar"
 
 #: footer.php:40 includes/nav-global.php:23
 msgid "Download Firefox"
-msgstr ""
+msgstr "Descargar Firefox"
 
 #: footer.php:41
 msgid "Desktop"
-msgstr ""
+msgstr "Escritorio"
 
 #: footer.php:42
 msgid "Mobile"
-msgstr ""
+msgstr "Celular"
 
 #: footer.php:43
 msgid "Features"
-msgstr ""
+msgstr "Características"
 
 #: footer.php:44
 msgid "Beta, Nightly, Developer Edition"
-msgstr ""
+msgstr "Edición para desarrolladores, Beta, Nightly"
 
 #: footer.php:58
 msgid "Website Privacy Notice"
-msgstr ""
+msgstr "Política de privacidad del sitio web"
 
 #: footer.php:59
 msgid "Cookies"
-msgstr ""
+msgstr "Cookies"
 
 #: footer.php:60
 msgid "Legal"
-msgstr ""
+msgstr "Legal"
 
 #: footer.php:64
 #, php-format
-msgid ""
-"Visit Mozilla Corporation’s not-for-profit parent, the <a href=\"%1s\" data-"
-"link-type=\"%2s\" data-link-name=\"%3s\">Mozilla Foundation</a>."
-msgstr ""
+msgid "Visit Mozilla Corporation’s not-for-profit parent, the <a href=\"%1s\" data-link-type=\"%2s\" data-link-name=\"%3s\">Mozilla Foundation</a>."
+msgstr "Visita la organización matriz de Mozilla Corporation, la empresa sin fines de lucro <a href=\"%1s\" data-link-type=\"%2s\" data-link-name=\"%3s\">Mozilla Foundation</a>."
 
 #: footer.php:68
 #, php-format
-msgid ""
-"Portions of this content are ©1998-%1s by individual contributors. Content "
-"available under a <a href=\"%2s\" rel=\"external license\">Creative Commons "
-"license</a>."
-msgstr ""
+msgid "Portions of this content are ©1998-%1s by individual contributors. Content available under a <a href=\"%2s\" rel=\"external license\">Creative Commons license</a>."
+msgstr "Algunos contenidos están protegidos por derechos de autor ©1998-%1s de determinados colaboradores. El resto de los contenidos está disponible mediante licencia de <a href=\"%2s\" rel=\"external license\">Creative Commons</a>."
 
 #: functions.php:44
 msgid "Site Menu"
-msgstr ""
+msgstr "Menú del sitio"
 
 #: functions.php:84
 msgid "Social sharing for posts"
-msgstr ""
+msgstr "Uso compartido de publicaciones en las redes sociales"
 
 #: functions.php:96
 msgid "Social sharing for Pages"
-msgstr ""
+msgstr "Uso compartido de páginas en las redes sociales"
 
 #: functions.php:108
 msgid "Twitter username"
-msgstr ""
+msgstr "Nombre de usuario en Twitter"
 
 #: functions.php:125
 msgid "Add social sharing buttons to posts"
-msgstr ""
+msgstr "Agregar botones de uso compartido en redes sociales a las publicaciones"
 
 #: functions.php:127
 msgid "Adds buttons for Twitter and Facebook to the top of blog articles."
-msgstr ""
+msgstr "Agrega botones para Twitter y Facebook en la parte superior de los artículos de blog."
 
 #: functions.php:141
 msgid "Add social sharing buttons to Pages"
-msgstr ""
+msgstr "Agregar botones de uso compartido en redes sociales a las páginas"
 
 #: functions.php:143
 msgid "Adds buttons for Twitter and Facebook to the top of static Pages."
-msgstr ""
+msgstr "Agrega botones para Twitter y Facebook en la parte superior de las páginas estáticas."
 
 #: functions.php:156
-msgid ""
-"The Twitter account for attribution when sharing. Appears as \"via @username"
-"\" at the end of the tweet, and Twitter may suggest related accounts to "
-"follow. Leave this blank for no attribution."
-msgstr ""
+msgid "The Twitter account for attribution when sharing. Appears as \"via @username\" at the end of the tweet, and Twitter may suggest related accounts to follow. Leave this blank for no attribution."
+msgstr "La cuenta de Twiter para atribución al compartir aparece como \"mediante @nombredeusuario\" al final del tuit y Twitter quizás sugiera cuentas relacionadas para seguirlas. Dejar esto en blanco cuando no haya atribución."
 
 #: functions.php:168
 msgid "Extra Large"
-msgstr ""
+msgstr "Extragrande"
 
 #: functions.php:278
 #, php-format
 msgid "Page %s"
-msgstr ""
+msgstr "Página %s"
 
 #: functions.php:321
 #, php-format
 msgid "Search results for “%s”"
-msgstr ""
+msgstr "Buscar resultados para “%s”"
 
 #: functions.php:323
 msgid "Not Found"
-msgstr ""
+msgstr "No se encuentra"
 
 #: functions.php:403
-msgid ""
-"Spamming robots, please fill in this field. Real humans should leave it "
-"blank."
-msgstr ""
+msgid "Spamming robots, please fill in this field. Real humans should leave it blank."
+msgstr "Robots de correo no deseado, llenar este campo. Los humanos deben dejarlo en blanco."
 
 #: functions.php:413
-msgid ""
-"Sorry, you appear to be a spamming robot because you filled in the hidden "
-"spam trap field. To show you are not a spammer, submit your comment again "
-"and leave the field blank."
-msgstr ""
+msgid "Sorry, you appear to be a spamming robot because you filled in the hidden spam trap field. To show you are not a spammer, submit your comment again and leave the field blank."
+msgstr "Al parecer eres un robot de correo no deseado porque llenaste el campo oculto de trampa para spam. Para demostrar que no eres un servidor de correo no deseado, envía tu comentario nuevamente y deja el espacio en blanco."
 
 #: functions.php:414
 msgid "Spam Prevention"
-msgstr ""
+msgstr "Prevención de correo no deseado"
 
 #: functions.php:504
 msgid "Read more"
-msgstr ""
+msgstr "Entérate de más"
 
 #: functions.php:540
 msgid "Sidebar Menu"
-msgstr ""
+msgstr "Menú lateral"
 
 #: functions.php:565
 msgid "Trackback from "
-msgstr ""
+msgstr "Vínculo de referencia "
 
 #. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
 #. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
 #: functions.php:568 functions.php:581
 msgid "on"
-msgstr ""
+msgstr "en"
 
 #: functions.php:569 functions.php:582 functions.php:596
 msgid "Permanent link to this comment by "
-msgstr ""
+msgstr "Vínculo permanente a este comentario de "
 
 #. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
 #. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
@@ -308,278 +289,269 @@ msgstr ""
 #: functions.php:572 functions.php:585 functions.php:599
 #, php-format
 msgid "%1$s at %2$s:"
-msgstr ""
+msgstr "%1$s en %2$s:"
 
 #: functions.php:578
 msgid "Ping from "
-msgstr ""
+msgstr "Ping desde "
 
 #: functions.php:595
 msgid "wrote on"
-msgstr ""
+msgstr "escrito el"
 
 #: functions.php:608
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Tu comentario está a la espera de ser moderado."
 
 #: functions.php:620
 msgid "Edit comment"
-msgstr ""
+msgstr "Editar comentario"
 
 #: functions.php:667
-msgid ""
-"Remember to include a featured image! It should be at least 1400 by 770 "
-"pixels."
-msgstr ""
+msgid "Remember to include a featured image! It should be at least 1400 by 770 pixels."
+msgstr "Recuerda incluir una imagen destacada. Debe ser de al menos 1400 x 770 pixeles."
 
 #: functions.php:670
 msgid " Posts without a featured image will show a standard placeholder image."
-msgstr ""
+msgstr " Las publicaciones con una imagen destacada mostrarán un marcador de posición de imagen estándar."
 
 #: functions.php:715
 msgid "Custom Sidebar Content"
-msgstr ""
+msgstr "Personalizar contenido lateral"
 
 #: functions.php:746
-msgid ""
-"The image will be used as a thumbnail for this post and for social media, "
-"but won‘t appear on the post page."
-msgstr ""
+msgid "The image will be used as a thumbnail for this post and for social media, but won‘t appear on the post page."
+msgstr "La imagen se utilizará como miniatura en esta publicación y en los medios sociales, pero no aparecerá en la página de la publicación."
 
 #: functions.php:749
 msgid "Hide featured image"
-msgstr ""
+msgstr "Ocultar imagen destacada"
 
 #: functions.php:756
 msgid "Hide Featured Image"
-msgstr ""
+msgstr "Ocultar imagen destacada"
 
 #: image.php:18
 #, php-format
-msgid ""
-"<time class=\"date published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time>"
-msgstr ""
+msgid "<time class=\"date published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time>"
+msgstr "<time class=\"date published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time>"
 
 #: image.php:24
 #, php-format
 msgid "Original size: <a href=\"%1$s\">%2$s &times; %3$s</a>"
-msgstr ""
+msgstr "Tamaño original: <a href=\"%1$s\">%2$s &times; %3$s</a>"
 
 #: inc/customizer.php:22
 msgid "Accent Color"
-msgstr ""
+msgstr "Color de énfasis"
 
 #: inc/customizer.php:27 inc/customizer.php:53
 msgid "None (Default)"
-msgstr ""
+msgstr "Ninguno (predeterminado)"
 
 #: inc/customizer.php:28
 msgid "Cyan"
-msgstr ""
+msgstr "Cian"
 
 #: inc/customizer.php:29
 msgid "Coral"
-msgstr ""
+msgstr "Coral"
 
 #: inc/customizer.php:30
 msgid "Yellow"
-msgstr ""
+msgstr "Amarillo"
 
 #: inc/customizer.php:31
 msgid "Lilac"
-msgstr ""
+msgstr "Lila"
 
 #: inc/customizer.php:32
 msgid "Orange"
-msgstr ""
+msgstr "Naranja"
 
 #: inc/customizer.php:33
 msgid "Lime"
-msgstr ""
+msgstr "Verde limón"
 
 #: inc/customizer.php:34
 msgid "Neon Blue"
-msgstr ""
+msgstr "Azul neón"
 
 #: inc/customizer.php:35
 msgid "Neon Pink"
-msgstr ""
+msgstr "Rosa neón"
 
 #: inc/customizer.php:36
 msgid "Neon Green"
-msgstr ""
+msgstr "Verde neón"
 
 #: inc/customizer.php:48
 msgid "Header Pattern"
-msgstr ""
+msgstr "Patrón del encabezado"
 
 #: inc/customizer.php:54
 msgid "Arrows"
-msgstr ""
+msgstr "Flechas"
 
 #: inc/customizer.php:55
 msgid "Basket Weave"
-msgstr ""
+msgstr "Tejido de esterilla"
 
 #: inc/customizer.php:56
 msgid "Confetti"
-msgstr ""
+msgstr "Confeti"
 
 #: inc/customizer.php:57
 msgid "Emoticons"
-msgstr ""
+msgstr "Emoticonos"
 
 #: inc/customizer.php:58
 msgid "Slashes and Brackets"
-msgstr ""
+msgstr "Barras diagonales y corchetes"
 
 #: inc/customizer.php:59
 msgid "Trade Winds"
-msgstr ""
+msgstr "Vientos alisios"
 
 #: includes/categories.php:13
 msgid "More articles"
-msgstr ""
+msgstr "Más artículos"
 
 #: includes/masthead.php:16
 msgid "Go to the front page"
-msgstr ""
+msgstr "Ir a la página de información"
 
 #: includes/nav-global.php:9
 msgid "Visit mozilla.org"
-msgstr ""
+msgstr "Visita mozilla.org"
 
 #: includes/nav-global.php:12
 msgid "Menu"
-msgstr ""
+msgstr "Menú"
 
 #: includes/nav-global.php:14
 msgid "Internet Health"
-msgstr ""
+msgstr "Integridad de Internet"
 
 #: includes/nav-global.php:15
 msgid "Technology"
-msgstr ""
+msgstr "Tecnología"
 
 #: includes/nav-global.php:16
 msgid "Give"
-msgstr ""
+msgstr "Dar"
 
 #: includes/nav-global.php:18
 msgid "Discover Firefox"
-msgstr ""
+msgstr "Descubre Firefox"
 
 #: includes/nav-pagination.php:5
 msgid "Page"
-msgstr ""
+msgstr "Página"
 
 #: includes/nav-pagination.php:13
 msgid "Previous"
-msgstr ""
+msgstr "Anterior"
 
 #: includes/nav-pagination.php:14
 msgid "Next"
-msgstr ""
+msgstr "Siguiente"
 
 #: includes/nav-paging.php:14
 msgid "Previous article"
-msgstr ""
+msgstr "Artículo anterior"
 
 #: includes/nav-paging.php:26
 msgid "Next article"
-msgstr ""
+msgstr "Artículo siguiente"
 
 #: includes/nav-util.php:10
 msgid "Explore"
-msgstr ""
+msgstr "Explorar"
 
 #: includes/nav-util.php:13
 msgid "Categories"
-msgstr ""
+msgstr "Categorías"
 
 #: includes/newsletter-form.php:14
 msgid "Love the Web?"
-msgstr ""
+msgstr "¿Te encanta la web?"
 
 #: includes/newsletter-form.php:15
 msgid "Get the Mozilla newsletter and help us keep it open and free."
-msgstr ""
+msgstr "Recibe el boletín de noticias de Mozilla y ayúdanos a que siga siendo abierta y gratuita."
 
 #: includes/newsletter-form.php:22
 msgid "Your e-mail address"
-msgstr ""
+msgstr "Tu dirección de correo electrónico"
 
 #. L10n: 'yourname' is used as the first part of an example e-mail address, as in 'yourname@example.com'
 #: includes/newsletter-form.php:24
 msgid "yourname"
-msgstr ""
+msgstr "tunombre"
 
 #: includes/newsletter-form.php:29
 msgid "Language"
-msgstr ""
+msgstr "Idioma"
 
 #: includes/newsletter-form.php:40
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: includes/newsletter-form.php:41
 msgid "Text"
-msgstr ""
+msgstr "Texto"
 
 #: includes/newsletter-form.php:47
 #, php-format
-msgid ""
-"I’m okay with Mozilla handling my info as explained in this <a href=\"%s"
-"\">Privacy Policy</a>."
-msgstr ""
+msgid "I’m okay with Mozilla handling my info as explained in this <a href=\"%s\">Privacy Policy</a>."
+msgstr "Me parece bien que Mozilla gestione mi información conforme a lo especificado en esta <a href=\"%s\">Política de privacidad</a>."
 
 #: includes/newsletter-form.php:53
 msgid "Sign up now"
-msgstr ""
+msgstr "Suscríbete ya"
 
 #: includes/newsletter-form.php:55
 msgid "We will only send you Mozilla-related information."
-msgstr ""
+msgstr "Solo te enviaremos información relacionada con Mozilla."
 
 #: includes/newsletter-form.php:61
 msgid "Thanks!"
-msgstr ""
+msgstr "¡Gracias!"
 
 #: includes/newsletter-form.php:63
-msgid ""
-"If you haven’t previously confirmed a subscription to a Mozilla-related "
-"newsletter you may have to do so."
-msgstr ""
+msgid "If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so."
+msgstr "Si anteriormente no confirmaste una suscripción a algún boletín de Mozilla, tendrás que hacerlo ahora."
 
 #: includes/newsletter-form.php:64
 msgid "Please check your inbox or your spam filter for an e-mail from us."
-msgstr ""
+msgstr "Revisa tu bandeja de entrada o tu filtro de correo no deseado y comprueba que te llegó un correo nuestro."
 
 #: includes/related-posts.php:21
 #, php-format
 msgid "More articles in “%s”"
-msgstr ""
+msgstr "Más artículos en “%s”"
 
 #: includes/related-posts.php:35
 msgid "There are no other articles in this category."
-msgstr ""
+msgstr "No hay más articulos en esta categoría."
 
 #: includes/related-posts.php:43
 msgid "Popular articles"
-msgstr ""
+msgstr "Artículos populares"
 
 #: includes/related-posts.php:57
 msgid "Recent articles"
-msgstr ""
+msgstr "Artículos recientes"
 
 #: includes/social-share.php:15
 msgid "Share:"
-msgstr ""
+msgstr "Compartir:"
 
 #: searchform.php:10
 msgid "Search this site"
-msgstr ""
+msgstr "Buscar en este sitio"
 
 #: searchform.php:12
 msgid "Search"
-msgstr ""
+msgstr "Buscar"

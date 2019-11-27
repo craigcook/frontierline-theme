@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2019-03-27 16:55-0700\n"
-"PO-Revision-Date: 2019-11-20 16:05-0800\n"
+"PO-Revision-Date: 2019-11-27 13:34-0800\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,288 +19,269 @@ msgstr ""
 #: archive.php:18 functions.php:306
 #, php-format
 msgid "Articles in “%s”"
-msgstr ""
+msgstr "Artikel di “%s”"
 
 #: archive.php:20 functions.php:308
 #, php-format
 msgid "Articles tagged with “%s”"
-msgstr ""
+msgstr "Artikel dengan tag “%s”"
 
-#: archive.php:22 archive.php:24 archive.php:26 functions.php:312
-#: functions.php:314 functions.php:316
+#: archive.php:22 archive.php:24 archive.php:26 functions.php:312 functions.php:314 functions.php:316
 #, php-format
 msgid "Articles from %s"
-msgstr ""
+msgstr "Artikel dari %s"
 
 #: archive.php:28 functions.php:310
 #, php-format
 msgid "Articles by %s"
-msgstr ""
+msgstr "Artikel oleh %s"
 
 #. L10n: %s: post title
 #: comments.php:23
 #, php-format
 msgid "One comment on “%s”"
-msgstr ""
+msgstr "Satu komentar di “%s”"
 
 #. L10n: 1: number of comments, 2: post title
 #: comments.php:26
 #, php-format
 msgid "%1$s comments on “%2$s”"
-msgstr ""
+msgstr "%1$s komentar di “%2$s”"
 
 #: comments.php:31
 msgid "No comments yet"
-msgstr ""
+msgstr "Belum ada komentar"
 
 #: comments.php:35
 msgid "Post a comment"
-msgstr ""
+msgstr "Kirim komentar"
 
 #: comments.php:45
 msgid "More comments:"
-msgstr ""
+msgstr "Komentar lain:"
 
 #. L10n: 'trackbacks' are when another website refers to this blog post with a link notification
 #: comments.php:54
 #, php-format
-msgid ""
-"Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post"
-"\">trackbacks</a> are open."
-msgstr ""
+msgid "Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post\">trackbacks</a> are open."
+msgstr "Komentar ditutup, tapi <a href=\"%1$s\" title=\"Trackback URL for this post\">trackback</a> dibuka."
 
 #: content-views/content-none.php:10
 msgid "Nothing Found"
-msgstr ""
+msgstr "Tak Ada yang Ditemukan"
 
 #: content-views/content-none.php:16
 #, php-format
 msgid "Sorry, we didn’t find anything for “%s”. Try another search?"
-msgstr ""
+msgstr "Maaf, kami tidak menemukan apa pun untuk “%s”. Coba pencarian lain?"
 
 #: content-views/content-none.php:20
-msgid ""
-"Sorry, we looked everywhere, but we couldn’t find the page or file you were "
-"looking for. A few possible explanations:"
-msgstr ""
+msgid "Sorry, we looked everywhere, but we couldn’t find the page or file you were looking for. A few possible explanations:"
+msgstr "Maaf, kami telah mencari ke mana pun, tapi tidak menemukan halaman atau berkas yang Anda cari. Beberapa kemungkinan yang terjadi:"
 
 #: content-views/content-none.php:22
 msgid "You may have followed an out-dated link or bookmark."
-msgstr ""
+msgstr "Anda mungkin mengikuti tautan atau markah yang telah usang."
 
 #: content-views/content-none.php:23
 msgid "If you entered the address by hand, you may have mistyped it."
-msgstr ""
+msgstr "Jika Anda mengetikkan alamatnya langsung, bisa jadi Anda telah salah ketik."
 
 #: content-views/content-none.php:24
 msgid "You might have just discovered an error. Congratulations!"
-msgstr ""
+msgstr "Mungkin saja ada galat. Selamat!"
 
 #: content-views/content-none.php:27
 msgid "So what do we do now?"
-msgstr ""
+msgstr "Lalu apa yang harus kita lakukan sekarang?"
 
 #: content-views/content-none.php:29
 #, php-format
 msgid "Go to the <a href=\"%s\">front page</a>."
-msgstr ""
+msgstr "Buka <a href=\"%s\">halaman depan</a>."
 
 #: content-views/content-none.php:30
 #, php-format
 msgid "Visit <a href=\"%s\">mozilla.org</a>."
-msgstr ""
+msgstr "Kunjungi <a href=\"%s\">mozilla.org</a>."
 
 #: content-views/content-none.php:31
 msgid "Try searching this blog."
-msgstr ""
+msgstr "Coba telusuri blog ini."
 
-#: content-views/content-page-sidebar.php:24 content-views/content.php:77
-#: image.php:30
+#: content-views/content-page-sidebar.php:24 content-views/content.php:77 image.php:30
 msgid "Edit"
-msgstr ""
+msgstr "Sunting"
 
 #: content-views/content-page-sidebar.php:31 content-views/content.php:82
 msgid "Continue reading…"
-msgstr ""
+msgstr "Lanjutkan membaca…"
 
 #: content-views/content-page-sidebar.php:32 content-views/content.php:83
 msgid "Pages:"
-msgstr ""
+msgstr "Halaman:"
 
 #: content-views/content.php:31
 msgid "Categories:"
-msgstr ""
+msgstr "Kategori:"
 
 #: content-views/content.php:74
 msgid "No responses yet"
-msgstr ""
+msgstr "Belum ada respons"
 
 #: content-views/content.php:74
 msgid "1 response"
-msgstr ""
+msgstr "1 respons"
 
 #: content-views/content.php:74
 msgid "% responses"
-msgstr ""
+msgstr "% respons"
 
 #: content-views/content.php:88
 msgid "Tags:"
-msgstr ""
+msgstr "Tag:"
 
 #: footer.php:26
 msgid "About"
-msgstr ""
+msgstr "Tentang"
 
 #: footer.php:27
 msgid "Contact Us"
-msgstr ""
+msgstr "Kontak Kami"
 
 #: footer.php:28
 msgid "Donate"
-msgstr ""
+msgstr "Donasi"
 
 #: footer.php:40 includes/nav-global.php:23
 msgid "Download Firefox"
-msgstr ""
+msgstr "Unduh Firefox"
 
 #: footer.php:41
 msgid "Desktop"
-msgstr ""
+msgstr "Desktop"
 
 #: footer.php:42
 msgid "Mobile"
-msgstr ""
+msgstr "Seluler"
 
 #: footer.php:43
 msgid "Features"
-msgstr ""
+msgstr "Fitur"
 
 #: footer.php:44
 msgid "Beta, Nightly, Developer Edition"
-msgstr ""
+msgstr "Beta, Nightly, Developer Edition"
 
 #: footer.php:58
 msgid "Website Privacy Notice"
-msgstr ""
+msgstr "Pemberitahuan Privasi Situs"
 
 #: footer.php:59
 msgid "Cookies"
-msgstr ""
+msgstr "Kuki"
 
 #: footer.php:60
 msgid "Legal"
-msgstr ""
+msgstr "Legal"
 
 #: footer.php:64
 #, php-format
-msgid ""
-"Visit Mozilla Corporation’s not-for-profit parent, the <a href=\"%1s\" data-"
-"link-type=\"%2s\" data-link-name=\"%3s\">Mozilla Foundation</a>."
-msgstr ""
+msgid "Visit Mozilla Corporation’s not-for-profit parent, the <a href=\"%1s\" data-link-type=\"%2s\" data-link-name=\"%3s\">Mozilla Foundation</a>."
+msgstr "Kunjungi induk nirlaba Mozilla Corporation, <a href=\"%1s\" data-link-type=\"%2s\" data-link-name=\"%3s\">Mozilla Foundation</a>."
 
 #: footer.php:68
 #, php-format
-msgid ""
-"Portions of this content are ©1998-%1s by individual contributors. Content "
-"available under a <a href=\"%2s\" rel=\"external license\">Creative Commons "
-"license</a>."
-msgstr ""
+msgid "Portions of this content are ©1998-%1s by individual contributors. Content available under a <a href=\"%2s\" rel=\"external license\">Creative Commons license</a>."
+msgstr "Hak cipta ©1998-%1s oleh kontributor individual untuk bagian konten ini. Konten tersedia di bawah <a href=\"%2s\" rel=\"external license\">lisensi Creative Commons</a>."
 
 #: functions.php:44
 msgid "Site Menu"
-msgstr ""
+msgstr "Menu Situs"
 
 #: functions.php:84
 msgid "Social sharing for posts"
-msgstr ""
+msgstr "Social sharing untuk postingan"
 
 #: functions.php:96
 msgid "Social sharing for Pages"
-msgstr ""
+msgstr "Social sharing untuk Halaman"
 
 #: functions.php:108
 msgid "Twitter username"
-msgstr ""
+msgstr "Nama pengguna Twitter"
 
 #: functions.php:125
 msgid "Add social sharing buttons to posts"
-msgstr ""
+msgstr "Tambahkah tombol social sharing ke postingan"
 
 #: functions.php:127
 msgid "Adds buttons for Twitter and Facebook to the top of blog articles."
-msgstr ""
+msgstr "Tambahkan tombol untuk Twitter dan Facebook pada bagian atas artikel blog."
 
 #: functions.php:141
 msgid "Add social sharing buttons to Pages"
-msgstr ""
+msgstr "Tambahkah tombol social sharing ke Halaman"
 
 #: functions.php:143
 msgid "Adds buttons for Twitter and Facebook to the top of static Pages."
-msgstr ""
+msgstr "Tambahkan tombol untuk Twitter dan Facebook pada bagian atas Halaman statis."
 
 #: functions.php:156
-msgid ""
-"The Twitter account for attribution when sharing. Appears as \"via @username"
-"\" at the end of the tweet, and Twitter may suggest related accounts to "
-"follow. Leave this blank for no attribution."
-msgstr ""
+msgid "The Twitter account for attribution when sharing. Appears as \"via @username\" at the end of the tweet, and Twitter may suggest related accounts to follow. Leave this blank for no attribution."
+msgstr "Akun Twitter untuk atribusi saat berbagi. Muncul sebagai \"via @username\" pada bagian akhir tweet, dan Twitter dapat menyarankan akun yang berhubungan untuk diikuti. Biarkan ini kosong bila tak ada atribusi."
 
 #: functions.php:168
 msgid "Extra Large"
-msgstr ""
+msgstr "Ekstra Besar"
 
 #: functions.php:278
 #, php-format
 msgid "Page %s"
-msgstr ""
+msgstr "Halaman %s"
 
 #: functions.php:321
 #, php-format
 msgid "Search results for “%s”"
-msgstr ""
+msgstr "Hasil pencarian untuk “%s”"
 
 #: functions.php:323
 msgid "Not Found"
-msgstr ""
+msgstr "Tidak Ditemukan"
 
 #: functions.php:403
-msgid ""
-"Spamming robots, please fill in this field. Real humans should leave it "
-"blank."
-msgstr ""
+msgid "Spamming robots, please fill in this field. Real humans should leave it blank."
+msgstr "Robot spamming, harap isi bidang ini. Manusia sungguhan dapat mengosongkannya."
 
 #: functions.php:413
-msgid ""
-"Sorry, you appear to be a spamming robot because you filled in the hidden "
-"spam trap field. To show you are not a spammer, submit your comment again "
-"and leave the field blank."
-msgstr ""
+msgid "Sorry, you appear to be a spamming robot because you filled in the hidden spam trap field. To show you are not a spammer, submit your comment again and leave the field blank."
+msgstr "Maaf, sepertinya Anda adalah robot spamming karena Anda mengisi bidang perangkap spam tersembunyi. Untuk membuktikan bahwa Anda bukan spammer, kirimkan lagi komentar dan kosongkan bidangnya."
 
 #: functions.php:414
 msgid "Spam Prevention"
-msgstr ""
+msgstr "Pencegahan Spam"
 
 #: functions.php:504
 msgid "Read more"
-msgstr ""
+msgstr "Baca selengkapnya"
 
 #: functions.php:540
 msgid "Sidebar Menu"
-msgstr ""
+msgstr "Menu Bilah Samping"
 
 #: functions.php:565
 msgid "Trackback from "
-msgstr ""
+msgstr "Trackback dari "
 
 #. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
 #. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
 #: functions.php:568 functions.php:581
 msgid "on"
-msgstr ""
+msgstr "di"
 
 #: functions.php:569 functions.php:582 functions.php:596
 msgid "Permanent link to this comment by "
-msgstr ""
+msgstr "Tautan permanen pada komentar ini oleh "
 
 #. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
 #. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
@@ -308,278 +289,269 @@ msgstr ""
 #: functions.php:572 functions.php:585 functions.php:599
 #, php-format
 msgid "%1$s at %2$s:"
-msgstr ""
+msgstr "%1$s di %2$s:"
 
 #: functions.php:578
 msgid "Ping from "
-msgstr ""
+msgstr "Ping dari "
 
 #: functions.php:595
 msgid "wrote on"
-msgstr ""
+msgstr "ditulis pada"
 
 #: functions.php:608
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Komentar Anda sedang menunggu moderasi."
 
 #: functions.php:620
 msgid "Edit comment"
-msgstr ""
+msgstr "Sunting komentar"
 
 #: functions.php:667
-msgid ""
-"Remember to include a featured image! It should be at least 1400 by 770 "
-"pixels."
-msgstr ""
+msgid "Remember to include a featured image! It should be at least 1400 by 770 pixels."
+msgstr "Jangan lupa menyertakan gambar utama! Minimal 1400 x 770 pixel."
 
 #: functions.php:670
 msgid " Posts without a featured image will show a standard placeholder image."
-msgstr ""
+msgstr " Postingan tanpa gambar utama akan menampilkan gambar placeholder standar."
 
 #: functions.php:715
 msgid "Custom Sidebar Content"
-msgstr ""
+msgstr "Konten Bilah Samping Kustom"
 
 #: functions.php:746
-msgid ""
-"The image will be used as a thumbnail for this post and for social media, "
-"but won‘t appear on the post page."
-msgstr ""
+msgid "The image will be used as a thumbnail for this post and for social media, but won‘t appear on the post page."
+msgstr "Gambar akan digunakan sebagai thumbnail untuk postingan ini dan untuk media sosial, tapi tidak akan muncul dalam halaman postingan."
 
 #: functions.php:749
 msgid "Hide featured image"
-msgstr ""
+msgstr "Sembunyikan gambar utama"
 
 #: functions.php:756
 msgid "Hide Featured Image"
-msgstr ""
+msgstr "Sembunyikan Gambar Utama"
 
 #: image.php:18
 #, php-format
-msgid ""
-"<time class=\"date published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time>"
-msgstr ""
+msgid "<time class=\"date published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time>"
+msgstr "<time class=\"date published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time>"
 
 #: image.php:24
 #, php-format
 msgid "Original size: <a href=\"%1$s\">%2$s &times; %3$s</a>"
-msgstr ""
+msgstr "Ukuran sebenarnya: <a href=\"%1$s\">%2$s &times; %3$s</a>"
 
 #: inc/customizer.php:22
 msgid "Accent Color"
-msgstr ""
+msgstr "Warna Aksen"
 
 #: inc/customizer.php:27 inc/customizer.php:53
 msgid "None (Default)"
-msgstr ""
+msgstr "Tidak ada (Default)"
 
 #: inc/customizer.php:28
 msgid "Cyan"
-msgstr ""
+msgstr "Sian"
 
 #: inc/customizer.php:29
 msgid "Coral"
-msgstr ""
+msgstr "Coral"
 
 #: inc/customizer.php:30
 msgid "Yellow"
-msgstr ""
+msgstr "Kuning"
 
 #: inc/customizer.php:31
 msgid "Lilac"
-msgstr ""
+msgstr "Lilac"
 
 #: inc/customizer.php:32
 msgid "Orange"
-msgstr ""
+msgstr "Orange"
 
 #: inc/customizer.php:33
 msgid "Lime"
-msgstr ""
+msgstr "Lime"
 
 #: inc/customizer.php:34
 msgid "Neon Blue"
-msgstr ""
+msgstr "Neon Blue"
 
 #: inc/customizer.php:35
 msgid "Neon Pink"
-msgstr ""
+msgstr "Neon Pink"
 
 #: inc/customizer.php:36
 msgid "Neon Green"
-msgstr ""
+msgstr "Neon Green"
 
 #: inc/customizer.php:48
 msgid "Header Pattern"
-msgstr ""
+msgstr "Pola Header"
 
 #: inc/customizer.php:54
 msgid "Arrows"
-msgstr ""
+msgstr "Panah"
 
 #: inc/customizer.php:55
 msgid "Basket Weave"
-msgstr ""
+msgstr "Basket Weave"
 
 #: inc/customizer.php:56
 msgid "Confetti"
-msgstr ""
+msgstr "Confetti"
 
 #: inc/customizer.php:57
 msgid "Emoticons"
-msgstr ""
+msgstr "Emoticon"
 
 #: inc/customizer.php:58
 msgid "Slashes and Brackets"
-msgstr ""
+msgstr "Garis Miring dan Tanda Kurung"
 
 #: inc/customizer.php:59
 msgid "Trade Winds"
-msgstr ""
+msgstr "Angin Pasat"
 
 #: includes/categories.php:13
 msgid "More articles"
-msgstr ""
+msgstr "Artikel lain"
 
 #: includes/masthead.php:16
 msgid "Go to the front page"
-msgstr ""
+msgstr "Buka halaman depan"
 
 #: includes/nav-global.php:9
 msgid "Visit mozilla.org"
-msgstr ""
+msgstr "Kunjungi mozilla.org"
 
 #: includes/nav-global.php:12
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: includes/nav-global.php:14
 msgid "Internet Health"
-msgstr ""
+msgstr "Kesehatan Internet"
 
 #: includes/nav-global.php:15
 msgid "Technology"
-msgstr ""
+msgstr "Teknologi"
 
 #: includes/nav-global.php:16
 msgid "Give"
-msgstr ""
+msgstr "Beri"
 
 #: includes/nav-global.php:18
 msgid "Discover Firefox"
-msgstr ""
+msgstr "Temukan Firefox"
 
 #: includes/nav-pagination.php:5
 msgid "Page"
-msgstr ""
+msgstr "Halaman"
 
 #: includes/nav-pagination.php:13
 msgid "Previous"
-msgstr ""
+msgstr "Sebelumnya"
 
 #: includes/nav-pagination.php:14
 msgid "Next"
-msgstr ""
+msgstr "Selanjutnya"
 
 #: includes/nav-paging.php:14
 msgid "Previous article"
-msgstr ""
+msgstr "Artikel sebelumnya"
 
 #: includes/nav-paging.php:26
 msgid "Next article"
-msgstr ""
+msgstr "Artikel selanjutnya"
 
 #: includes/nav-util.php:10
 msgid "Explore"
-msgstr ""
+msgstr "Jelajahi"
 
 #: includes/nav-util.php:13
 msgid "Categories"
-msgstr ""
+msgstr "Kategori"
 
 #: includes/newsletter-form.php:14
 msgid "Love the Web?"
-msgstr ""
+msgstr "Mencintai Web?"
 
 #: includes/newsletter-form.php:15
 msgid "Get the Mozilla newsletter and help us keep it open and free."
-msgstr ""
+msgstr "Dapatkan nawala Mozilla dan bantu kami menjaganya tetap terbuka dan gratis."
 
 #: includes/newsletter-form.php:22
 msgid "Your e-mail address"
-msgstr ""
+msgstr "Alamat surel Anda"
 
 #. L10n: 'yourname' is used as the first part of an example e-mail address, as in 'yourname@example.com'
 #: includes/newsletter-form.php:24
 msgid "yourname"
-msgstr ""
+msgstr "nama Anda"
 
 #: includes/newsletter-form.php:29
 msgid "Language"
-msgstr ""
+msgstr "Bahasa"
 
 #: includes/newsletter-form.php:40
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: includes/newsletter-form.php:41
 msgid "Text"
-msgstr ""
+msgstr "Teks"
 
 #: includes/newsletter-form.php:47
 #, php-format
-msgid ""
-"I’m okay with Mozilla handling my info as explained in this <a href=\"%s"
-"\">Privacy Policy</a>."
-msgstr ""
+msgid "I’m okay with Mozilla handling my info as explained in this <a href=\"%s\">Privacy Policy</a>."
+msgstr "Saya menyetujui Mozilla untuk menangani informasi tentang saya seperti yang dijelaskan dalam <a href=\"%s\">Kebijakan Privasi</a> ini."
 
 #: includes/newsletter-form.php:53
 msgid "Sign up now"
-msgstr ""
+msgstr "Daftar sekarang"
 
 #: includes/newsletter-form.php:55
 msgid "We will only send you Mozilla-related information."
-msgstr ""
+msgstr "Kami hanya akan mengirimkan informasi terkait Mozilla."
 
 #: includes/newsletter-form.php:61
 msgid "Thanks!"
-msgstr ""
+msgstr "Terima kasih!"
 
 #: includes/newsletter-form.php:63
-msgid ""
-"If you haven’t previously confirmed a subscription to a Mozilla-related "
-"newsletter you may have to do so."
-msgstr ""
+msgid "If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so."
+msgstr "Jika Anda sebelumnya belum pernah mengonfirmasi berlangganan salah satu nawala terkait Mozilla, Anda mungkin harus melakukannya."
 
 #: includes/newsletter-form.php:64
 msgid "Please check your inbox or your spam filter for an e-mail from us."
-msgstr ""
+msgstr "Silakan cek surel dari kami di kotak atau filter spam Anda."
 
 #: includes/related-posts.php:21
 #, php-format
 msgid "More articles in “%s”"
-msgstr ""
+msgstr "Artikel lain di “%s”"
 
 #: includes/related-posts.php:35
 msgid "There are no other articles in this category."
-msgstr ""
+msgstr "Tidak ada artikel lain di kategori ini."
 
 #: includes/related-posts.php:43
 msgid "Popular articles"
-msgstr ""
+msgstr "Artikel populer"
 
 #: includes/related-posts.php:57
 msgid "Recent articles"
-msgstr ""
+msgstr "Artikel terbaru"
 
 #: includes/social-share.php:15
 msgid "Share:"
-msgstr ""
+msgstr "Bagikan:"
 
 #: searchform.php:10
 msgid "Search this site"
-msgstr ""
+msgstr "Cari situs ini"
 
 #: searchform.php:12
 msgid "Search"
-msgstr ""
+msgstr "Cari"

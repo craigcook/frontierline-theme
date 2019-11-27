@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2019-03-27 16:55-0700\n"
-"PO-Revision-Date: 2019-11-20 16:44-0800\n"
+"PO-Revision-Date: 2019-11-27 13:37-0800\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,288 +19,287 @@ msgstr ""
 #: archive.php:18 functions.php:306
 #, php-format
 msgid "Articles in “%s”"
-msgstr ""
+msgstr "關於「%s」的文章"
 
 #: archive.php:20 functions.php:308
 #, php-format
 msgid "Articles tagged with “%s”"
-msgstr ""
+msgstr "標記有「%s」的文章"
 
-#: archive.php:22 archive.php:24 archive.php:26 functions.php:312
-#: functions.php:314 functions.php:316
+#: archive.php:22 archive.php:24 archive.php:26 functions.php:312 functions.php:314 functions.php:316
 #, php-format
 msgid "Articles from %s"
-msgstr ""
+msgstr "來自「%s」的文章"
 
 #: archive.php:28 functions.php:310
 #, php-format
 msgid "Articles by %s"
-msgstr ""
+msgstr "「%s」的文章"
 
 #. L10n: %s: post title
 #: comments.php:23
 #, php-format
 msgid "One comment on “%s”"
-msgstr ""
+msgstr "關於「%s」的一則評論"
 
 #. L10n: 1: number of comments, 2: post title
 #: comments.php:26
 #, php-format
 msgid "%1$s comments on “%2$s”"
-msgstr ""
+msgstr "關於「%2$s」的 %1$s 則評論"
 
 #: comments.php:31
 msgid "No comments yet"
-msgstr ""
+msgstr "目前沒有評論"
 
 #: comments.php:35
 msgid "Post a comment"
-msgstr ""
+msgstr "發表評論"
 
 #: comments.php:45
 msgid "More comments:"
-msgstr ""
+msgstr "更多評論："
 
 #. L10n: 'trackbacks' are when another website refers to this blog post with a link notification
 #: comments.php:54
 #, php-format
-msgid ""
-"Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post"
-"\">trackbacks</a> are open."
-msgstr ""
+msgid "Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post\">trackbacks</a> are open."
+msgstr "評論已關閉，但<a href=\"%1$s\" title=\"Trackback URL for this post\">引用</a>仍開啟。"
 
 #: content-views/content-none.php:10
 msgid "Nothing Found"
-msgstr ""
+msgstr "找不到結果"
 
 #: content-views/content-none.php:16
 #, php-format
 msgid "Sorry, we didn’t find anything for “%s”. Try another search?"
-msgstr ""
+msgstr "抱歉，我們找不到關於「%s」的結果。要搜尋其他的嗎？"
 
 #: content-views/content-none.php:20
 msgid ""
-"Sorry, we looked everywhere, but we couldn’t find the page or file you were "
-"looking for. A few possible explanations:"
-msgstr ""
+"Sorry, we looked everywhere, but we couldn’t find the page or file you were looking for. A few possible "
+"explanations:"
+msgstr "抱歉，我們實在找不到您要找的網頁或檔案。有以下幾種可能："
 
 #: content-views/content-none.php:22
 msgid "You may have followed an out-dated link or bookmark."
-msgstr ""
+msgstr "您關注的連結或書籤可能已過時了。"
 
 #: content-views/content-none.php:23
 msgid "If you entered the address by hand, you may have mistyped it."
-msgstr ""
+msgstr "如果您是手動輸入網址，有可能打錯字了。"
 
 #: content-views/content-none.php:24
 msgid "You might have just discovered an error. Congratulations!"
-msgstr ""
+msgstr "您可能剛好抓出了一個錯誤，恭喜！"
 
 #: content-views/content-none.php:27
 msgid "So what do we do now?"
-msgstr ""
+msgstr "現在該怎麼辦？"
 
 #: content-views/content-none.php:29
 #, php-format
 msgid "Go to the <a href=\"%s\">front page</a>."
-msgstr ""
+msgstr "請前往<a href=\"%s\">首頁</a>。"
 
 #: content-views/content-none.php:30
 #, php-format
 msgid "Visit <a href=\"%s\">mozilla.org</a>."
-msgstr ""
+msgstr "請前往 <a href=\"%s\">mozilla.org</a>。"
 
 #: content-views/content-none.php:31
 msgid "Try searching this blog."
-msgstr ""
+msgstr "試著搜尋此部落格。"
 
-#: content-views/content-page-sidebar.php:24 content-views/content.php:77
-#: image.php:30
+#: content-views/content-page-sidebar.php:24 content-views/content.php:77 image.php:30
 msgid "Edit"
-msgstr ""
+msgstr "編輯"
 
 #: content-views/content-page-sidebar.php:31 content-views/content.php:82
 msgid "Continue reading…"
-msgstr ""
+msgstr "繼續閱讀…"
 
 #: content-views/content-page-sidebar.php:32 content-views/content.php:83
 msgid "Pages:"
-msgstr ""
+msgstr "頁："
 
 #: content-views/content.php:31
 msgid "Categories:"
-msgstr ""
+msgstr "分類："
 
 #: content-views/content.php:74
 msgid "No responses yet"
-msgstr ""
+msgstr "目前暫無回應"
 
 #: content-views/content.php:74
 msgid "1 response"
-msgstr ""
+msgstr "1 則回應"
 
 #: content-views/content.php:74
 msgid "% responses"
-msgstr ""
+msgstr "% 則回應"
 
 #: content-views/content.php:88
 msgid "Tags:"
-msgstr ""
+msgstr "標籤："
 
 #: footer.php:26
 msgid "About"
-msgstr ""
+msgstr "關於"
 
 #: footer.php:27
 msgid "Contact Us"
-msgstr ""
+msgstr "聯絡我們"
 
 #: footer.php:28
 msgid "Donate"
-msgstr ""
+msgstr "捐款"
 
 #: footer.php:40 includes/nav-global.php:23
 msgid "Download Firefox"
-msgstr ""
+msgstr "下載 Firefox"
 
 #: footer.php:41
 msgid "Desktop"
-msgstr ""
+msgstr "桌面版"
 
 #: footer.php:42
 msgid "Mobile"
-msgstr ""
+msgstr "行動版"
 
 #: footer.php:43
 msgid "Features"
-msgstr ""
+msgstr "功能"
 
 #: footer.php:44
 msgid "Beta, Nightly, Developer Edition"
-msgstr ""
+msgstr "Beta、Nightly、Developer Edition"
 
 #: footer.php:58
 msgid "Website Privacy Notice"
-msgstr ""
+msgstr "網站隱私權保護聲明"
 
 #: footer.php:59
 msgid "Cookies"
-msgstr ""
+msgstr "Cookie"
 
 #: footer.php:60
 msgid "Legal"
-msgstr ""
+msgstr "法律資訊"
 
 #: footer.php:64
 #, php-format
 msgid ""
-"Visit Mozilla Corporation’s not-for-profit parent, the <a href=\"%1s\" data-"
-"link-type=\"%2s\" data-link-name=\"%3s\">Mozilla Foundation</a>."
+"Visit Mozilla Corporation’s not-for-profit parent, the <a href=\"%1s\" data-link-type=\"%2s\" data-link-name=\"%3s"
+"\">Mozilla Foundation</a>."
 msgstr ""
+"造訪 Mozilla Corporation 的非營利母公司：<a href=\"%1s\" data-link-type=\"%2s\" data-link-name=\"%3s\">Mozilla 基金"
+"會</a>。"
 
 #: footer.php:68
 #, php-format
 msgid ""
-"Portions of this content are ©1998-%1s by individual contributors. Content "
-"available under a <a href=\"%2s\" rel=\"external license\">Creative Commons "
-"license</a>."
+"Portions of this content are ©1998-%1s by individual contributors. Content available under a <a href=\"%2s\" rel="
+"\"external license\">Creative Commons license</a>."
 msgstr ""
+"本頁的部分內容著作權為 ©1998-%1s 由個別貢獻者所有，使用<a href=\"%2s\" rel=\"external license\">創用 CC 授權條款</a>"
+"授權大眾使用。"
 
 #: functions.php:44
 msgid "Site Menu"
-msgstr ""
+msgstr "網站選單"
 
 #: functions.php:84
 msgid "Social sharing for posts"
-msgstr ""
+msgstr "社群媒體貼文分享"
 
 #: functions.php:96
 msgid "Social sharing for Pages"
-msgstr ""
+msgstr "社群媒體網頁分享"
 
 #: functions.php:108
 msgid "Twitter username"
-msgstr ""
+msgstr "Twitter 使用者名稱"
 
 #: functions.php:125
 msgid "Add social sharing buttons to posts"
-msgstr ""
+msgstr "為貼文添加社群媒體分享按鈕"
 
 #: functions.php:127
 msgid "Adds buttons for Twitter and Facebook to the top of blog articles."
-msgstr ""
+msgstr "在部落格文章頂端為 Twitter 和 Facebook 添加按鈕。"
 
 #: functions.php:141
 msgid "Add social sharing buttons to Pages"
-msgstr ""
+msgstr "為網頁添加社群媒體分享按鈕"
 
 #: functions.php:143
 msgid "Adds buttons for Twitter and Facebook to the top of static Pages."
-msgstr ""
+msgstr "在靜態網頁頂端為 Twitter 和 Facebook 添加按鈕。"
 
 #: functions.php:156
 msgid ""
-"The Twitter account for attribution when sharing. Appears as \"via @username"
-"\" at the end of the tweet, and Twitter may suggest related accounts to "
-"follow. Leave this blank for no attribution."
+"The Twitter account for attribution when sharing. Appears as \"via @username\" at the end of the tweet, and Twitter "
+"may suggest related accounts to follow. Leave this blank for no attribution."
 msgstr ""
+"分享內容時會使用 Twitter 帳號作為出處。在推文末尾會顯示為「透過 @username」，Twitter 也可能會建議關注相關帳號。保留"
+"此空白表示無出處。"
 
 #: functions.php:168
 msgid "Extra Large"
-msgstr ""
+msgstr "特大"
 
 #: functions.php:278
 #, php-format
 msgid "Page %s"
-msgstr ""
+msgstr "%s 網頁"
 
 #: functions.php:321
 #, php-format
 msgid "Search results for “%s”"
-msgstr ""
+msgstr "「%s」的搜尋結果"
 
 #: functions.php:323
 msgid "Not Found"
-msgstr ""
+msgstr "找不到結果"
 
 #: functions.php:403
-msgid ""
-"Spamming robots, please fill in this field. Real humans should leave it "
-"blank."
-msgstr ""
+msgid "Spamming robots, please fill in this field. Real humans should leave it blank."
+msgstr "垃圾郵件機器人，請填寫此欄位。真正的人類是會保留空白的。"
 
 #: functions.php:413
 msgid ""
-"Sorry, you appear to be a spamming robot because you filled in the hidden "
-"spam trap field. To show you are not a spammer, submit your comment again "
-"and leave the field blank."
+"Sorry, you appear to be a spamming robot because you filled in the hidden spam trap field. To show you are not a "
+"spammer, submit your comment again and leave the field blank."
 msgstr ""
+"抱歉，您似乎是垃圾郵件機器人，因為您填寫了垃圾郵件隱藏陷阱欄位。為了表明您不是垃圾郵件發送者，請再次提交評論，並將該"
+"欄位留空。"
 
 #: functions.php:414
 msgid "Spam Prevention"
-msgstr ""
+msgstr "防止垃圾郵件"
 
 #: functions.php:504
 msgid "Read more"
-msgstr ""
+msgstr "閱讀更多"
 
 #: functions.php:540
 msgid "Sidebar Menu"
-msgstr ""
+msgstr "側邊欄選單"
 
 #: functions.php:565
 msgid "Trackback from "
-msgstr ""
+msgstr "參照引用來自 "
 
 #. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
 #. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
 #: functions.php:568 functions.php:581
 msgid "on"
-msgstr ""
+msgstr "在"
 
 #: functions.php:569 functions.php:582 functions.php:596
 msgid "Permanent link to this comment by "
-msgstr ""
+msgstr "永久連結至此評論，作者為 "
 
 #. L10n: Trackback headings read "Trackback from <Site> on <Date> at <Time>:"
 #. L10n: Pingback headings read "Ping from <Site> on <Date> at <Time>:"
@@ -308,278 +307,269 @@ msgstr ""
 #: functions.php:572 functions.php:585 functions.php:599
 #, php-format
 msgid "%1$s at %2$s:"
-msgstr ""
+msgstr "在 %2$s 的 %1$s："
 
 #: functions.php:578
 msgid "Ping from "
-msgstr ""
+msgstr "Ping 指令來自 "
 
 #: functions.php:595
 msgid "wrote on"
-msgstr ""
+msgstr "寫於"
 
 #: functions.php:608
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "您的評論正在等候審核。"
 
 #: functions.php:620
 msgid "Edit comment"
-msgstr ""
+msgstr "編輯評論"
 
 #: functions.php:667
-msgid ""
-"Remember to include a featured image! It should be at least 1400 by 770 "
-"pixels."
-msgstr ""
+msgid "Remember to include a featured image! It should be at least 1400 by 770 pixels."
+msgstr "請記得包含主題圖片！至少為 1400 x 770 像素。"
 
 #: functions.php:670
 msgid " Posts without a featured image will show a standard placeholder image."
-msgstr ""
+msgstr " 沒有主題圖片的貼文將顯示為標準佔位符圖片。"
 
 #: functions.php:715
 msgid "Custom Sidebar Content"
-msgstr ""
+msgstr "自訂側邊欄內容"
 
 #: functions.php:746
-msgid ""
-"The image will be used as a thumbnail for this post and for social media, "
-"but won‘t appear on the post page."
-msgstr ""
+msgid "The image will be used as a thumbnail for this post and for social media, but won‘t appear on the post page."
+msgstr "圖片將作為此貼文和社交媒體的縮圖使用，但不會顯示在貼文頁面上。"
 
 #: functions.php:749
 msgid "Hide featured image"
-msgstr ""
+msgstr "隱藏主題圖片"
 
 #: functions.php:756
 msgid "Hide Featured Image"
-msgstr ""
+msgstr "隱藏主題圖片"
 
 #: image.php:18
 #, php-format
-msgid ""
-"<time class=\"date published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time>"
-msgstr ""
+msgid "<time class=\"date published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time>"
+msgstr "<time class=\"date published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time>"
 
 #: image.php:24
 #, php-format
 msgid "Original size: <a href=\"%1$s\">%2$s &times; %3$s</a>"
-msgstr ""
+msgstr "原始尺寸：<a href=\"%1$s\">%2$s &times; %3$s</a>"
 
 #: inc/customizer.php:22
 msgid "Accent Color"
-msgstr ""
+msgstr "強調色"
 
 #: inc/customizer.php:27 inc/customizer.php:53
 msgid "None (Default)"
-msgstr ""
+msgstr "無 (預設)"
 
 #: inc/customizer.php:28
 msgid "Cyan"
-msgstr ""
+msgstr "青色"
 
 #: inc/customizer.php:29
 msgid "Coral"
-msgstr ""
+msgstr "珊瑚紅色"
 
 #: inc/customizer.php:30
 msgid "Yellow"
-msgstr ""
+msgstr "黃色"
 
 #: inc/customizer.php:31
 msgid "Lilac"
-msgstr ""
+msgstr "紫丁香色"
 
 #: inc/customizer.php:32
 msgid "Orange"
-msgstr ""
+msgstr "橙色"
 
 #: inc/customizer.php:33
 msgid "Lime"
-msgstr ""
+msgstr "萊姆綠色"
 
 #: inc/customizer.php:34
 msgid "Neon Blue"
-msgstr ""
+msgstr "螢光藍色"
 
 #: inc/customizer.php:35
 msgid "Neon Pink"
-msgstr ""
+msgstr "螢光粉紅色"
 
 #: inc/customizer.php:36
 msgid "Neon Green"
-msgstr ""
+msgstr "螢光綠色"
 
 #: inc/customizer.php:48
 msgid "Header Pattern"
-msgstr ""
+msgstr "標頭圖案"
 
 #: inc/customizer.php:54
 msgid "Arrows"
-msgstr ""
+msgstr "箭頭"
 
 #: inc/customizer.php:55
 msgid "Basket Weave"
-msgstr ""
+msgstr "編織籃網"
 
 #: inc/customizer.php:56
 msgid "Confetti"
-msgstr ""
+msgstr "五彩紙屑"
 
 #: inc/customizer.php:57
 msgid "Emoticons"
-msgstr ""
+msgstr "表情符號"
 
 #: inc/customizer.php:58
 msgid "Slashes and Brackets"
-msgstr ""
+msgstr "斜線和括號"
 
 #: inc/customizer.php:59
 msgid "Trade Winds"
-msgstr ""
+msgstr "信風"
 
 #: includes/categories.php:13
 msgid "More articles"
-msgstr ""
+msgstr "更多文章"
 
 #: includes/masthead.php:16
 msgid "Go to the front page"
-msgstr ""
+msgstr "前往首頁"
 
 #: includes/nav-global.php:9
 msgid "Visit mozilla.org"
-msgstr ""
+msgstr "前往 mozilla.org"
 
 #: includes/nav-global.php:12
 msgid "Menu"
-msgstr ""
+msgstr "選單"
 
 #: includes/nav-global.php:14
 msgid "Internet Health"
-msgstr ""
+msgstr "網路生態"
 
 #: includes/nav-global.php:15
 msgid "Technology"
-msgstr ""
+msgstr "技術"
 
 #: includes/nav-global.php:16
 msgid "Give"
-msgstr ""
+msgstr "慈善捐款"
 
 #: includes/nav-global.php:18
 msgid "Discover Firefox"
-msgstr ""
+msgstr "探索 Firefox"
 
 #: includes/nav-pagination.php:5
 msgid "Page"
-msgstr ""
+msgstr "頁"
 
 #: includes/nav-pagination.php:13
 msgid "Previous"
-msgstr ""
+msgstr "上一頁"
 
 #: includes/nav-pagination.php:14
 msgid "Next"
-msgstr ""
+msgstr "下一頁"
 
 #: includes/nav-paging.php:14
 msgid "Previous article"
-msgstr ""
+msgstr "上一則文章"
 
 #: includes/nav-paging.php:26
 msgid "Next article"
-msgstr ""
+msgstr "下一則文章"
 
 #: includes/nav-util.php:10
 msgid "Explore"
-msgstr ""
+msgstr "探索"
 
 #: includes/nav-util.php:13
 msgid "Categories"
-msgstr ""
+msgstr "分類"
 
 #: includes/newsletter-form.php:14
 msgid "Love the Web?"
-msgstr ""
+msgstr "喜歡上網嗎？"
 
 #: includes/newsletter-form.php:15
 msgid "Get the Mozilla newsletter and help us keep it open and free."
-msgstr ""
+msgstr "快訂閱 Mozilla 電子報，與我們一起保持網際網路的自由與開放。"
 
 #: includes/newsletter-form.php:22
 msgid "Your e-mail address"
-msgstr ""
+msgstr "您的電子郵件地址"
 
 #. L10n: 'yourname' is used as the first part of an example e-mail address, as in 'yourname@example.com'
 #: includes/newsletter-form.php:24
 msgid "yourname"
-msgstr ""
+msgstr "您的姓名"
 
 #: includes/newsletter-form.php:29
 msgid "Language"
-msgstr ""
+msgstr "語言"
 
 #: includes/newsletter-form.php:40
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: includes/newsletter-form.php:41
 msgid "Text"
-msgstr ""
+msgstr "純文字"
 
 #: includes/newsletter-form.php:47
 #, php-format
-msgid ""
-"I’m okay with Mozilla handling my info as explained in this <a href=\"%s"
-"\">Privacy Policy</a>."
-msgstr ""
+msgid "I’m okay with Mozilla handling my info as explained in this <a href=\"%s\">Privacy Policy</a>."
+msgstr "我同意 Mozilla 依照<a href=\"%s\">隱私保護政策</a>所描述的方式處理我的資訊。"
 
 #: includes/newsletter-form.php:53
 msgid "Sign up now"
-msgstr ""
+msgstr "立刻訂閱"
 
 #: includes/newsletter-form.php:55
 msgid "We will only send you Mozilla-related information."
-msgstr ""
+msgstr "我們只會寄送 Mozilla 相關資訊給您。"
 
 #: includes/newsletter-form.php:61
 msgid "Thanks!"
-msgstr ""
+msgstr "感謝您！"
 
 #: includes/newsletter-form.php:63
-msgid ""
-"If you haven’t previously confirmed a subscription to a Mozilla-related "
-"newsletter you may have to do so."
-msgstr ""
+msgid "If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so."
+msgstr "若您尚未確認過要訂閱 Mozilla 相關電子報，可能要先完成確認。"
 
 #: includes/newsletter-form.php:64
 msgid "Please check your inbox or your spam filter for an e-mail from us."
-msgstr ""
+msgstr "請檢查您的收件匣或垃圾信件匣中是否有我們寄出的郵件。"
 
 #: includes/related-posts.php:21
 #, php-format
 msgid "More articles in “%s”"
-msgstr ""
+msgstr "更多關於「%s」的文章"
 
 #: includes/related-posts.php:35
 msgid "There are no other articles in this category."
-msgstr ""
+msgstr "此分類下沒有其他文章。"
 
 #: includes/related-posts.php:43
 msgid "Popular articles"
-msgstr ""
+msgstr "熱門文章"
 
 #: includes/related-posts.php:57
 msgid "Recent articles"
-msgstr ""
+msgstr "最近的文章"
 
 #: includes/social-share.php:15
 msgid "Share:"
-msgstr ""
+msgstr "分享："
 
 #: searchform.php:10
 msgid "Search this site"
-msgstr ""
+msgstr "搜尋本網站"
 
 #: searchform.php:12
 msgid "Search"
-msgstr ""
+msgstr "搜尋"
