@@ -77,6 +77,51 @@ require get_template_directory() . '/inc/customizer.php';
 function frontierline_admin_init(){
   register_setting(
     'reading',
+    'frontierline_newsform_posts',
+    array(
+      'default' => 1,
+    )
+);
+  add_settings_field(
+    'newsform_posts',
+    __('Show newsletter form under posts', 'frontierline'),
+    'frontierline_settings_field_newsform_posts',
+    'reading',
+    'default'
+  );
+
+  register_setting(
+    'reading',
+    'frontierline_newsform_pages',
+    array(
+      'default' => 1,
+    )
+  );
+  add_settings_field(
+    'newsform_pages',
+    __('Show newsletter form on Pages', 'frontierline'),
+    'frontierline_settings_field_newsform_pages',
+    'reading',
+    'default'
+  );
+
+  register_setting(
+    'reading',
+    'frontierline_newsform_other',
+    array(
+      'default' => 1,
+    )
+  );
+  add_settings_field(
+    'newsform_other',
+    __('Show newsletter form under posts lists and other views', 'frontierline'),
+    'frontierline_settings_field_newsform_other',
+    'reading',
+    'default'
+  );
+
+  register_setting(
+    'reading',
     'frontierline_share_posts'
   );
   add_settings_field(
@@ -113,6 +158,54 @@ function frontierline_admin_init(){
 }
 add_action('admin_init', 'frontierline_admin_init');
 
+
+/**
+ * Renders the Newsletter form setting field for posts.
+ */
+function frontierline_settings_field_newsform_posts() { ?>
+    <div class="layout newsform-posts">
+        <label>
+            <input type="checkbox" id="frontierline_newsform_posts" name="frontierline_newsform_posts" value="1" <?php checked( '1', get_option('frontierline_newsform_posts') ); ?>>
+            <span>
+      <?php _e('Show newsletter form under posts', 'frontierline'); ?>
+    </span>
+            <p class="description"><?php _e('Adds a subscribe form to the Mozilla newsletter to the bottom of blog articles.', 'frontierline'); ?></p>
+        </label>
+    </div>
+    <?php
+}
+
+/**
+ * Renders the Newsletter form setting field for pages.
+ */
+function frontierline_settings_field_newsform_pages() { ?>
+    <div class="layout newsform-pages">
+        <label>
+            <input type="checkbox" id="frontierline_newsform_pages" name="frontierline_newsform_pages" value="1" <?php checked( '1', get_option('frontierline_newsform_pages') ); ?>>
+            <span>
+      <?php _e('Show newsletter form on Pages', 'frontierline'); ?>
+    </span>
+            <p class="description"><?php _e('Adds a subscribe form to the Mozilla newsletter to the bottom of static Pages.', 'frontierline'); ?></p>
+        </label>
+    </div>
+    <?php
+}
+
+/**
+ * Renders the Newsletter form setting field for post lists and other views.
+ */
+function frontierline_settings_field_newsform_other() { ?>
+    <div class="layout newsform-other">
+        <label>
+            <input type="checkbox" id="frontierline_newsform_other" name="frontierline_newsform_other" value="1" <?php checked( '1', get_option('frontierline_newsform_other') ); ?>>
+            <span>
+      <?php _e('Show newsletter form under posts lists and other views', 'frontierline'); ?>
+    </span>
+            <p class="description"><?php _e('Adds a subscribe form to the Mozilla newsletter to the bottom of posts lists and other views.', 'frontierline'); ?></p>
+        </label>
+    </div>
+    <?php
+}
 
 /**
  * Renders the Add Sharing setting field for posts.
