@@ -1,0 +1,56 @@
+// Header for the author archive page
+
+.author-info {
+    @include border-box;
+    margin: 0 auto 2em;
+    max-width: $width-desktop;
+    padding-top: 140px;
+    position: relative;
+
+    .page-title {
+        text-align: center;
+    }
+
+    .photo {
+        border-radius: 100%;
+        height: 100px;
+        left: 50%;
+        margin-left: -51px;
+        position: absolute;
+        top: 20px;
+        width: 100px;
+        border: 1px solid #eee;
+    }
+
+    @media #{$mq-tablet} {
+        padding-top: 20px;
+        padding-left: 150px;
+
+        .page-title {
+            text-align: left;
+        }
+
+        .photo {
+            left: 20px;
+            margin: 0;
+        }
+    }
+}
+
+@media #{$mq-tablet} {
+    [dir='rtl'] {
+        .author-info {
+            padding-left: 20px;
+            padding-right: 150px;
+
+            .page-title {
+                text-align: right;
+            }
+
+            .photo {
+                left: auto;
+                right: 20px;
+            }
+        }
+    }
+}
