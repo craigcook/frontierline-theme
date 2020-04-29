@@ -13,12 +13,14 @@ function frontierline_customize_register($wp_customize) {
 
   // Register color scheme setting and control
   $wp_customize->add_setting('frontierline_color_scheme', array(
+    'capability'        => 'edit_theme_options',
     'default'           => 'none',
     'sanitize_callback' => 'frontierline_sanitize_color_scheme',
     'transport'         => 'postMessage',
   ));
 
   $wp_customize->add_control('frontierline_color_scheme', array(
+    'capability'        => 'edit_theme_options',
     'label'    => __('Accent Color', 'frontierline'),
     'priority' => 5,
     'section'  => 'frontierline_theme_options',
@@ -39,12 +41,14 @@ function frontierline_customize_register($wp_customize) {
 
   // Register header pattern option and control
   $wp_customize->add_setting('frontierline_head_pattern', array(
+    'capability'        => 'edit_theme_options',
     'default'           => 'none',
     'sanitize_callback' => 'frontierline_sanitize_head_pattern',
     'transport'         => 'postMessage',
   ));
 
   $wp_customize->add_control('frontierline_head_pattern', array(
+    'capability'        => 'edit_theme_options',
     'label'    => __('Header Pattern', 'frontierline'),
     'priority' => 6,
     'section'  => 'frontierline_theme_options',
@@ -57,6 +61,26 @@ function frontierline_customize_register($wp_customize) {
       'emoticons'     => __('Emoticons', 'frontierline'),
       'slashbracket'  => __('Slashes and Brackets', 'frontierline'),
       'tradewinds'    => __('Trade Winds', 'frontierline'),
+    ),
+  ));
+
+  // Register Firefox download button option and control
+  $wp_customize->add_setting('frontierline_global_firefox', array(
+    'capability'        => 'edit_theme_options',
+    'default'           => 'link',
+    'sanitize_callback' => 'frontierline_sanitize_global_firefox',
+    'transport'         => 'postMessage',
+  ));
+
+  $wp_customize->add_control('frontierline_global_firefox', array(
+    'label'       => esc_html__('Firefox in the main navigation', 'frontierline'),
+    'description' => esc_html__('Display either a "Download Firefox" button or a "Discover Firefox" link in the standard main navigation. Can be overridden by a custom menu.', 'frontierline'),
+    'priority' => 7,
+    'section'  => 'frontierline_theme_options',
+    'type'     => 'select',
+    'choices'  => array(
+      'link'      => __('Discover Firefox (menu link)', 'frontierline'),
+      'button'    => __('Download Firefox (button)', 'frontierline'),
     ),
   ));
 
@@ -74,23 +98,6 @@ function frontierline_customize_register($wp_customize) {
     'priority' => 7,
     'section'     => 'frontierline_theme_options',
     'settings'    => 'frontierline_category_drawer',
-    'type'        => 'checkbox',
-  ));
-
-  // Register Firefox download button option and control
-  $wp_customize->add_setting('frontierline_firefox_button', array(
-    'capability'        => 'edit_theme_options',
-    'default'           => '',
-    'sanitize_callback' => 'frontierline_sanitize_checkbox',
-    'type'              => 'theme_mod',
-  ));
-
-  $wp_customize->add_control('frontierline_firefox_button', array(
-    'label'       => esc_html__('Firefox download button', 'frontierline'),
-    'description' => esc_html__('Display a “Download Firefox” button in the main navigation in place of the “Discover Firefox” link.', 'frontierline'),
-    'priority' => 7,
-    'section'     => 'frontierline_theme_options',
-    'settings'    => 'frontierline_firefox_button',
     'type'        => 'checkbox',
   ));
 
@@ -182,23 +189,15 @@ add_action('customize_register', 'frontierline_customize_register');
 /*
  * Sanitize excerpt select option
  */
-function frontierline_sanitize_excerpt_select($excerpt_select) {
-  if (!in_array($excerpt_select, array('disabled', 'enabled'))) {
-    $excerpt_select = 'disabled';
-  }
-  return $excerpt_select;
+function frontierline_sanitize_excerpt_select($input) {
+  return frontierline_sanitize_select($input, array('disabled', 'enabled'), 'disabled');
 }
 
 /**
  * Sanitize the color scheme.
  */
 function frontierline_sanitize_color_scheme($input) {
-  $valid = array('none', 'cyan', 'coral', 'yellow', 'lilac', 'orange', 'lime', 'neonblue', 'neonpink', 'neongreen');
-
-  if (in_array($input, $valid)) {
-    return $input;
-  }
-  return 'none'; // Default
+  return frontierline_sanitize_select($input, array('none', 'cyan', 'coral', 'yellow', 'lilac', 'orange', 'lime', 'neonblue', 'neonpink', 'neongreen'), 'none');
 }
 
 
@@ -206,13 +205,17 @@ function frontierline_sanitize_color_scheme($input) {
  * Sanitize the header pattern.
  */
 function frontierline_sanitize_head_pattern($input) {
-  $valid = array('none', 'arrows', 'basketweave', 'confetti', 'emoticons', 'slashbracket', 'tradewinds');
-
-  if (in_array($input, $valid)) {
-    return $input;
-  }
-  return 'none'; // Default
+  return frontierline_sanitize_select($input, array('none', 'arrows', 'basketweave', 'confetti', 'emoticons', 'slashbracket', 'tradewinds'), 'none');
 }
+
+
+/**
+ * Sanitize the global menu Firefox option.
+ */
+function frontierline_sanitize_global_firefox($input) {
+  return frontierline_sanitize_select($input, array('link', 'button'), 'link');
+}
+
 
 /**
  * Sanitize checkbox values.
@@ -230,6 +233,18 @@ function frontierline_sanitize_checkbox($input) {
  */
 function frontierline_sanitize_text($input) {
   return wp_kses_post(force_balance_tags($input));
+}
+
+
+/**
+ * Sanitize select.
+ */
+function frontierline_sanitize_select($input, $valid, $default) {
+  if (in_array($input, $valid)) {
+    return $input;
+  } else {
+    return $default;
+  }
 }
 
 

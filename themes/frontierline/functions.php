@@ -40,7 +40,8 @@ function frontierline_setup() {
   // Indicate widgets can use selective refresh in the Customizer.
   add_theme_support('customize-selective-refresh-widgets');
 
-  // Register custom menu
+  // Register custom menus
+  register_nav_menu('main_menu', __('Main Menu', 'frontierline'));
   register_nav_menu('site_menu', __('Site Menu', 'frontierline'));
 }
 endif;

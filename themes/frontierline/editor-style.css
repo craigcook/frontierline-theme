@@ -1,9 +1,7 @@
 /* !important used for forceful overrides */
 /* stylelint-disable declaration-no-important  */
-@font-face { font-family: 'Zilla Slab'; font-weight: normal; font-style: normal; src: url("fonts/ZillaSlab-Regular.woff2") format("woff2"), url("fonts/ZillaSlab-Regular.woff") format("woff"); }
-@font-face { font-family: 'Zilla Slab'; font-weight: bold; font-style: normal; src: url("fonts/ZillaSlab-Bold.woff2") format("woff2"), url("fonts/ZillaSlab-Bold.woff") format("woff"); }
-@font-face { font-family: 'Zilla Slab'; font-weight: normal; font-style: italic; src: url("fonts/ZillaSlab-RegularItalic.woff2") format("woff2"), url("fonts/ZillaSlab-RegularItalic.woff") format("woff"); }
-@font-face { font-family: 'Zilla Slab'; font-weight: bold; font-style: italic; src: url("fonts/ZillaSlab-BoldItalic.woff2") format("woff2"), url("fonts/ZillaSlab-BoldItalic.woff") format("woff"); }
+@font-face { font-display: swap; font-family: 'Zilla Slab'; font-style: normal; font-weight: normal; src: url("fonts/ZillaSlab-Regular.woff2") format("woff2"), url("fonts/ZillaSlab-Regular.woff") format("woff"); }
+@font-face { font-display: swap; font-family: 'Zilla Slab'; font-style: normal; font-weight: bold; src: url("fonts/ZillaSlab-Bold.woff2") format("woff2"), url("fonts/ZillaSlab-Bold.woff") format("woff"); }
 @font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: normal; src: url("fonts/Inter-Regular.woff2") format("woff2"), url("fonts/Inter-Regular.woff") format("woff"); }
 @font-face { font-display: swap; font-family: Inter; font-style: normal; font-weight: bold; src: url("fonts/Inter-Bold.woff2") format("woff2"), url("fonts/Inter-Bold.woff") format("woff"); }
 @font-face { font-display: swap; font-family: Inter; font-style: italic; font-weight: normal; src: url("fonts/Inter-Italic.woff2") format("woff2"), url("fonts/Inter-Italic.woff") format("woff"); }
