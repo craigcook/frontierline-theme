@@ -131,6 +131,10 @@ h1, h2, h3, h4, h5, h6, legend {
     margin: -.25em 0 0;
 }
 
+.nav-global-fxdownload .button {
+    white-space: nowrap;
+}
+
 .fx-footer {
     border-top: 1px solid #ccc;
     padding: 30px 0 0;
