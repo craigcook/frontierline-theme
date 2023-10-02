@@ -37,17 +37,6 @@ body.wp-autoresize.mceContentBody {
         padding: 0;
     }
 
-    // Fancy first paragraph
-    & > p:first-child:not(.disclaimer),
-    & > .disclaimer:first-child + p {
-        @include font-size-level4;
-        min-height: 70px;
-
-        &:first-line {
-            @include font-size-level3;
-        }
-    }
-
     a {
         @include transition(color 80ms ease-out);
         color: $color-link;
