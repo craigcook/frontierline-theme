@@ -209,21 +209,6 @@
         }
     }
 
-    // First paragraph gets special treatment
-    @media #{$mq-tablet} {
-        .post,
-        .page {
-            .entry-content > p:first-child:not(.disclaimer),
-            .entry-content > .disclaimer:first-child + p {
-                @include font-size-level4;
-
-                &:first-line {
-                    @include font-size-level3;
-                }
-            }
-        }
-    }
-
     .entry-tags {
         margin-top: 30px;
         padding-top: 30px;
