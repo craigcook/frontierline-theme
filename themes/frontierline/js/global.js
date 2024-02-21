@@ -147,6 +147,11 @@
         if (typeof ga === 'function') {
             ga('send', 'event', blogname + ' Interactions', 'share', network);
         }
+        if (typeof gtag === 'function') {
+            gtag('event', 'social_share', {
+                label: network
+            });
+        }
 
         window.open(
             this.href,
@@ -271,6 +276,105 @@
                 eventLabel: 'Firefox for Desktop',
                 dimension15: 'in-content cta',
                 dimension1: blogname
+            });
+        });
+    }
+
+    if (typeof gtag === 'function') {
+        var search = jQuery('#search');
+        var searchField = jQuery('#s');
+        var prev = jQuery('#adjacent-posts .nav-paging-prev a');
+        var next = jQuery('#adjacent-posts .nav-paging-next a');
+        var incat = jQuery('.in-category .cat-posts a');
+        var popular = jQuery('.popular .wpp-list a');
+        var recent = jQuery('.popular .recent-posts a');
+        var catLinks = jQuery('#categories .entry-link');
+        var sideLinks = jQuery('#sidebar a');
+        var navDownload = jQuery('.nav-global-fxdownload .button');
+        var footerDownload = jQuery('.fx-footer .button');
+
+        // Global nav
+        navMoz.find('a').on('click', function() {
+            gtag('event', 'link_click', {
+                label: jQuery(this).text(),
+                position: "global nav" 
+            });
+        });
+
+        // Links in categories drawer
+        catLinks.on('click', function() {
+            gtag('event', 'link_click', {
+                label: jQuery(this).find('.entry-title').text(),
+                position: "category nav" 
+            });
+        });
+
+        // Links in sidebar
+        sideLinks.on('click', function() {
+            gtag('event', 'link_click', {
+                label: jQuery(this).text(),
+                position: "sidebar nav" 
+            });
+        });
+
+        // Searches
+        search.on('submit', function() {
+            gtag("event", "search", {
+                search_term: searchField.val()
+            });
+        });
+
+        // Previous article
+        prev.on('click', function() {
+            gtag('event', 'link_click', {
+                label: jQuery(this).find('.entry-title').text(),
+                position: "previous"
+            });
+        });
+
+        // Next article
+        next.on('click', function() {
+            gtag('event', 'link_click', {
+                label: jQuery(this).find('.entry-title').text(),
+                position: "next"
+            });
+        });
+
+        // In category
+        incat.on('click', function() {
+            gtag('event', 'link_click', {
+                label: jQuery(this).text(),
+                position: "category"
+            });
+        });
+
+        // Popular
+        popular.on('click', function() {
+            gtag('event', 'link_click', {
+                label: jQuery(this).text(),
+                position: "popular"
+            });
+        });
+
+        // Recent (only visible if popular is disabled)
+        recent.on('click', function() {
+            gtag('event', 'link_click', {
+                label: jQuery(this).text(),
+                position: "recent"
+            });
+        });
+
+        // Count download clicks in the navbar (Firefox blog)
+        navDownload.on('click', function() {
+            gtag('event', 'download_click', {
+                position: 'global nav'
+            });
+        });
+
+        // Count download clicks in the post footer (Firefox blog)
+        footerDownload.on('click', function() {
+            gtag('event', 'download_click', {
+                position: 'footer'
             });
         });
     }
