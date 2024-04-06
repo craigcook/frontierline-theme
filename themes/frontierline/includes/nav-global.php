@@ -29,7 +29,7 @@
         </ul>
       <?php endif; ?>
 
-      <?php if (!has_nav_menu('main_menu') && get_theme_mod('frontierline_global_firefox') === 'button') : ?>
+      <?php if (get_theme_mod('frontierline_global_firefox') === 'button') : ?>
         <aside class="nav-global-fxdownload"><a href="https://www.mozilla.org/firefox/new/?utm_source=<?php echo frontierline_blog_domain(); ?>&amp;utm_medium=referral&amp;utm_campaign=blog-nav" rel="external" class="button button-product"><?php _e('Download Firefox', 'frontierline'); ?></a></aside>
       <?php endif; ?>
     </div>
