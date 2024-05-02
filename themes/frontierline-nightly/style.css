@@ -267,6 +267,28 @@ h1, h2, h3, h4, h5, h6, legend {
     padding: 0.3rem;
 }
 
+.single .category-news .entry-content h3 :link,
+.single .category-news .entry-content h3 :visited,
+.page .category-news .entry-content h3 :link,
+.page .category-news .entry-content h3 :visited,
+.single .category-news .entry-content h4 :link,
+.single .category-news .entry-content h4 :visited,
+.page .category-news .entry-content h4 :link,
+.page .category-news .entry-content h4 :visited {
+    color: white;
+}
+
+.single .category-news .entry-content h3 :link:hover,
+.single .category-news .entry-content h3 :visited:hover,
+.page .category-news .entry-content h3 :link:hover,
+.page .category-news .entry-content h3 :visited:hover,
+.single .category-news .entry-content h4 :link:hover,
+.single .category-news .entry-content h4 :visited:hover,
+.page .category-news .entry-content h4 :link:hover,
+.page .category-news .entry-content h4 :visited:hover {
+    color: lightskyblue;
+}
+
 .single .category-news .entry-content h4,
 .page .category-news .entry-content h4 {
     font-weight: normal;
