@@ -33,11 +33,6 @@
                 catToggle.removeClass('close');
             }
 
-            // Count the sidebar opening
-            if ((typeof ga === 'function') && !sidebar.hasClass('is-open')) {
-                ga('send', 'event', blogname + ' Interactions', 'sidebar click', 'sidebar-open');
-            }
-
             sidebar.toggleClass('is-open');
             sideToggle.toggleClass('close');
         });
@@ -83,10 +78,6 @@
 
             jQuery('#categories .cat-list a.on').removeClass('on');
             catLink.addClass('on');
-
-            if (typeof ga === 'function') {
-                ga('send', 'event', blogname + ' Interactions', 'category drawer click', 'Category: ' + catLink.text());
-            }
         });
     }
 
@@ -144,9 +135,6 @@
         var network = jQuery(this).data('network');
 
         // Count the clicks
-        if (typeof ga === 'function') {
-            ga('send', 'event', blogname + ' Interactions', 'share', network);
-        }
         if (typeof gtag === 'function') {
             gtag('event', 'social_share', {
                 label: network
@@ -195,90 +183,6 @@
     navMozToggle.on('click', function(){
         navMoz.slideToggle('fast');
     });
-
-    // Analyze All The Things
-    if (typeof ga === 'function') {
-        var search = jQuery('#search');
-        var searchField = jQuery('#s');
-        var prev = jQuery('#adjacent-posts .nav-paging-prev a');
-        var next = jQuery('#adjacent-posts .nav-paging-next a');
-        var incat = jQuery('.in-category .cat-posts a');
-        var popular = jQuery('.popular .wpp-list a');
-        var recent = jQuery('.popular .recent-posts a');
-        var catLinks = jQuery('#categories .entry-link');
-        var sideLinks = jQuery('#sidebar a');
-        var navDownload = jQuery('.nav-global-fxdownload .button');
-        var contentDownload = jQuery('.fx-footer .button');
-
-        // Global nav
-        navMoz.find('a').on('click', function() {
-            ga('send', 'event', blogname + ' Interactions', 'nav click', 'Global nav: ' + jQuery(this).text());
-        });
-
-        // Links in categories drawer
-        catLinks.on('click', function() {
-            ga('send', 'event', blogname + ' Interactions', 'category drawer click', 'Category link: ' + jQuery(this).find('.entry-title').text());
-        });
-
-        // Links in sidebar
-        sideLinks.on('click', function() {
-            ga('send', 'event', blogname + ' Interactions', 'sidebar click', 'Sidebar link: ' + jQuery(this).text());
-        });
-
-        // Searches
-        search.on('submit', function() {
-            ga('send', 'event', blogname + ' Interactions', 'search', 'Search: ' + searchField.val());
-        });
-
-        // Previous article
-        prev.on('click', function() {
-            ga('send', 'event', blogname + ' Interactions', 'adjacent click', 'Previous: ' + jQuery(this).find('.entry-title').text());
-        });
-
-        // Next article
-        next.on('click', function() {
-            ga('send', 'event', blogname + ' Interactions', 'adjacent click', 'Next: ' + jQuery(this).find('.entry-title').text());
-        });
-
-        // In category
-        incat.on('click', function() {
-            ga('send', 'event', blogname + ' Interactions', 'related click', 'In category: ' + jQuery(this).text());
-        });
-
-        // Popular
-        popular.on('click', function() {
-            ga('send', 'event', blogname + ' Interactions', 'related click', 'Popular: ' + jQuery(this).text());
-        });
-
-        // Recent (only visible if popular is disabled)
-        recent.on('click', function() {
-            ga('send', 'event', blogname + ' Interactions', 'related click', 'Recent: ' + jQuery(this).text());
-        });
-
-        // Count download clicks in the navbar (Firefox blog)
-        navDownload.on('click', function() {
-            ga('send', {
-                hitType: 'event',
-                eventCategory: blogname + ' Interactions',
-                eventAction: 'Firefox Download',
-                eventLabel: 'Firefox for Desktop',
-                dimension15: 'nav cta',
-                dimension1: blogname
-            });
-        });
-
-        // Count download clicks in the post footer (Firefox blog)
-        contentDownload.on('click', function() {
-            ga('send', {
-                hitType: 'event',
-                eventCategory: blogname + ' Interactions',
-                eventAction: 'Firefox Download',
-                eventLabel: 'Firefox for Desktop',
-                dimension15: 'in-content cta',
-                dimension1: blogname
-            });
-        });
-    }
 
     if (typeof gtag === 'function') {
         var search = jQuery('#search');
